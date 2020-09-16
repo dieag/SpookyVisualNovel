@@ -1,0 +1,79 @@
+Documentation
+
+Order:
+name|"String"|command|...
+
+#Character Speech:
+	Character speech is set up so if you want a character to start speaking, you have to first write the name followed by the '|'. The '|' is use as a delimiter, so make sure it is there.
+	Format:						EX:
+		<NAME>|"<STRING>"			Raelin|"Hi, my name is Raelin. What's yours?"
+
+	After a name is supplied, you don't need to use the name again unless a new character is speaking
+		Format					EX:
+			<NAME>|"<STRING>"				Raelin|"Hi, my name is Raelin. What's yours?"
+			<STRING>"						"Oh I guess you're just shy huh"
+
+
+	Additive:
+		Additives are a way to display more text without creating a new line of dialogue, it just continues from the current string:
+		Format					EX:
+		<NAME>|"<STRING>"			Raelin|"Hi, my name is Raelin."
+		+"<STRING>"					+"What's yours?""
+#Commands:
+	setBackground(imageName,speed,smooth)
+		Description: Sets background image of game
+		Input Variables:
+			imageName: Name of image in 'images/UI/backdrops/' folder
+			speed: speed of which background shows up in transition, default is 2f
+			smooth: boolean for smooth transition, default is false
+	setForeground()
+		Description: Sets foreground image of game, which covers background and characters
+		Input Variables:
+			imageName: Name of image in 'images/UI?backdrops/'' folder
+			speed: speed of which background shows up in transition, default is 2f
+			smooth: boolean for smooth transition, default is false
+	setCinematic()
+		Description: Sets cinematic layer of game, which covers evertying
+		Input Variables:
+			imageName: Name of image in 'images/UI?backdrops/'' folder
+			speed: speed of which background shows up in transition, default is 2f
+			smooth: boolean for smooth transition, default is false
+	playSound(soundName)
+		Description: Plays sound effect
+		Input Variables:
+			soundName: Name of sound in 'Audio/SFX/' folder
+	playMusic(songName)
+		Description: Plays song
+		Input Variables:
+			songName: Name of song in 'Audio/Music/' folder
+	moveCharacter(characterName,locationX,locationY,speed,smooth)
+		Description: Move character to x and y position of screen
+		Input Variables:
+			characterName: Name of Character you want to move
+			locationX: X coordinate, 0 - 1. 0 is leftmost portion of screen, 1 is rightmost
+			locationY: Y coordinate, 0 - 1. 0 is bottom portion of screen, 1 is top
+			speed (optional): How fast the character moves, default is 1f
+			smooth (optional): If character smoothly moves or snaps to new position
+	setPosition(characterName,locationX,locationY)
+		Description: Instantly snap character to x and y position of screen
+		Input Variables:
+			characterName: Name of Character you want to move
+			locationX: X coordinate, 0 - 1. 0 is leftmost portion of screen, 1 is rightmost
+			locationY: Y coordinate, 0 - 1. 0 is bottom portion of screen, 1 is top
+	changeExpression(characteName,region,expression,speed)
+		Description: Changes image used for sprite
+		Input Variables:
+			characteName: Name of character you want to change expressions
+			region: Either is 'face' or 'body', designates the area you want to change
+			expression: Name of sprite that is going to be changed to
+			speed (Optional): Speed of transition. If set to 0, expresion will instantly change. Anything else will be a gradual transition. Defualt is 0
+
+Example Script:
+
+	setBackground(green, false, 1)|playMusic(Waltz)
+
+	Raelin|"Hi, my name is Raelin. What's yours?"|playSound(ButtonPush)
+
+	"I heard you are into <b>anime girls</b>! "|moveCharacter(Raelin,0.7,0.5,1.5,false)
+
+	+"Good thing I'm an anime girl."|changeExpression(Raelin,body,Raelin_1)

@@ -1,0 +1,11 @@
+setBackground(green, false, 1)|playMusic(Waltz)|enter(Raelin)
+
+Raelin|"Hi, my name is Raelin. What's yours?"|playSound(ButtonPush)
+
+"I heard you are into <b>anime girls</b>! "|moveCharacter(Raelin,0.7,0.5,1.5,false)
+
++"Good thing I'm an anime girl."|changeExpression(Raelin,body,Raelin_1,3)
+
+narrator|"But in reality, she was a Kpop girl."
+
+exit(Raelin)
