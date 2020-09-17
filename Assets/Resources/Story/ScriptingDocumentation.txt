@@ -97,10 +97,12 @@ name|"String"|command|...
 
 Example Script:
 
-	setBackground(green, false, 1)|playMusic(Waltz)
+setBackground(green, false, 1)|playMusic(Waltz)|enter(Raelin)
 
-	Raelin|"Hi, my name is Raelin. What's yours?"|playSound(ButtonPush)
+Raelin|"Hi, my name is Raelin.{a}[playSound(ButtonPush)] What's yours?{c}I heard you are into <b>anime girls</b>!"|moveCharacter(Raelin,0.7,0.5,1.5,false)
 
-	"I heard you are into <b>anime girls</b>! "|moveCharacter(Raelin,0.7,0.5,1.5,false)
+"Good thing [changeExpression(Raelin,body,Raelin_1,0)]I'm an anime girl."
 
-	+"Good thing I'm an anime girl."|changeExpression(Raelin,body,Raelin_1)
+narrator|"But in reality, she was a Kpop girl."
+
+exit(Raelin)

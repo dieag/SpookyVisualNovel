@@ -13,7 +13,6 @@ public class DialogueEvents : MonoBehaviour
 
 			for(int i = 0; i < actions.Length; i++)
 			{
-				print(actions[i]);
 				NovelController.instance.HandleAction(actions[i]);
 			}
 			return;
