@@ -1779,7 +1779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1806740783
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2067,6 +2067,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a891999e5a1344e87c3d1d021c6a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delimiter: 124
+  cachedLastSpeaker: 
 --- !u!114 &1976114284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2079,8 +2081,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79a1b8c4da78e8c4ea5b1b2aa41884b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overlayImage: {fileID: 0}
-  transitionMaterialPrefab: {fileID: 0}
+  overlayImage: {fileID: 1806740784}
+  transitionMaterialPrefab: {fileID: 2100000, guid: d566fffa82640014880c3287cc571378,
+    type: 2}
 --- !u!1 &2087955070
 GameObject:
   m_ObjectHideFlags: 0

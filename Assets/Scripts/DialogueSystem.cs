@@ -39,7 +39,7 @@ public class DialogueSystem : MonoBehaviour {
 	public bool isSpeaking {get{return speaking != null;}}
 	string targetSpeech = "";
 	Coroutine speaking = null;
-	TextArchitect textArchitect = null;
+	public TextArchitect textArchitect = null;
 	[HideInInspector] public bool isWaitingForUserInput = false;
 	IEnumerator Speaking(string speech, bool additive, string speaker = "")
 	{
