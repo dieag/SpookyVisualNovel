@@ -14,12 +14,33 @@ name|"String"|command|...
 			<STRING>"						"Oh I guess you're just shy huh"
 
 
-	Additive:
-		Additives are a way to display more text without creating a new line of dialogue, it just continues from the current string:
-		Format					EX:
-		<NAME>|"<STRING>"			Raelin|"Hi, my name is Raelin."
-		+"<STRING>"					+"What's yours?""
-#Commands:
+	Inline String Commands:
+		Format: "{COMMAND}"			Ex:"Hi this is a test!{a}"
+		Commands:
+			c:
+				Description: Wait for input and clear
+			a:
+				Description: Wait for input and append
+			w:
+				Description: Wait for set time and clear
+					Time: number of seconds? to wait
+			wa:
+				Description: Wait for set time and append
+				Input Variables:
+					Time: number of seconds? to wait
+	Inline Event Commands:
+		Format:						Ex:
+			"[EVENT]text[\EVENT]"		I can see [txtSpd 30,1]something[/txtSpd]
+		Commands:
+			txtSpd(speed,numOfCharsPerTick)
+
+	Inline Action Commands:
+		See below for list of commands
+		List of command seperated by a '|' to run inline a string instead of at the end
+		Format								EX:
+			"[COMMAND1|COMMAND2|...]"			"I heard Raelin was coming...{a}[enter(Raelin)] Oh, there she is!"
+
+#Action Commands:
 	setBackground(imageName,speed,smooth)
 		Description: Sets background image of game
 		Input Variables:
@@ -67,6 +88,12 @@ name|"String"|command|...
 			region: Either is 'face' or 'body', designates the area you want to change
 			expression: Name of sprite that is going to be changed to
 			speed (Optional): Speed of transition. If set to 0, expresion will instantly change. Anything else will be a gradual transition. Defualt is 0
+	flip
+	faceRight
+	enter
+	exit
+	transBackground
+	transForeground
 
 Example Script:
 

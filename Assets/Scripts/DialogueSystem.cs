@@ -37,7 +37,7 @@ public class DialogueSystem : MonoBehaviour {
 	}
 
 	public bool isSpeaking {get{return speaking != null;}}
-	string targetSpeech = "";
+	public string targetSpeech = "";
 	Coroutine speaking = null;
 	public TextArchitect textArchitect = null;
 	[HideInInspector] public bool isWaitingForUserInput = false;
@@ -47,8 +47,10 @@ public class DialogueSystem : MonoBehaviour {
 		string additiveSpeech = additive ? speechText.text : "";
 		targetSpeech = additiveSpeech + speech;
 
-
-		textArchitect = new TextArchitect(speechText, speech, additiveSpeech);
+		if(textArchitect == null)
+			textArchitect = new TextArchitect(speechText, speech, additiveSpeech);
+		else
+			textArchitect.Renew(speech, additiveSpeech);
 
 		speakerNameText.text = DetermineSpeaker(speaker);
 		speakerNamePanel.SetActive(speakerNameText.text != "");
