@@ -1,0 +1,31 @@
+setBackground(living_room, true, 1)|playMusic(music_beginning)|enter(Raelin)
+
+narrator|"It's Halloween tonight. A storm pounds against the walls of this mansion, raindrops tapping impatiently against the glass window near the glowing fireplace."
+
+narrator|"I curl up further into the leather couch, turning the page of my book. No trick-or-treaters tonight, it seems. I'm not sure how they'd make it up here in the storm."
+
+narrator|"The mansion - my boyfriend's mansion - sits at the top of a mountain, miles up a windy road from a small town nearby. According to my boyfriend, this mansion has been in his family for generations."
+
+Gwen|"So isolated."
+
+playSound(effect_thunder1)
+
+narrator|"Another crack of thunder. I glance up towards the roof. Is the garden okay?"
+
+narrator|"I've only been dating Victor for a few months now. In that little time, however, I've come to learn just how much that garden means to him. It sprawls across the entire roof, with varying flowers, vegetables, and herbs packed into growers beneath absurdly large trees. Trees! On his roof!"
+
+narrator|"I'd better go check on it. A storm this bad hasn't hit this mansion in a while. I set my book down and head up the stairs, away from the fire's warmth."
+
+setBackground(hallway_up_light, true, 1)
+
+narrator|"This mansion can be so maze-like, sometimes. I'm not used to living somewhere with this many rooms. I grew up poor, and my parents abandoned me when I was barely in high school. Victor's wealth was a little shocking, at first."
+
+Gwen|"Left... right?"
+
+narrator|"After meandering and making some bad turns, I finally find it - the ladder! Well, more like the door leading to the ladder."
+
+narrator|"I haven't seen most of Victor's mansion. He has these strange locks on every door that need a code to be opened. He gave me a set of codes to use to open the rooms I need to go in, but there are many more rooms hidden to me."
+
+narrator|"Ah, well, I am glad I have the codes necessary to get onto the roof. Let's see what we have here."
+
+narrator|"Each puzzle is like a simple cypher to unlock. I just have to check the card number, and line it up with the number in the key. I think I have the key on me."
