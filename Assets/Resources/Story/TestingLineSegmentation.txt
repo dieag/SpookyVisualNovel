@@ -1,5 +1,5 @@
-setBackground(green, false, 1)|playMusic(Waltz)|enter(Raelin)
+setBackground(living_room,true,100)|playSound(ambient_rain)|playSound(DoorOpen)|enter(Raelin)
 Raelin|"Hi, my name is Raelin.{a}[playSound(ButtonPush)] What's yours?{c}I heard you are into <b>anime girls</b>!"|moveCharacter(Raelin,0.7,0.5,1.5,false)
-"Good thing [changeExpression(Raelin,body,Raelin_1,0)]I'm an anime girl."
-narrator|"But in reality, she was a Kpop girl."
+"[showScene(false,blur)|playMusic(music_library)]Good thing [changeExpression(Raelin,body,Raelin_1,0)]I'm an anime girl."
+narrator|"But in reality, she was a Kpop girl[transBackground(blue,blur)]."
 exit(Raelin)

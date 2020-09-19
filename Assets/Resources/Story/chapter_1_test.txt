@@ -1,0 +1,2 @@
+setBackground(green, false, 1)|enter(Raelin)
+Raelin|"Hi, my name is Raelin. What's yours?"

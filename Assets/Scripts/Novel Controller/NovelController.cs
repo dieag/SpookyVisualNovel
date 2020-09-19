@@ -32,7 +32,7 @@ public class NovelController : MonoBehaviour
     	}
     }
 
-    void LoadChapterFile(string fileName)
+    public void LoadChapterFile(string fileName)
     {
     	data = FileManager.LoadFile(FileManager.savPath + "Resources/Story/" + fileName);
     	cachedLastSpeaker = "";
@@ -48,6 +48,7 @@ public class NovelController : MonoBehaviour
         _next = true;
     }
 
+    public bool isHandlingChapterFile {get{return handlingChapterFile != null;}}
     Coroutine handlingChapterFile = null;
     IEnumerator HandlingChapterFile()
     {
@@ -65,6 +66,8 @@ public class NovelController : MonoBehaviour
             }
             yield return new WaitForEndOfFrame();
         }
+
+        handlingChapterFile = null;
     }
 
     void HandleLine(string rawLine)
@@ -198,6 +201,10 @@ public class NovelController : MonoBehaviour
                 return;
             case "showScene":
                 Command_ShowScene(data[1]);
+                return;
+            case "inputScreen":
+                //Command_InputScreen(data[1]);
+                //Input text, function to check for correct input
                 return;
             //case ("transCinematic"):
 
