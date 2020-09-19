@@ -88,12 +88,64 @@ name|"String"|command|...
 			region: Either is 'face' or 'body', designates the area you want to change
 			expression: Name of sprite that is going to be changed to
 			speed (Optional): Speed of transition. If set to 0, expresion will instantly change. Anything else will be a gradual transition. Defualt is 0
-	flip
-	faceRight
-	enter
-	exit
-	transBackground
-	transForeground
+	flip(characterName):
+		Description: Flip Character horiztonal
+		Input Variables:
+			characterName: Name of character you want to flip
+	faceRight(characterName):
+		Description: Make Character Face Right
+		Input Variables:
+			characterName: Name of character you want to flip
+	faceLeft(characterName):
+		Description: Make Character Face Right
+		Input Variables:
+			characterName: Name of character you want to flip
+	enter(characterNames<;>,speed,smooth):
+		Speical format: enter(character0;character1;,3,false)
+		Description: Enter N amount of characters
+		Input Variables:
+			characterNames:
+				List of character you want to enter the scene
+			speed:
+				Speed character pop into scene
+			smooth:
+				Smooth
+
+	exit(characterNames<;>,speed,smooth):
+		Special format: enter(character0;character1;,3,false)
+		Description: Enter N amount of characters
+		Input Variables:
+			characterNames:
+				List of character you want to enter the scene
+			speed:
+				Speed character pop into scene
+			smooth:
+				Smooth
+	transBackground(textureName,transitionName,speed,smooth):
+		Description: Transition Background to new texture with transition effect
+		Input Variables:
+			textureName:
+				Name of texture in images/UI/backdrops
+			transitionName:
+				Name of transition in images/TransitionEffects
+			speed:
+				Speed of transition
+			smooth:
+				Smooth Transition
+
+	transForeground(textureName,transitionName,speed,smooth):
+		Description: Transition Foreground to new texture with transition effect
+		Input Variables:
+			textureName:
+				Name of texture in images/UI/backdrops
+			transitionName:
+				Name of transition in images/TransitionEffects
+			speed:
+				Speed of transition
+			smooth:
+				Smooth Transition
+	inputScreen
+		Description: Pop up input screen with referenc to function
 
 Example Script:
 
