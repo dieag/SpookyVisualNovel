@@ -1,11 +1,12 @@
-setBackground(green, false, 1)|playMusic(Waltz)|enter(Raelin)
-
-Raelin|"Hi, my name is Raelin. What's yours?"|playSound(ButtonPush)
-
-"I heard you are into <b>anime girls</b>! "|moveCharacter(Raelin,0.7,0.5,1.5,false)
-
-+"Good thing I'm an anime girl."|changeExpression(Raelin,body,Raelin_1,3)
-
+setBackground(living_room,true,100)|playSound(ambient_rain)|setPosition(Gwen,.5,0)|enter(Gwen)
+Gwen|"Hi, my name is Gwen.{a}[moveCharacter(Gwen,.75,0,1.5,false)] What's yours?{c}I heard you are into <b>anime girls</b>!"
+"Good thing [changeExpression(Gwen,face,Gwen_4,1)]I'm an anime girl.[flip(Gwen)]"
 narrator|"But in reality, she was a Kpop girl."
 
-exit(Raelin)
+choice|"Is she an anime girl?"
+{
+    "Yes"
+        Load(chapter_1a_test)
+    "No"
+        Load(chapter_1b_test)
+}

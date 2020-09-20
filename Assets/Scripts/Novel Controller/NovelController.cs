@@ -18,8 +18,7 @@ public class NovelController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoadChapterFile("TestingLineSegmentation");
-        //LoadChapterFile("chapter0_start");
+        LoadChapterFile("chapter0_start");
     }
 
     // Update is called once per frame
@@ -40,6 +39,8 @@ public class NovelController : MonoBehaviour
         if(handlingChapterFile != null)
             StopCoroutine(handlingChapterFile);
         handlingChapterFile = StartCoroutine(HandlingChapterFile());
+
+        Next();
     }
 
     bool _next = false;
@@ -50,24 +51,83 @@ public class NovelController : MonoBehaviour
 
     public bool isHandlingChapterFile {get{return handlingChapterFile != null;}}
     Coroutine handlingChapterFile = null;
+    [HideInInspector] public int chapterProgress = 0;
     IEnumerator HandlingChapterFile()
     {
-        int progress = 0;
-        while(progress < data.Count)
+        chapterProgress = 0;
+        while(chapterProgress < data.Count)
         {
             if(_next)
             {
-                HandleLine(data[progress]);
-                progress ++;
-                while(isHandlingLine)
+                string line = data[chapterProgress];
+                if (line.StartsWith("choice"))
                 {
-                    yield return new WaitForEndOfFrame();
+                    yield return HandlingChoiceLine(line);
+                    chapterProgress++;
                 }
+                else
+                {
+                    HandleLine(line);
+                    chapterProgress ++;
+                    while(isHandlingLine)
+                    {
+                        yield return new WaitForEndOfFrame();
+                    }   
+                }
+
             }
             yield return new WaitForEndOfFrame();
         }
 
         handlingChapterFile = null;
+    }
+
+    IEnumerator HandlingChoiceLine(string line)
+    {
+        string title = line.Split('"')[1];
+        List<string> choices = new List<string>();
+        List<string> actions = new List<string>();
+
+        bool gatheringChoices = true;
+        while(gatheringChoices)
+        {
+            chapterProgress++;
+            line = data[chapterProgress];
+
+            if(line == "{")
+                continue;
+
+            line = line.Replace("    ","");
+
+            if(line != "}")
+            {
+                choices.Add(line.Split('"')[1]);
+                actions.Add(data[chapterProgress+1].Replace("    ",""));
+                chapterProgress++;
+            }
+            else
+            {
+                gatheringChoices = false;
+            }
+
+        }
+
+        if (choices.Count > 0)
+        {
+            ChoiceScreen.Show(title, choices.ToArray()); yield return new WaitForEndOfFrame();
+            while(ChoiceScreen.isWaitingForChoiceToBeMade)
+                yield return new WaitForEndOfFrame();
+            string action = actions[ChoiceScreen.lastChoiceMade.index];
+            Debug.Log(ChoiceScreen.lastChoiceMade.index);
+            HandleLine(action);
+
+            while(isHandlingLine)
+                yield return new WaitForEndOfFrame();
+        }
+        else
+        {
+            Debug.LogError("Invalid choice operation. No choices were found.");
+        }
     }
 
     void HandleLine(string rawLine)
@@ -202,13 +262,17 @@ public class NovelController : MonoBehaviour
             case "showScene":
                 Command_ShowScene(data[1]);
                 return;
-            case "inputScreen":
-                //Command_InputScreen(data[1]);
-                //Input text, function to check for correct input
+            case "Load":
+                Command_Load(data[1]);
                 return;
             //case ("transCinematic"):
 
 		}
+    }
+
+    void Command_Load(string chapterName)
+    {
+        NovelController.instance.LoadChapterFile(chapterName);
     }
 
     void Command_SetLayerImage(string data, BCFC.LAYER layer)
@@ -263,6 +327,7 @@ public class NovelController : MonoBehaviour
     	float locationY = float.Parse(parameters[2]);
     	float speed = parameters.Length >= 4 ? float.Parse(parameters[3]) : 1f;
     	bool smooth = parameters.Length == 5 ? bool.Parse(parameters[4]) : true;
+
 
     	Character c = CharacterManager.instance.getCharacter(character);
     	c.MoveTo(new Vector2(locationX, locationY), speed, smooth);

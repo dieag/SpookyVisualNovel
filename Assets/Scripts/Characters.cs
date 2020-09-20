@@ -16,14 +16,14 @@ public class Character {
 //Begin Transitioning
 	public Sprite GetSprite(int index = 0)
 	{
-		Sprite[] sprites = Resources.LoadAll<Sprite>("Images/Characters/"+ char_name);
+		Sprite[] sprites = Resources.LoadAll<Sprite>("images/Characters/"+ char_name);
 
 		return sprites[index];
 	}
 
 	public Sprite GetSprite(string spriteName = "")
 	{
-		Sprite[] sprites = Resources.LoadAll<Sprite>("Images/Characters/"+ char_name);
+		Sprite[] sprites = Resources.LoadAll<Sprite>("images/Characters/"+ char_name);
 
 		for(int i = 0; i < sprites.Length; i++)
 		{

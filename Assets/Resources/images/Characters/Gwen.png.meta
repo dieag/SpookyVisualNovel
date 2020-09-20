@@ -1,0 +1,454 @@
+fileFormatVersion: 2
+guid: f0e4a15e66c9be9428d2cbe4369c9ebd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -324285440327765518
+    second: Gwen sprites_0
+  - first:
+      213: -8643989434455216732
+    second: Gwen sprites_1
+  - first:
+      213: 6139005885574232119
+    second: Gwen sprites_2
+  - first:
+      213: 2196471402463874293
+    second: Gwen sprites_3
+  - first:
+      213: -112820388870866284
+    second: Gwen sprites_4
+  - first:
+      213: -8486011462873121749
+    second: Gwen sprites_5
+  - first:
+      213: -7573904982636327900
+    second: Gwen sprites_6
+  - first:
+      213: -5976868931104763212
+    second: Gwen sprites_7
+  - first:
+      213: 174321166061095267
+    second: Gwen sprites_8
+  - first:
+      213: -8068214911554156567
+    second: Gwen sprites_9
+  - first:
+      213: -1506951713672650896
+    second: Gwen sprites_10
+  - first:
+      213: 5681125994575368461
+    second: Gwen sprites_11
+  - first:
+      213: 2533391656611215318
+    second: Gwen sprites_12
+  - first:
+      213: 5611202117749826689
+    second: Gwen sprites_13
+  - first:
+      213: -4786153753054392949
+    second: Gwen sprites_14
+  - first:
+      213: 7692874802861282589
+    second: Gwen sprites_15
+  - first:
+      213: -8392347819280373495
+    second: Gwen sprites_16
+  - first:
+      213: 8388096533386462107
+    second: Gwen sprites_17
+  - first:
+      213: 1694601493898665079
+    second: Gwen sprites_18
+  - first:
+      213: 1608272404692119845
+    second: Gwen sprites_19
+  - first:
+      213: -2305194691074852224
+    second: Gwen sprites_20
+  - first:
+      213: -4715639947115598826
+    second: Gwen sprites_21
+  - first:
+      213: 4129617391954564451
+    second: Gwen sprites_22
+  - first:
+      213: 2671523076506050293
+    second: Gwen sprites_23
+  - first:
+      213: -9181243964155328516
+    second: Gwen sprites_24
+  - first:
+      213: -3632163843984239809
+    second: Gwen sprites_25
+  - first:
+      213: -8661935486813600529
+    second: Gwen_0
+  - first:
+      213: 9140814023783276045
+    second: Gwen_1
+  - first:
+      213: -6087116493083914855
+    second: Gwen_2
+  - first:
+      213: -3767920239792954239
+    second: Gwen_3
+  - first:
+      213: -2126102008187979942
+    second: Gwen_4
+  - first:
+      213: -5825206907008310380
+    second: Gwen_5
+  - first:
+      213: -2274701062576879061
+    second: Gwen_6
+  - first:
+      213: 4201897051902987769
+    second: Gwen_7
+  - first:
+      213: 8744906312849460904
+    second: Gwen_8
+  - first:
+      213: -9065333948087181714
+    second: Gwen_9
+  - first:
+      213: 243224327361280906
+    second: Gwen_0
+  - first:
+      213: -8995849160545512830
+    second: Gwen_1
+  - first:
+      213: 3710785693534375143
+    second: Gwen_2
+  - first:
+      213: 3365496610279475566
+    second: Gwen_3
+  - first:
+      213: 6581853217804675360
+    second: Gwen_4
+  - first:
+      213: -226636602047666057
+    second: Gwen_5
+  - first:
+      213: -66315565733296951
+    second: Gwen_6
+  - first:
+      213: -2265063500457926963
+    second: Gwen_7
+  - first:
+      213: -1483263131061915461
+    second: Gwen_8
+  - first:
+      213: 1648157423021738553
+    second: Gwen_9
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gwen_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7219
+        width: 282
+        height: 801
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b3a11bc3b106300800000000000000
+      internalID: 243224327361280906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gwen_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6417
+        width: 282
+        height: 801
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28250bcb9d2582380800000000000000
+      internalID: -8995849160545512830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gwen_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5615
+        width: 282
+        height: 801
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ecc7bc7deb5f7330800000000000000
+      internalID: 3710785693534375143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gwen_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4813
+        width: 282
+        height: 801
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e694d7cf555a4be20800000000000000
+      internalID: 3365496610279475566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gwen_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4011
+        width: 282
+        height: 801
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029620321a0775b50800000000000000
+      internalID: 6581853217804675360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gwen_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3209
+        width: 282
+        height: 801
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778e8d11633dadcf0800000000000000
+      internalID: -226636602047666057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gwen_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2407
+        width: 282
+        height: 801
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c443652856641ff0800000000000000
+      internalID: -66315565733296951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gwen_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1605
+        width: 282
+        height: 801
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce90854fb0e090e0800000000000000
+      internalID: -2265063500457926963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gwen_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 803
+        width: 282
+        height: 801
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0fe9c7a046a6be0800000000000000
+      internalID: -1483263131061915461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gwen_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 282
+        height: 801
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a4225a17e6fd610800000000000000
+      internalID: 1648157423021738553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

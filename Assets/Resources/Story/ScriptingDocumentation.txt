@@ -47,18 +47,21 @@ name|"String"|command|...
 			imageName: Name of image in 'images/UI/backdrops/' folder
 			speed: speed of which background shows up in transition, default is 2f
 			smooth: boolean for smooth transition, default is false
+
 	setForeground()
 		Description: Sets foreground image of game, which covers background and characters
 		Input Variables:
 			imageName: Name of image in 'images/UI?backdrops/'' folder
 			speed: speed of which background shows up in transition, default is 2f
 			smooth: boolean for smooth transition, default is false
+
 	setCinematic()
 		Description: Sets cinematic layer of game, which covers evertying
 		Input Variables:
 			imageName: Name of image in 'images/UI?backdrops/'' folder
 			speed: speed of which background shows up in transition, default is 2f
 			smooth: boolean for smooth transition, default is false
+
 	playSound(soundName)
 		Description: Plays sound effect
 		Input Variables:
@@ -67,6 +70,7 @@ name|"String"|command|...
 		Description: Plays song
 		Input Variables:
 			songName: Name of song in 'Audio/Music/' folder
+
 	moveCharacter(characterName,locationX,locationY,speed,smooth)
 		Description: Move character to x and y position of screen
 		Input Variables:
@@ -75,12 +79,14 @@ name|"String"|command|...
 			locationY: Y coordinate, 0 - 1. 0 is bottom portion of screen, 1 is top
 			speed (optional): How fast the character moves, default is 1f
 			smooth (optional): If character smoothly moves or snaps to new position
+
 	setPosition(characterName,locationX,locationY)
 		Description: Instantly snap character to x and y position of screen
 		Input Variables:
 			characterName: Name of Character you want to move
 			locationX: X coordinate, 0 - 1. 0 is leftmost portion of screen, 1 is rightmost
 			locationY: Y coordinate, 0 - 1. 0 is bottom portion of screen, 1 is top
+
 	changeExpression(characteName,region,expression,speed)
 		Description: Changes image used for sprite
 		Input Variables:
@@ -88,18 +94,22 @@ name|"String"|command|...
 			region: Either is 'face' or 'body', designates the area you want to change
 			expression: Name of sprite that is going to be changed to
 			speed (Optional): Speed of transition. If set to 0, expresion will instantly change. Anything else will be a gradual transition. Defualt is 0
+
 	flip(characterName):
 		Description: Flip Character horiztonal
 		Input Variables:
 			characterName: Name of character you want to flip
+
 	faceRight(characterName):
 		Description: Make Character Face Right
 		Input Variables:
 			characterName: Name of character you want to flip
+
 	faceLeft(characterName):
 		Description: Make Character Face Right
 		Input Variables:
 			characterName: Name of character you want to flip
+
 	enter(characterNames<;>,speed,smooth):
 		Speical format: enter(character0;character1;,3,false)
 		Description: Enter N amount of characters
@@ -121,6 +131,7 @@ name|"String"|command|...
 				Speed character pop into scene
 			smooth:
 				Smooth
+
 	transBackground(textureName,transitionName,speed,smooth):
 		Description: Transition Background to new texture with transition effect
 		Input Variables:
@@ -144,17 +155,57 @@ name|"String"|command|...
 				Speed of transition
 			smooth:
 				Smooth Transition
-	inputScreen
-		Description: Pop up input screen with referenc to function
 
-Example Script:
+	Load(chapter_file_name):
+		Description: Loads chapter file
+		Input Variables:
+			chapter_file_name: Name of chapter file
+Choices:
+	Format:
+		choice|"TITLE TEXT"
+	{
+	    "OPTION 1"
+	        COMMANDS
+	    "OPTION 2"
+	        COMMANDS
+	}
 
-setBackground(green, false, 1)|playMusic(Waltz)|enter(Raelin)
+	Example:
+		choice|"Is she an anime girl?"
+		{
+		    "Yes"
+		        Load(chapter_1a_test)
+		    "No"
+		        Load(chapter_1b_test)
+		}
 
-Raelin|"Hi, my name is Raelin.{a}[playSound(ButtonPush)] What's yours?{c}I heard you are into <b>anime girls</b>!"|moveCharacter(Raelin,0.7,0.5,1.5,false)
 
-"Good thing [changeExpression(Raelin,body,Raelin_1,0)]I'm an anime girl."
 
-narrator|"But in reality, she was a Kpop girl."
+Example Scripts:
 
-exit(Raelin)
+Ex 1:
+
+	setBackground(green, false, 1)|playMusic(Waltz)|enter(Raelin)
+
+	Raelin|"Hi, my name is Raelin.{a}[playSound(ButtonPush)] What's yours?{c}I heard you are into <b>anime girls</b>!"|moveCharacter(Raelin,0.7,0.5,1.5,false)
+
+	"Good thing [changeExpression(Raelin,body,Raelin_1,0)]I'm an anime girl."
+
+	narrator|"But in reality, she was a Kpop girl."
+
+	exit(Raelin)
+
+Ex 2:
+
+	setBackground(living_room,true,100)|playSound(ambient_rain)|setPosition(Gwen,.5,0)|enter(Gwen)
+	Gwen|"Hi, my name is Gwen.{a}[moveCharacter(Gwen,.75,0,1.5,false)] What's yours?{c}I heard you are into <b>anime girls</b>!"
+	"Good thing [changeExpression(Gwen,face,Gwen_4,1)]I'm an anime girl.[flip(Gwen)]"
+	narrator|"But in reality, she was a Kpop girl."
+
+	choice|"Is she an anime girl?"
+	{
+	    "Yes"
+	        Load(chapter_1a_test)
+	    "No"
+	        Load(chapter_1b_test)
+	}
