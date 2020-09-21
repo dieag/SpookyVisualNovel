@@ -17,8 +17,9 @@ public class NovelController : MonoBehaviour
     }
     // Start is called before the first frame update
     void Start()
-    {
+    {   
         LoadChapterFile("chapter0_start");
+        //LoadChapterFile("chapter1a");
     }
 
     // Update is called once per frame
@@ -265,6 +266,12 @@ public class NovelController : MonoBehaviour
             case "Load":
                 Command_Load(data[1]);
                 return;
+            case "endGame":
+                Command_EndGame(data[1]);
+                return;
+            case "loadMiniGame":
+                Command_LoadMiniGame(data[1]);
+                return;
             //case ("transCinematic"):
 
 		}
@@ -273,6 +280,23 @@ public class NovelController : MonoBehaviour
     void Command_Load(string chapterName)
     {
         NovelController.instance.LoadChapterFile(chapterName);
+    }
+
+    void Command_EndGame(string endGameName)
+    {
+        //Fade out
+        //Fade to end of game screen
+        //Choice
+            //Retry?
+            //Exit game
+    }
+
+
+    void Command_LoadMiniGame(string miniGameName)
+    {
+        //Fade out
+        //Fade to Mini Game
+
     }
 
     void Command_SetLayerImage(string data, BCFC.LAYER layer)
@@ -339,7 +363,7 @@ public class NovelController : MonoBehaviour
     	string character = parameters[0];
     	float locationX = float.Parse(parameters[1]);
     	float locationY = float.Parse(parameters[2]);
-    	Character c = CharacterManager.instance.getCharacter(character);
+    	Character c = CharacterManager.instance.getCharacter(character,true,false);
     	c.SetPosition(new Vector2(locationX, locationY));
     }
 
