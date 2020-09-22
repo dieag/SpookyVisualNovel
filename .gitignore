@@ -17,6 +17,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk'
+*.meta
+Library/Artifacts/*
 
 Temp/UnityLockfile
 
