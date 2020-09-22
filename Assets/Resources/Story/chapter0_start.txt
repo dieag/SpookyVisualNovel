@@ -1,4 +1,4 @@
-setBackground(living_room,true,100)|playSound(ambient_rain)	
+setBackground(living_room,true,100)|playMusic(ambient_rain, 0.5, 0.5)	
 
 narrator|"It's Halloween tonight. A storm pounds against the walls of this mansion, raindrops tapping impatiently against the glass window near the glowing fireplace."
 
@@ -10,7 +10,7 @@ setPosition(Gwen,.5,0)|enter(Gwen,1,true)
 
 Gwen|"So isolated." 
 
-narrator|"<i>THUNDER IN THE DISTANCE<\i>"
+narrator|"<i>THUNDER IN THE DISTANCE</i>"|playSound(effect_thunder1)
 
 narrator|"Another crack of thunder. I glance up towards the roof. Is the garden okay?" 
 
@@ -33,6 +33,8 @@ Gwen|"I haven't seen most of Victor's mansion. He has these strange locks on eve
 "I think Victor is a little fond of math. Cute. These all just look like the card number times ten!" 
 
 "Let's enter the correct code in." 
+
+loadPuzzle(puzzle1	)
 
 Gwen|"Yes! I'm in!"
 

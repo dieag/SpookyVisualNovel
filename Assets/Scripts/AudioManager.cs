@@ -118,7 +118,6 @@ public class AudioManager : MonoBehaviour
 			source.loop = loop;
 
 			AudioManager.allSongs.Add(this);
-
 			if(playOnStart)
 				source.Play();
 		}

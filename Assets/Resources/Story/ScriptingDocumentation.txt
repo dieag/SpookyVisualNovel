@@ -66,10 +66,12 @@ name|"String"|command|...
 		Description: Plays sound effect
 		Input Variables:
 			soundName: Name of sound in 'Audio/SFX/' folder
-	playMusic(songName)
+	playMusic(songName,maxVolume,startingVolume)
 		Description: Plays song
 		Input Variables:
 			songName: Name of song in 'Audio/Music/' folder
+			maxVolume: Volume of Song, 0.0 - 1.0 (0 quietest, 1 loudest)
+			startingValume: Starting volume of song, will transition to maxVolume (0.0 to 1)
 
 	moveCharacter(characterName,locationX,locationY,speed,smooth)
 		Description: Move character to x and y position of screen
@@ -160,6 +162,8 @@ name|"String"|command|...
 		Description: Loads chapter file
 		Input Variables:
 			chapter_file_name: Name of chapter file
+	loadPuzzle(puzzleName,PassChapter,FailChapter)
+
 Choices:
 	Format:
 		choice|"TITLE TEXT"
@@ -196,7 +200,7 @@ Ex 1:
 	exit(Raelin)
 
 Ex 2:
-
+	
 	setBackground(living_room,true,100)|playSound(ambient_rain)|setPosition(Gwen,.5,0)|enter(Gwen)
 	Gwen|"Hi, my name is Gwen.{a}[moveCharacter(Gwen,.75,0,1.5,false)] What's yours?{c}I heard you are into <b>anime girls</b>!"
 	"Good thing [changeExpression(Gwen,face,Gwen_4,1)]I'm an anime girl.[flip(Gwen)]"

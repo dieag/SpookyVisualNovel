@@ -1,0 +1,151 @@
+Gwen|"I have to get to the phone!" 
+
+narrator|"I quickly duck back down the ladder." 
+
+setBackground(hallway_up_light,true,100)
+
+"Damn!" 
+
+"Immediately, I hear someone coming up the stairs. They aren't even trying to be quiet!" 
+
+Man|"Oh Gweeeen? Come ouuuut!"
+
+narrator|"How do they know my name?? I need to get some help!"
+
+"The first door I see open is for the library. There's plenty of places for me to hide in there, right?"
+
+setBackground(library_door,true,100)
+
+"I run in and carefully close the door, hands shaking. Get a hold of yourself, Gwen!"
+
+"Victor’s bookshelves are packed with his favorite works, spanning many genres. The shelves he sectioned off for me to use are much barer, in contrast."
+
+"Where to hide, where to hide? I hear someone in the hallway moving closer." 
+
+"I notice a light in the corner of the library. Is that Victor's office?" 
+
+"Running over, I see a bookcase out of place, with a small room hidden behind it."
+
+Gwen|"Codes, hidden rooms… this house is so weird." 
+
+narrator|"I dash into the small room and tug the bookshelf door closed with all my strength. Gah! It's so heavy!!" 
+
+"<i>DOOR CLOSES</i>"
+
+setBackground(secret_room,true,100)
+
+playMusic(music_bedroom) 
+
+"Safe. I have to be safe, now. There's no way anyone but Victor could know about this. I'm sure Victor has a code to open it anyway." 
+
+"Maybe I would have found this room earlier if I had used the library more often. I'm lucky he left it open!"
+
+"There's no windows in here, and I can't hear the storm anymore. I settle into a chair with a sigh. No phone in sight, but at least I can take a breather."
+
+"There's more bookshelves in here next to a desk. The spines look almost ancient compared to the volumes in the library." 
+
+"I tilt my head to read the titles to try to take my mind off of everything. '19th Century African Safaris'. 'Encyclopedia of Knives, Swords, Spears & Daggers'. 'Aztecs and Sacrifice'. Eh. Just more historical non-fiction. Victor has always had an interest in that kind of stuff."
+
+"I scan along, feeling calmer while skimming through his titles. 'Leather + Hide'. Is this about how people make leather?"
+
+"I tug the volume off the shelf and a scrap of paper falls from the pages." 
+
+"setForeground(key2)""
+
+"Wait! This looks just like one of Victor's keys! There's a different card suite on it, and a different set of numbers lined up. I grab some tape off the desk and attach it to the key scrap I already have. I tuck the tape into my back pocket."
+
+"setForeground(tapedKey)"
+
+"I'm sure this will come in handy later. Having access to more rooms to hide in will be really helpful. I'm suddenly glad my boyfriend uses codes to lock doors instead of keys - there's no way the intruders could pick the lock."  
+
+"Suddenly, I hear a muffled set of footsteps wandering around just outside my hiding place. Oh, no!" 
+
+"There's no way they will find me in here! Right?" 
+
+"I duck my head down into my lap, squeezing my eyes shut." 
+
+Woman|"Gweeeen! Come say hi!" 
+
+"What? Who is that?? A woman??"
+
+"Is there more than one person?" 
+
+"The steps approach the secret door and I curl up tighter. Please leave!" 
+
+"The noise stops right outside the door. Do they know there's a room here? I realized I left the lights on. I'm so stupid." 
+
+"Breathe, breathe, breathe!" 
+
+"After I stay frozen for what seems like an eternity, the woman in the library finally shuffles away, and I hear the library door click shut. Oh, thank god!"
+
+Gwen|"I thought for sure she knew I was in here." 
+
+"Should I stay in here? Should I wait for Victor?"
+
+"Victor!"
+
+"There's no way he'll know there's people in here. What will they do when he walks in? He'll be taken by surprise!"
+
+"Come on, Gwen!!" 
+
+narrator|"I carefully push open the bookshelf door, peeking my head out to make sure no one is in the library. It seems empty." 
+
+playSound(ambient_rain)|playSound(effect_thunder2) 
+
+"I turn off the light and close the door."
+
+Gwen|"What should I do? I can try to run to the phone, or[txtSpd 30,1].......[\txtSpd] defend myself." 
+
+narrator|"I clench my fist."
+
+Gwen|They must have found the phone by now and destroyed it. That's too risky."
+
+"So, I guess it's time to defend myself." 
+
+"Happy Halloween, Gwen." 
+
+narrator|"I let a few moments pass and then I approach the library door, placing my hand on the doorknob. I twist it slowly and pull the door open." 
+
+setBackground(hallway_up_light,true,100)
+
+Gwen|"Silence.{a} Perfect." 
+
+"Where can I go to find something to defend myself? Victor's never talked about owning guns. I don't own any pepper spray, either."
+
+"Oh, wait!"
+
+"The kitchen! I think of the array of knives decorating the wall above the stove. There's a large butcher knife hanging there, I know it." 
+
+"But first… I need to get there. The stairs are back downstairs, behind the living room."
+
+narrator|"Hugging the wall, I creep through the hallway, aware of every small creak I hear and constantly checking my surroundings. When I make it to the stairs, I duck behind the railing as I step down. There's nowhere to really hide as I descend, and I'm very aware of how exposed I am."
+
+Gwen|"Please don't see me, please don't see me." 
+
+"When I reach the bottom of the stairs, I do a quick scan of the area. No one is there to greet me. Whew." 
+
+setBackground(living_room,true,100)
+
+"Just behind the wall by the couch - the kitchen!" 
+
+Gwen|"Wait, what?" 
+
+"The kitchen door - it's shut! In all the time I've lived here, it's never been shut!!" 
+
+narrator|"I run to the door and twist the knob, but it's locked. No!" 
+
+"I've never tried to unlock this door. But I need in!"
+
+"Wait - is that footsteps?{w 3} From upstairs?{w 3} Ah!!!" 
+
+"Someone is coming down the stairs! I need to open this fast!!!"
+
+loadPuzzle(puzzle1,chapter_2a,chapter_2b)
+
+choice|"Puzzle Result?"
+{
+    "Pass"
+        Load(chapter_2a)
+    "Fail"
+        Load(chapter_2b)
+}

@@ -119,7 +119,6 @@ public class NovelController : MonoBehaviour
             while(ChoiceScreen.isWaitingForChoiceToBeMade)
                 yield return new WaitForEndOfFrame();
             string action = actions[ChoiceScreen.lastChoiceMade.index];
-            Debug.Log(ChoiceScreen.lastChoiceMade.index);
             HandleLine(action);
 
             while(isHandlingLine)
@@ -269,8 +268,8 @@ public class NovelController : MonoBehaviour
             case "endGame":
                 Command_EndGame(data[1]);
                 return;
-            case "loadMiniGame":
-                Command_LoadMiniGame(data[1]);
+            case "loadPuzzle":
+                Command_LoadPuzzle(data[1]);
                 return;
             //case ("transCinematic"):
 
@@ -292,10 +291,12 @@ public class NovelController : MonoBehaviour
     }
 
 
-    void Command_LoadMiniGame(string miniGameName)
+    void Command_LoadPuzzle(string miniGameName)
     {
         //Fade out
         //Fade to Mini Game
+        //Input Screen
+        //There is a button to view cypher
 
     }
 
@@ -336,9 +337,12 @@ public class NovelController : MonoBehaviour
     }
     void Command_PlayMusic(string data)
     {
-    	AudioClip clip = Resources.Load("Audio/Music/" + data) as AudioClip;
+        string[] parameters = data.Split(',');
+        AudioClip clip = Resources.Load("Audio/Music/" + parameters[0]) as AudioClip;
+        float startingVolume = parameters.Length == 2 ? float.Parse(parameters[1]): 1f;
+        float maxVolume = parameters.Length == 3 ? float.Parse(parameters[2]): 1f; 
     	if (clip != null)
-    		AudioManager.instance.PlaySong(clip);
+    		AudioManager.instance.PlaySong(clip, maxVolume, 1f, startingVolume);
     	else
     		Debug.LogError("Clip " + data + " does not exist");
     }
