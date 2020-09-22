@@ -129,6 +129,46 @@ public class NovelController : MonoBehaviour
             Debug.LogError("Invalid choice operation. No choices were found.");
         }
     }
+ 
+    IEnumerator WaitForKeyDown(KeyCode keyCode)
+    {
+        while(!Input.GetKeyDown(keyCode))
+            yield return null; 
+    }
+
+    bool checkPuzzleAnswer(string puzzleAnswer, string puzzleName){
+        switch(puzzleName) {
+            case "puzzle0": return puzzleAnswer == "100201104070";
+            default: return false;
+        }
+    }
+
+    IEnumerator HandlePuzzle(string puzzleName, string passChapter, string failChapter)
+    {
+        bool gameDone = false;
+        bool passedTimedGame = true;
+        string puzzleInput = InputScreen.currentInput;
+        while(gameDone == false) {
+            yield return StartCoroutine(WaitForKeyDown(KeyCode.Return));
+            puzzleInput = InputScreen.currentInput;
+            gameDone = checkPuzzleAnswer(puzzleInput,puzzleName);
+            if(gameDone == false)
+                InputScreen.Show("<color=red>Wrong Answer</color>",true);
+        }
+        InputScreen.instance.Accept();
+        Command_SetLayerImage("null", BCFC.instance.foreground);
+        InputScreen.Hide();
+        Command_PlayMusic(lastPlayedClipData);
+        if(passChapter != "" && failChapter != "")
+        {
+            if(passedTimedGame)
+                Command_Load(passChapter);
+            else
+                Command_Load(failChapter);
+        }
+        Next();
+    }
+
 
     void HandleLine(string rawLine)
     {
@@ -281,24 +321,6 @@ public class NovelController : MonoBehaviour
         NovelController.instance.LoadChapterFile(chapterName);
     }
 
-    void Command_EndGame(string endGameName)
-    {
-        //Fade out
-        //Fade to end of game screen
-        //Choice
-            //Retry?
-            //Exit game
-    }
-
-
-    void Command_LoadPuzzle(string miniGameName)
-    {
-        //Fade out
-        //Fade to Mini Game
-        //Input Screen
-        //There is a button to view cypher
-
-    }
 
     void Command_SetLayerImage(string data, BCFC.LAYER layer)
     {
@@ -335,8 +357,11 @@ public class NovelController : MonoBehaviour
     	else
     		Debug.LogError("Clip " + data + " does not exist");
     }
-    void Command_PlayMusic(string data)
+    string lastPlayedClipData = "";
+    void Command_PlayMusic(string data, bool cacheLastPlayedClip = true)
     {
+        if(cacheLastPlayedClip)
+            lastPlayedClipData = data;
         string[] parameters = data.Split(',');
         AudioClip clip = Resources.Load("Audio/Music/" + parameters[0]) as AudioClip;
         float startingVolume = parameters.Length >= 2 ? float.Parse(parameters[1]): 1f;
@@ -514,4 +539,27 @@ public class NovelController : MonoBehaviour
         TransitionMaster.ShowScene(show, spd, smooth, transTex);
     }
 
+    void Command_EndGame(string endGameName)
+    {
+        //Fade out
+        //Fade to end of game screen
+        //Choice
+            //Retry?
+            //Exit game
+    }
+
+
+    public bool isHandlingPuzzle {get{return handlingPuzzle != null;}}
+    Coroutine handlingPuzzle = null;
+    void Command_LoadPuzzle(string data)
+    {
+        string[] parameters = data.Split(',');
+        string puzzleName = parameters[0];
+        string passChapter = parameters[1];
+        string failChapter = parameters[2];
+        Command_SetLayerImage(puzzleName+",1f,true",BCFC.instance.foreground);
+        Command_PlayMusic("music_puzzle,0.5,0.5",false);
+        InputScreen.Show("Enter the Key");
+        handlingPuzzle = StartCoroutine(HandlePuzzle(puzzleName,passChapter,failChapter));
+    }
 }

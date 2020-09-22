@@ -27,7 +27,6 @@ public class InputScreen : MonoBehaviour
 
 		if(clearCurrentInput)
 			instance.inputField.text = "";
-
 		if(title != "")
 			instance.header.Show(title);
 		else
@@ -44,6 +43,8 @@ public class InputScreen : MonoBehaviour
 	{
 		instance.root.SetActive(false);
 		instance.header.Hide();
+		if(isRevealing)
+			instance.StopCoroutine(revealing);
 	}
 
 	public static bool isWaitingForUserInput{get{return instance.root.activeInHierarchy;}}
@@ -53,9 +54,10 @@ public class InputScreen : MonoBehaviour
 	static IEnumerator Revealing()
 	{
 		instance.inputField.gameObject.SetActive(false);
-
-		while(instance.header.isRevealing)
-			yield return new WaitForEndOfFrame();
+		if(instance.header != null) {
+			while(instance.header.isRevealing)
+				yield return new WaitForEndOfFrame();
+		}
 		instance.inputField.gameObject.SetActive(true);
 
 		revealing = null;

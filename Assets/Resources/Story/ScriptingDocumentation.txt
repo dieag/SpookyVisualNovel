@@ -162,7 +162,13 @@ name|"String"|command|...
 		Description: Loads chapter file
 		Input Variables:
 			chapter_file_name: Name of chapter file
-	loadPuzzle(puzzleName,PassChapter,FailChapter)
+	loadPuzzle(puzzleName,PassChapter,FailChapter):
+		Description: Load puzzle. For a call that doesnt lead to split path, leave chapter vars blank i.e. loadPuzzle(puzzleName,,)
+		Input Variables:
+			puzzleName: Name of puzzle, tied to puzzle picture name
+			passChapter: Name of chapter file if player succeeds
+			FailChapter: Name of chapter file if player fails
+
 
 Choices:
 	Format:
