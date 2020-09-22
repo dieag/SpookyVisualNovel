@@ -34,7 +34,7 @@ narrator|"I dash into the small room and tug the bookshelf door closed with all 
 
 setBackground(secret_room,true,100)
 
-playMusic(music_bedroom) 
+playMusic(music_bedroom,0.5,0.5) 
 
 "Safe. I have to be safe, now. There's no way anyone but Victor could know about this. I'm sure Victor has a code to open it anyway." 
 

@@ -339,7 +339,7 @@ public class NovelController : MonoBehaviour
     {
         string[] parameters = data.Split(',');
         AudioClip clip = Resources.Load("Audio/Music/" + parameters[0]) as AudioClip;
-        float startingVolume = parameters.Length == 2 ? float.Parse(parameters[1]): 1f;
+        float startingVolume = parameters.Length >= 2 ? float.Parse(parameters[1]): 1f;
         float maxVolume = parameters.Length == 3 ? float.Parse(parameters[2]): 1f; 
     	if (clip != null)
     		AudioManager.instance.PlaySong(clip, maxVolume, 1f, startingVolume);

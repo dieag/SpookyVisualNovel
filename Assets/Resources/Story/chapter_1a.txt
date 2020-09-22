@@ -28,8 +28,12 @@ narrator|"I stumble back, tripping on the boxes littering the floor."
 
 Man|"Wait!"
 
-"The man lunges forward to grab me, but I crash into the window. Suddenly, there's nothing under me, and rain stings my eyes." 
+"The man lunges forward to grab me, but I crash into the window."
+
+"Suddenly, there's nothing under me, and rain stings my eyes."|playSound(effect_window_break)
 
 Gwen|"[txtSpd 30,1]WH-[/txtSpd]" 
+
 narrator|"<i>THUMP</i>"
+
 endGame(bad_end1)
