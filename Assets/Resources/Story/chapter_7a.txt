@@ -1,0 +1,77 @@
+showBackground(hallway_down_dark,true,1)|playMusic(music_pursuit,0.25,0.25)
+
+narrator|"Yes! {a}I'm in!"|playSound(effect_door_unlock)
+
+"I swing open the door - piles and piles of gasoline containers and propane tanks litter the room. {a}Holy shit."
+
+Gwen|"He's really gonna blow this place up."
+
+narrator|"I open the valves to the propane, snatch the first canister in front of me, and unscrew the cap, drizzling the pungent liquid around the entrance before dragging it out of the room."
+
+showBackground(living_room,true,1)
+
+narrator|"I trail the gas down the hall until I reach the living room. {a}Flames are still blazing in the fireplace - exactly what I needed."
+
+Gwen|"VICTOR!"
+
+narrator|"I hear one final crash and then heavy footsteps thud above me towards the stairs. {a}Victor's face appears at the top as he almost trips down them to the first floor."
+
+Victor|"Good work, Gwen."
+
+narrator|"He grabs my hand."
+
+Victor|"Throw it in the fire and let's GO!"
+
+narrator|"I chuck the last of the gasoline into the open fire and Victor pulls me down the hallway towards the broken window.[playSound(effect_run_inside)] {a}Glass cuts into my hands and legs and we tumble out onto the grass."
+
+showBackground(mansion_burning,true,1)
+
+playSound(ambient_rain,loop)
+
+narrator|"We did it! {a}It worked!"
+
+narrator|"The explosion rocks the earth beneath us and debris flies through the air. {a}Victor pulls me to my feet and we sprint away from the mansion, not stopping until we reach the edge of the forest. [playSound(effect_run_gravel)]"
+
+"Victor and I both turn, staring at the crimson inferno before us. {a}I can see his mother pounding on an upstairs window."
+
+Gwen|"Will she jump?"
+
+Victor|"No. {a}She knows she can't survive that."
+
+narrator|"I grab his arm and tug him deeper into the forest."
+
+Gwen|"Don't watch. {a}Let's just go."
+
+narrator|"He nods. {a}Together we enter the woods, leaving the mansion behind us."
+
+playMusic(music_library,0.25,0.25)|stopSound()
+
+narrator|"The rain is lighter now, and the storm is still. {a}All I hear is the roaring fire behind me and our feet sloshing across the muddy forest floor."
+
+"I let the silence between us hang in the air. {a}So much just happened. {a}Everything I thought I knew about Victor changed in less than an hour. {a}Now that my adrenaline is retreating, I can't stop thinking about what we'll do when we reach the bottom of the mountain."
+
+Victor|"I killed a lot of people, Gwen."
+
+Gwen|"Yeah. {a}I figured."
+
+Victor|"You can't let me get away with it."
+
+Gwen|"But you were forced into it."
+
+Victor|"Stop."
+
+narrator|"He turns to face me and we both stop walking."
+
+Victor|"I'm turning myself in when we reach the bottom."
+
+narrator|"When I meet his gaze, I notice he doesn't look sad. {a}He looks relieved, his eyes soft."
+
+Victor|"I'm free now. {a}Thanks to you."
+
+narrator|"He pulls me into a tight hug and I wrap my arms around him."
+
+"We stand there for a moment, the ashes of mansion mingling with the rainfall and misting over our shoulders."
+
+"It's over."
+
+"{wa 1}TRUE END: Goodbye forever."

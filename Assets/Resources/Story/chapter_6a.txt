@@ -1,0 +1,213 @@
+Man|"Help you? {a}Do you see where you are right now?"
+
+narrator|"Victor frowns and his mother laughs cruelly behind him."
+
+Woman|"Ha! {a}Victor helped you?"
+
+Gwen|"You did! {a}I know you did!"
+
+narrator|"I quickly tug the taped together codes out of my pocket, waving it in front of me."
+
+Gwen|"These! {a}I found all of these because of you!"
+
+Man|"He dropped that key for you so it would lead you here!"
+
+Gwen|"I'm not talking about that."
+
+narrator|"I point to the middle two keys."
+
+Gwen|"You left that door open in the library. {a}You NEVER leave that door open."
+
+narrator|"Victor's eyes soften a bit and his father frowns next to him."
+
+Gwen|"I could only find those knives because of you. {a}And you put the next key in there for me to find."
+
+narrator|"I grab his pant leg."
+
+Gwen|"You wanted me to escape. {a}God, I'm stupid. {a}Those knives, the books in your hidden library room... {a}you wanted me to figure it out, too."
+
+Woman|"What is she saying, Victor?"
+
+Victor|"Mother -"
+
+Man|"Just get it over with!"
+
+narrator|"Victor grimaces, lifting his knife."
+
+Gwen|"The diary! {a}In your room!"
+
+narrator|"He pauses."
+
+Gwen|"I know you aren't doing this because you want to. {a}I know you're afraid."
+
+Man|"Enough!"
+
+Gwen|"Wait!"
+
+narrator|"The man lifts his own blade into the air over my head. {a}No!!"
+
+playSound(effect_stab)
+
+Woman|"{wa 1}VICTOR!"
+
+narrator|"The man collapses, a knife hilt protruding from his chest. {a}Victor turns to me, hands empty."
+
+Victor|"Let's go!"
+
+narrator|"Yes!"
+
+"I grab his hand and see the woman rush over to the man collapsed on the floor. {a}He's not moving."
+
+Woman|"No! {a}No, no, no, no, no!!!!"
+
+Victor|"Gwen - "
+
+Woman|"I'LL KILL YOU!"
+
+Victor|"GO!"
+
+narrator|"I book it back to the ladder, Victor on my heels. {a}We scramble up the ladder as fast as possible, slamming the hatch shut behind us."
+
+showBackground(kitchen,true,1)
+
+Victor|"We aren't safe yet."
+
+Gwen|"What do you mean?"
+
+Victor|"There's another entrance."
+
+Gwen|"Damn. {a}Let's get to your car."
+
+Victor|"No. {a}She's probably slashing the tires right now."
+
+Gwen|"Then what? {a}What do we do?"
+
+Victor|"Burn this. {a}All of it."
+
+Gwen|"The mansion?"
+
+Victor|"With my mother inside."
+
+narrator|"Shit. {a}I lean back against the counter, but Victor looks unphased by what he just said."
+
+Gwen|"Are you okay?"
+
+Victor|"What? {a}No, of course I'm not okay."
+
+Gwen|"Ha."
+
+Victor|"Let's go."
+
+narrator|"He takes my hand and leads me out of the kitchen."
+
+showBackground(living_room,true,1)
+
+Victor|"My mother isn't stupid. {a}She'll be waiting for us somewhere outside. {a}We'll need to lure her back in."
+
+narrator|"I sit on the couch and Victor grimaces."
+
+Victor|"I wouldn't sit on that anymore."
+
+Gwen|"What? {a}Why?"
+
+Victor|"You remember seeing any books about… making leather?"
+
+Gwen|"Yes?"
+
+narrator|"He stares at me. {a}What does he mean by -"
+
+"Shit. {a}I bolt up from the couch, struggling to resist the urge to vomit."
+
+Victor|"Sorry. {a}We're almost done."
+
+narrator|"I can't meet his gaze."
+
+Victor|"Let's go."
+
+narrator|"He walks up the stairs and I follow at a distance, still trying to clear my head."|playSound(effect_stairs)
+
+showBackground(hallway_up_dark,true,1)
+
+Gwen|"How... {a}how will we get her inside?"
+
+Victor|"With bait."
+
+narrator|"He points to himself."
+
+Victor|"She wants to kill me more than you right now."
+
+Gwen|"Surely she's not dumb enough to fall for something like that."
+
+Victor|"Right now she is. {a}She's not thinking."
+
+narrator|"Victor swings open a window, thunder crackling in response."
+
+playSound(effect_thunder2)|playSound(ambient_rain, loop)
+
+Victor|"MOTHER!"
+
+Gwen|"Victor! {a}What are you doing?"
+
+Victor|"COME INSIDE AND HAVE A FEAST WITH US! {a}GWENNY IS CHOPPING UP DAD RIGHT NOW!"
+
+narrator|"My stomach turns again at his words, but stills at the blood-curdling scream that follows."
+
+stopSound()
+
+"He closes the window and places his hands firmly on my shoulders."
+
+Victor|"She's coming back inside. {a}We need to trap her."
+
+Gwen|"How?"
+
+Victor|"In my room."
+
+Gwen|"Will this place burn down fast enough before she breaks out?"
+
+Victor|"I can hold her at the bedroom door long enough if you can start the fire fast enough."
+
+Gwen|"How can I do that? {a}I need gasoline for a fire that big."
+
+Victor|"There's a room in the back of the first floor. {a}West side. {a}Blue door. {a}There's gas and propane inside."
+
+Gwen|"Why do you have that inside the mansion?"
+
+narrator|"Victor lifts his hands from my shoulders and turns back to the stairs."
+
+Victor|"I've always planned to end it this way."
+
+narrator|"When we reach the top of the stairs, Victor pauses and blocks me with his arm. {a}The woman screams below."
+
+Victor|"Damn! {a}Quick, run!"
+
+narrator|"He quickly shoves me in the opposite direction of the bedroom as his mother begins her loud, angry ascent."
+
+"I dart around the corner out of sight just as she reaches the top.[playSound(effect_run_inside)] {a}She shrieks and I hear the beginning of a pursuit as Victor runs in the opposite direction."
+
+"He can handle it. {a}I need to do my part."
+
+showBackground(living_room,true,1)|playSound(effect_stairs)
+
+"Panting at the bottom of the stairs, I rack my brain to remember which direction Victor told me to go."
+
+Gwen|"First floor. {a}West side."
+
+narrator|"Gotta move."
+
+showBackground(hallway_down_dark,true,1)
+
+"As I run down the hall, I notice that none of the locks are shattered. {a}I can get in the gasoline room!"
+
+"I finally see the blue door and stop, slamming my hand on the lock to activate the code. {a}Damn, a long one."
+
+"I can hear distant screeching and something banging. {a}Victor must have her trapped in the room! {a}I need to do this now!!"
+
+loadPuzzle(puzzle6,chapter_7a,chapter_7b)
+
+choice|"Puzzle Result?"
+{
+    "Pass"
+        Load(chapter_7a)
+    "Fail"
+        Load(chapter_7b)
+}

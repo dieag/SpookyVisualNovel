@@ -1,0 +1,29 @@
+showBackground(hallway_down_dark,true,1)
+
+playMusic(music_final)
+
+playSound(effect_puzzle_timeup)
+
+narrator|"Why did he have to make this so complicated? {a}Damn!"
+
+"A loud crash behind me - that sounded like a broken table!"
+
+Gwen|"Victor!"
+
+showBackground(living_room,true,1)
+
+narrator|"When I round the corner into the living room, I see Victor's body crumpled on a shattered desk beneath the stairs, blood pooling around his head."
+
+Gwen|"No! {a}No, Victor!"
+
+Woman|"HEY!"
+
+narrator|"I look up to see Victor's mother, face red with rage. {a}She's gripping a large brick over her head."
+
+Gwen|"YOU!"
+
+narrator|"She swings her arms and the brick rockets towards me before I can duck away."
+
+Gwen|"BITCH -"
+
+narrator|"{wa 1}END: Serious Sevens."

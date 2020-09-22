@@ -1,0 +1,53 @@
+narrator|"The diary... {a}the terrible secret... {a}"
+
+Gwen|"You're his parents... {a}"
+
+Woman|"Ha! {a}You're more clever than Victor says."
+
+narrator|"Victor stands slowly, and the woman hands him the knife."
+
+Victor|"How did you figure it out?"
+
+Gwen|"What are you doing? {a}I came here to help you!"
+
+narrator|"There's nowhere to run. {a}I'm trapped. {a}This isn't how it was supposed to go! {a}Why is he doing this?"
+
+narrator|"The man lunges at me and wrests the knife from my shaky grip. {a}He jumps back before I can retaliate."
+
+narrator|"I fall to my knees."
+
+Gwen|"Victor... {a}whatever this is, I can help you. {a}I know you don't want this."
+
+Woman|"I think we know our son a little better than you, dear."
+
+narrator|"She walks in front of me and crouches down so our faces are on the same level."
+
+Woman|"And we know what he needs. {a}What he craves."
+
+Gwen|"What do you mean?"
+
+Woman|"Our family has a long-held tradition. {a}Once a year, the adults all get together for a Halloween feast."
+
+Gwen|"A feast... {a}That's nothing special."
+
+Man|"Our menu is quite unique."
+
+narrator|"The woman smiles at me, raising a hand to my hair."
+
+Woman|"Tonight, you will be our main course."
+
+narrator|"My eyes lock onto the meat hook glinting in the light. {a}No way. {a}No."
+
+narrator|"The woman stands and steps aside. {a}Victor and his father move towards me simultaneously."
+
+Victor|"Just relax. {a}It'll be over soon."
+
+narrator|"No... {a}wait... {a}"
+
+choice|"I need to choose."
+{
+    "How could you do this to me?"
+        Load(chapter_6b)
+    "You didn't want this. {a}You've been trying to help me!"
+        Load(chapter_6a)
+}

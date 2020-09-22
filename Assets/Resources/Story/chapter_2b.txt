@@ -1,0 +1,15 @@
+showBackground(living_room,true,1)
+
+playSound(effect_puzzle_timeup)
+
+playMusic(music_pursuit,0.25,0.25)
+
+narrator|"No! {a}I couldn't open it in time!"
+
+"Someone grabs my arm, spinning me around. {a}It's the woman!"
+
+Woman|"Finally!"|playSound(effect_stab)
+
+Gwen|"Noooooooooo!!"
+
+narrator|"{wa 1}BAD END 2: Terrible Twos."

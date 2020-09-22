@@ -1,16 +1,18 @@
-Gwen|"The attic! They'll never find me there!"
+Gwen|"The attic! {a}They'll never find me there!"
 
-narrator|"I run to the hatch and swing it open, climbing down the ladder as fast as I can." 
+narrator|"I run to the hatch and swing it open, climbing down the ladder as fast as I can."
 
-setBackground(bedroom,true,100)
+setBackground(attic,true,1)
 
-Gwen|"Phew. There's a large window that overlooks the front of the mansion, but besides that, you can only get in here either through the roof or through the hidden entrance in the master bedroom." 
+playMusic(music_pursuit,0.25,0.25)
 
-"There's no way they'll find me here. No way." 
+"Phew. {a}There's a large window that overlooks the front of the mansion, but besides that, you can only get in here either through the roof or through the hidden entrance in the master bedroom."
 
-narrator|"I hear a crash downstairs and duck into a corner near the window. Don't scream. Victor will be here soon." 
+"There's no way they'll find me here. {a}No way."
 
-"<i>BANG!</i>{wa 2} <i>BANG!</i>{wa 2} <i>BANG!</i>{wa 2} The door swings open"
+"I hear a crash downstairs and duck into a corner near the window. {a}Don't scream. {a}Victor will be here soon."
+
+"<i>BANG!</i>{wa 0.5} <i>BANG!</i>{wa 0.5} <i>BANG!</i>{wa 0.5} The door swings open"
 
 Gwen|"What??"
 
@@ -18,21 +20,21 @@ narrator|"I leap to my feet just as someone slams open the attic door from the m
 
 moveCharacter(Gwen,.75,0,3)|setPosition(Man,.25,0)|enter(Man,1,true)
 
-narrator|"It's a man, brandishing a knife and grinning at me." 
+narrator|"It's a man, brandishing a knife and grinning at me."
 
-Man|"Happy Halloween, sweetie." 
+Man|"Happy Halloween, sweetie."
 
-Gwen|"No!{w 3}Get away from me!" 
+Gwen|"No! {a}Get away from me!"
 
-narrator|"I stumble back, tripping on the boxes littering the floor." 
+narrator|"I stumble back, tripping on the boxes littering the floor."
 
 Man|"Wait!"
 
-"The man lunges forward to grab me, but I crash into the window."
+narrator|"The man lunges forward to grab me, but I crash into the window."
 
 "Suddenly, there's nothing under me, and rain stings my eyes."|playSound(effect_window_break)
 
-Gwen|"[txtSpd 30,1]WH-[/txtSpd]" 
+Gwen|"[txtSpd 30,1]WH-[/txtSpd]"
 
 narrator|"<i>THUMP</i>"
 

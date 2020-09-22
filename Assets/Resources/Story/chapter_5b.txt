@@ -1,0 +1,49 @@
+Gwen|"What do you mean 'our little Victor'?"
+
+Man|"Come on, can't you figure it out yet?"
+
+narrator|"Victor finally stands, gently taking the knife from the woman's hand."
+
+Victor|"Gwen... {a}meet my parents."
+
+narrator|"The knife falls from my hands, clattering on the cement. {a}The man dashes forward and grabs the knife before I can shake myself out of shock."
+
+Gwen|"Y-You told me they died! {a}Years ago!"
+
+narrator|"He steps toward me, face unreadable. {a}My knees buckle, and I fall to the floor."
+
+Victor|"I'm sorry. {a}I lied."
+
+Gwen|"What? {a}What are you saying? {a}You're scaring me."
+
+Woman|"Scaring you? {a}Ha! {a}What happened to all that bravery?"
+
+narrator|"She walks in front of me and crouches down so our faces are on the same level."
+
+Woman|"Victor has a very special craving. {a}We all do."
+
+Gwen|"What do you mean?"
+
+Woman|"Our family has a long-held tradition. {a}Once a year, the adults all get together for a Halloween feast."
+
+Gwen|"A feast... {a}That's nothing special."
+
+Man|"Our menu is quite unique."
+
+narrator|"The woman smiles at me, raising a hand to my hair."
+
+Woman|"Tonight, you will be our main course."
+
+narrator|"My eyes lock onto the meat hook glinting in the light. {a}No way. {a}No."
+
+narrator|"The woman stands and steps aside. {a}Victor and his father move towards me simultaneously."
+
+Victor|"Just relax. {a}It'll be over soon."
+
+narrator|"No... {a}wait... {a}"
+
+choice|"I need to choose."
+{
+    "How could you do this to me?"
+        Load(chapter_6b)
+}
