@@ -79,6 +79,9 @@
     <Compile Include="Assets\Scripts\TagManager.cs" />
     <Compile Include="Assets\TEST\scripts\ChoiceScreenTesting.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\InputAndChoiceSystem\PuzzleScreen.cs" />
+    <Compile Include="Assets\Scripts\InputAndChoiceSystem\PuzzleButton.cs" />
+    <Compile Include="Assets\Scripts\InputAndChoiceSystem\Timer.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

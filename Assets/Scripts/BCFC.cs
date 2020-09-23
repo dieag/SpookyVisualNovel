@@ -10,6 +10,7 @@ public class BCFC : MonoBehaviour
 	public LAYER background = new LAYER();
 	public LAYER cinematic = new LAYER();
 	public LAYER foreground = new LAYER();
+	public LAYER cypherframe = new LAYER();
 
 
 	void Awake()

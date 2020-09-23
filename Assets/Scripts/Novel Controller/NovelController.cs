@@ -129,45 +129,6 @@ public class NovelController : MonoBehaviour
             Debug.LogError("Invalid choice operation. No choices were found.");
         }
     }
- 
-    IEnumerator WaitForKeyDown(KeyCode keyCode)
-    {
-        while(!Input.GetKeyDown(keyCode))
-            yield return null; 
-    }
-
-    bool checkPuzzleAnswer(string puzzleAnswer, string puzzleName){
-        switch(puzzleName) {
-            case "puzzle0": return puzzleAnswer == "100201104070";
-            default: return false;
-        }
-    }
-
-    IEnumerator HandlePuzzle(string puzzleName, string passChapter, string failChapter)
-    {
-        bool gameDone = false;
-        bool passedTimedGame = true;
-        string puzzleInput = InputScreen.currentInput;
-        while(gameDone == false) {
-            yield return StartCoroutine(WaitForKeyDown(KeyCode.Return));
-            puzzleInput = InputScreen.currentInput;
-            gameDone = checkPuzzleAnswer(puzzleInput,puzzleName);
-            if(gameDone == false)
-                InputScreen.Show("<color=red>Wrong Answer</color>",true);
-        }
-        InputScreen.instance.Accept();
-        Command_SetLayerImage("null", BCFC.instance.foreground);
-        InputScreen.Hide();
-        Command_PlayMusic(lastPlayedClipData);
-        if(passChapter != "" && failChapter != "")
-        {
-            if(passedTimedGame)
-                Command_Load(passChapter);
-            else
-                Command_Load(failChapter);
-        }
-        Next();
-    }
 
 
     void HandleLine(string rawLine)
@@ -319,13 +280,13 @@ public class NovelController : MonoBehaviour
 		}
     }
 
-    void Command_Load(string chapterName)
+    public void Command_Load(string chapterName)
     {
         NovelController.instance.LoadChapterFile(chapterName);
     }
 
 
-    void Command_SetLayerImage(string data, BCFC.LAYER layer)
+    public void Command_SetLayerImage(string data, BCFC.LAYER layer)
     {
     	string texName = data.Contains(",") ? data.Split(',')[0] : data;
     	Texture2D tex = texName == null ? null : Resources.Load("images/UI/backdrops/" + texName) as Texture2D;
@@ -352,7 +313,7 @@ public class NovelController : MonoBehaviour
     	}
     	layer.TransitionToTexture(tex, speed, smooth);
     }
-    void Command_PlaySound(string data)
+    public void Command_PlaySound(string data)
     {
     	AudioClip clip = Resources.Load("Audio/SFX/" + data) as AudioClip;
     	if (clip != null)
@@ -360,10 +321,9 @@ public class NovelController : MonoBehaviour
     	else
     		Debug.LogError("Clip " + data + " does not exist");
     }
-    string lastPlayedClipData = "";
-    void Command_PlayMusic(string data, bool cacheLastPlayedClip = true)
+    public string lastPlayedClipData = "";
+    public void Command_PlayMusic(string data, bool cacheLastPlayedClip = true)
     {
-        Debug.Log(data);
         if(cacheLastPlayedClip)
             lastPlayedClipData = data;
         string[] parameters = data.Split(',');
@@ -371,7 +331,6 @@ public class NovelController : MonoBehaviour
         float startingVolume = parameters.Length >= 2 ? float.Parse(parameters[1]): 1f;
         float maxVolume = parameters.Length == 3 ? float.Parse(parameters[2]): 1f; 
     	if (clip != null) {
-            Debug.Log(parameters[0]);
     		AudioManager.instance.PlaySong(clip, maxVolume, 1f, startingVolume);
         }
     	else
@@ -554,18 +513,17 @@ public class NovelController : MonoBehaviour
             //Exit game
     }
 
-
-    public bool isHandlingPuzzle {get{return handlingPuzzle != null;}}
-    Coroutine handlingPuzzle = null;
     void Command_LoadPuzzle(string data)
     {
         string[] parameters = data.Split(',');
         string puzzleName = parameters[0];
-        string passChapter = parameters[1];
-        string failChapter = parameters[2];
-        Command_SetLayerImage(puzzleName+",1f,true",BCFC.instance.foreground);
-        Command_PlayMusic("music_puzzle,0.5,0.5",false);
-        InputScreen.Show("Enter the Key");
-        handlingPuzzle = StartCoroutine(HandlePuzzle(puzzleName,passChapter,failChapter));
+        string keycode = parameters[1];
+        string passChapter = parameters.Length > 2 ? parameters[2] : "";
+        string failChapter = parameters.Length > 2 ? parameters[3] : "";
+        float time = 0f;
+        float fVal = 0;
+        if(parameters.Length > 2)
+            if(float.TryParse(parameters[4], out fVal)) {time = fVal;}
+        PuzzleScreen.instance.puzzleStart(puzzleName,keycode,passChapter,failChapter,time);
     }
 }

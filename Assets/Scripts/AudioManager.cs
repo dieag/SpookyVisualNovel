@@ -44,7 +44,6 @@ public class AudioManager : MonoBehaviour
 				SONG s = allSongs[i];
 				if (s.clip == song)
 				{
-					Debug.Log(song);
 					activeSong = s;
 					break;
 				}
@@ -73,7 +72,6 @@ public class AudioManager : MonoBehaviour
 		for(int i = allSongs.Count - 1; i >= 0; i--)
 		{
 			SONG song = allSongs[i];
-			Debug.Log("Clip " + song.clip + "activeSong " + activeSong.clip);
 
 			if (song == activeSong) {
 				if(song.volume < song.maxVolume)
@@ -82,7 +80,6 @@ public class AudioManager : MonoBehaviour
 					anyValueChanged = true;	
 				}
 			} else {
-				Debug.Log("Song Volume " + song.volume);
 				if(song.volume > 0f)
 				{
 					song.volume = songSmoothTransitions ? Mathf.MoveTowards(song.volume, 0f, speed) : 0f;
@@ -151,7 +148,6 @@ public class AudioManager : MonoBehaviour
 
 		public void Destroy()
 		{
-			Debug.Log("Destory" + this.clip);
 			AudioManager.allSongs.Remove(this);
 			DestroyImmediate(source.gameObject);
 		}
