@@ -1041,7 +1041,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Show Key
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1375,6 +1375,7 @@ GameObject:
   - component: {fileID: 660156674}
   - component: {fileID: 660156673}
   - component: {fileID: 660156675}
+  - component: {fileID: 660156676}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -1512,6 +1513,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   continualUpdate: 1
   fontSizeAtDefaultResolution: 40
+--- !u!114 &660156676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660156671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c85d35d15011043b2300db6be05b4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 660156673}
 --- !u!1 &739258682
 GameObject:
   m_ObjectHideFlags: 0
@@ -3242,7 +3256,6 @@ GameObject:
   - component: {fileID: 1431414740}
   - component: {fileID: 1431414739}
   - component: {fileID: 1431414743}
-  - component: {fileID: 1431414744}
   m_Layer: 5
   m_Name: PuzzleInputScreen
   m_TagString: Untagged
@@ -3352,19 +3365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleButton: {fileID: 2117187062}
---- !u!114 &1431414744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1431414737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2c85d35d15011043b2300db6be05b4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerText: {fileID: 660156673}
+  timer: {fileID: 660156676}
 --- !u!1 &1461359319
 GameObject:
   m_ObjectHideFlags: 0
