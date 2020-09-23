@@ -1,4 +1,3 @@
-
 setBackground(living_room,true,100)|playMusic(music_bedroom,0.25,0.25)
 
 narrator|"It's Halloween tonight. {a}A storm pounds against the walls of this mansion, raindrops tapping impatiently against the glass window near the glowing fireplace."
@@ -37,7 +36,7 @@ narrator|"After meandering and making some bad turns, I finally find it - the la
 
 "Let's enter the correct code in."
 
-loadPuzzle(puzzle0)
+loadPuzzle(puzzle0,100201104070)
 
 setBackground(hallway_up_light,true,1)
 
