@@ -1,4 +1,4 @@
-setBackground(living_room,true,100)|playMusic(ambient_rain,0.25,0.25)
+setBackground(living_room,true,100)|playMusic(ambient_rain,0.25,0)
 
 loadPuzzle(puzzle0,,)
 

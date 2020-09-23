@@ -311,7 +311,10 @@ public class NovelController : MonoBehaviour
             case "loadPuzzle":
                 Command_LoadPuzzle(data[1]);
                 return;
-            //case ("transCinematic"):
+            case "stopSound":
+                return;
+            case "stopMusic":
+                return;
 
 		}
     }
@@ -360,14 +363,17 @@ public class NovelController : MonoBehaviour
     string lastPlayedClipData = "";
     void Command_PlayMusic(string data, bool cacheLastPlayedClip = true)
     {
+        Debug.Log(data);
         if(cacheLastPlayedClip)
             lastPlayedClipData = data;
         string[] parameters = data.Split(',');
         AudioClip clip = Resources.Load("Audio/Music/" + parameters[0]) as AudioClip;
         float startingVolume = parameters.Length >= 2 ? float.Parse(parameters[1]): 1f;
         float maxVolume = parameters.Length == 3 ? float.Parse(parameters[2]): 1f; 
-    	if (clip != null)
+    	if (clip != null) {
+            Debug.Log(parameters[0]);
     		AudioManager.instance.PlaySong(clip, maxVolume, 1f, startingVolume);
+        }
     	else
     		Debug.LogError("Clip " + data + " does not exist");
     }

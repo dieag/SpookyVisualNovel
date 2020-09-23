@@ -54,10 +54,8 @@ public class InputScreen : MonoBehaviour
 	static IEnumerator Revealing()
 	{
 		instance.inputField.gameObject.SetActive(false);
-		if(instance.header != null) {
-			while(instance.header.isRevealing)
-				yield return new WaitForEndOfFrame();
-		}
+		while(instance.header.isRevealing)
+			yield return new WaitForEndOfFrame();
 		instance.inputField.gameObject.SetActive(true);
 
 		revealing = null;

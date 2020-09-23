@@ -8,8 +8,8 @@ public class AudioManager : MonoBehaviour
 	public static SONG activeSong = null;
 	public static List<SONG> allSongs = new List<SONG>();
 
-	public float songTransitionSpeed = 2f;
-	public bool songSmoothTransitions = true;
+	public float songTransitionSpeed = 0.5f;
+	public bool songSmoothTransitions = true;	
 
 	void Awake()
 	{
@@ -36,6 +36,7 @@ public class AudioManager : MonoBehaviour
 
 	public void PlaySong(AudioClip song, float maxVolume =1f, float pitch = 1f, float startingVolume = 0f, bool playOnStart = true, bool loop = true)
 	{
+
 		if(song != null)
 		{
 			for(int i = 0; i < allSongs.Count; i++)
@@ -43,6 +44,7 @@ public class AudioManager : MonoBehaviour
 				SONG s = allSongs[i];
 				if (s.clip == song)
 				{
+					Debug.Log(song);
 					activeSong = s;
 					break;
 				}
@@ -71,17 +73,19 @@ public class AudioManager : MonoBehaviour
 		for(int i = allSongs.Count - 1; i >= 0; i--)
 		{
 			SONG song = allSongs[i];
+			Debug.Log("Clip " + song.clip + "activeSong " + activeSong.clip);
 
 			if (song == activeSong) {
 				if(song.volume < song.maxVolume)
 				{
-					song.volume = songSmoothTransitions ? Mathf.Lerp(song.volume, song.maxVolume, speed) : Mathf.MoveTowards(song.volume, song.maxVolume, speed);
+					song.volume = songSmoothTransitions ? Mathf.MoveTowards(song.volume, song.maxVolume, speed) : 0f;
 					anyValueChanged = true;	
 				}
 			} else {
-				if(song.volume > 0)
+				Debug.Log("Song Volume " + song.volume);
+				if(song.volume > 0f)
 				{
-					song.volume = songSmoothTransitions ? Mathf.Lerp(song.volume, 0f, speed) : Mathf.MoveTowards(song.volume, 0f, speed);
+					song.volume = songSmoothTransitions ? Mathf.MoveTowards(song.volume, 0f, speed) : 0f;
 					anyValueChanged = true;
 				} else {
 					allSongs.RemoveAt(i);
@@ -147,6 +151,7 @@ public class AudioManager : MonoBehaviour
 
 		public void Destroy()
 		{
+			Debug.Log("Destory" + this.clip);
 			AudioManager.allSongs.Remove(this);
 			DestroyImmediate(source.gameObject);
 		}
