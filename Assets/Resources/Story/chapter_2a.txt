@@ -1,0 +1,165 @@
+playMusic(music_library,0.25, 0.25)
+
+setBackground(kitchen,true,1)
+
+Gwen|"Yes! {a}It's open!"|playSound(effect_door_unlock)
+
+narrator|"I rush in and close the door behind me, leaning against its cold steel and taking deep breaths."|playSound(effect_door_close)
+
+"I can't hear anything through the door this time. {a}Damn. {a}How will I know when it's safe?"
+
+"I glance around the kitchen. {a}Kept perfectly clean, everything in its place. {a}Victor is a bit of a neat freak, so I know no one has trashed this place yet. {a}I'd rather him be this way than a slob though."
+
+"The knives are gleaming in the moonlight from a skylight above. {a}The butcher knife is at the end of the row, exactly where I thought it would be."
+
+"I walk to the counter and reach up for the handle. {a}When I pull it off the wall, it feels a little heavy in my hands. {a}It's been a while since I've used this knife in the kitchen."
+
+"Can I actually do this? {a}Can I actually… you know, stab someone?"
+
+"I guess with this it'd be more of a chop than a stab, huh? {a}I can probably chop someone..."
+
+Gwen|"Ha..."
+
+narrator|"When can I leave the kitchen? {a}I wish I could hear anything outside the door. {a}Damn."
+
+"My eyes wander around the room until it settles on a cabinet in a corner, locked with one of those special locks. {a}That's been sealed ever since I've moved in. {a}When I asked Victor what was in it, he said it was just antique kitchenware that was locked away so it couldn't be stolen."
+
+"Odd that he wouldn't want them displayed, though. {a}I'd at least lock them in a glass case, or something."
+
+"I kneel down in front of the cabinet, tapping the screen."
+
+Gwen|"Oh! {a}Wait, I think I can unlock this!"
+
+narrator|"Let's give it a shot."
+
+loadPuzzle(puzzle2)
+
+setBackground(kitchen,true,1)
+
+playMusic(music_library,0.25, 0.25)
+
+"Done! {a}The door swings open."
+
+"Laying on the cabinet shelves are piles of knives, scattered, unsorted. {a}This isn't like Victor."
+
+"They range from dingy stone knives to razor sharp steel blades, some as short as three inches and some as long as my forearm. {a}They do all look a little old, but… I'm not sure why Victor would lock these up."
+
+Gwen|"Maybe they're worth a fortune?"
+
+narrator|"There's something under the knife pile - another scrap of paper!"
+
+// show scrap
+
+"It's another suite and another set of numbers. {a}This is getting a little complicated. {a}I tape it to my key and turn back to the pile of knives."
+
+"I pick up one of the longer ones. {a}The sharp tip gleams in the light. {a}This one might be better than the butcher knife"
+
+"Standing, I put the butcher knife back and swing my new knife a bit, getting used to the weight. {a}It's lighter, faster. {a}Definitely easier to use to defend myself."
+
+"I approach the kitchen door, taking a deep breath. {a}You can do this, Gwen. {a}My hand gripping the knife starts to sweat."
+
+"There's no way to know if someone will be behind the door. {a}But I have to open it."
+
+"I push it open, brandishing my knife in my right hand and ready to strike as my eyes move around the living room."
+
+setBackground(living_room,true,1)
+
+"No one. {a}I got lucky."
+
+playSound(effect_thunder1)
+
+"The thunder cracks loudly and a flash of lightning blinds me through the window. {a}With a loud pop, I hear all the lightbulbs die through the mansion."
+
+Gwen|"Shit."
+
+narrator|"The fireplace is now the only source of light in the entire mansion, aside from the occasional flash from the lightning outside. {a}I wish I could stay by the fire forever, reading my book, and not worrying about getting my throat slit."
+
+"But for now, I need to decide where to go. {a}I've heard two people in the mansion so far, but there could be more. {a}If they are separated, though, I might have a chance."
+
+"Let's check around downstairs. {a}I know for sure that someone was recently here, and with any luck they're still down here. {a}Alone."
+
+"On top of that... I've never heard more than one person at a time. {a}The chances are high that they are wandering around alone."
+
+setBackground(hallway_down_dark,true,1)
+
+"No light, as expected. {a}Every single door in the long hallway is shut."
+
+"Are they hiding? {a}Are they waiting for me?"
+
+"I shake my head. {a}I can't back out now."
+
+"Slowly, I move through the hallway. {a}Every door I pass looms behind me, and I strain to listen for the sound of any of them opening behind me."
+
+"I've been in some of these rooms before. {a}Guest bedrooms, bathrooms, a sauna… Victor really has it all."
+
+"It always made me wonder, though, what could possibly be behind the other doors. {a}What else does he need?"
+
+"At the end of the hallway, I pause, eyes locked on the entrance to the final room."
+
+"There's a small window at the top of the door, and when I look in I see a workbench with papers scattered around. {a}More books are stacked on metal mobile shelves.
+
+"And a man is leaning over the workbench, faced away from the door."
+
+"I duck down. {a}My hand grips the knife against my chest. {a}The man inside is alone. {a}This is my chance."
+
+"I turn to the door, and see a lock. {a}Damn. {a}Can I open it?"
+
+"My fingers carefully press the touchpad and the code buzzes to life on the screen."
+
+loadPuzzle(puzzle2)
+
+"Got it."
+
+playSound(effect_door_open)
+
+"Wait, shit!"
+
+"I forgot about the sound it makes!"
+
+Man|"Who's there?"
+
+playMusic(music_pursuit,0.25,0.25)
+
+narrator|"I gotta run!"|playSound(effect_run_inside)
+
+setBackground(living_room,true,1)
+
+"Upstairs, upstairs!"|playSound(effect_stairs)
+
+setBackground(hallway_up_dark,true,1)
+
+"Shit, are any of these doors open? {a}Can I go back into the library?"
+
+"I hear shouting downstairs - the man and woman! {a}I’m hoping no one else is here."
+
+"I run to the library door and turn the knob but the door doesn't budge. {a}Do I need to unlock it?"
+
+Gwen|"Oh, shit. {a}The lock…"
+
+narrator|"It's shattered. {a}There's no getting in here."
+
+Woman|"Stop running!"
+
+narrator|"Oh god! {a}They're coming up the stairs!!"
+
+"I scramble to find another hiding spot. {a}I can't fight them both at once!"playSound(effect_run_inside)
+
+"As I run down the winding hallway, I see that all of the locks have been smashed. {a}No!"
+
+"At the end of the hall, I place my hands on my knees, gasping for breath. {a}Dead end. {a}They'll find me any minute now."
+
+"I glance at the door in front of me. {a}Smashed. {a}As expected."
+
+"Wait? {a}It looks like the screen is still functioning! {a}I tap the screen and the code buzzes to life. {a}Yes!"
+
+"I have to open this door!"
+
+loadPuzzle(puzzle3,chapter_3a,chapter_3b)
+
+choice|"Puzzle Result?"
+{
+    "Pass"
+        Load(chapter_3a)
+    "Fail"
+        Load(chapter_3b)
+}
