@@ -72,7 +72,16 @@ name|"String"|command|...
 			songName: Name of song in 'Audio/Music/' folder
 			maxVolume: Volume of Song, 0.0 - 1.0 (0 quietest, 1 loudest)
 			startingValume: Starting volume of song, will transition to maxVolume (0.0 to 1)
-
+	playAmbientMusic(songName,maxVolume,startingVolume)
+		Description: Plays Ambient Music (Exactly like playMusic)
+		Input Variables:
+			songName: Name of song in 'Audio/Music/' folder
+			maxVolume: Volume of Song, 0.0 - 1.0 (0 quietest, 1 loudest)
+			startingValume: Starting volume of song, will transition to maxVolume (0.0 to 1)
+	stopMusic()
+		Description: Stop Music Track
+	stopAmbientMusic():
+		Description: Stops Ambient Music Track
 	moveCharacter(characterName,locationX,locationY,speed,smooth)
 		Description: Move character to x and y position of screen
 		Input Variables:

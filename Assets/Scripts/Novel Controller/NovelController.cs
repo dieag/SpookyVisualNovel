@@ -230,7 +230,10 @@ public class NovelController : MonoBehaviour
 			case "playMusic":
 				Command_PlayMusic(data[1]);
 				return;
-			case "moveCharacter":
+            case "ambientMusic":
+                Command_PlayMusic(data[1]);
+                return;
+            case "moveCharacter":
 				Command_MoveCharacter(data[1]);
 				return;
 			case "setPosition":
@@ -272,9 +275,11 @@ public class NovelController : MonoBehaviour
             case "loadPuzzle":
                 Command_LoadPuzzle(data[1]);
                 return;
-            case "stopSound":
+            case "stopAmbientMusic":
+                Command_StopAmbientMusic();
                 return;
             case "stopMusic":
+                Command_StopMusic();
                 return;
 
 		}
@@ -335,6 +340,33 @@ public class NovelController : MonoBehaviour
         }
     	else
     		Debug.LogError("Clip " + data + " does not exist");
+    }
+
+    public void Command_StopMusic()
+    {
+        AudioManager.instance.StopSong();
+    }
+
+    public string lastPlayedAmbientClipData = "";
+    public void Command_PlayAmbientMusic(string data, bool cacheLastPlayedClip = true)
+    {
+        if (cacheLastPlayedClip)
+            lastPlayedAmbientClipData = data;
+        string[] parameters = data.Split(',');
+        AudioClip clip = Resources.Load("Audio/Music/" + parameters[0]) as AudioClip;
+        float startingVolume = parameters.Length >= 2 ? float.Parse(parameters[1]) : 1f;
+        float maxVolume = parameters.Length == 3 ? float.Parse(parameters[2]) : 1f;
+        if (clip != null)
+        {
+            AudioManager.instance.PlayAmbientSong(clip, maxVolume, 1f, startingVolume);
+        }
+        else
+            Debug.LogError("Clip " + data + " does not exist");
+    }
+
+    public void Command_StopAmbientMusic()
+    {
+        AudioManager.instance.StopAmbientSong();
     }
 
     void Command_MoveCharacter(string data)

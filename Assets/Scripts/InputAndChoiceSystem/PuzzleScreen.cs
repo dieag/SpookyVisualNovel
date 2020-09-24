@@ -47,6 +47,9 @@ public class PuzzleScreen : MonoBehaviour
     IEnumerator HandlePuzzle(string puzzleName, string keyCode, string passChapter, string failChapter, float timerStart)
     {
         bool gameDone = false;
+        AudioClip wrongAnswerClip = Resources.Load("Audio/SFX/effect_puzzle_fail") as AudioClip;
+        AudioClip passedClip = Resources.Load("Audio/SFX/effect_puzzle_pass") as AudioClip;
+        AudioClip failClip = Resources.Load("Audio/SFX/effect_puzzle_timeup") as AudioClip;
         bool passedTimedGame = true;
         string puzzleInput = InputScreen.currentInput;
         timer.StartTimer(timerStart);
@@ -55,13 +58,16 @@ public class PuzzleScreen : MonoBehaviour
         while(gameDone == false) {
             yield return StartCoroutine(WaitForKeyDown(KeyCode.Return));
             if(timer.isTimeOut && timer.isTimerOn) {
+                //Out of Time so failed
                 passedTimedGame = false;
                 break;
             }
             puzzleInput = InputScreen.currentInput;
             gameDone = (puzzleInput == keyCode);
-            if(gameDone == false)
-                InputScreen.Show("<color=red>Wrong Answer</color>",true);
+            if (gameDone == false) {
+                AudioManager.instance.PlaySFX(wrongAnswerClip);
+                InputScreen.Show("<color=red>Wrong Answer</color>", true);
+            }
         }
         timer.StopTimer();
         InputScreen.instance.Accept();
@@ -69,7 +75,12 @@ public class PuzzleScreen : MonoBehaviour
         NovelController.instance.Command_SetLayerImage("null", BCFC.instance.cypherframe);
         InputScreen.Hide();
         NovelController.instance.Command_PlayMusic(NovelController.instance.lastPlayedClipData);
-        if(passChapter != "" && failChapter != "")
+        NovelController.instance.Command_PlayAmbientMusic(NovelController.instance.lastPlayedAmbientClipData);
+        if(passedTimedGame)
+            AudioManager.instance.PlaySFX(passedClip);
+        else
+            AudioManager.instance.PlaySFX(failClip);
+        if (passChapter != "" && failChapter != "")
         {
             if(passedTimedGame)
                 NovelController.instance.Command_Load(passChapter);

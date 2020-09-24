@@ -38,9 +38,7 @@ narrator|"After meandering and making some bad turns, I finally find it - the la
 
 loadPuzzle(puzzle0,100201104070)
 
-setBackground(hallway_up_light,true,1)
-
-Gwen|"Yes! {a}I'm in!"
+Gwen|"Yes! {a}I'm in!"|setBackground(hallway_up_light,true,1)
 
 narrator|"I've done this so many times that I could probably just memorize it if I wanted to."
 

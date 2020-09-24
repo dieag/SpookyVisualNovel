@@ -6,7 +6,9 @@ public class AudioManager : MonoBehaviour
 {
 	public static AudioManager instance;
 	public static SONG activeSong = null;
+	public static SONG activeAmbientSong = null;
 	public static List<SONG> allSongs = new List<SONG>();
+	public static List<SONG> allAmbientSongs = new List<SONG>();
 
 	public float songTransitionSpeed = 0.5f;
 	public bool songSmoothTransitions = true;	
@@ -57,6 +59,45 @@ public class AudioManager : MonoBehaviour
 		StopAllCoroutines();
 		StartCoroutine(VolumeLeveling());
 	}
+	public void StopSong()
+	{
+
+		activeSong = null;
+		StopAllCoroutines();
+		StartCoroutine(VolumeLeveling());
+	}
+
+	public void PlayAmbientSong(AudioClip song, float maxVolume = 1f, float pitch = 1f, float startingVolume = 0f, bool playOnStart = true, bool loop = true)
+	{
+
+		if (song != null)
+		{
+			for (int i = 0; i < allAmbientSongs.Count; i++)
+			{
+				SONG s = allAmbientSongs[i];
+				if (s.clip == song)
+				{
+					activeAmbientSong = s;
+					break;
+				}
+
+			}
+			if (activeAmbientSong == null || activeAmbientSong.clip != song)
+				activeAmbientSong = new SONG(song, maxVolume, pitch, startingVolume, playOnStart, loop);
+		}
+		else
+			activeAmbientSong = null;
+
+		StopAllCoroutines();
+		StartCoroutine(VolumeLeveling());
+	}
+	public void StopAmbientSong()
+	{
+
+		activeAmbientSong = null;
+		StopAllCoroutines();
+		StartCoroutine(VolumeLeveling());
+	}
 
 	IEnumerator VolumeLeveling()
 	{
@@ -86,6 +127,42 @@ public class AudioManager : MonoBehaviour
 					anyValueChanged = true;
 				} else {
 					allSongs.RemoveAt(i);
+					song.Destroy();
+					continue;
+				}
+			}
+		}
+
+		return anyValueChanged;
+	}
+
+	bool TransitionAmbientSongs()
+	{
+		bool anyValueChanged = false;
+
+		float speed = songTransitionSpeed * Time.deltaTime;
+		for (int i = allAmbientSongs.Count - 1; i >= 0; i--)
+		{
+			SONG song = allAmbientSongs[i];
+
+			if (song == activeAmbientSong)
+			{
+				if (song.volume < song.maxVolume)
+				{
+					song.volume = songSmoothTransitions ? Mathf.MoveTowards(song.volume, song.maxVolume, speed) : 0f;
+					anyValueChanged = true;
+				}
+			}
+			else
+			{
+				if (song.volume > 0f)
+				{
+					song.volume = songSmoothTransitions ? Mathf.MoveTowards(song.volume, 0f, speed) : 0f;
+					anyValueChanged = true;
+				}
+				else
+				{
+					allAmbientSongs.RemoveAt(i);
 					song.Destroy();
 					continue;
 				}
