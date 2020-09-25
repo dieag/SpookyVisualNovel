@@ -1,0 +1,430 @@
+fileFormatVersion: 2
+guid: 180b22c4cc33690479abe33a83325630
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2054795350586306836
+    second: VictorBody_FistUp
+  - first:
+      213: 7956847696485898840
+    second: VictorBody_HandDown
+  - first:
+      213: -5930382201812604227
+    second: VictorBody_BloodyFistUp
+  - first:
+      213: 7062580043189101827
+    second: VictorBody_BloodyHandsDown
+  - first:
+      213: -6913433976813651228
+    second: VictorFace_ShockedMouthOpen
+  - first:
+      213: -1318037268567972054
+    second: VictorFace_ShockedMouthClosed
+  - first:
+      213: 5338025896362290184
+    second: VictorFace_Happy
+  - first:
+      213: 7838576296132536716
+    second: VictorFace_Talking
+  - first:
+      213: 1892293842520867361
+    second: VictorFace_BoredMouthClosed
+  - first:
+      213: -5872877791097517397
+    second: VictorFace_BoredMouthOpen
+  - first:
+      213: -3211658402132948283
+    second: VictorFace_AngryMouthOpen
+  - first:
+      213: 4094270928094477490
+    second: VictorFace_AngryMouthClosed
+  - first:
+      213: 6383004209405024057
+    second: Victor_0
+  - first:
+      213: -5590876236584428412
+    second: Victor_1
+  - first:
+      213: 151079666130825154
+    second: Victor_2
+  - first:
+      213: 1506171395846745147
+    second: Victor_3
+  - first:
+      213: -5587722413605684575
+    second: Victor_4
+  - first:
+      213: 1446723418537147654
+    second: Victor_5
+  - first:
+      213: 6516882486722894819
+    second: Victor_6
+  - first:
+      213: 4897518994718083931
+    second: Victor_7
+  - first:
+      213: -3020544075849931928
+    second: Victor_8
+  - first:
+      213: -7415759091312774584
+    second: Victor_9
+  - first:
+      213: -4537546563006067004
+    second: Victor_10
+  - first:
+      213: -9128245371950401709
+    second: Victor_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Victor_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11837
+        width: 543
+        height: 1075
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937d865828cf49850800000000000000
+      internalID: 6383004209405024057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Victor_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10761
+        width: 543
+        height: 1075
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c563f3fa73962b0800000000000000
+      internalID: -5590876236584428412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Victor_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9685
+        width: 543
+        height: 1075
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf2388e72eb81200800000000000000
+      internalID: 151079666130825154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Victor_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8609
+        width: 543
+        height: 1075
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3cac4c87eef6e410800000000000000
+      internalID: 1506171395846745147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Victor_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7533
+        width: 543
+        height: 1075
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa7b81e11c6472b0800000000000000
+      internalID: -5587722413605684575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Victor_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6457
+        width: 543
+        height: 1075
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d352ab84bc31410800000000000000
+      internalID: 1446723418537147654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Victor_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5381
+        width: 543
+        height: 1075
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb1510081e907a50800000000000000
+      internalID: 6516882486722894819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Victor_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4305
+        width: 543
+        height: 1075
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b46e8d39b77f340800000000000000
+      internalID: 4897518994718083931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Victor_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3229
+        width: 543
+        height: 1075
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863ed82aa2fd416d0800000000000000
+      internalID: -3020544075849931928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Victor_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2153
+        width: 543
+        height: 1075
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842bd66956ee51990800000000000000
+      internalID: -7415759091312774584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Victor_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1077
+        width: 543
+        height: 1075
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce8a3021756701c0800000000000000
+      internalID: -4537546563006067004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Victor_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 543
+        height: 1075
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357fa4e9235f15180800000000000000
+      internalID: -9128245371950401709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

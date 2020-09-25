@@ -554,8 +554,11 @@ public class NovelController : MonoBehaviour
         string failChapter = parameters.Length > 2 ? parameters[3] : "";
         float time = 0f;
         float fVal = 0;
-        if(parameters.Length > 2)
-            if(float.TryParse(parameters[4], out fVal)) {time = fVal;}
+        Debug.Log(parameters.Length);
+        if (parameters.Length > 2)
+        {
+            if (float.TryParse(parameters[4], out fVal)) { time = fVal; }
+        }
         PuzzleScreen.instance.puzzleStart(puzzleName,keycode,passChapter,failChapter,time);
     }
 }

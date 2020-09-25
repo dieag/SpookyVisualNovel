@@ -58,6 +58,7 @@
     <Compile Include="Assets\Scripts\InputAndChoiceSystem\TitleHeader.cs" />
     <Compile Include="Assets\Scripts\InputAndChoiceSystem\InputScreen.cs" />
     <Compile Include="Assets\TEST\scripts\characterTesting.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\TEST\scripts\TransitionMasterTesting.cs" />
     <Compile Include="Assets\Scripts\TransitionMaster.cs" />
     <Compile Include="Assets\Scripts\TextArchitect.cs" />
@@ -82,7 +83,6 @@
     <Compile Include="Assets\Scripts\TagManager.cs" />
     <Compile Include="Assets\TEST\scripts\ChoiceScreenTesting.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
