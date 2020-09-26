@@ -4,34 +4,34 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -8661935486813600529
-    second: Gwen_0
+    second: stand
   - first:
       213: 9140814023783276045
-    second: Gwen_1
+    second: standarmsbehind
   - first:
       213: -6087116493083914855
-    second: Gwen_2
+    second: neutral
   - first:
       213: -3767920239792954239
-    second: Gwen_3
+    second: shock
   - first:
       213: -2126102008187979942
-    second: Gwen_4
+    second: shocktalk
   - first:
       213: -5825206907008310380
-    second: Gwen_5
+    second: unamusedtalk
   - first:
       213: -2274701062576879061
-    second: Gwen_6
+    second: unamused
   - first:
       213: 4201897051902987769
-    second: Gwen_7
+    second: happytalk
   - first:
       213: 8744906312849460904
-    second: Gwen_8
+    second: happy
   - first:
       213: -9065333948087181714
-    second: Gwen_9
+    second: neutraltalk
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -119,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gwen_0
+      name: stand
       rect:
         serializedVersion: 2
         x: 0
@@ -127,7 +127,7 @@ TextureImporter:
         width: 282
         height: 801
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -140,7 +140,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gwen_1
+      name: standarmsbehind
       rect:
         serializedVersion: 2
         x: 0
@@ -148,7 +148,7 @@ TextureImporter:
         width: 282
         height: 801
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -161,7 +161,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gwen_2
+      name: neutral
       rect:
         serializedVersion: 2
         x: 0
@@ -169,7 +169,7 @@ TextureImporter:
         width: 282
         height: 801
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -182,7 +182,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gwen_3
+      name: shock
       rect:
         serializedVersion: 2
         x: 0
@@ -190,7 +190,7 @@ TextureImporter:
         width: 282
         height: 801
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -203,7 +203,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gwen_4
+      name: shocktalk
       rect:
         serializedVersion: 2
         x: 0
@@ -211,7 +211,7 @@ TextureImporter:
         width: 282
         height: 801
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -224,7 +224,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gwen_5
+      name: unamusedtalk
       rect:
         serializedVersion: 2
         x: 0
@@ -232,7 +232,7 @@ TextureImporter:
         width: 282
         height: 801
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -245,7 +245,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gwen_6
+      name: unamused
       rect:
         serializedVersion: 2
         x: 0
@@ -253,7 +253,7 @@ TextureImporter:
         width: 282
         height: 801
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -266,7 +266,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gwen_7
+      name: happytalk
       rect:
         serializedVersion: 2
         x: 0
@@ -274,7 +274,7 @@ TextureImporter:
         width: 282
         height: 801
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -287,7 +287,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gwen_8
+      name: happy
       rect:
         serializedVersion: 2
         x: 0
@@ -295,7 +295,7 @@ TextureImporter:
         width: 282
         height: 801
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -308,7 +308,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gwen_9
+      name: neutraltalk
       rect:
         serializedVersion: 2
         x: 0
@@ -316,7 +316,7 @@ TextureImporter:
         width: 282
         height: 801
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

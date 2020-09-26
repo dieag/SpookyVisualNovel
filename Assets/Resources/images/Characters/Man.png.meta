@@ -4,37 +4,37 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 5207544987158716770
-    second: Man_0
+    second: standknifeout
   - first:
       213: -2250128633291984448
-    second: Man_1
+    second: standknife
   - first:
       213: -672509754820783249
-    second: Man_2
+    second: stand
   - first:
       213: -5657222779149273551
-    second: Man_3
+    second: happytalk
   - first:
       213: -761530471776030657
-    second: Man_4
+    second: unamused
   - first:
       213: -526423914407090313
-    second: Man_5
+    second: disgust
   - first:
       213: 5427590300147334247
-    second: Man_6
+    second: angry
   - first:
       213: -4532698330198780497
-    second: Man_7
+    second: unamusedtalk
   - first:
       213: -3907811233784148841
-    second: Man_8
+    second: happy
   - first:
       213: 6146765075070113607
-    second: Man_9
+    second: disgusttalk
   - first:
       213: -3331590989316002027
-    second: Man_10
+    second: angrytalk
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Man_0
+      name: standknifeout
       rect:
         serializedVersion: 2
         x: 0
@@ -130,7 +130,7 @@ TextureImporter:
         width: 502
         height: 1081
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -143,7 +143,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_1
+      name: standknife
       rect:
         serializedVersion: 2
         x: 0
@@ -151,7 +151,7 @@ TextureImporter:
         width: 502
         height: 1081
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -164,7 +164,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_2
+      name: stand
       rect:
         serializedVersion: 2
         x: 0
@@ -172,7 +172,7 @@ TextureImporter:
         width: 502
         height: 1081
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -185,7 +185,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_3
+      name: happytalk
       rect:
         serializedVersion: 2
         x: 0
@@ -193,7 +193,7 @@ TextureImporter:
         width: 502
         height: 1081
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -206,7 +206,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_4
+      name: unamused
       rect:
         serializedVersion: 2
         x: 0
@@ -214,7 +214,7 @@ TextureImporter:
         width: 502
         height: 1081
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -227,7 +227,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_5
+      name: disgust
       rect:
         serializedVersion: 2
         x: 0
@@ -235,7 +235,7 @@ TextureImporter:
         width: 502
         height: 1081
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -248,7 +248,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_6
+      name: angry
       rect:
         serializedVersion: 2
         x: 0
@@ -256,7 +256,7 @@ TextureImporter:
         width: 502
         height: 1081
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -269,7 +269,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_7
+      name: unamusedtalk
       rect:
         serializedVersion: 2
         x: 0
@@ -277,7 +277,7 @@ TextureImporter:
         width: 502
         height: 1081
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -290,7 +290,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_8
+      name: happy
       rect:
         serializedVersion: 2
         x: 0
@@ -298,7 +298,7 @@ TextureImporter:
         width: 502
         height: 1081
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -311,7 +311,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_9
+      name: disgusttalk
       rect:
         serializedVersion: 2
         x: 0
@@ -319,7 +319,7 @@ TextureImporter:
         width: 502
         height: 1081
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -332,15 +332,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_10
+      name: angrytalk
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
+        y: 0
         width: 502
         height: 1081
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

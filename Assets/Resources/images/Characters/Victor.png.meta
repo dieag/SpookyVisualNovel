@@ -4,40 +4,40 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -2054795350586306836
-    second: Victor_0
+    second: standarm
   - first:
       213: 7956847696485898840
-    second: Victor_1
+    second: stand
   - first:
       213: -5930382201812604227
-    second: Victor_2
+    second: standarmblood
   - first:
       213: 7062580043189101827
-    second: Victor_3
+    second: standblood
   - first:
       213: -6913433976813651228
-    second: Victor_4
+    second: shocktalk
   - first:
       213: -1318037268567972054
-    second: Victor_5
+    second: shock
   - first:
       213: 5338025896362290184
-    second: Victor_6
+    second: happy
   - first:
       213: 7838576296132536716
-    second: Victor_7
+    second: happytalk
   - first:
       213: 1892293842520867361
-    second: Victor_8
+    second: unamused
   - first:
       213: -5872877791097517397
-    second: Victor_9
+    second: unamusedtalk
   - first:
       213: -3211658402132948283
-    second: Victor_10
+    second: angrytalk
   - first:
       213: 4094270928094477490
-    second: Victor_11
+    second: angry
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -125,7 +125,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Victor_0
+      name: standarm
       rect:
         serializedVersion: 2
         x: 0
@@ -133,7 +133,7 @@ TextureImporter:
         width: 545
         height: 1075.6666
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,7 +146,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Victor_1
+      name: stand
       rect:
         serializedVersion: 2
         x: 0
@@ -154,7 +154,7 @@ TextureImporter:
         width: 545
         height: 1075.6666
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,7 +167,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Victor_2
+      name: standarmblood
       rect:
         serializedVersion: 2
         x: 0
@@ -175,7 +175,7 @@ TextureImporter:
         width: 545
         height: 1075.6666
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,15 +188,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Victor_3
+      name: standblood
       rect:
         serializedVersion: 2
         x: 0
-        y: 8608.333
+        y: 8607
         width: 545
-        height: 1075.6666
+        height: 1076
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,7 +209,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Victor_4
+      name: shocktalk
       rect:
         serializedVersion: 2
         x: 0
@@ -217,7 +217,7 @@ TextureImporter:
         width: 545
         height: 1075.6666
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,7 +230,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Victor_5
+      name: shock
       rect:
         serializedVersion: 2
         x: 0
@@ -238,7 +238,7 @@ TextureImporter:
         width: 545
         height: 1075.6666
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,7 +251,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Victor_6
+      name: happy
       rect:
         serializedVersion: 2
         x: 0
@@ -259,7 +259,7 @@ TextureImporter:
         width: 545
         height: 1075.6666
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -272,7 +272,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Victor_7
+      name: happytalk
       rect:
         serializedVersion: 2
         x: 0
@@ -280,7 +280,7 @@ TextureImporter:
         width: 545
         height: 1075.6666
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -293,7 +293,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Victor_8
+      name: unamused
       rect:
         serializedVersion: 2
         x: 0
@@ -301,7 +301,7 @@ TextureImporter:
         width: 545
         height: 1075.6666
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -314,7 +314,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Victor_9
+      name: unamusedtalk
       rect:
         serializedVersion: 2
         x: 0
@@ -322,7 +322,7 @@ TextureImporter:
         width: 545
         height: 1075.6666
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -335,15 +335,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Victor_10
+      name: angrytalk
       rect:
         serializedVersion: 2
         x: 0
-        y: 1076.3334
+        y: 1076
         width: 545
-        height: 1075.6666
+        height: 1076
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -356,15 +356,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Victor_11
+      name: angry
       rect:
         serializedVersion: 2
         x: 0
-        y: 0.33337402
+        y: 0
         width: 545
-        height: 1075.6666
+        height: 1076
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
