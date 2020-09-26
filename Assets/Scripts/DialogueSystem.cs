@@ -8,6 +8,7 @@ public class DialogueSystem : MonoBehaviour {
 
 	public static DialogueSystem instance;
 	public ELEMENTS elements;
+	public GameObject root;
 
 	void Awake()
 	{
@@ -16,6 +17,7 @@ public class DialogueSystem : MonoBehaviour {
 	
 	public void Say(string speech, string speaker = "", bool additive = false)
 	{
+		root.SetActive(true);
 		StopSpeaking();
 		if (additive)
 			speechText.text = targetSpeech;

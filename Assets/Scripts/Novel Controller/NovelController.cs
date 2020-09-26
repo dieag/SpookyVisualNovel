@@ -5,11 +5,11 @@ using UnityEngine;
 public class NovelController : MonoBehaviour
 {
 
-    public static NovelController instance; 
+    public static NovelController instance;
 
 	List<string> data = new List<string>();
     [HideInInspector]
-	public char delimiter = '|';
+    public char delimiter = '|';
 
     void Awake()
     {
@@ -281,7 +281,12 @@ public class NovelController : MonoBehaviour
             case "stopMusic":
                 Command_StopMusic();
                 return;
-
+            case "checkFlagLoad":
+                Command_CheckFlagLoad(data[1]);
+                return;
+            case "setFlag":
+                Command_SetFlag(data[1]);
+                return;
 		}
     }
 
@@ -289,7 +294,35 @@ public class NovelController : MonoBehaviour
     {
         NovelController.instance.LoadChapterFile(chapterName);
     }
+    public void Command_CheckFlagLoad(string data)
+    {
+        string[] parameters = data.Split(',');
+        string character = parameters[0];
+        string chapterNamePass = parameters[1];
+        string chapterNameFail = parameters[2];
 
+        Character c = CharacterManager.instance.getCharacter(character, true, false);
+        if (c.flag)
+        {
+            NovelController.instance.LoadChapterFile(chapterNamePass);
+        } else
+        {
+            NovelController.instance.LoadChapterFile(chapterNameFail);
+        }
+
+    }
+    public void Command_SetFlag(string data)
+    {
+        string[] parameters = data.Split(',');
+        string character = parameters[0];
+        bool flag;
+        Character c = CharacterManager.instance.getCharacter(character, true, false);
+        if (bool.TryParse(parameters[1], out flag))
+        { 
+            c.flag = flag; 
+        }
+
+    }
 
     public void Command_SetLayerImage(string data, BCFC.LAYER layer)
     {
@@ -326,6 +359,7 @@ public class NovelController : MonoBehaviour
     	else
     		Debug.LogError("Clip " + data + " does not exist");
     }
+    [HideInInspector]
     public string lastPlayedClipData = "";
     public void Command_PlayMusic(string data, bool cacheLastPlayedClip = true)
     {
@@ -346,7 +380,7 @@ public class NovelController : MonoBehaviour
     {
         AudioManager.instance.StopSong();
     }
-
+    [HideInInspector]
     public string lastPlayedAmbientClipData = "";
     public void Command_PlayAmbientMusic(string data, bool cacheLastPlayedClip = true)
     {

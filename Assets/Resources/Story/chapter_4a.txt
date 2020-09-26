@@ -168,13 +168,4 @@ Woman|"Our little Victor... {a}always was so obedient growing up, wasn't he?"
 
 "My eyes widen."
 
-checkVar(var_read,chapter_5a,chapter_5b)
-
-
-choice|"Diary"
-{
-    "True"
-        Load(chapter_5a)
-    "False"
-        Load(chapter_5b)
-}
+checkFlagLoad(chapter_5a,chapter_5b)

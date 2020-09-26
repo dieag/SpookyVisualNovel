@@ -8,7 +8,8 @@ public class Character {
 
 	public string char_name;
 	[HideInInspector]public RectTransform root;
-	
+	[HideInInspector]public bool flag = false;
+
 	public bool enabled {get {return root.gameObject.activeInHierarchy;} set{root.gameObject.SetActive(value);}}
 
 	public Vector2 anchorPadding {get{return root.anchorMax - root.anchorMin;}}
@@ -32,6 +33,7 @@ public class Character {
 		}
 		return sprites.Length > 0 ? sprites[0] : null;
 	}
+
 
 	public void SetBody(int index)
 	{
@@ -175,6 +177,16 @@ public class Character {
 
 		TransitionBody(alphaSprite, speed, smooth);
 		TransitionExpression(alphaSprite, speed, smooth);
+	}
+
+	public void SetFlag(bool value)
+    {
+		flag = value;
+    }
+
+	public bool GetFlag(bool value)
+	{
+		return flag;
 	}
 
 	Sprite lastBodySprite, lastFacialSprite = null;

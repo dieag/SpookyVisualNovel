@@ -63,7 +63,7 @@ narrator|"Should I read it? {a}{a}{a}I know this is wrong..."
 choice|"Should I read it? {a}{a}{a}I know this is wrong..."
 {
     "Read the diary."
-        var_read = true
+        setFlag(Gwen,true)
 
         narrator|"I crack it open. {a}{a}I know, I shouldn't read this. {a}{a}But I’m desperate for a distraction. {a}{a}I'll apologize later."
 
@@ -107,7 +107,6 @@ choice|"Should I read it? {a}{a}{a}I know this is wrong..."
 
 
     "Put it back."
-        var_read = false
 
         narrator|"This is none of my business, and I would hate to invade Victor's privacy. {a}{a}He wouldn't have hidden this behind so many locks if he wanted me to see it."
 
