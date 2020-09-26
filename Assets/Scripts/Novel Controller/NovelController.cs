@@ -10,6 +10,8 @@ public class NovelController : MonoBehaviour
 	List<string> data = new List<string>();
     [HideInInspector]
     public char delimiter = '|';
+    [HideInInspector]
+    public bool blockNext = false;
 
     void Awake()
     {
@@ -26,7 +28,6 @@ public class NovelController : MonoBehaviour
     {
     	if(Input.GetKeyDown(KeyCode.RightArrow))  
     	{
-            
             Next();
     	}
     }
@@ -46,7 +47,8 @@ public class NovelController : MonoBehaviour
     bool _next = false;
     public void Next()
     {
-        _next = true;
+        if(!blockNext)
+            _next = true;
     }
 
     public bool isHandlingChapterFile {get{return handlingChapterFile != null;}}
@@ -578,16 +580,16 @@ public class NovelController : MonoBehaviour
     {
         string[] parameters = data.Split(',');
         string puzzleName = parameters[0];
-        string keycode = parameters[1];
-        string passChapter = parameters.Length > 2 ? parameters[2] : "";
-        string failChapter = parameters.Length > 2 ? parameters[3] : "";
+        string keyImage = parameters[1];
+        string keycode = parameters[2];
+        string passChapter = parameters.Length > 3 ? parameters[3] : "";
+        string failChapter = parameters.Length > 3 ? parameters[4] : "";
         float time = 0f;
         float fVal = 0;
-        Debug.Log(parameters.Length);
-        if (parameters.Length > 2)
+        if (parameters.Length > 3)
         {
-            if (float.TryParse(parameters[4], out fVal)) { time = fVal; }
+            if (float.TryParse(parameters[5], out fVal)) { time = fVal; }
         }
-        PuzzleScreen.instance.puzzleStart(puzzleName,keycode,passChapter,failChapter,time);
+        PuzzleScreen.instance.puzzleStart(puzzleName,keyImage, keycode, passChapter,failChapter,time);
     }
 }

@@ -1,4 +1,5 @@
 setBackground(living_room,true,100)|playMusic(music_bedroom,0,0.25)
+loadPuzzle(puzzle3,key3,100201104070)
 
 narrator|"It's Halloween tonight. {a}A storm pounds against the walls of this mansion, raindrops tapping impatiently against the glass window near the glowing fireplace."
 

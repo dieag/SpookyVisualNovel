@@ -10,8 +10,11 @@ public class PuzzleScreen : MonoBehaviour
 	public static PuzzleScreen instance;
 	public PuzzleButton puzzleButton;
 	public Timer timer;
+    public GameObject inputField;
+    public GameObject inputHeader;
+    private string keyImage;
 
-	void Awake()
+    void Awake()
 	{
 		instance = this;
 	}
@@ -36,17 +39,19 @@ public class PuzzleScreen : MonoBehaviour
 
 	public bool isHandlingPuzzle {get{return handlingPuzzle != null;}}
     Coroutine handlingPuzzle = null;
-	public void puzzleStart(string puzzleName, string keyCode, string passChapter, string failChapter, float timerStart)
+	public void puzzleStart(string puzzleName, string _keyImage, string keyCode, string passChapter, string failChapter, float timerStart)
 	{
 		NovelController.instance.Command_SetLayerImage(puzzleName+",1f,true",BCFC.instance.foreground);
         NovelController.instance.Command_PlayMusic("music_puzzle,0.5,0.5",false);
         InputScreen.Show("Enter the Key");
-        handlingPuzzle = StartCoroutine(HandlePuzzle(puzzleName,keyCode,passChapter,failChapter,timerStart));
+        handlingPuzzle = StartCoroutine(HandlePuzzle(puzzleName, keyCode, passChapter,failChapter,timerStart));
+        keyImage = _keyImage;
 	}
 
     IEnumerator HandlePuzzle(string puzzleName, string keyCode, string passChapter, string failChapter, float timerStart)
     {
         bool gameDone = false;
+        NovelController.instance.blockNext = true;
         AudioClip wrongAnswerClip = Resources.Load("Audio/SFX/effect_puzzle_fail") as AudioClip;
         AudioClip passedClip = Resources.Load("Audio/SFX/effect_puzzle_pass") as AudioClip;
         AudioClip failClip = Resources.Load("Audio/SFX/effect_puzzle_timeup") as AudioClip;
@@ -87,6 +92,7 @@ public class PuzzleScreen : MonoBehaviour
             else
                 NovelController.instance.Command_Load(failChapter);
         }
+        NovelController.instance.blockNext = false;
         NovelController.instance.Next();
     }
 
@@ -94,10 +100,18 @@ public class PuzzleScreen : MonoBehaviour
     public void ShowKey(PuzzleButton button)
     {
     	showingKey ^= true;
-    	if(showingKey)
-    		NovelController.instance.Command_SetLayerImage("cypher_key", BCFC.instance.cypherframe);
-    	else
-    		NovelController.instance.Command_SetLayerImage("null", BCFC.instance.cypherframe);
+        if (showingKey)
+        {
+            NovelController.instance.Command_SetLayerImage(keyImage, BCFC.instance.cypherframe);
+            inputHeader.SetActive(false);
+            inputField.SetActive(false);
+        }
+        else
+        {
+            NovelController.instance.Command_SetLayerImage("null", BCFC.instance.cypherframe);
+            inputHeader.SetActive(true);
+            inputField.SetActive(true);
+        }
 
     }
 

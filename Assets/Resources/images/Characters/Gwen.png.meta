@@ -3,84 +3,6 @@ guid: f0e4a15e66c9be9428d2cbe4369c9ebd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -324285440327765518
-    second: Gwen sprites_0
-  - first:
-      213: -8643989434455216732
-    second: Gwen sprites_1
-  - first:
-      213: 6139005885574232119
-    second: Gwen sprites_2
-  - first:
-      213: 2196471402463874293
-    second: Gwen sprites_3
-  - first:
-      213: -112820388870866284
-    second: Gwen sprites_4
-  - first:
-      213: -8486011462873121749
-    second: Gwen sprites_5
-  - first:
-      213: -7573904982636327900
-    second: Gwen sprites_6
-  - first:
-      213: -5976868931104763212
-    second: Gwen sprites_7
-  - first:
-      213: 174321166061095267
-    second: Gwen sprites_8
-  - first:
-      213: -8068214911554156567
-    second: Gwen sprites_9
-  - first:
-      213: -1506951713672650896
-    second: Gwen sprites_10
-  - first:
-      213: 5681125994575368461
-    second: Gwen sprites_11
-  - first:
-      213: 2533391656611215318
-    second: Gwen sprites_12
-  - first:
-      213: 5611202117749826689
-    second: Gwen sprites_13
-  - first:
-      213: -4786153753054392949
-    second: Gwen sprites_14
-  - first:
-      213: 7692874802861282589
-    second: Gwen sprites_15
-  - first:
-      213: -8392347819280373495
-    second: Gwen sprites_16
-  - first:
-      213: 8388096533386462107
-    second: Gwen sprites_17
-  - first:
-      213: 1694601493898665079
-    second: Gwen sprites_18
-  - first:
-      213: 1608272404692119845
-    second: Gwen sprites_19
-  - first:
-      213: -2305194691074852224
-    second: Gwen sprites_20
-  - first:
-      213: -4715639947115598826
-    second: Gwen sprites_21
-  - first:
-      213: 4129617391954564451
-    second: Gwen sprites_22
-  - first:
-      213: 2671523076506050293
-    second: Gwen sprites_23
-  - first:
-      213: -9181243964155328516
-    second: Gwen sprites_24
-  - first:
-      213: -3632163843984239809
-    second: Gwen sprites_25
-  - first:
       213: -8661935486813600529
     second: Gwen_0
   - first:
@@ -109,36 +31,6 @@ TextureImporter:
     second: Gwen_8
   - first:
       213: -9065333948087181714
-    second: Gwen_9
-  - first:
-      213: 243224327361280906
-    second: Gwen_0
-  - first:
-      213: -8995849160545512830
-    second: Gwen_1
-  - first:
-      213: 3710785693534375143
-    second: Gwen_2
-  - first:
-      213: 3365496610279475566
-    second: Gwen_3
-  - first:
-      213: 6581853217804675360
-    second: Gwen_4
-  - first:
-      213: -226636602047666057
-    second: Gwen_5
-  - first:
-      213: -66315565733296951
-    second: Gwen_6
-  - first:
-      213: -2265063500457926963
-    second: Gwen_7
-  - first:
-      213: -1483263131061915461
-    second: Gwen_8
-  - first:
-      213: 1648157423021738553
     second: Gwen_9
   externalObjects: {}
   serializedVersion: 11
@@ -186,7 +78,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -241,8 +133,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8b3a11bc3b106300800000000000000
-      internalID: 243224327361280906
+      spriteID: fe40021519f9ac780800000000000000
+      internalID: -8661935486813600529
       vertices: []
       indices: 
       edges: []
@@ -262,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28250bcb9d2582380800000000000000
-      internalID: -8995849160545512830
+      spriteID: d0ed28dace1bade70800000000000000
+      internalID: 9140814023783276045
       vertices: []
       indices: 
       edges: []
@@ -283,8 +175,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ecc7bc7deb5f7330800000000000000
-      internalID: 3710785693534375143
+      spriteID: 99dcf4becc7368ba0800000000000000
+      internalID: -6087116493083914855
       vertices: []
       indices: 
       edges: []
@@ -304,8 +196,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e694d7cf555a4be20800000000000000
-      internalID: 3365496610279475566
+      spriteID: 184e2255188a5bbc0800000000000000
+      internalID: -3767920239792954239
       vertices: []
       indices: 
       edges: []
@@ -325,8 +217,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 029620321a0775b50800000000000000
-      internalID: 6581853217804675360
+      spriteID: a57f5b5fc719e72e0800000000000000
+      internalID: -2126102008187979942
       vertices: []
       indices: 
       edges: []
@@ -346,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 778e8d11633dadcf0800000000000000
-      internalID: -226636602047666057
+      spriteID: 4932e9c6e25b82fa0800000000000000
+      internalID: -5825206907008310380
       vertices: []
       indices: 
       edges: []
@@ -367,8 +259,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c443652856641ff0800000000000000
-      internalID: -66315565733296951
+      spriteID: b2ac6ea7f63ae60e0800000000000000
+      internalID: -2274701062576879061
       vertices: []
       indices: 
       edges: []
@@ -388,8 +280,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dce90854fb0e090e0800000000000000
-      internalID: -2265063500457926963
+      spriteID: 9fd40792b13205a30800000000000000
+      internalID: 4201897051902987769
       vertices: []
       indices: 
       edges: []
@@ -409,8 +301,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb0fe9c7a046a6be0800000000000000
-      internalID: -1483263131061915461
+      spriteID: 8ae867385f52c5970800000000000000
+      internalID: 8744906312849460904
       vertices: []
       indices: 
       edges: []
@@ -430,8 +322,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93a4225a17e6fd610800000000000000
-      internalID: 1648157423021738553
+      spriteID: e6e59fdedc6713280800000000000000
+      internalID: -9065333948087181714
       vertices: []
       indices: 
       edges: []
