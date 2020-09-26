@@ -4,34 +4,34 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -5214326327777863317
-    second: Female_0
+    second: standing
   - first:
       213: 8298529408443100213
-    second: Female_1
+    second: standingknife
   - first:
       213: -6518665748617429779
-    second: Female_2
+    second: snear
   - first:
       213: -6267183408718571335
-    second: Female_3
+    second: laugh
   - first:
       213: 8282999082770283381
-    second: Female_4
+    second: angry
   - first:
       213: 412429259375262135
-    second: Female_5
+    second: angrytalk
   - first:
       213: -4915345205940628438
-    second: Female_6
+    second: sad
   - first:
       213: -7355322185358604753
-    second: Female_7
+    second: sadtalk
   - first:
       213: -1998584504227886608
-    second: Female_8
+    second: neutraltalk
   - first:
       213: 3922859196945235731
-    second: Female_9
+    second: neutral
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -119,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Female_0
+      name: standing
       rect:
         serializedVersion: 2
         x: 0
@@ -127,7 +127,7 @@ TextureImporter:
         width: 495
         height: 1072
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -140,7 +140,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female_1
+      name: standingknife
       rect:
         serializedVersion: 2
         x: 0
@@ -148,7 +148,7 @@ TextureImporter:
         width: 495
         height: 1072
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -161,7 +161,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female_2
+      name: snear
       rect:
         serializedVersion: 2
         x: 0
@@ -169,7 +169,7 @@ TextureImporter:
         width: 495
         height: 1072
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -182,7 +182,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female_3
+      name: laugh
       rect:
         serializedVersion: 2
         x: 0
@@ -190,7 +190,7 @@ TextureImporter:
         width: 495
         height: 1072
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -203,7 +203,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female_4
+      name: angry
       rect:
         serializedVersion: 2
         x: 0
@@ -211,7 +211,7 @@ TextureImporter:
         width: 495
         height: 1072
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -224,7 +224,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female_5
+      name: angrytalk
       rect:
         serializedVersion: 2
         x: 0
@@ -232,7 +232,7 @@ TextureImporter:
         width: 495
         height: 1072
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -245,7 +245,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female_6
+      name: sad
       rect:
         serializedVersion: 2
         x: 0
@@ -253,7 +253,7 @@ TextureImporter:
         width: 495
         height: 1072
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -266,7 +266,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female_7
+      name: sadtalk
       rect:
         serializedVersion: 2
         x: 0
@@ -274,7 +274,7 @@ TextureImporter:
         width: 495
         height: 1072
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -287,7 +287,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female_8
+      name: neutraltalk
       rect:
         serializedVersion: 2
         x: 0
@@ -295,7 +295,7 @@ TextureImporter:
         width: 495
         height: 1072
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -308,7 +308,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Female_9
+      name: neutral
       rect:
         serializedVersion: 2
         x: 0
@@ -316,7 +316,7 @@ TextureImporter:
         width: 495
         height: 1072
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
