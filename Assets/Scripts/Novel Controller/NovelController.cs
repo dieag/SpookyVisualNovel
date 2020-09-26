@@ -19,7 +19,6 @@ public class NovelController : MonoBehaviour
     void Start()
     {   
         LoadChapterFile("chapter0_start");
-        //LoadChapterFile("chapter1a");
     }
 
     // Update is called once per frame
@@ -570,13 +569,9 @@ public class NovelController : MonoBehaviour
         TransitionMaster.ShowScene(show, spd, smooth, transTex);
     }
 
-    void Command_EndGame(string endGameName)
+    void Command_EndGame(string endGameImage)
     {
-        //Fade out
-        //Fade to end of game screen
-        //Choice
-            //Retry?
-            //Exit game
+        EndGameScreen.instance.setEndGame(endGameImage);
     }
 
     void Command_LoadPuzzle(string data)

@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\TagManager.cs" />
     <Compile Include="Assets\TEST\scripts\ChoiceScreenTesting.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Novel Controller\EndGameScreen.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

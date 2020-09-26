@@ -15,14 +15,9 @@ public class AudioManager : MonoBehaviour
 
 	void Awake()
 	{
-		if (instance == null)
-		{
 			instance = this;
 			DontDestroyOnLoad(gameObject);
-		}
-		else {
-			DestroyImmediate(gameObject);
-		}
+	
 	}
 
 	public void PlaySFX(AudioClip effect, float volume = 1f, float pitch = 1f)

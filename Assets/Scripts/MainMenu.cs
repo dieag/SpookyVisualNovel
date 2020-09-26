@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-
+    private bool waitForAnimation = false;
     public Animator startGamePanel;
+
+    private IEnumerator WaitForFadeIn()
+    {
+        yield return new WaitForSeconds(2f);
+        waitForAnimation = true;
+    }
 
     private IEnumerator WaitForAnimation()
     {
@@ -15,7 +21,10 @@ public class MainMenu : MonoBehaviour
 
     public void ClickStartGame()
     {
-        startGamePanel.SetTrigger("activate");
-        StartCoroutine(WaitForAnimation());
+        if (!waitForAnimation)
+        {
+            startGamePanel.SetTrigger("activate");
+            StartCoroutine(WaitForAnimation());
+        }
     }
 }
