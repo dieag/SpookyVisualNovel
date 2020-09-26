@@ -1,11 +1,24 @@
 setBackground(living_room,true,100)|playMusic(music_bedroom,0,0.25)
+
+endGame(end_bad)
+
+loadPuzzle(puzzle0,key1,100201104070,chapter_1a,chapter_1b,30)
+
+choice|"What should I choose?"
+{
+    "Attic"
+        Load(chapter_1a)
+    "Downstairs"
+        Load(chapter_1b)
+}
+
 narrator|"It's Halloween tonight. {a}A storm pounds against the walls of this mansion, raindrops tapping impatiently against the glass window near the glowing fireplace."
 
 "I curl up further into the leather couch, turning the page of my book. {a}No trick-or-treaters tonight, it seems."
 
-"The mansion - my boyfriend's mansion - sits at the top of a mountain, miles up a windy road from a small town nearby. {a}When I first started living here my boyfriend told me that this mansion has been in his family for generations."
+"The mansion - my boyfriend's mansion - sits at the top of a mountain, miles up a windy road from a small town nearby. {a}When I first started living here my boyfriend told me that this mansion has been in his family for generations."|setPosition(Gwen,.5,0)|changeExpression(Gwen,body,stand,expression,neutral)|enter(Gwen,1,true)
 
-Gwen|"Generations of tradition... [enter(Gwen,1,true)][setPosition(Gwen,.5,0)] {a}wonder what that's like."
+Gwen|"Generations of tradition... {a}wonder what that's like."
 
 narrator|"[playSound(effect_thunder1)]Another crack of thunder. {a}I glance up towards the roof. {a}Is his garden okay?"
 
@@ -31,7 +44,7 @@ narrator|"[playSound(effect_thunder1)]Another crack of thunder. {a}I glance up t
 
 "Anyway, let's enter in the code and unlock this door."
 
-loadPuzzle(puzzle0,100201104070)
+loadPuzzle(puzzle0,key1,100201104070)
 
 Gwen|"Yes! {a}I'm in!"|setBackground(hallway_up_light,true,1)
 
