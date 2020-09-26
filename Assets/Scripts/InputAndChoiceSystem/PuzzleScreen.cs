@@ -39,10 +39,12 @@ public class PuzzleScreen : MonoBehaviour
 
 	public bool isHandlingPuzzle {get{return handlingPuzzle != null;}}
     Coroutine handlingPuzzle = null;
-	public void puzzleStart(string puzzleName, string _keyImage, string keyCode, string passChapter, string failChapter, float timerStart)
-	{
-		NovelController.instance.Command_SetLayerImage(puzzleName+",1f,true",BCFC.instance.foreground);
-        NovelController.instance.Command_PlayMusic("music_puzzle,0.5,0.5",false);
+    public void puzzleStart(string puzzleName, string _keyImage, string keyCode, string passChapter, string failChapter, float timerStart)
+    {
+        NovelController.instance.Command_SetLayerImage(puzzleName + ",1f,true", BCFC.instance.foreground);
+        if (timerStart > 0f) {
+           NovelController.instance.Command_PlayMusic("music_puzzle,0.5,0.5", false);
+        }
         InputScreen.Show("Enter the Key");
         handlingPuzzle = StartCoroutine(HandlePuzzle(puzzleName, keyCode, passChapter,failChapter,timerStart));
         keyImage = _keyImage;
@@ -79,8 +81,11 @@ public class PuzzleScreen : MonoBehaviour
         NovelController.instance.Command_SetLayerImage("null", BCFC.instance.foreground);
         NovelController.instance.Command_SetLayerImage("null", BCFC.instance.cypherframe);
         InputScreen.Hide();
-        NovelController.instance.Command_PlayMusic(NovelController.instance.lastPlayedClipData);
-        NovelController.instance.Command_PlayAmbientMusic(NovelController.instance.lastPlayedAmbientClipData);
+        if (timerStart > 0f)
+        {
+            NovelController.instance.Command_PlayMusic(NovelController.instance.lastPlayedClipData);
+            NovelController.instance.Command_PlayAmbientMusic(NovelController.instance.lastPlayedAmbientClipData);
+        }
         if(passedTimedGame)
             AudioManager.instance.PlaySFX(passedClip);
         else

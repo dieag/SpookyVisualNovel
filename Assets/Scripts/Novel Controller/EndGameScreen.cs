@@ -28,7 +28,7 @@ public class EndGameScreen : MonoBehaviour
     private IEnumerator WaitForFadeOut(string endGameImage)
     {
         yield return new WaitForSeconds(2f);
-        NovelController.instance.Command_SetLayerImage(endGameImage + ",1f,true", BCFC.instance.foreground);
+        NovelController.instance.Command_SetLayerImage(endGameImage + ",100f,false", BCFC.instance.foreground);
         root.SetActive(true);
         endGamePanel.SetTrigger("showEndGame");
     }
