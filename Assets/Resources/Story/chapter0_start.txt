@@ -1,4 +1,4 @@
-setBackground(living_room,true,100)|playMusic(music_bedroom,0.25,0.25)
+setBackground(living_room,true,100)|playMusic(music_bedroom,0,0.25)
 
 narrator|"It's Halloween tonight. {a}A storm pounds against the walls of this mansion, raindrops tapping impatiently against the glass window near the glowing fireplace."
 
@@ -6,35 +6,33 @@ narrator|"It's Halloween tonight. {a}A storm pounds against the walls of this ma
 
 "The mansion - my boyfriend's mansion - sits at the top of a mountain, miles up a windy road from a small town nearby. {a}When I first started living here my boyfriend told me that this mansion has been in his family for generations."
 
-setPosition(Gwen,.5,0)|enter(Gwen,1,true)
+Gwen|"Generations of tradition... [enter(Gwen,1,true)][setPosition(Gwen,.5,0)] {a}wonder what that's like."
 
-Gwen|"So isolated."
+narrator|"[playSound(effect_thunder1)]Another crack of thunder. {a}I glance up towards the roof. {a}Is the garden okay?"
 
-playSound(effect_thunder1)
+"I've only been dating Victor for a few months now. {a}In that little time, however, I've come to learn just how much that garden means to him. {a}It sprawls across the entire roof, with varying flowers, vegetables, and herbs packed into growers."
 
-narrator|"Another crack of thunder. {a}I glance up towards the roof. {a}Is the garden okay?"
+"He's told me stories about how his mom loved to work with him on the garden - I think that was his favorite thing to do with her. Together, they transformed it from cracked cement to brilliant greenery."|playSound(effect_thunder2)
 
-"I've only been dating Victor for a few months now. {a}In that little time, however, I've come to learn just how much that garden means to him. {a}It sprawls across the entire roof, with varying flowers, vegetables, and herbs packed into growers beneath absurdly large trees. {a}Trees! {a}On his roof!"
+"Damn, this storm sounds bad - I better go up and check on it. {a}I set my book down and head up the stairs, leaving the warmth of the fire behind me."|playSound(effect_stairs)|setBackground(hallway_up_light,true,1)
 
-"This storm sounds bad - I better go check on the garden. {a}I set my book down and head up the stairs, leaving the warmth of the fire behind me."|playSound(effect_stairs)
+"This mansion can be like a labyrinth, sometimes - to be honest, I'm not used to living somewhere with this many rooms.{c}I grew up dirt poor, and my parents abandoned me when I was barely in high school."
 
-setBackground(hallway_up_light,true,1)
+"Victor's parents died when he was young, so, we could relate immediately on some level when we met. Trauma bonding and all that. It's nice to have a place to really call home again."
 
-"This mansion can be like a labyrinth, sometimes. {a}I'm not used to living somewhere with this many rooms.{c}I grew up poor, and my parents abandoned me when I was barely in high school. {a}Victor's wealth was a little shocking at first, but his hospitality has helped ease me into this new lifestyle."
+Gwen|"Left... right?"
 
-Gwen|"Left[txtSpd 30,1]...[/txtSpd]Right?"
+narrator|"After meandering and making some bad turns, I finally find it - the roof ladder!{a} Well, more like the door leading to the ladder."
 
-narrator|"After meandering and making some bad turns, I finally find it - the ladder!{a} Well, more like the door leading to the ladder."
+"For as long as I've lived here, it may seem surprising that I haven't seen most of Victor's mansion. {a}He has these strange locks on every door that need a code to be opened, and he only gave me a handful of codes to use for the rooms he dubbed 'safe'. {a}According to him, some of the rooms are too old and decrepit could be damaged if someone goes into them."
 
-"I haven't seen most of Victor's mansion. {a}He has these strange locks on every door that need a code to be opened. {a}He only gave me a handful of codes to use for the rooms that are safe. {a}He says some of the rooms are too old and could be damaged if someone goes into them, and since I'm a guest I don't want to question him further."
+"Ah, well, I am glad I have the codes necessary to get into the roof garden."
 
-"Ah, well, I am glad I have the codes necessary to get onto the roof. {a}Let's see what we have here."
+"Each puzzle is like a simple cypher to unlock. {a}I just have to check the card number and enter in the corresponding code. {a}I think I have that key on me."
 
-"Each puzzle is like a simple cypher to unlock. {a}I just have to check the card number, and line it up with the number in the key. {a}I think I have the key on me."
+"I sense that Victor is a little fond of math, since all the codes on here look like the card number times ten. {a}Cute."
 
-"I think Victor is a little fond of math. {a}Cute. {a}These all just look like the card number times ten!"
-
-"Let's enter the correct code in."
+"Anyway, let's enter in the code and unlock this door."
 
 loadPuzzle(puzzle0,100201104070)
 
@@ -42,41 +40,27 @@ Gwen|"Yes! {a}I'm in!"|setBackground(hallway_up_light,true,1)
 
 narrator|"I've done this so many times that I could probably just memorize it if I wanted to."
 
-"When the door opens, there's a rope hanging in front of me. {a}I pull it and the ladder to the roof slides down soundlessly, oiled to perfection."
+"When the door opens, the ladder to the roof slides down soundlessly, oiled to perfection."|setBackground(hallway_up_light,true,1)
 
-setBackground(hallway_up_light,true,1)
+"I emerge and notice immediately that the top cover to the greenhouse is already up. {a}Victor must have checked weather reports and lowered it when I didn't notice. {a}Ha - guess I should have known he wouldn't have forgotten about the plants up here."
 
-playMusic(ambient_rain,0.25,0.25)
-
-"When I come out I notice that the cover to the greenhouse is already up. {a}Victor must have checked weather reports and raised it when I didn't notice."
-
-"I walk to the edge of the roof and see the mechanical gears lined up neatly. {a}It must have automatically wound out once it sensed rain. {a}I've never been up here during a storm. {a}Come to think of it though, Victor did seem pretty unphased during the last storm. {a}Now i feel a little stupid for worrying."
-
-"I walk up to one of the windows and glance around the front of the mansion.{a} The expansive lawn is an acre long, stretching to the forest that surrounds the windy path."
+"I walk up to one of the windows and glance around the front of the mansion.{a} The expansive lawn is an acre long, stretching to the forest that surrounds the windy path. Victor and I have often hiked around the mountain - it's almost like he has a private set of trails since no one else really comes up here."|playSound(effect_thunder1)
 
 Gwen|"I hope Victor will be okay driving in this storm."
 
-narrator|"I'm sure he's upset about it. {a}He's told me many times that Halloween is his favorite holiday - and it's ruined!"
+narrator|"I'm sure he's upset about it. {a}He's told me many times that Halloween is his favorite holiday - and it's ruined! No trick or treaters, no scary movies by the fire..."
 
-"For a moment, the thunder stops rumbling. {a}The rain patters a little more gently on the thin roof above me."
+Gwen|"Ah! {a}A crash?"|playMusic(music_pursuit,0,0.25)
 
-Gwen|"Ah! {a}A crash?"
-
-narrator|"It sounded like it came from the other side of the mansion!"
-
-"I run across the roof garden to the other side, peering out the fogged up window."
+narrator|"I lean into the glass window, struggling to see immediately below."
 
 Gwen|"W[txtSpeed 30,1] - [\txtSpeed]What was that?"
 
 narrator|"It looked like something just jumped into a window downstairs!"
 
-Gwen|"Oh, no!"
-
-"Were they relying on the storm to cover the sound of the crash? {a}On cue, the thunder picks up again."
-
 "What should I do?? {a}If I go for the phone downstairs, I might run into them!"
 
-"Or should I run to the attic? {a}There's a small hatch on the roof that leads directly there."
+"Or should I run to the attic? {a}There's a small hatch on the roof that leads directly there, but I might get cornered."
 
 choice|"What should I choose?"
 {
