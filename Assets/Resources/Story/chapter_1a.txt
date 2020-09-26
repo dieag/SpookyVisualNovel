@@ -1,4 +1,4 @@
-Gwen|"The attic! {a}They'll never find me there!"
+Gwen|"The attic! {a}Hiding is the safest option."
 
 narrator|"I run to the hatch and swing it open, climbing down the ladder as fast as I can."|setBackground(attic,true,1)
 
@@ -10,9 +10,7 @@ narrator|"I run to the hatch and swing it open, climbing down the ladder as fast
 
 Gwen|"Shit!"
 
-narrator|"I leap to my feet just as someone slams open the attic door from the master bedroom."|moveCharacter(Gwen,.75,0,3)|setPosition(Man,.25,0)|enter(Man,1,true)
-
-narrator|"It's a man, brandishing a knife and grinning at me."
+narrator|"I leap to my feet just as the intruder crawls inside. It's a man, brandishing a knife and grinning at me."|moveCharacter(Gwen,.75,0,3)|setPosition(Man,.25,0)|enter(Man,1,true)
 
 Man|"Happy Halloween, sweetie."
 
@@ -22,11 +20,9 @@ narrator|"I stumble back, tripping on the boxes littering the floor."
 
 Man|"Wait!"
 
-narrator|"The man lunges forward to grab me, but I crash into the window."|playSound(effect_window_break)
+narrator|"The man lunges forward to grab me, but I crash into the window and fly into the air."|playSound(effect_window_break)
 
-"Suddenly, there's nothing under me, and rain stings my eyes."
-
-Gwen|"[txtSpd 30,1]WH-[/txtSpd]"
+Gwen|"SH-"
 
 narrator|"<i>THUMP</i>"
 
