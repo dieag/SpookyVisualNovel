@@ -1,13 +1,13 @@
-narrator|"Victor wanted me to stay safe. {a}I need to be reasonable here."|showBackground(forest,true,1)
+narrator|"[flip(Gwen)]Victor wanted me to stay safe. {a}I need to be reasonable here."|showBackground(forest,true,1)
 
-"Crying, I hurry down the mountain[playSound(effect_run_gravel)], struggling to make my way through the muddy terrain. {a}Please, please hold on, Victor. {a}Help will come soon!"
+"[exit(Gwen)]Crying, I hurry down the mountain[playSound(effect_run_gravel)], struggling to make my way through the muddy terrain. {a}Please, please hold on, Victor. {a}Help will come soon!"
 
 "Minutes pass, but they feel like hours. {a}My legs eventually give out, and I collapse onto the wet soil under my feet. {a}My throat is burning."
 
-Gwen|"I can't, Victor."
+Gwen|"[setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,sadtalk)|enter(Gwen)]I can't, Victor."
 
 narrator|"I bury my head in my hands and scream. {a}There's no one nearby to hear it."
 
 "I should have known. {a}I'll never make it down the mountain in time."
 
-endGame(end_bad)
+exit(Gwen)|endGame(end_bad)

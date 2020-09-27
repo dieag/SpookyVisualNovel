@@ -4,6 +4,6 @@
 
 Woman|"Finally!"|playSound(effect_stab)
 
-Gwen|"Noooooooooo!!"|changeExpression(Gwen,face,sad)|flip
+Gwen|"Noooooooooo!!"|changeExpression(Gwen,face,sad)|flip(Gwen)
 
-endGame(end_death)
+exit(Gwen)|endGame(end_death)
