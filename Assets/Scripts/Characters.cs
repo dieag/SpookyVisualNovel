@@ -25,7 +25,6 @@ public class Character {
 	public Sprite GetSprite(string spriteName = "")
 	{
 		Sprite[] sprites = Resources.LoadAll<Sprite>("images/Characters/"+ char_name);
-
 		for(int i = 0; i < sprites.Length; i++)
 		{
 			if(sprites[i].name == spriteName)
@@ -38,32 +37,38 @@ public class Character {
 	public void SetBody(int index)
 	{
 		renderers.bodyRenderer.sprite = GetSprite(index);
+		lastBodySprite = renderers.bodyRenderer.sprite;
 
 	}
 	public void SetBody(Sprite sprite)
 	{
 		renderers.bodyRenderer.sprite = sprite;
+		lastBodySprite = renderers.bodyRenderer.sprite;
 
 	}
 	public void SetBody(string spriteName)
 	{
 		renderers.bodyRenderer.sprite = GetSprite(spriteName);
+		lastBodySprite = renderers.bodyRenderer.sprite;
 
 	}
 
 	public void SetExpression(int index)
 	{
 		renderers.expressionRenderer.sprite = GetSprite(index);
+		lastFacialSprite = renderers.expressionRenderer.sprite;
 
 	}
 	public void SetExpression(Sprite sprite)
 	{
-		renderers.expressionRenderer.sprite = sprite;
+  		renderers.expressionRenderer.sprite = sprite;
+		lastFacialSprite = renderers.expressionRenderer.sprite;
 
 	}
 	public void SetExpression(string spriteName)
 	{
 		renderers.expressionRenderer.sprite = GetSprite(spriteName);
+		lastFacialSprite = renderers.expressionRenderer.sprite;
 
 	}
 
@@ -123,7 +128,7 @@ public class Character {
 	void StopTransitioningExpression()
 	{
 		if (isTransitioningExpression)
-			CharacterManager.instance.StopCoroutine(transitioningExpression);
+    			CharacterManager.instance.StopCoroutine(transitioningExpression);
 		transitioningExpression = null;
 	}
 
