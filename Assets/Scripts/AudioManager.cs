@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
 	public static List<SONG> allSongs = new List<SONG>();
 	public static List<SONG> allAmbientSongs = new List<SONG>();
 
-	public float songTransitionSpeed = 0.5f;
+    public float songTransitionSpeed = 3f;
 	public bool songSmoothTransitions = true;	
 
 	void Awake()
@@ -33,12 +33,13 @@ public class AudioManager : MonoBehaviour
 
 	public void PlaySong(AudioClip song, float maxVolume =1f, float pitch = 1f, float startingVolume = 0f, bool playOnStart = true, bool loop = true)
 	{
-
+		Debug.Log(song);
 		if(song != null)
 		{
 			for(int i = 0; i < allSongs.Count; i++)
 			{
 				SONG s = allSongs[i];
+				Debug.Log(song);
 				if (s.clip == song)
 				{
 					activeSong = s;
@@ -47,7 +48,7 @@ public class AudioManager : MonoBehaviour
 
 			}
 			if (activeSong == null || activeSong.clip != song)
-				activeSong = new SONG(song, maxVolume, pitch, startingVolume, playOnStart, loop);
+				activeSong = new SONG(song, maxVolume, pitch, startingVolume, ref allSongs, playOnStart, loop);
 		} else
 			activeSong = null;
 
@@ -78,7 +79,7 @@ public class AudioManager : MonoBehaviour
 
 			}
 			if (activeAmbientSong == null || activeAmbientSong.clip != song)
-				activeAmbientSong = new SONG(song, maxVolume, pitch, startingVolume, playOnStart, loop);
+				activeAmbientSong = new SONG(song, maxVolume, pitch, startingVolume, ref allAmbientSongs, playOnStart, loop);
 		}
 		else
 			activeAmbientSong = null;
@@ -88,7 +89,6 @@ public class AudioManager : MonoBehaviour
 	}
 	public void StopAmbientSong()
 	{
-
 		activeAmbientSong = null;
 		StopAllCoroutines();
 		StartCoroutine(AmbientVolumeLeveling());
@@ -111,26 +111,27 @@ public class AudioManager : MonoBehaviour
 		bool anyValueChanged = false;
 
 		float speed = songTransitionSpeed * Time.deltaTime;
-		for(int i = allSongs.Count - 1; i >= 0; i--)
+        for (int i = allSongs.Count - 1; i >= 0; i--)
 		{
 			SONG song = allSongs[i];
 
 			if (song == activeSong) {
-				if(song.volume < song.maxVolume)
+				if (!song.isPlaying())
+					song.Play();
+				while (song.volume < song.maxVolume)
 				{
-					song.volume = songSmoothTransitions ? Mathf.MoveTowards(song.volume, song.maxVolume, speed) : 0f;
+					song.volume = songSmoothTransitions ? Mathf.MoveTowards(song.volume, song.maxVolume, speed) : song.maxVolume;
 					anyValueChanged = true;	
 				}
 			} else {
-				if(song.volume > 0f)
+				while(song.volume > 0f)
 				{
 					song.volume = songSmoothTransitions ? Mathf.MoveTowards(song.volume, 0f, speed) : 0f;
 					anyValueChanged = true;
-				} else {
-					allSongs.RemoveAt(i);
-					song.Destroy(allSongs);
-					continue;
 				}
+				allSongs.RemoveAt(i);
+				song.Destroy(ref allSongs);
+				continue;
 			}
 		}
 
@@ -148,25 +149,24 @@ public class AudioManager : MonoBehaviour
 
 			if (song == activeAmbientSong)
 			{
-				if (song.volume < song.maxVolume)
+				if (!song.isPlaying())
+					song.Play();
+				while (song.volume < song.maxVolume)
 				{
-					song.volume = songSmoothTransitions ? Mathf.MoveTowards(song.volume, song.maxVolume, speed) : 0f;
+					song.volume = songSmoothTransitions ? Mathf.MoveTowards(song.volume, song.maxVolume, speed) : song.maxVolume;
 					anyValueChanged = true;
 				}
 			}
 			else
 			{
-				if (song.volume > 0f)
+				while (song.volume > 0f)
 				{
 					song.volume = songSmoothTransitions ? Mathf.MoveTowards(song.volume, 0f, speed) : 0f;
 					anyValueChanged = true;
 				}
-				else
-				{
-					allAmbientSongs.RemoveAt(i);
-					song.Destroy(allAmbientSongs);
-					continue;
-				}
+				allAmbientSongs.RemoveAt(i);
+				song.Destroy(ref allAmbientSongs);
+				continue;
 			}
 		}
 
@@ -187,7 +187,7 @@ public class AudioManager : MonoBehaviour
 		public AudioClip clip {get{return source.clip;} set{source.clip = value;}}
 		public float maxVolume = 1f;
 
-		public SONG(AudioClip clip, float _maxVolume, float pitch, float startingVolume, bool playOnStart = true, bool loop = true)
+		public SONG(AudioClip clip, float _maxVolume, float pitch, float startingVolume, ref List<SONG> allSongsList, bool playOnStart = true, bool loop = true)
 		{
 			source = AudioManager.CreateNewSource(string.Format("SONG [{0}]", clip.name));
 			source.clip = clip;
@@ -196,7 +196,7 @@ public class AudioManager : MonoBehaviour
 			source.pitch = pitch;
 			source.loop = loop;
 
-			AudioManager.allSongs.Add(this);
+			allSongsList.Add(this);
 			if(playOnStart)
 				source.Play();
 		}
@@ -209,6 +209,10 @@ public class AudioManager : MonoBehaviour
 			source.Play();
 		}
 
+		public bool isPlaying()
+		{
+			return source.isPlaying;
+		}
 		public void Stop()
 		{
 			source.Stop();
@@ -224,9 +228,9 @@ public class AudioManager : MonoBehaviour
 			source.UnPause();
 		}
 
-		public void Destroy(List<SONG> allSongs)
+		public void Destroy(ref List<SONG> allSongsList)
 		{
-			allSongs.Remove(this);
+			allSongsList.Remove(this);
 			DestroyImmediate(source.gameObject);
 		}
 	}
