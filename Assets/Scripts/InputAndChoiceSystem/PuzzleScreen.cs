@@ -44,6 +44,7 @@ public class PuzzleScreen : MonoBehaviour
         NovelController.instance.Command_SetLayerImage(puzzleName + ",1f,true", BCFC.instance.foreground);
         if (timerStart > 0f) {
            NovelController.instance.Command_PlayMusic("music_puzzle,0.5,0.5", false);
+           NovelController.instance.Command_StopAmbientMusic();
         }
         InputScreen.Show("Enter the Key");
         handlingPuzzle = StartCoroutine(HandlePuzzle(puzzleName, keyCode, passChapter,failChapter,timerStart));
@@ -60,8 +61,14 @@ public class PuzzleScreen : MonoBehaviour
         bool passedTimedGame = true;
         string puzzleInput = InputScreen.currentInput;
         timer.StartTimer(timerStart);
-        if(!timer.isTimerOn)
+        if (!timer.isTimerOn)
+        {
             timer.gameObject.SetActive(false);
+        }   
+        else
+        {
+            timer.gameObject.SetActive(true);
+        }
         while(gameDone == false) {
             yield return StartCoroutine(WaitForKeyDown(KeyCode.Return));
             if(timer.isTimeOut && timer.isTimerOn) {
@@ -83,6 +90,7 @@ public class PuzzleScreen : MonoBehaviour
         InputScreen.Hide();
         if (timerStart > 0f)
         {
+            Debug.Log(NovelController.instance.lastPlayedClipData);
             NovelController.instance.Command_PlayMusic(NovelController.instance.lastPlayedClipData);
             NovelController.instance.Command_PlayAmbientMusic(NovelController.instance.lastPlayedAmbientClipData);
         }
