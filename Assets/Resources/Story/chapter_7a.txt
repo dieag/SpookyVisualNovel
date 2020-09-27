@@ -2,27 +2,25 @@ narrator|"Yes! {a}I'm in!"|playSound(effect_door_unlock)|playMusic(music_title,0
 
 "I swing open the door - piles and piles of gasoline containers and propane tanks litter the room. {a}Holy shit."
 
-Gwen|"He's really gonna blow this place up."
+Gwen|"[setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shock)|enter(Gwen)]He's really gonna blow this place up."
 
-narrator|"I open the valves to the propane, snatch the first canister in front of me, and unscrew the cap. {a}[playSound(effect_liquid_shake)]The pungent liquid surges out when I dump it over the other containers around the entrance before dragging the trail out of the room."|showBackground(living_room,true,1)|playAmbientMusic(ambient_fireplace, 0.1,0.0)
+narrator|"[changeExpression(Gwen,face,unamused)]I open the valves to the propane, snatch the first canister in front of me, and unscrew the cap. {a}[playSound(effect_liquid_shake)]The pungent liquid surges out when I dump it over the other containers around the entrance before dragging the trail out of the room."|showBackground(living_room,true,1)|playAmbientMusic(ambient_fireplace, 0.1,0.0)
 
-narrator|"I trail the gas down the hall until I reach the living room. {a}Flames are still blazing in the fireplace - exactly what I needed."
+narrator|"The gas glugs sloppily from the container as I pour it down the hall. {a}Flames are still blazing in the fireplace - exactly what I needed."
 
-Gwen|"VICTOR!"
+Gwen|"[changeExpression(Gwen,face,angrytalk)|flip(Gwen)]VICTOR!"
 
 narrator|"[playSound(effect_crash_faraway]I hear one final crash and then heavy footsteps thud above me towards the stairs. {a}[playSound(effect_stairs)]Victor's face appears at the top as he almost trips down them to the first floor."
 
-Victor|"Good work, Gwen."
+Victor|"[moveCharacter(Gwen,0.25,0)|setPosition(Victor,0.75,0)|changeExpression(Victor,body,standblood)|changeExpression(Victor,face,happytalk)|enter(Victor)]Good work, Gwen."
 
 narrator|"He grabs my hand."
 
-Victor|"Throw it in the fire and let's GO!"
+Victor|"[changeExpression(Victor,body,standarmsblood)|changeExpression(Victor,face,angrytalk)]Throw it in the fire and let's GO!"
 
-narrator|"I chuck the last of the gasoline into the open fire and Victor pulls me down the hallway towards the broken window.[playSound(effect_run_inside)] {a}Glass cuts into my hands and legs and we tumble out onto the grass."
+narrator|"[exit(Victor)|exit(Gwen)]I chuck the last of the gasoline into the open fire and Victor pulls me down the hallway towards the broken window.[playSound(effect_run_inside)] {a}Glass cuts into my hands and legs and we tumble out onto the grass."
 
-Gwen|"[playSound(effect_explosion)]Shit!"
-
-narrator|"[showBackground(mansion_burning,true,1)|playAmbientMusic(ambient_fire,0.2,0)]The explosion rocks the earth beneath us and debris flies through the air. {a}Victor pulls me to my feet and we sprint away from the mansion, not stopping until we reach the edge of the forest. [playSound(effect_run_gravel)]"
+narrator|"[playSound(effect_explosion)|showBackground(mansion_burning,true,1)|playAmbientMusic(ambient_fire,0.2,0)]The explosion rocks the earth beneath us and debris flies through the air. {a}Victor pulls me to my feet and we sprint away from the mansion, not stopping until we reach the edge of the forest. [playSound(effect_run_gravel)]"
 
 "We did it! {a}It worked!"
 
@@ -42,27 +40,45 @@ narrator|"The rain is lighter now, and the storm is still. {a}All I hear is the 
 
 "I let the silence between us hang in the air. {a}So much just happened. {a}Everything I thought I knew about Victor changed in less than an hour. {a}Now that my adrenaline is retreating, I can't stop thinking about what we'll do when we reach the bottom of the mountain."
 
-Victor|"I killed a lot of people, Gwen."
+Victor|"[setPosition(Victor,0.25,0)|changeExpression(Victor,body,standblood)|changeExpression(Victor,face,unamusedtalk)|enter(Victor)]I killed a lot of people, Gwen."
 
-Gwen|"Yeah. {a}I figured."
+Gwen|"[setPosition(Gwen,0.25,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,unamusedtalk)|enter(Gwen)]Yeah. {a}I figured. {a}I do have a question for you, Victor."
 
-Victor|"You can't let me get away with it."
+Victor|"Yes?"
 
-Gwen|"But you were forced into it."
+Gwen|"[flip(Gwen)]Back there, your mother said that you have a 'craving', that your entire family does."
+
+Victor"........."
+
+Gwen|"Is it true?"
+
+Victor|"[changeExpression(Victor,face,sadtalk)]... No. I've never felt it."
+
+Gwen|"[changeExpression(Gwen,face,sadtalk)]Then why did they think that?"
+
+Victor|"[changeExpression(Victor,face,happy)|flip(Victor)]Who knows. I guess I didn't take after them as much as they thought I did."
+
+Gwen|"[changeExpression(Gwen,face,happy)|flip(Gwen)]Ha... that's a relief."
+
+narrator|"Victor is quiet next to me, tense."
+
+Victor|"[changeExpression(Victor,face,sad)]But, even still, you can't let me get away with all of that."
+
+Gwen|"[changeExpression(Gwen,face,sad)]You were forced into it. You said so yourself."
 
 Victor|"Stop."
 
-narrator|"He turns to face me and we both stop walking."
+narrator|"[flip(Victor)]He turns to face me and we both stop walking."
 
-Victor|"I'm turning myself in when we reach the bottom."
+Victor|"[changeExpression(Victor,face,happytalk)]It was my choice, and I can't make any excuses. I could have fought back earlier and saved all those lives. I'm turning myself in when we reach the bottom."
 
 narrator|"When I meet his gaze, I notice he doesn't look sad. {a}He looks relieved, his eyes soft."
 
-Victor|"I'm free now. {a}Thanks to you."
+Victor|"[changeExpression(Victor,face,happy)]I'm free now. {a}Thanks to you."
 
 narrator|"He pulls me into a tight hug and I wrap my arms around him."
 
-"We stand there for a moment, the ashes of mansion mingling with the rainfall and misting over our shoulders."
+"[exit(Gwen)|exit(Victor)]We stand there for a moment, the ashes of mansion mingling with the rainfall and misting over our shoulders."
 
 "It's over."
 

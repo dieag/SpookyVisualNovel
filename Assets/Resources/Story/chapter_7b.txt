@@ -1,21 +1,21 @@
-narrator|"Why did he have to make this so complicated? {a}Damn!"|playMusic(music_final)
+narrator|"[setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,sadtalk)|enter(Gwen)]Why did he have to make this so complicated? {a}Damn!"|playMusic(music_final)
 
-"[playSound(effect_table_crash)]A loud crash - that sounded like a broken table!"
+"[playSound(effect_table_crash)|flip(Gwen)|changeExpression(Gwen,face,shock)]A loud crash - that sounded like a broken table!"
 
-Gwen|"Victor!"|playSound(effect_run_inside)|showBackground(living_room,true,1)
+Gwen|"Victor!"|playSound(effect_run_inside)|exit(Gwen)|showBackground(living_room,true,1)
 
 narrator|"When I round the corner into the living room, I see Victor's body crumpled on a shattered desk beneath the stairs, blood pooling around his head."
 
-Gwen|"No! {a}No, Victor!"
+Gwen|"[setPosition(Gwen,0.3,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,sadtalk)|enter(Gwen)]No! {a}No, Victor!"
 
 Woman|"HEY!"
 
-narrator|"I look up to see Victor's mother, face red with rage. {a}She's gripping a large brick over her head."
+narrator|"[setPosition(Woman,0.8,0)|changeExpression(Woman,body,standing)|changeExpression(Woman,face,angrytalk)|enter(Woman)]I look up to see Victor's mother, face red with rage. {a}She's gripping a large brick over her head."
 
-Gwen|"YOU!"
+Gwen|"[changeExpression(Gwen,face,angrytalk)]YOU!"
 
-narrator|"She swings her arms and the brick rockets towards me before I can duck away."
+narrator|"She swings her arms and the brick rockets towards me before I can duck away."|exit(Woman)
 
-Gwen|"BITCH - "|playSound(effect_brick_impact)|exit(Gwen)
+Gwen|"[flip(Gwen)]BITCH - "|playSound(effect_brick_impact)|exit(Gwen)
 
 endGame(end_death)
