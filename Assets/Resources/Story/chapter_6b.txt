@@ -1,6 +1,6 @@
 Victor|"Easily. {a}I do this every year."
 
-Gwen|"What do you mean?"
+Gwen|"What do you mean?"|playMusic(music_final,0,0.25)
 
 Woman|"Little Victor has been taking idiots like you into his home every Halloween for us to enjoy."
 
@@ -14,7 +14,7 @@ Man|"He's a good actor, isn't he?"
 
 "I clench my fists and take deep breaths. {a}It's hopeless. {a}I should have ran down the mountain."
 
-Gwen|"Why wait til now? {a}Why not do this whole song and dance back in the living room?"
+Gwen|"Why wait until now? {a}Why not do this whole song and dance back in the living room?"
 
 Woman|"You had a much higher chance of escaping compared to now. {a}We couldn't risk Victor's little act getting ruined."
 
@@ -26,13 +26,13 @@ Woman|"Us? {a}Kill Victor?"
 
 Woman|"We just wanted him to donate an arm for dinner. {a}As penance for failing."
 
-Gwen|"Wh -"
+Gwen|"What??"
 
 Man|"Enough. {a}Let's end this."
 
 "Victor takes one step forward."
 
-Gwen|"I loved you, Victor. {a}I came back to save you."
+Gwen|"Damn it. I loved you, Victor. {a}I came back to save you."
 
 "He doesn't say anything. {a}I lift my head and scream at him."
 
@@ -40,8 +40,6 @@ Gwen|"You're disgusting! {a}A monster! {a}A freak!"
 
 "He raises his arm."
 
-Gwen|"I hope you CHOKE on my god damn -"
+Gwen|"I hope you CHOKE on my god damn -"|playSound(effect_stab)
 
-playSound(effect_stab)
-
-// END: Happy Halloween.
+endGame(end_death)

@@ -1,22 +1,22 @@
 narrator|"The diary... {a}the terrible secret... {a}"
 
-Gwen|"You're his parents... {a}"
+Gwen|"You're his parents. {a}"
 
 Woman|"Ha! {a}You're more clever than Victor says."
 
-narrator|"Victor stands slowly, and the woman hands him the knife."
+narrator|"Victor stands slowly, and the woman hands him her knife."
 
 Victor|"How did you figure it out?"
 
-Gwen|"What are you doing? {a}I came here to help you!"
+Gwen|"What are you doing, Victor? {a}I came here to help you!"
 
 narrator|"There's nowhere to run. {a}I'm trapped. {a}This isn't how it was supposed to go! {a}Why is he doing this?"
 
 narrator|"The man lunges at me and wrests the knife from my shaky grip. {a}He jumps back before I can retaliate."
 
-narrator|"I fall to my knees."
+narrator|"I fall to the cold concrete, stunned."
 
-Gwen|"Victor... {a}whatever this is, I can help you. {a}I know you don't want this."
+Gwen|"Victor... whatever this is, I can help you. {a}I know you don't want this."
 
 Woman|"I think we know our son a little better than you, dear."
 
@@ -44,7 +44,7 @@ Victor|"Just relax. {a}It'll be over soon."
 
 narrator|"No... {a}wait... {a}"
 
-choice|"I need to choose."
+choice|"Victor!"
 {
     "How could you do this to me?"
         Load(chapter_6b)
