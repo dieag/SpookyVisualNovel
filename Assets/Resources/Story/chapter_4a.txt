@@ -46,7 +46,7 @@ narrator|"At the side of the mansion, I grip my knife tightly and advance out of
 
 Gwen|"Time to open this."|exit(Gwen)
 
-loadPuzzle(puzzle5,key3,0)
+loadPuzzle(puzzle6,key3,724123027491277239100702030)
 
 narrator|"[playSound(effect_door_unlock)]The lock clicks open and I panic for a moment. {a}I didn't think again! {a}Idiot! {a}Did they hear that?"
 

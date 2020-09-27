@@ -184,4 +184,4 @@ narrator|"Gotta move."|showBackground(hallway_down_dark,true,1)
 
 "I can hear distant screeching and something banging. {a}Victor must have her trapped in the room! {a}I need to do this now!!"
 
-loadPuzzle(puzzle5,key3,0,chapter_7a,chapter_7b,60)
+loadPuzzle(puzzle7,key3,499229180185618130772724220367850,chapter_7a,chapter_7b,90)
