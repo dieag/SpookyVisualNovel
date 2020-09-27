@@ -46,7 +46,7 @@ narrator|"They said his name in the hallway. {a}Do they know him? {a}Have I met 
 
 "I know it's an invasion of privacy, but I need something to keep my mind off the people looking for me."|exit(Gwen)
 
-loadPuzzle(puzzle5,key3,0)
+loadPuzzle(puzzle5,key2,220612501221801830110)
 
 "[playSound(effect_box_unlock)]It clicks open and I lift the lid. {a}There's a small notebook tucked inside, with Victor's name scrawled on the front in a black marker."
 
