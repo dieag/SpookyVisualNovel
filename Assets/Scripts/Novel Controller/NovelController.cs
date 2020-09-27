@@ -368,8 +368,9 @@ public class NovelController : MonoBehaviour
             lastPlayedClipData = data;
         string[] parameters = data.Split(',');
         AudioClip clip = Resources.Load("Audio/Music/" + parameters[0]) as AudioClip;
-        float startingVolume = parameters.Length >= 2 ? float.Parse(parameters[1]): 1f;
-        float maxVolume = parameters.Length == 3 ? float.Parse(parameters[2]): 1f; 
+        float maxVolume = parameters.Length >= 2 ? float.Parse(parameters[1]) : 1f;
+        float startingVolume = parameters.Length >= 3 ? float.Parse(parameters[2]): 1f;
+        Debug.Log(clip);
     	if (clip != null) {
     		AudioManager.instance.PlaySong(clip, maxVolume, 1f, startingVolume);
         }
@@ -437,6 +438,7 @@ public class NovelController : MonoBehaviour
     	float speed = parameters.Length == 4 ? float.Parse(parameters[3]) : 0;
     	Character c = CharacterManager.instance.getCharacter(character);
     	Sprite sprite = c.GetSprite(expression);
+        Debug.Log("Character: " + character + " region: " + region + " expression: " + expression + " speed " + speed);
     	if (region.ToLower() == "body") {
     		if(speed == 0)
     			c.SetBody(sprite);

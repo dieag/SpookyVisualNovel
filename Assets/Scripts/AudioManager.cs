@@ -52,14 +52,14 @@ public class AudioManager : MonoBehaviour
 		} else
 			activeSong = null;
 
-		StopAllCoroutines();
+		StopCoroutine(VolumeLeveling());
 		StartCoroutine(VolumeLeveling());
 	}
 	public void StopSong()
 	{
 
 		activeSong = null;
-		StopAllCoroutines();
+		StopCoroutine(VolumeLeveling());
 		StartCoroutine(VolumeLeveling());
 	}
 
@@ -84,13 +84,13 @@ public class AudioManager : MonoBehaviour
 		else
 			activeAmbientSong = null;
 
-		StopAllCoroutines();
+		StopCoroutine(AmbientVolumeLeveling());
 		StartCoroutine(AmbientVolumeLeveling());
 	}
 	public void StopAmbientSong()
 	{
 		activeAmbientSong = null;
-		StopAllCoroutines();
+		StopCoroutine(AmbientVolumeLeveling());
 		StartCoroutine(AmbientVolumeLeveling());
 	}
 
@@ -118,20 +118,23 @@ public class AudioManager : MonoBehaviour
 			if (song == activeSong) {
 				if (!song.isPlaying())
 					song.Play();
-				while (song.volume < song.maxVolume)
+				if (song.volume < song.maxVolume)
 				{
 					song.volume = songSmoothTransitions ? Mathf.MoveTowards(song.volume, song.maxVolume, speed) : song.maxVolume;
 					anyValueChanged = true;	
 				}
 			} else {
-				while(song.volume > 0f)
+				if (song.volume > 0f)
 				{
 					song.volume = songSmoothTransitions ? Mathf.MoveTowards(song.volume, 0f, speed) : 0f;
 					anyValueChanged = true;
 				}
-				allSongs.RemoveAt(i);
-				song.Destroy(ref allSongs);
-				continue;
+				else
+				{
+					allSongs.RemoveAt(i);
+					song.Destroy(ref allSongs);
+					continue;
+				}
 			}
 		}
 
@@ -151,7 +154,7 @@ public class AudioManager : MonoBehaviour
 			{
 				if (!song.isPlaying())
 					song.Play();
-				while (song.volume < song.maxVolume)
+				if (song.volume < song.maxVolume)
 				{
 					song.volume = songSmoothTransitions ? Mathf.MoveTowards(song.volume, song.maxVolume, speed) : song.maxVolume;
 					anyValueChanged = true;
@@ -159,7 +162,7 @@ public class AudioManager : MonoBehaviour
 			}
 			else
 			{
-				while (song.volume > 0f)
+				if (song.volume > 0f)
 				{
 					song.volume = songSmoothTransitions ? Mathf.MoveTowards(song.volume, 0f, speed) : 0f;
 					anyValueChanged = true;
