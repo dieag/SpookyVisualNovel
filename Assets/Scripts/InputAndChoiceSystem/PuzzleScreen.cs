@@ -115,12 +115,14 @@ public class PuzzleScreen : MonoBehaviour
             NovelController.instance.Command_SetLayerImage(keyImage, BCFC.instance.cypherframe);
             inputHeader.SetActive(false);
             inputField.SetActive(false);
+            enterButton.gameObject.SetActive(false);
         }
         else
         {
             NovelController.instance.Command_SetLayerImage("null", BCFC.instance.cypherframe);
             inputHeader.SetActive(true);
             inputField.SetActive(true);
+            enterButton.gameObject.SetActive(true);
         }
 
     }
