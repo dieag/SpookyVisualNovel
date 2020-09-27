@@ -1,34 +1,34 @@
-Gwen|"What do you mean 'our little Victor'?"
+Gwen|"[changeExpression(Gwen,face,unamused)]What do you mean 'our little Victor'?"
 
-Man|"Come on, can't you figure it out yet?"
+Man|"[changeExpression(Man,face,happy)]Come on, can't you figure it out yet?"
 
-narrator|"Victor finally stands, gently taking the knife from the woman's hand."
+narrator|"Victor finally stands, gently taking the knife from the woman's hand."|changeExpression(Victor,face,shocktalk)|changeExpression(Victor,body,stand)|enter(Victor,1,true)
 
 Victor|"Gwen... {a}meet my parents."
 
-narrator|"The grip on the knife wavers, and the man dashes forward. He wrests the knife away before I can react."
+narrator|"The grip on my knife wavers, and the man [flip(Man)|changeExpression(Man,face,angry)|moveCharacter(Man,.75,0)]dashes forward. He wrests the knife away before I can react and points it at me.[changeExpression(Man,face,happy)|changeExpression(Man,body,standknifeout)|moveCharacter(Man,.5,0)]"
 
-Gwen|"Y-You told me they died! {a}Years ago!"
+Gwen|"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,sadtalk)]Y-You told me they died! {a}Years ago!"
 
-narrator|"He steps toward me, face unreadable. {a}My knees buckle, and I fall to the cold concrete."
+narrator|"[changeExpression(Gwen,face,sad)]He steps toward me[changeExpression(Victor,face,unamused)|moveCharacter(Victor,.25,0)], face unreadable. {a}My knees buckle, and I fall to the cold concrete."
 
-Victor|"I'm sorry. {a}I lied."
+Victor|"[changeExpression(Victor,face,unamusedtalk)]I'm sorry. {a}I lied."
 
-Gwen|"What? {a}What are you saying? {a}You're scaring me."
+Gwen|"[changeExpression(Gwen,face,sadtalk)|changeExpression(Victor,face,unamused)]What? {a}What are you saying? {a}You're scaring me."
 
-Woman|"Scaring you? {a}Ha! {a}What happened to all that bravery?"
+Woman|"[changeExpression(Gwen,face,sad)|changeExpression(Woman,face,snear)]Scaring you? {a}Ha! {a}What happened to all that bravery?"
 
-narrator|"She walks in front of me and crouches down so our faces are on the same level."
+narrator|"[moveCharacter(Woman,.25,0)]She walks in front of me and crouches down so our faces are on the same level."
 
 Woman|"Victor has a very special craving. {a}We all do."
 
-Gwen|"What do you mean?"
+Gwen|"[changeExpression(Gwen,face,sadtalk)]What do you mean?"
 
-Woman|"Our family has a long-held tradition. {a}Once a year, the adults all get together for a Halloween feast."
+Woman|"[changeExpression(Gwen,face,sad)]Our family has a long-held tradition. {a}Once a year, the adults all get together for a Halloween feast."
 
-Gwen|"A feast... {a}That's nothing special."
+Gwen|"[changeExpression(Gwen,face,sadtalk)]A feast... {a}That's nothing special."
 
-Man|"Our menu is quite unique."
+Man|"[changeExpression(Gwen,face,sadtalk)]Our menu is quite unique."
 
 narrator|"The woman smiles at me, raising a hand to my hair."
 
@@ -38,7 +38,7 @@ narrator|"My eyes lock onto the meat hook glinting in the light. {a}No way. {a}N
 
 narrator|"The woman stands and steps aside. {a}Victor and his father move towards me simultaneously."
 
-Victor|"Just relax. {a}It'll be over soon."
+Victor|"[changeExpression(Victor,face,unamusedtalk)]Just relax. {a}It'll be over soon."
 
 narrator|"No... {a}wait... {a}"
 
