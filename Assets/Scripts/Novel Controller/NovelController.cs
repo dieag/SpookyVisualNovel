@@ -231,8 +231,8 @@ public class NovelController : MonoBehaviour
 			case "playMusic":
 				Command_PlayMusic(data[1]);
 				return;
-            case "ambientMusic":
-                Command_PlayMusic(data[1]);
+            case "playAmbientMusic":
+                Command_PlayAmbientMusic(data[1]);
                 return;
             case "moveCharacter":
 				Command_MoveCharacter(data[1]);
