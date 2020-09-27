@@ -10,7 +10,7 @@ public class Character {
 	[HideInInspector]public RectTransform root;
 	[HideInInspector]public bool flag = false;
 
-	public bool enabled {get {return root.gameObject.activeInHierarchy;} set{root.gameObject.SetActive(value);}}
+	public bool enabled {get {return root.gameObject.activeInHierarchy;} set{root.gameObject.SetActive(value); visibleInScene = value; }}
 
 	public Vector2 anchorPadding {get{return root.anchorMax - root.anchorMin;}}
 
@@ -48,8 +48,15 @@ public class Character {
 	}
 	public void SetBody(string spriteName)
 	{
-		renderers.bodyRenderer.sprite = GetSprite(spriteName);
-		lastBodySprite = renderers.bodyRenderer.sprite;
+		if (spriteName == "AlphaOnly")
+		{
+			SetBody(Resources.Load<Sprite>("images/AlphaOnly"));
+		}
+		else
+		{
+			renderers.bodyRenderer.sprite = GetSprite(spriteName);
+			lastBodySprite = renderers.bodyRenderer.sprite;
+		}
 
 	}
 
@@ -61,15 +68,21 @@ public class Character {
 	}
 	public void SetExpression(Sprite sprite)
 	{
-  		renderers.expressionRenderer.sprite = sprite;
+   		renderers.expressionRenderer.sprite = sprite;
 		lastFacialSprite = renderers.expressionRenderer.sprite;
 
 	}
 	public void SetExpression(string spriteName)
 	{
-		renderers.expressionRenderer.sprite = GetSprite(spriteName);
-		lastFacialSprite = renderers.expressionRenderer.sprite;
-
+		if (spriteName == "AlphaOnly")
+		{
+			SetExpression(Resources.Load<Sprite>("images/AlphaOnly"));
+		}
+		else
+		{
+			renderers.expressionRenderer.sprite = GetSprite(spriteName);
+			lastFacialSprite = renderers.expressionRenderer.sprite;
+		}
 	}
 
 	//Body Transitioning
@@ -164,15 +177,22 @@ public class Character {
 		root.localScale = new Vector3(root.localScale.x * -1, 1, 1);
 	}
 
+	public bool isFacingLeft { get { return root.localScale.x == 1; } }
 	public void FaceLeft()
 	{
 		root.localScale = Vector3.one;
 	}
 
+	public bool isFacingRight { get { return root.localScale.y == -1; } }
 	public void FaceRight()
 	{
 		root.localScale = new Vector3(-1, 1, 1);
 	}
+
+	public bool isVisibleInScene {
+        get { return visibleInScene; }
+	}
+	bool visibleInScene = true;
 
 	public void FadeOut(float speed = 3, bool smooth = false)
 	{
@@ -182,6 +202,7 @@ public class Character {
 
 		TransitionBody(alphaSprite, speed, smooth);
 		TransitionExpression(alphaSprite, speed, smooth);
+		visibleInScene = false;
 	}
 
 	public void SetFlag(bool value)
@@ -199,8 +220,9 @@ public class Character {
 	{
 		if(lastBodySprite != null && lastFacialSprite != null)
 		{
-		TransitionBody(lastBodySprite, speed, smooth);
-		TransitionExpression(lastFacialSprite, speed, smooth);
+			TransitionBody(lastBodySprite, speed, smooth);
+			TransitionExpression(lastFacialSprite, speed, smooth);
+			visibleInScene = true;
 		}
 	}
 
@@ -223,6 +245,7 @@ public class Character {
 		dialogue = DialogueSystem.instance;
 
 		enabled = enabledOnStart;
+		visibleInScene = enabled;
 	}
 
 	[System.Serializable]
@@ -251,6 +274,11 @@ public class Character {
 			
 			dialogue.Say(speech, char_name, speech_addon);
 	}
+
+	public Vector2 _targetPosition {
+        get { return targetPosition; }
+	}
+
 
 	Vector2 targetPosition;
 	Coroutine moving;

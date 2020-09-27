@@ -83,6 +83,23 @@ public class DialogueSystem : MonoBehaviour {
 		return retVal;
 	}
 
+	public void Open(string speakerName = "", string speech = "")
+	{
+		if (speakerName == "" && speech == "")
+		{
+			root.SetActive(false);
+			return;
+		}
+
+		root.SetActive(true);
+
+		speakerNameText.text = speakerName;
+
+		speakerNamePanel.SetActive(speakerName != "");
+
+		speechText.text = speech;
+	}
+
 	public void Close()
 	{
 		StopSpeaking();

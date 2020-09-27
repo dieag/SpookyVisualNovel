@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class NovelController : MonoBehaviour
@@ -17,11 +19,116 @@ public class NovelController : MonoBehaviour
     {
         instance = this;
     }
+
+    int activeGameFileNumber = 0;
+    GAMEFILE activeGameFile = null;
+    string activeChapterFile = "";
+
     // Start is called before the first frame update
     void Start()
-    {   
-        LoadChapterFile("chapter0_start");
+    {
+        LoadGameFile(0);
+        //TODO: Differentiate between a new game and loading from a saved game. If saved game is very first line, is that a bug?
     }
+
+    public void LoadGameFile(int gameFileNumber)
+    {
+        activeGameFileNumber = gameFileNumber;
+        string filePath = FileManager.savPath + "Resources/gameFiles/" + gameFileNumber.ToString() + ".txt";
+
+        if(!System.IO.File.Exists(filePath))
+        {
+            FileManager.SaveEncryptedJSON(filePath, new GAMEFILE(),keys);
+        }
+
+        activeGameFile = FileManager.LoadEncryptedJSON<GAMEFILE>(filePath,keys);
+        //Load the File
+        data = FileManager.LoadFile(FileManager.savPath + "Resources/Story/" + activeGameFile.chapterName);
+        activeChapterFile = activeGameFile.chapterName;
+        cachedLastSpeaker = activeGameFile.cachedLastSpeaker;
+
+        DialogueSystem.instance.Open(activeGameFile.currentTextSystemSpeakerDisplayText, activeGameFile.currentTextSystemDisplayText);
+
+        //Load all characters back into scene
+        for(int i = 0; i < activeGameFile.charactersInScene.Count; i++)
+        {
+            GAMEFILE.CHARACTERDATA data = activeGameFile.charactersInScene[i];
+            Character character = CharacterManager.instance.createNewCharacter(data.characterName, data.enabled);
+            character.SetBody(data.bodyExpression);
+            character.SetExpression(data.facialExpression);
+            if (data.facingLeft)
+                character.FaceLeft();
+            else
+                character.FaceRight();
+            character.SetPosition(data.position);
+        }
+
+        //Load the layer images back into the scene
+        if (activeGameFile.background != null)
+            BCFC.instance.background.SetTexture(activeGameFile.background);
+        if (activeGameFile.cinematic != null)
+            BCFC.instance.cinematic.SetTexture(activeGameFile.cinematic);
+        if (activeGameFile.foreground != null)
+            BCFC.instance.foreground.SetTexture(activeGameFile.foreground);
+
+        //start the music back up
+          if (activeGameFile.music != null) {
+            GAMEFILE.SONGDATA song = activeGameFile.music;
+            AudioManager.instance.PlaySong(song.clip, song.maxVolume, song.pitch, song.startingVolume, song.playOnStart, song.loop);
+        }
+        //start the music back up
+        if (activeGameFile.ambientMusic != null)
+        {
+            GAMEFILE.SONGDATA song = activeGameFile.ambientMusic;
+            AudioManager.instance.PlayAmbientSong(song.clip, song.maxVolume, song.pitch, song.startingVolume, song.playOnStart, song.loop);
+        }
+
+        if (handlingChapterFile != null)
+            StopCoroutine(handlingChapterFile);
+        handlingChapterFile = StartCoroutine(HandlingChapterFile());
+        chapterProgress = activeGameFile.chapterProgress;
+    }
+
+    public void SaveGameFile()
+    {
+        string filePath = FileManager.savPath + "Resources/gameFiles/" + activeGameFileNumber.ToString() + ".txt";
+
+        activeGameFile.chapterName = activeChapterFile;
+        activeGameFile.chapterProgress = chapterProgress;
+        activeGameFile.cachedLastSpeaker = cachedLastSpeaker;
+        activeGameFile.currentTextSystemDisplayText = DialogueSystem.instance.speechText.text;
+        activeGameFile.currentTextSystemSpeakerDisplayText = DialogueSystem.instance.speakerNameText.text;
+
+        activeGameFile.charactersInScene.Clear();
+        for(int i = 0; i < CharacterManager.instance.characters.Count; i++)
+        {
+            Character character = CharacterManager.instance.characters[i];
+            GAMEFILE.CHARACTERDATA data = new GAMEFILE.CHARACTERDATA(character);
+            activeGameFile.charactersInScene.Add(data);
+        }
+
+        //save the layers to disk
+        BCFC b = BCFC.instance;
+        activeGameFile.background = b.background.activeImage != null ? b.background.activeImage.texture : null;
+        activeGameFile.cinematic = b.cinematic.activeImage != null ? b.cinematic.activeImage.texture : null;
+        activeGameFile.foreground = b.foreground.activeImage != null ? b.foreground.activeImage.texture : null;
+
+        //save the music to disk
+        if (AudioManager.activeSong != null)
+        {
+            GAMEFILE.SONGDATA songdata = new GAMEFILE.SONGDATA(AudioManager.activeSong);
+            activeGameFile.music = songdata;
+        }
+        if (AudioManager.activeSong != null)
+        {
+            GAMEFILE.SONGDATA songdata = new GAMEFILE.SONGDATA(AudioManager.activeAmbientSong);
+            activeGameFile.ambientMusic = songdata;
+        }
+
+        FileManager.SaveEncryptedJSON(filePath, activeGameFile,keys);
+    }
+
+    byte[] keys = new byte[3] { 23, 70, 194 };
 
     // Update is called once per frame
     void Update()
@@ -30,10 +137,15 @@ public class NovelController : MonoBehaviour
     	{
             Next();
     	}
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            SaveGameFile();
+        }
     }
 
     public void LoadChapterFile(string fileName)
     {
+        activeChapterFile = fileName;
     	data = FileManager.LoadFile(FileManager.savPath + "Resources/Story/" + fileName);
     	cachedLastSpeaker = "";
 
@@ -370,7 +482,6 @@ public class NovelController : MonoBehaviour
         AudioClip clip = Resources.Load("Audio/Music/" + parameters[0]) as AudioClip;
         float maxVolume = parameters.Length >= 2 ? float.Parse(parameters[1]) : 1f;
         float startingVolume = parameters.Length >= 3 ? float.Parse(parameters[2]): 1f;
-        Debug.Log(clip);
     	if (clip != null) {
     		AudioManager.instance.PlaySong(clip, maxVolume, 1f, startingVolume);
         }
@@ -438,7 +549,6 @@ public class NovelController : MonoBehaviour
     	float speed = parameters.Length == 4 ? float.Parse(parameters[3]) : 0;
     	Character c = CharacterManager.instance.getCharacter(character);
     	Sprite sprite = c.GetSprite(expression);
-        Debug.Log("Character: " + character + " region: " + region + " expression: " + expression + " speed " + speed);
     	if (region.ToLower() == "body") {
     		if(speed == 0)
     			c.SetBody(sprite);

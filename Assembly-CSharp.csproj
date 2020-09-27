@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -52,6 +52,9 @@
     <UnityVersion>2020.1.5f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Scripts\BCFC.cs" />
     <Compile Include="Assets\Scripts\Features\AdaptiveFont.cs" />
     <Compile Include="Assets\Scripts\CharacterManager.cs" />
@@ -59,6 +62,7 @@
     <Compile Include="Assets\Scripts\InputAndChoiceSystem\InputScreen.cs" />
     <Compile Include="Assets\TEST\scripts\characterTesting.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Novel Controller\EndGameScreen.cs" />
     <Compile Include="Assets\TEST\scripts\TransitionMasterTesting.cs" />
     <Compile Include="Assets\Scripts\TransitionMaster.cs" />
     <Compile Include="Assets\Scripts\TextArchitect.cs" />
@@ -83,7 +87,8 @@
     <Compile Include="Assets\Scripts\TagManager.cs" />
     <Compile Include="Assets\TEST\scripts\ChoiceScreenTesting.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\Novel Controller\EndGameScreen.cs" />
+	<Compile Include="Assets\Scripts\Novel Controller\EndGameScreen.cs" />
+    <Compile Include="Assets\Scripts\SavingLoading\GAMEFILE.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -97,6 +102,7 @@
      <None Include="Assets\Resources\Story\chapter_1b.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\Resources\Story\chapter_6a.txt" />
+     <None Include="Assets\Resources\Story\TODOnotes.txt" />
      <None Include="Assets\Resources\Story\chapter_1a_test.txt" />
      <None Include="Assets\Resources\Story\ScriptingDocumentation.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
