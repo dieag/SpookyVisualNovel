@@ -411,7 +411,7 @@ public class NovelController : MonoBehaviour
     	string character = parameters[0];
     	float locationX = float.Parse(parameters[1]);
     	float locationY = float.Parse(parameters[2]);
-    	float speed = parameters.Length >= 4 ? float.Parse(parameters[3]) : 1f;
+    	float speed = parameters.Length >= 4 ? float.Parse(parameters[3]) : 3f;
     	bool smooth = parameters.Length == 5 ? bool.Parse(parameters[4]) : true;
 
 

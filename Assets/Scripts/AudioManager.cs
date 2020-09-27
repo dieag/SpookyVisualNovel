@@ -33,13 +33,11 @@ public class AudioManager : MonoBehaviour
 
 	public void PlaySong(AudioClip song, float maxVolume =1f, float pitch = 1f, float startingVolume = 0f, bool playOnStart = true, bool loop = true)
 	{
-		Debug.Log(song);
 		if(song != null)
 		{
 			for(int i = 0; i < allSongs.Count; i++)
 			{
 				SONG s = allSongs[i];
-				Debug.Log(song);
 				if (s.clip == song)
 				{
 					activeSong = s;
