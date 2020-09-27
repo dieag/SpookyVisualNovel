@@ -14,13 +14,13 @@ narrator|"[playSound(effect_thunder1)]Another crack of thunder. {a}I glance up t
 
 "He's told me stories about how his mom loved to work with him on the garden - I think that was his favorite thing to do with her. Together, they transformed it from cracked cement to brilliant greenery."|playSound(effect_thunder2)
 
-"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,unamused)]Damn - I better go up and check on it. {a}I set my book down and to the stairs, leaving the warmth of the fire behind me."|playSound(effect_stairs)|setBackground(hallway_up_light,true,1)|exit(Gwen)
+"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,unamused)]Damn - I better go up and check on it. {a}I set my book down and head to the stairs, leaving the warmth of the fire behind me."|playSound(effect_stairs)|setBackground(hallway_up_light,true,1)|exit(Gwen)
 
 "This mansion can be like a labyrinth, sometimes - to be honest, I'm not used to living somewhere with this many rooms.{a} I didn't exactly grow up in the lap of luxury."
 
-"Victor's parents died when he was young, and my parents abandoned me when I was twelve, so we could relate immediately on some level when we met. Trauma bonding and all that."|setPosition(Gwen,.5,0)|changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,neutral)|enter(Gwen,0,false)
+"Victor's parents died when he was young, and my parents abandoned me when I was twelve, so we could relate immediately on some level when we met. Trauma bonding and all that."
 
-Gwen|"It's nice to have a place to really call home again."
+Gwen|"[setPosition(Gwen,.75,0)|changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,neutral)|enter(Gwen,0,false)]It's nice to have a place to really call home again."
 
 narrator|"After meandering and making some bad turns, I finally find it - the roof ladder!{a} Well, more like the door leading to the ladder."
 
@@ -42,13 +42,13 @@ narrator|"I've done this so many times that I could probably just memorize it if
 
 "I emerge and notice immediately that the top cover to the greenhouse is already up. {a}Victor must have checked weather reports and lowered it when I didn't notice. {a}Ha - guess I should have known he wouldn't have forgotten about the plants up here."
 
-"I walk up to one of the windows and glance around the front of the mansion.{a} The expansive lawn is an acre long, stretching to the forest edge. Victor and I have often hiked through that forest - it's almost like he has a private set of trails since no one else really comes up here."|playSound(effect_thunder1)
+"[moveCharacter(Gwen,0.25,0)]I walk up to one of the windows and glance around the front of the mansion.{a} The expansive lawn is an acre long, stretching to the forest edge. Victor and I have often hiked through that forest - it's almost like he has a private set of trails since no one else really comes up here."|playSound(effect_thunder1)
 
-Gwen|"[changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,neutral)]I hope Victor will be okay driving in this storm."
+Gwen|"[changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,sad)]I hope Victor will be okay driving in this storm."
 
 narrator|"I'm sure he's upset about it. {a}He's told me many times that Halloween is his favorite holiday - and it's ruined! No trick or treaters, no scary movies by the fire..."
 
-Gwen|"[playSound(effect_crash_faraway)|changeExpression(Gwen,face,shock)]Ah! {a}A crash?"|playMusic(music_pursuit,0,0.25)
+Gwen|"[playSound(effect_crash_faraway)|changeExpression(Gwen,face,shock)|playMusic(music_pursuit,0,0.25)]Ah! {a}A crash?"
 
 narrator|"Shaken from my reverie, I lean into the glass window, struggling to see immediately below."
 

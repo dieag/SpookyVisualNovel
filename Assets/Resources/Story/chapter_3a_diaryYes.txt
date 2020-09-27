@@ -1,0 +1,43 @@
+setFlag(Gwen,true)
+
+narrator|"[changeExpression(Gwen,face,neutral)|flip(Gwen)]I crack it open[playSound(effect_book_take)]. {a}I know, I shouldn't read this, but I’m desperate for a distraction. {a}I'll apologize later."
+
+"Flipping through the pages[playSound(effect_page_turn)], it looks like he kept this diary during high school. {a}The date ranges line up, at least."
+
+"I turn to the final entry. {a}The date at the top of the page is from around the time he would have graduated."
+
+"'Hey, it's me again. {a}I have no idea what to do.'"
+
+"'Mom and Dad approached me just a few minutes ago with a giant, old crate. {a}They told me something… terrible. {a}A horrible, awful family secret.'"
+
+Gwen|"A secret?"|changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,unamused)
+
+narrator|"'I can't even write it out here - I feel like I'm going to vomit just thinking about it. {a}I don't want to be a part of this. {a}The things they had in the box… ugh.'"
+
+"'My dad told me I had to do this to survive. {a}He said if I didn't participate, if I didn't help them do this, that they would kill me!'"
+
+"'I'm not sure what to do, but I know I don't want to do this. {a}However... {a}I also don't want to die, especially by their hands. {a}I can’t believe they're threatening to end my life...'"
+
+"'Anyway. {a}This is the last you'll hear from me. {a}No matter what happens, I'm sure I can't write anything in here anymore.'"
+
+"'I hope I'm still around after this. {a}Thank you for holding my thoughts all these years.'"
+
+"It ends there."
+
+"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,angry)|flip(Gwen)]What the hell is this? {a}He told me his parents died way before high school."
+
+"I stare at the photo on his dresser, the one of the two people with their arms around him. {a}He lied to me. {a}I'm guessing it has to do with what they told him, then."
+
+"[changeExpression(Gwen,face,unamused)|flip(Gwen)]Maybe he rejected his parents, and... and they disappeared? {a}That doesn't make sense. {a}They threatened to kill him."
+
+"I look at the bedroom door, where the intruders were standing behind minutes before."
+
+Gwen|"Maybe that's them. {a}Maybe they're killing him tonight."
+
+narrator|"That has to be it. {a}They've been stalking him for years, tracking him - that's how they know who I am, too!"
+
+"[playSound(effect_box_close)|moveCharacter(Gwen,0.3,0)]I place the diary back in the lockbox and close it, setting it back in the drawer[playSound(effect_drawer_close)]. {a}He should have told me about this. {a}I of all people would understand shitty parents."
+
+"[changeExpression(Gwen,face,angry)]I won't let them hurt you, Victor."
+
+Load(chapter_3a_continue)

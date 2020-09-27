@@ -1,0 +1,5 @@
+narrator|"[changeExpression(Gwen,face,sad)|flip(Gwen)]This is none of my business, and I would hate to invade Victor's privacy. {a}He wouldn't have hidden this behind so many locks if he wanted me to see it."
+
+"[playSound(effect_box_close)]I close the box and tuck it back in the drawer."|playSound(effect_drawer_close)
+
+Load(chapter_3a_continue)

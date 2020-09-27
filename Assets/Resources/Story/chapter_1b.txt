@@ -44,7 +44,7 @@ narrator|"I dash into the small room and tug the bookshelf door closed with all 
 
 "I'm sure this will come in handy later. {a}I'm suddenly glad my boyfriend uses codes to lock doors instead of keys - there's no way the intruders could pick their way in."
 
-"Suddenly, I hear a muffled set of footsteps just outside my hiding place."|playSound(effect_walk_womanlibrary_soft)
+"Abruptly, I hear a muffled set of footsteps just outside my hiding place."|playSound(effect_walk_womanlibrary_soft)
 
 "There's no way they will find me in here. {a}Right?"|changeExpression(Gwen,face,sad)|moveCharacter(Gwen,.5,0)
 
@@ -60,7 +60,7 @@ narrator|"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,sad)|fli
 
 "Breathe, breathe, breathe."
 
-"After I stay frozen for what seems like an eternity, the woman in the library finally shuffles away, and I can barely hear the library door click shut. {a}Thank god."|changeExpression(Gwen,body,standarmsbehind)
+"After I stay frozen for what seems like an eternity, the woman in the library finally shuffles away, and after waiting for a while I don't hear her return. {a}Thank god."|changeExpression(Gwen,body,standarmsbehind)
 
 "I thought for sure she knew I was in here."
 
@@ -108,12 +108,10 @@ Gwen|"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shocktalk)]W
 
 narrator|"The kitchen door - it's shut! {a}In all the time I've lived here, it's never been shut!!"|moveCharacter(Gwen,.6,0)
 
-"I run to the door and twist the knob, but it's locked. {a}No!"|playSound(effect_door_locked)
+"[playSound(effect_door_locked)]I run to the door and twist the knob, but it's locked. {a}No!"
 
 "I've never tried to unlock this door. {a}But I need in!"
 
-"Wait - is that footsteps? {a}From upstairs?"
-
-"Shit! Someone is coming down the stairs! {a}I need to open this right now!!!"|playSound(effect_screen_smack)|exit(Gwen)
+"[flip(Gwen)]Shit! Someone is coming down the stairs! {a}I need to open this right now!!!"|playSound(effect_screen_smack)|exit(Gwen)
 
 loadPuzzle(puzzle1,key1,23012010122620,chapter_2a,chapter_2b,60)
