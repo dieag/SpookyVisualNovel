@@ -1,9 +1,9 @@
-"No! {a}I couldn't open it in time!"|playMusic(music_final,0.25,0.25)
+"No! {a}I couldn't open it in time!"|playMusic(music_final,0.25,0.25)|moveCharacter(Gwen,.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,sadtalk)
 
-"Someone grabs my arm, spinning me around. {a}It's the woman!"
+"Someone grabs my arm, spinning me around. {a}It's the woman!"|moveCharacter(Gwen,0.5,0,5)|setPosition(Woman,0.25,0)|changeExpression(Woman,face,laugh)|enter(Woman)
 
 Woman|"Finally!"|playSound(effect_stab)
 
-Gwen|"Noooooooooo!!"
+Gwen|"Noooooooooo!!"|changeExpression(Gwen,face,sad)|flip
 
 endGame(end_death)
