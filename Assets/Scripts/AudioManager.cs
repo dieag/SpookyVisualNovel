@@ -84,19 +84,25 @@ public class AudioManager : MonoBehaviour
 			activeAmbientSong = null;
 
 		StopAllCoroutines();
-		StartCoroutine(VolumeLeveling());
+		StartCoroutine(AmbientVolumeLeveling());
 	}
 	public void StopAmbientSong()
 	{
 
 		activeAmbientSong = null;
 		StopAllCoroutines();
-		StartCoroutine(VolumeLeveling());
+		StartCoroutine(AmbientVolumeLeveling());
 	}
 
 	IEnumerator VolumeLeveling()
 	{
 		while(TransitionSongs())
+			yield return new WaitForEndOfFrame();
+	}
+
+	IEnumerator AmbientVolumeLeveling()
+	{
+		while (TransitionAmbientSongs())
 			yield return new WaitForEndOfFrame();
 	}
 
@@ -122,7 +128,7 @@ public class AudioManager : MonoBehaviour
 					anyValueChanged = true;
 				} else {
 					allSongs.RemoveAt(i);
-					song.Destroy();
+					song.Destroy(allSongs);
 					continue;
 				}
 			}
@@ -158,7 +164,7 @@ public class AudioManager : MonoBehaviour
 				else
 				{
 					allAmbientSongs.RemoveAt(i);
-					song.Destroy();
+					song.Destroy(allAmbientSongs);
 					continue;
 				}
 			}
@@ -218,9 +224,9 @@ public class AudioManager : MonoBehaviour
 			source.UnPause();
 		}
 
-		public void Destroy()
+		public void Destroy(List<SONG> allSongs)
 		{
-			AudioManager.allSongs.Remove(this);
+			allSongs.Remove(this);
 			DestroyImmediate(source.gameObject);
 		}
 	}
