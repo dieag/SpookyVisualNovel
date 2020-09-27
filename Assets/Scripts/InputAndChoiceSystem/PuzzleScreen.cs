@@ -8,27 +8,22 @@ public class PuzzleScreen : MonoBehaviour
 {
 
 	public static PuzzleScreen instance;
-	public PuzzleButton puzzleButton;
+	public PuzzleButton cypherButton;
+    public PuzzleButton enterButton;
 	public Timer timer;
     public GameObject inputField;
     public GameObject inputHeader;
     private string keyImage;
+    private bool enterButtonHit = false;
 
     void Awake()
 	{
 		instance = this;
 	}
 
-    bool checkPuzzleAnswer(string puzzleAnswer, string puzzleName){
-        switch(puzzleName) {
-            case "puzzle0": return puzzleAnswer == "100201104070";
-            default: return false;
-        }
-    }
-
     IEnumerator WaitForKeyDown(KeyCode keyCode)
     {
-        while(!Input.GetKeyDown(keyCode)) {
+        while(!Input.GetKeyDown(keyCode) && !enterButtonHit) {
             if(timer.isTimeOut && timer.isTimerOn) {
                 yield break;
             }
@@ -37,7 +32,6 @@ public class PuzzleScreen : MonoBehaviour
             
     }
 
-	public bool isHandlingPuzzle {get{return handlingPuzzle != null;}}
     Coroutine handlingPuzzle = null;
     public void puzzleStart(string puzzleName, string _keyImage, string keyCode, string passChapter, string failChapter, float timerStart)
     {
@@ -60,6 +54,7 @@ public class PuzzleScreen : MonoBehaviour
         AudioClip failClip = Resources.Load("Audio/SFX/effect_puzzle_timeup") as AudioClip;
         bool passedTimedGame = true;
         string puzzleInput = InputScreen.currentInput;
+
         timer.StartTimer(timerStart);
         if (!timer.isTimerOn)
         {
@@ -79,6 +74,7 @@ public class PuzzleScreen : MonoBehaviour
             puzzleInput = InputScreen.currentInput;
             gameDone = (puzzleInput == keyCode);
             if (gameDone == false) {
+                enterButtonHit = false;
                 AudioManager.instance.PlaySFX(wrongAnswerClip);
                 InputScreen.Show("<color=red>Wrong Answer</color>", true);
             }
@@ -112,6 +108,7 @@ public class PuzzleScreen : MonoBehaviour
     bool showingKey = false;
     public void ShowKey(PuzzleButton button)
     {
+        if (InputScreen.isRevealing) return;
     	showingKey ^= true;
         if (showingKey)
         {
@@ -126,6 +123,12 @@ public class PuzzleScreen : MonoBehaviour
             inputField.SetActive(true);
         }
 
+    }
+
+    public void EnterAnswer(PuzzleButton button)
+    {
+        if(!showingKey && !InputScreen.isRevealing)
+            enterButtonHit = true;
     }
 
 }

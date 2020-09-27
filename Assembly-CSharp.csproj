@@ -62,16 +62,15 @@
     <Compile Include="Assets\Scripts\InputAndChoiceSystem\InputScreen.cs" />
     <Compile Include="Assets\TEST\scripts\characterTesting.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
-	<Compile Include="Assets\Scripts\Novel Controller\EndGameScreen.cs" />
+    <Compile Include="Assets\Scripts\Novel Controller\EndGameScreen.cs" />
     <Compile Include="Assets\TEST\scripts\TransitionMasterTesting.cs" />
     <Compile Include="Assets\Scripts\TransitionMaster.cs" />
     <Compile Include="Assets\Scripts\TextArchitect.cs" />
     <Compile Include="Assets\Scripts\Features\AdaptiveFontTMpro.cs" />
-	<Compile Include="Assets\Scripts\InputAndChoiceSystem\Timer.cs" />
+    <Compile Include="Assets\Scripts\InputAndChoiceSystem\Timer.cs" />
     <Compile Include="Assets\Scripts\DialogueSystem.cs" />
     <Compile Include="Assets\TEST\scripts\architectTextTesting.cs" />
     <Compile Include="Assets\Scripts\Novel Controller\CLM.cs" />
-	<Compile Include="Assets\Scripts\InputAndChoiceSystem\PuzzleScreen.cs" />
     <Compile Include="Assets\TEST\scripts\dialogueTesting.cs" />
     <Compile Include="Assets\Scripts\Characters.cs" />
     <Compile Include="Assets\Scripts\Novel Controller\DialogueEvents.cs" />
@@ -80,7 +79,7 @@
     <Compile Include="Assets\TEST\scripts\InputScreenTesting.cs" />
     <Compile Include="Assets\Scripts\InputAndChoiceSystem\ChoiceButton.cs" />
     <Compile Include="Assets\Scripts\Novel Controller\NovelController.cs" />
-	<Compile Include="Assets\Scripts\InputAndChoiceSystem\PuzzleScreen.cs" />
+    <Compile Include="Assets\Scripts\InputAndChoiceSystem\PuzzleScreen.cs" />
     <Compile Include="Assets\Scripts\FileManager.cs" />
     <Compile Include="Assets\Scripts\InputAndChoiceSystem\ChoiceScreen.cs" />
     <Compile Include="Assets\Scripts\InputAndChoiceSystem\PuzzleButton.cs" />
@@ -88,7 +87,6 @@
     <Compile Include="Assets\Scripts\TagManager.cs" />
     <Compile Include="Assets\TEST\scripts\ChoiceScreenTesting.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
-	<Compile Include="Assets\Scripts\Novel Controller\EndGameScreen.cs" />
     <Compile Include="Assets\Scripts\SavingLoading\GAMEFILE.cs" />
   </ItemGroup>
   <ItemGroup>
