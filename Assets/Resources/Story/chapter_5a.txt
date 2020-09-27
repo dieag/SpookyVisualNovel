@@ -1,46 +1,46 @@
 narrator|"The diary... {a}the terrible secret... {a}"
 
-Gwen|"You're his parents. {a}"
+Gwen|"[changeExpression(Gwen,face,shocktalk)]You're his parents. {a}"
 
-Woman|"Ha! {a}You're more clever than Victor says."
+Woman|"[changeExpression(Gwen,face,shock)]Ha! {a}You're more clever than Victor says."
 
-narrator|"Victor stands slowly, and the woman hands him her knife."
+narrator|"Victor stands slowly, and the woman hands him her knife."|changeExpression(Victor,face,shock)|changeExpression(Victor,body,stand)|enter(Victor,1,true)
 
-Victor|"How did you figure it out?"
+Victor|"[changeExpression(Victor,face,shocktalk)]How did you figure it out?"
 
-Gwen|"What are you doing, Victor? {a}I came here to help you!"
+Gwen|"[changeExpression(Gwen,face,shocktalk)]What are you doing, Victor? {a}I came here to help you!"
 
-narrator|"There's nowhere to run. {a}I'm trapped. {a}This isn't how it was supposed to go! {a}Why is he doing this?"
+narrator|"[changeExpression(Gwen,face,shock)]There's nowhere to run. {a}I'm trapped. {a}This isn't how it was supposed to go! {a}Why is he doing this?"
 
-narrator|"The man lunges at me and wrests the knife from my shaky grip. {a}He jumps back before I can retaliate."
+narrator|"The man lunges [flip(Man)|changeExpression(Man,face,angry)|moveCharacter(Man,.75,0)]at me and wrests the knife from my shaky grip. {a}He jumps back[changeExpression(Man,face,happy)|changeExpression(Man,body,standknifeout)|moveCharacter(Man,.5,0)] before I can retaliate."
 
 narrator|"I fall to the cold concrete, stunned."
 
-Gwen|"Victor... whatever this is, I can help you. {a}I know you don't want this."
+Gwen|"[changeExpression(Gwen,face,sadtalk)]Victor... whatever this is, I can help you. {a}I know you don't want this."
 
-Woman|"I think we know our son a little better than you, dear."
+Woman|"[changeExpression(Gwen,face,sad)]I think we know our son a little better than you, dear."
 
-narrator|"She walks in front of me and crouches down so our faces are on the same level."
+narrator|"[moveCharacter(Woman,.25,0)]She walks in front of me and crouches down so our faces are on the same level."
 
 Woman|"And we know what he needs. {a}What he craves."
 
-Gwen|"What do you mean?"
+Gwen|"[changeExpression(Gwen,face,shocktalk)]What do you mean?"
 
-Woman|"Our family has a long-held tradition. {a}Once a year, the adults all get together for a Halloween feast."
+Woman|"[changeExpression(Gwen,face,shock)]Our family has a long-held tradition. {a}Once a year, the adults all get together for a Halloween feast."
 
-Gwen|"A feast... {a}That's nothing special."
+Gwen|"[changeExpression(Gwen,face,neutraltalk)]A feast... {a}That's nothing special."
 
-Man|"Our menu is quite unique."
+Man|"[changeExpression(Gwen,face,neutral)]Our menu is quite unique."
 
 narrator|"The woman smiles at me, raising a hand to my hair."
 
 Woman|"Tonight, you will be our main course."
 
-narrator|"My eyes lock onto the meat hook glinting in the light. {a}No way. {a}No."
+narrator|"[changeExpression(Gwen,face,shock)]My eyes lock onto the meat hook glinting in the light. {a}No way. {a}No."
 
 narrator|"The woman stands and steps aside. {a}Victor and his father move towards me simultaneously."
 
-Victor|"Just relax. {a}It'll be over soon."
+Victor|"[changeExpression(Victor,face,unamusedtalk)]Just relax. {a}It'll be over soon."
 
 narrator|"No... {a}wait... {a}"
 
