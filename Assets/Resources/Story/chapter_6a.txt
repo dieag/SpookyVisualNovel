@@ -1,8 +1,8 @@
-Man|"Help you? {a}Do you see where you are right now?"
+Man|"[changeExpression(Man,face,happytalk)]Help you? {a}Do you see where you are right now?"
 
-narrator|"[changeExpression(Victor,face,unamused)]Victor frowns and his mother laughs cruelly behind him."
+narrator|"[changeExpression(Victor,face,unamused)|changeExpression(Woman,face,laugh)]Victor frowns and his mother laughs cruelly behind him."
 
-Woman|"[moveCharacter(Woman,0.6,0)|flip(Woman)|changeExpression(Woman,face,laugh)]Ha! {a}Victor helped you?"
+Woman|"[moveCharacter(Woman,0.6,0)|flip(Woman)]Ha! {a}Victor helped you?"
 
 Gwen|"[flip(Gwen)|changeExpression(Gwen,face,sadtalk)]You did! {a}I know you did!"|playMusic(music_final,0,0.25)
 
@@ -18,7 +18,7 @@ narrator|"I point to the middle two keys."
 
 Gwen|"[changeExpression(Gwen,face,unamused)|changeExpression(Gwen,body,standarmsbehind)]You left that door open in the library. {a}You NEVER leave that door open."
 
-narrator|"Victor's eyes soften a bit and his father frowns next to him."
+narrator|"[changeExpression(Victor,face,shock)]Victor's eyes soften a bit and his father frowns next to him."|changeExpression(Man,face,unamused)
 
 Gwen|"I could only find those knives because of you. {a}And you put the next key in there for me to find."
 
@@ -26,107 +26,107 @@ narrator|"I grab his pant leg."
 
 Gwen|"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,sadtalk)|flip(Gwen)]You wanted me to escape. {a}God, I'm stupid. {a}Those knives, the books in your hidden library room... {a}you wanted me to figure it out, too."
 
-Woman|"What is she saying, Victor?"
+Woman|"[flip(Woman)|changeExpression(Woman,face,angrytalk)]What is she saying, Victor?"
 
-Victor|"Mother -"
+Victor|"[flip(Victor)]Mother -"
 
 Man|"Just get it over with!"
 
-narrator|"Victor grimaces, lifting his dagger."
+narrator|"[changeExpression(Victor,body,standarmblood)|changeExpression(Victor,face,angry)]Victor grimaces, lifting his dagger."
 
-Gwen|"The diary! {a}In your room!"
+Gwen|"[changeExpression(Gwen,face,sadtalk)|flip(Gwen)|moveCharacter(Gwen,0.7,0)]The diary! {a}In your room!"
 
-narrator|"He pauses."
+narrator|"[changeExpression(Victor,face,shock)]He pauses."
 
 Gwen|"I know you aren't doing this because you want to. {a}I know you're afraid."
 
-Man|"Enough!"
+Man|"[changeExpression(Man,face,angrytalk)]Enough!"
 
 Gwen|"Wait!"
 
-narrator|"The man lifts his own blade into the air over my head. {a}No!!"
+narrator|"[flip(Man)|changeExpression(Man,body,standknifeout)]The man lifts his own blade into the air. {a}No!!"
 
-Woman|"[playSound(effect_stab)]{wa 1}VICTOR!"
+Woman|"[playSound(effect_stab)|changeExpression(Man,face,angry)|changeExpression(Woman,face,sadtalk)|flip(Woman)|changeExpression(Victor,face,shock)|changeExpression(Gwen,face,shock)]{wa 1}VICTOR!"
 
-narrator|"[exit(Man)]The man collapses, a knife hilt protruding from his chest. {a}Victor turns to me, hands empty."
+narrator|"[changeExpression(Victor,body,standarmblood)|exit(Man)]The man collapses, a knife hilt protruding from his chest. {a}Victor turns to me, hands empty."
 
-Victor|"Let's go!"
+Victor|"[flip(Victor)]Let's go!"
 
 narrator|"Yes!"
 
-"I grab his hand and see the woman rush over to the man collapsed on the floor. {a}He's not moving."
+"[moveCharacter(Woman,0.2,0)|changeExpression(Woman,face,sad)]I grab his hand and see the woman rush over to the man collapsed on the floor. {a}He's not moving."
 
 Woman|"No! {a}No, no, no, no, no!!!!"
 
 Victor|"Gwen - "
 
-Woman|"I'LL KILL YOU!"
+Woman|"[flip(Woman)|changeExpression(Woman,face,angrytalk)]I'LL KILL YOU!"
 
-Victor|"GO!"|exit(Woman)
+Victor|"GO!"|exit(Woman)|exit(Victor)|exit(Gwen)
 
-narrator|"I book it back to the ladder, Victor on my heels. {a}We scramble up the ladder as fast as possible, slamming the hatch shut behind us."|playSound(effect_hatch_close)|showBackground(kitchen,true,1)
+narrator|"I book it back to the ladder, Victor on my heels. {a}We race to the top and slam the hatch shut behind us."|playSound(effect_hatch_close)|showBackground(kitchen,true,1)
 
-Victor|"We aren't safe yet."
+Victor|"[setPosition(Victor,0.25,0)|changeExpression(Victor,body,standblood)|changeExpression(Victor,face,unamusedtalk)|enter(Victor)]We aren't safe yet."
 
-Gwen|"What do you mean?"
+Gwen|"[setPosition(Gwen,0.75,0)|changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,sadtalk)|enter(Gwen)]What do you mean?"
 
 Victor|"There's another entrance."
 
 Gwen|"Damn. {a}Let's get to your car."
 
-Victor|"No. {a}She's probably slashing the tires right now."
+Victor|"[flip(Victor)|changeExpression(Victor,face,unamused)]No. {a}She's probably slashing the tires right now."
 
-Gwen|"Then what? {a}What do we do?"
+Gwen|"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,sad)]Then what? {a}What do we do?"
 
-Victor|"Burn this. {a}All of it."
+Victor|"[flip(Victor)]Burn this. {a}All of it."
 
-Gwen|"The mansion?"
+Gwen|"[changeExpression(Gwen,face,shock)]The mansion?"
 
 Victor|"With my mother inside."
 
 narrator|"Shit. {a}I lean back against the counter, but Victor looks unphased by what he just said."
 
-Gwen|"Are you okay?"
+Gwen|"[changeExpression(Gwen,face,sadtalk)]Are you okay?"
 
 Victor|"What? {a}No, of course I'm not okay."
 
-Gwen|"Ha."
+Gwen|"[changeExpression(Gwen,face,sad)]Ha."
 
-Victor|"Let's go."
+Victor|"Let's go."|exit(Victor)
 
-narrator|"He takes my hand and leads me out of the kitchen."|showBackground(living_room,true,1)
+narrator|"He takes my hand and leads me out of the kitchen."|showBackground(living_room,true,1)|exit(Gwen)
 
 Victor|"My mother isn't stupid. {a}She'll be waiting for us somewhere outside. {a}We'll need to lure her back in."
 
 narrator|"I sit on the couch and Victor grimaces."
 
-Victor|"I wouldn't sit on that anymore."
+Victor|"[setPosition(Victor,0.25,0)|changeExpression(Victor,body,standblood)|changeExpression(Victor,face,unamusedtalk)|enter(Victor)]I wouldn't sit on that anymore."
 
-Gwen|"What? {a}Why?"
+Gwen|"[setPosition(Gwen,0.75,0)|changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,neutraltalk)|enter(Gwen)]What? {a}Why?"
 
 Victor|"You remember seeing any books about making leather?"
 
 Gwen|"Yes?"
 
-narrator|"He stares at me. {a}What does he mean by -"
+narrator|"[flip(Victor)]He stares at me. {a}What does he mean by -"
 
-"Shit. {a}I leap up from the couch, struggling once again to resist the urge to vomit."
+"[changeExpression(Gwen,face,shock)]Shit. {a}[moveCharacter(Gwen,0.5,0)]I leap up from the couch, struggling once again to resist the urge to vomit."
 
-Victor|"Sorry. {a}We're almost done."
+Victor|"[flip(Victor)|changeExpression(Victor,face,unamused)]Sorry. {a}We're almost done."
 
 narrator|"I can't meet his gaze."
 
-Victor|"Let's go."
+Victor|"Let's go."|exit(Victor)|exit(Gwen)
 
-narrator|"He walks up the stairs and I follow at a distance, still trying to clear my head."|playSound(effect_stairs)|showBackground(hallway_up_dark,true,1)
+narrator|"He walks up the stairs and I follow at a distance, still trying to process that disgusting new discovery."|playSound(effect_stairs)|showBackground(hallway_up_dark,true,1)
 
-Gwen|"How... {a}how will we get her inside?"
+Gwen|"[setPosition(Gwen,0.25,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,sadtalk)|enter(Gwen)]How... {a}how will we get her inside?"
 
-Victor|"With bait."
+Victor|"[setPosition(Victor,0.75,0)|changeExpression(Victor,body,standblood)|changeExpression(Victor,face,happy)|enter(Victor)]With bait."
 
 narrator|"He points to himself."
 
-Victor|"She wants to kill me more than you right now."
+Victor|"[flip(Victor)]She wants to kill me more than you right now."
 
 Gwen|"Surely she's not dumb enough to fall for something like that."
 
@@ -134,15 +134,15 @@ Victor|"Right now she is. {a}She's not thinking."
 
 narrator|"[playSound(effect_window_open)]Victor swings open a window, thunder crackling in response."|playSound(effect_thunder1)
 
-Victor|"MOTHER!"
+Victor|"[changeExpresion(Victor,body,standarmblood)|changeExpression(Victor,face,angrytalk)]MOTHER!"
 
-Gwen|"Victor! {a}What are you doing?"
+Gwen|"[changeExpression(Gwen,face,shocktalk)]Victor! {a}What are you doing?"
 
 Victor|"COME INSIDE AND HAVE A FEAST WITH US! {a}GWENNY IS CHOPPING UP DAD RIGHT NOW!"
 
-narrator|"My stomach turns again at his words, but stills at the blood-curdling scream that follows."
+narrator|"[changeExpression(Gwen,face,shock)]My stomach turns again at his words, but stills at the blood-curdling scream that follows."
 
-"He closes the window[playSound(effect_window_close)] and places his hands firmly on my shoulders."
+"He closes the window[playSound(effect_window_close)] and places his hands firmly on my shoulders."|moveCharacter(Victor,0.5,0)|changeExpression(Victor,face,angry)
 
 Victor|"She's coming back inside. {a}We need to trap her."
 
@@ -150,35 +150,35 @@ Gwen|"How?"
 
 Victor|"In my room."
 
-Gwen|"Will this place burn down fast enough before she breaks out?"
+Gwen|"[changeExpression(Gwen,face,unamusedtalk)]Will this place burn down fast enough before she breaks out?"
 
 Victor|"I can hold her at the bedroom door long enough if you can start the fire fast enough."
 
-Gwen|"How can I do that? {a}I need gasoline for a fire that big."
+Gwen|"[flip(Gwen)]How can I do that? {a}I need gasoline for a fire that big."
 
-Victor|"There's a room in the back of the first floor. {a}West side. {a}Blue door. {a}There's gas and propane inside."
+Victor|"[changeExpression(Victor,face,unamused)]There's a room in the back of the first floor. {a}West side. {a}Blue door. {a}There's gas and propane inside."
 
-Gwen|"Why do you have that inside the mansion?"
+Gwen|"[changeExpression(Gwen,face,shocktalk)]Why do you have that inside the mansion?"
 
-narrator|"Victor lifts his hands from my shoulders and turns back to the stairs."
+narrator|"[flip(Victor)|moveCharacter(Victor,0.6,0)]Victor lifts his hands from my shoulders and turns back to the stairs."
 
-Victor|"I've always planned to end it this way."
+Victor|"[changeExpression(Victor,face,sad)|changeExpression(Victor,body,standblood)]I've always planned to end it this way."
 
-narrator|"When we reach the top of the stairs, Victor pauses and blocks me with his arm. {a}The woman screams below."|playMusic(music_pursuit)
+narrator|"[exit(Victor)|exit(Gwen)]When we reach the top of the stairs, Victor pauses and blocks me with his arm. {a}The woman screams below."|playMusic(music_pursuit)
 
-Victor|"Damn! {a}Quick, run!"
+Victor|"[setPosition(Victor,0.5,0)|changeExpression(Victor,body,standarmsblood)|changeExpression(Victor,face,angrytalk)|enter(Victor)]Damn! {a}Quick, run!"
 
 narrator|"He quickly shoves me in the opposite direction of the bedroom as his mother begins her loud, angry ascent."
 
-"I dart around the corner out of sight just as she reaches the top.[playSound(effect_run_inside)] {a}She shrieks and I hear the beginning of a pursuit as Victor runs in the opposite direction."
+"[exit(Victor)]I dart around the corner out of sight just as she reaches the top.[playSound(effect_run_inside)] {a}She shrieks and I hear the beginning of a pursuit as Victor runs in the opposite direction."
 
-"He can handle it. {a}I need to do my part."|showBackground(living_room,true,1)|playSound(effect_stairs)
+"[setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,angry)|enter(Gwen)]He can handle it. {a}I need to do my part."|showBackground(living_room,true,1)|playSound(effect_stairs)
 
-Gwen|"First floor. {a}West side."
+Gwen|"[flip(Gwen)]First floor. {a}West side."
 
 narrator|"Gotta move."|showBackground(hallway_down_dark,true,1)
 
-"As I run down the hall, I notice that none of the locks are shattered. {a}I can get in the gasoline room!"
+"[exit(Gwen)]As I run down the hall, I notice that none of the locks are shattered. {a}I can get in the gasoline room!"
 
 "I finally see the blue door and stop, slamming my hand on the lock to activate the code.[playSound(effect_screen_smack)] {a}Damn, a long one."
 
