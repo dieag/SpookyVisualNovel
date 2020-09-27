@@ -1,22 +1,22 @@
 Man|"Help you? {a}Do you see where you are right now?"
 
-narrator|"Victor frowns and his mother laughs cruelly behind him."
+narrator|"[changeExpression(Victor,face,unamused)]Victor frowns and his mother laughs cruelly behind him."
 
-Woman|"Ha! {a}Victor helped you?"
+Woman|"[moveCharacter(Woman,0.6,0)|flip(Woman)|changeExpression(Woman,face,laugh)]Ha! {a}Victor helped you?"
 
-Gwen|"You did! {a}I know you did!"|playMusic(music_final,0,0.25)
+Gwen|"[flip(Gwen)|changeExpression(Gwen,face,sadtalk)]You did! {a}I know you did!"|playMusic(music_final,0,0.25)
 
 narrator|"I quickly tug the taped together codes out of my pocket, waving it in front of me.[playSound(effect_paper_shake2)]"
 
 Gwen|"These! {a}I found all of these because of you!"
 
-Man|"He dropped that key for you so it would lead you here!"
+Man|"[changeExpression(Man,face,happytalk)]He dropped that key for you so it would lead you here!"
 
 Gwen|"I'm not talking about that."
 
 narrator|"I point to the middle two keys."
 
-Gwen|"You left that door open in the library. {a}You NEVER leave that door open."
+Gwen|"[changeExpression(Gwen,face,unamused)|changeExpression(Gwen,body,standarmsbehind)]You left that door open in the library. {a}You NEVER leave that door open."
 
 narrator|"Victor's eyes soften a bit and his father frowns next to him."
 
@@ -24,7 +24,7 @@ Gwen|"I could only find those knives because of you. {a}And you put the next key
 
 narrator|"I grab his pant leg."
 
-Gwen|"You wanted me to escape. {a}God, I'm stupid. {a}Those knives, the books in your hidden library room... {a}you wanted me to figure it out, too."
+Gwen|"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,sadtalk)|flip(Gwen)]You wanted me to escape. {a}God, I'm stupid. {a}Those knives, the books in your hidden library room... {a}you wanted me to figure it out, too."
 
 Woman|"What is she saying, Victor?"
 

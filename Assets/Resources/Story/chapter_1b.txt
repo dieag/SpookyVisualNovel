@@ -1,12 +1,12 @@
-Gwen|"I have to get to the phone!"
+Gwen|"I have to get to the phone!"|exit(Gwen)
 
-narrator|"I quickly duck back down the ladder."|playSound(effect_ladder)|setBackground(hallway_up_light,true,1)
+narrator|"I quickly duck back down the ladder."|playSound(effect_ladder)|setBackground(hallway_up_light,true,1)|setPosition(Gwen,.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shocktalk)|enter(Gwen,0,false)|flip(Gwen)
 
 "Damn! Someone is coming up the stairs!"|setPosition(Woman,100,0)|setPosition(Man,100,0)
 
-Man|"[exit(Man)]Oh, Gweeeen? {a}Come ouuuut!"
+Man|"Oh, Gweeeen? {a}Come ouuuut!"
 
-narrator|"How do they know my name?? {a}I need to get some help!"
+narrator|"How do they know my name?? {a}I need to get some help!"|flip(Gwen)|changeExpression(Gwen,face,shock)
 
 "The first door I see open is the library. {a}There's plenty of places for me to hide in there, right?"
 
@@ -14,7 +14,7 @@ narrator|"How do they know my name?? {a}I need to get some help!"
 
 "Victor’s bookshelves are packed with his favorite works, spanning many genres. {a}The shelves he sectioned off for me to use are much barer, in contrast."
 
-"Where to hide, where to hide? {a}I hear someone in the hallway moving closer."
+"[changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,sad)|moveCharacter(Gwen,.75,0)]Where to hide, where to hide? {a}I hear someone in the hallway moving closer."
 
 "I notice a light in the corner of the library. {a}Is that Victor's office?"
 
@@ -22,37 +22,37 @@ narrator|"How do they know my name?? {a}I need to get some help!"
 
 Gwen|"Codes, hidden rooms… this house is so weird."
 
-narrator|"I dash into the small room and tug the bookshelf door closed with all my strength. {a}Gah! {a}It's so heavy!!"|playSound(effect_door_close)|setBackground(secret_room,true,1)
+narrator|"I dash into the small room and tug the bookshelf door closed with all my strength. {a}[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shock)]Gah! {a}It's so heavy!!"|playSound(effect_door_close)|setBackground(secret_room,true,1)|moveCharacter(Gwen,.25,0)
 
 "Safe.[playMusic(music_library,0.25,0)] {a}I have to be safe, now. {a}There's no way anyone but Victor could know about this."
 
 "Maybe I would have found this room earlier if I had used the library more often. {a}I'm lucky he left it open!"
 
-"Lucky... but it's strange. {a}It's not like Victor to leave doors like this open."
+"[changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,neutral)|flip(Gwen)]Lucky... but it's strange. {a}It's not like Victor to leave doors like this open."
 
 "There's no windows in here, and I can't hear the storm anymore. {a}I settle into the desk chair with a sigh. {a}No phone in sight, but at least I can take a breather."
 
 "There's more bookshelves in here next to a desk. {a}The spines are much more worn and weathered compared to the volumes in the library."
 
-"I tilt my head to read the titles. {a}'19th Century African Safaris'. {a}'Encyclopedia of Knives, Swords, Spears & Daggers'. {a}'Aztecs and Sacrifice'. {a}Eh. {a}Just more historical non-fiction. {a}Victor has always had an interest in that kind of stuff."
+"I tilt my head to read the titles. {a}'19th Century African Safaris'. {a}'Encyclopedia of Knives, Swords, Spears & Daggers'. {a}'Aztecs and Sacrifice'. {a}Eh. [moveCharacter(Gwen,.5,0)]{a}Just more historical non-fiction. {a}Victor has always had an interest in that kind of stuff."
 
 "I scan along, feeling calmer while skimming through his titles. {a}'Leather + Hide'. {a}Is this about how people make leather?"
 
 "[playSound(effect_book_take)]I tug the volume off the shelf and a scrap of paper falls from the pages."|playSound(effect_paper_shake1)
 
-"Oh! {a}This looks just like one of Victor's keys! {a}There's a different card suite on it, and a different set of numbers lined up. {a}[playSound(effect_tape)]I grab some tape off the desk and attach it to the key scrap I already have, tucking the tape into my back pocket."
+"Oh! [changeExpression(Gwen,face,shock)|moveCharacter(Gwen,.6,0)]{a}This looks just like one of Victor's keys! {a}There's a different card suit on it, and a different set of numbers lined up. {a}[playSound(effect_tape)]I grab some tape off the desk and attach it to the key scrap I already have, tucking the tape into my back pocket."
 
 "I'm sure this will come in handy later. {a}I'm suddenly glad my boyfriend uses codes to lock doors instead of keys - there's no way the intruders could pick their way in."
 
 "Suddenly, I hear a muffled set of footsteps just outside my hiding place."|playSound(effect_walk_womanlibrary_soft)
 
-"There's no way they will find me in here. {a}Right?"
+"There's no way they will find me in here. {a}Right?"|changeExpression(Gwen,face,sad)|moveCharacter(Gwen,.5,0)
 
 "I duck my head down into my lap, squeezing my eyes shut."
 
-Woman|"[exit(Woman)]Gwen! {a}Come say hi!"
+Woman|"Gwen! {a}Come say hi!"
 
-narrator|"What? {a}Who is that? {a}A woman? So there's more than one person in here?"|playSound(effect_walk_womanlibrary_soft)
+narrator|"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,sad)|flip(Gwen)]What? {a}Who is that? {a}A woman? So there's more than one person in here?"|playSound(effect_walk_womanlibrary_soft)
 
 "The steps approach the secret door and I curl up tighter. {a}Please, please, please go away!"
 
@@ -60,25 +60,25 @@ narrator|"What? {a}Who is that? {a}A woman? So there's more than one person in h
 
 "Breathe, breathe, breathe."
 
-"After I stay frozen for what seems like an eternity, the woman in the library finally shuffles away, and I can barely hear the library door click shut. {a}Thank god."
+"After I stay frozen for what seems like an eternity, the woman in the library finally shuffles away, and I can barely hear the library door click shut. {a}Thank god."|changeExpression(Gwen,body,standarmsbehind)
 
 "I thought for sure she knew I was in here."
 
-"Should I stay in here? {a}Should I wait for Victor?"
+"Should I stay in here? {a}Should I wait for Victor?"|moveCharacter(Gwen,.75,0)
 
-Gwen|"Shit... Victor."
+Gwen|"Shit... Victor."|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,neutral)|flip(Gwen)
 
 narrator|"There's no way he'll know there's people in here. {a}What will they do when he walks in?"
 
 "Besides his parents' deaths, Victor's never had to deal with much hardship in his life. Not like what I have. Does he even know how to defend himself?"
 
-"I carefully push open the bookshelf door, peeking my head out to make sure no one is in the library. {a}It seems empty."|playSound(effect_door_open)
+"[flip(Gwen)]I carefully push open the bookshelf door, peeking my head out to make sure no one is in the library. {a}It seems empty."|playSound(effect_door_open)
 
-"I turn off the light and close the door."|playSound(effect_door_close)|setBackground(library,true,1)
+"I turn off the light and close the door."|playSound(effect_door_close)|setBackground(library,true,1)|moveCharacter(Gwen,.5,0)
 
 Gwen|"What should I do? {a}I can try to run to the phone and call Victor, or... or defend myself."
 
-narrator|"I clench my fist."
+narrator|"I clench my fist."|changeExpression(Gwen,face,unamused)
 
 Gwen|They must have found the phone by now and destroyed it. {a}That's too risky."
 
@@ -92,21 +92,21 @@ Gwen|"Silence.{a} Perfect."
 
 "Where can I go to find something to fight back? {a}Victor's never talked about owning guns. {a}I don't own any pepper spray, either."
 
-"Oh, wait!"
+"Oh, wait!"|changeExpression(Gwen,face,shock)
 
 "The kitchen! {a}There's an array of knives decorating the wall above the stove. {a}The butcher knife is perfect."
 
-"But first... I need to get there. {a}The kitchen is back downstairs, behind the living room."
+"But first... I need to get there. [changeExpression(Gwen,face,unamused)]{a}The kitchen is back downstairs, behind the living room."
 
-narrator|"Hugging the wall, I creep through the hallway, hyperaware of every tiny creak from the floorboards. {a}When I make it to the stairs, I duck behind the railing as I descend."|setBackground(living_room,true,1)
+narrator|"Hugging the wall, I creep through the hallway, hyperaware of every tiny creak from the floorboards. {a}When I make it to the stairs, I duck behind the railing as I descend."|setBackground(living_room,true,1)|moveCharacter(Gwen,.25,0)
 
-narrator|"When I reach the bottom of the stairs, I do a quick scan of the area. {a}No one is there to greet me. {a}Whew."
+narrator|"As I reach the bottom of the stairs, I do a quick scan of the area. {a}No one is there to greet me. {a}Whew."|changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,happy)|flip(Gwen)
 
 "Just behind the wall by the couch - the kitchen!"
 
-Gwen|"Wait, what?"
+Gwen|"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shocktalk)]Wait, what?"
 
-narrator|"The kitchen door - it's shut! {a}In all the time I've lived here, it's never been shut!!"
+narrator|"The kitchen door - it's shut! {a}In all the time I've lived here, it's never been shut!!"|moveCharacter(Gwen,.6,0)
 
 "I run to the door and twist the knob, but it's locked. {a}No!"|playSound(effect_door_locked)
 
@@ -114,6 +114,6 @@ narrator|"The kitchen door - it's shut! {a}In all the time I've lived here, it's
 
 "Wait - is that footsteps? {a}From upstairs?"
 
-"Shit! Someone is coming down the stairs! {a}I need to open this right now!!!"|playSound(effect_screen_smack)
+"Shit! Someone is coming down the stairs! {a}I need to open this right now!!!"|playSound(effect_screen_smack)|exit(Gwen)
 
 loadPuzzle(puzzle1,key1,23012010122620,chapter_2a,chapter_2b,60)
