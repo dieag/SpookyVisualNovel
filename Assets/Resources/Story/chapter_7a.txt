@@ -1,20 +1,16 @@
-showBackground(hallway_down_dark,true,1)|playMusic(music_pursuit,0.25,0.25)
-
-narrator|"Yes! {a}I'm in!"|playSound(effect_door_unlock)
+narrator|"Yes! {a}I'm in!"|playSound(effect_door_unlock)|playMusic(music_title,0,0.25)
 
 "I swing open the door - piles and piles of gasoline containers and propane tanks litter the room. {a}Holy shit."
 
 Gwen|"He's really gonna blow this place up."
 
-narrator|"I open the valves to the propane, snatch the first canister in front of me, and unscrew the cap, drizzling the pungent liquid around the entrance before dragging it out of the room."
-
-showBackground(living_room,true,1)
+narrator|"I open the valves to the propane, snatch the first canister in front of me, and unscrew the cap. {a}[playSound(effect_liquid_shake)]The pungent liquid surges out when I dump it over the other containers around the entrance before dragging the trail out of the room."|showBackground(living_room,true,1)|playAmbientMusic(ambient_fireplace, 0.1,0.0)
 
 narrator|"I trail the gas down the hall until I reach the living room. {a}Flames are still blazing in the fireplace - exactly what I needed."
 
 Gwen|"VICTOR!"
 
-narrator|"I hear one final crash and then heavy footsteps thud above me towards the stairs. {a}Victor's face appears at the top as he almost trips down them to the first floor."
+narrator|"[playSound(effect_crash_faraway]I hear one final crash and then heavy footsteps thud above me towards the stairs. {a}[playSound(effect_stairs)]Victor's face appears at the top as he almost trips down them to the first floor."
 
 Victor|"Good work, Gwen."
 
@@ -24,27 +20,23 @@ Victor|"Throw it in the fire and let's GO!"
 
 narrator|"I chuck the last of the gasoline into the open fire and Victor pulls me down the hallway towards the broken window.[playSound(effect_run_inside)] {a}Glass cuts into my hands and legs and we tumble out onto the grass."
 
-showBackground(mansion_burning,true,1)
+Gwen|"[playSound(effect_explosion)]Shit!"
 
-playSound(ambient_rain,loop)
+narrator|"[showBackground(mansion_burning,true,1)|playAmbientMusic(ambient_fire,0.2,0)]The explosion rocks the earth beneath us and debris flies through the air. {a}Victor pulls me to my feet and we sprint away from the mansion, not stopping until we reach the edge of the forest. [playSound(effect_run_gravel)]"
 
-narrator|"We did it! {a}It worked!"
-
-narrator|"The explosion rocks the earth beneath us and debris flies through the air. {a}Victor pulls me to my feet and we sprint away from the mansion, not stopping until we reach the edge of the forest. [playSound(effect_run_gravel)]"
+"We did it! {a}It worked!"
 
 "Victor and I both turn, staring at the crimson inferno before us. {a}I can see his mother pounding on an upstairs window."
 
 Gwen|"Will she jump?"
 
-Victor|"No. {a}She knows she can't survive that."
+Victor|"If she does, she'll die."
 
 narrator|"I grab his arm and tug him deeper into the forest."
 
 Gwen|"Don't watch. {a}Let's just go."
 
-narrator|"He nods. {a}Together we enter the woods, leaving the mansion behind us."
-
-playMusic(music_library,0.25,0.25)|stopSound()
+narrator|"He nods. {a}Together we enter the woods, leaving the mansion behind us."|stopAmbientMusic()|playAmbientMusic(ambient_fire,0.05,0)
 
 narrator|"The rain is lighter now, and the storm is still. {a}All I hear is the roaring fire behind me and our feet sloshing across the muddy forest floor."
 
@@ -74,4 +66,4 @@ narrator|"He pulls me into a tight hug and I wrap my arms around him."
 
 "It's over."
 
-"{wa 1}TRUE END: Goodbye forever."
+endGame(end_good)

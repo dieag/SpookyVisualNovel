@@ -6,11 +6,11 @@ narrator|"Victor finally stands, gently taking the knife from the woman's hand."
 
 Victor|"Gwen... {a}meet my parents."
 
-narrator|"The knife falls from my hands, clattering on the cement. {a}The man dashes forward and grabs the knife before I can shake myself out of shock."
+narrator|"The grip on the knife wavers, and the man dashes forward. He wrests the knife away before I can react."
 
 Gwen|"Y-You told me they died! {a}Years ago!"
 
-narrator|"He steps toward me, face unreadable. {a}My knees buckle, and I fall to the floor."
+narrator|"He steps toward me, face unreadable. {a}My knees buckle, and I fall to the cold concrete."
 
 Victor|"I'm sorry. {a}I lied."
 
@@ -42,7 +42,7 @@ Victor|"Just relax. {a}It'll be over soon."
 
 narrator|"No... {a}wait... {a}"
 
-choice|"I need to choose."
+choice|"Victor!"
 {
     "How could you do this to me?"
         Load(chapter_6b)

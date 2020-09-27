@@ -46,7 +46,7 @@ narrator|"At the side of the mansion, I grip my knife tightly and advance out of
 
 Gwen|"Time to open this."|exit(Gwen)
 
-loadPuzzle(puzzle5)
+loadPuzzle(puzzle5,key3,0)
 
 narrator|"[playSound(effect_door_unlock)]The lock clicks open and I panic for a moment. {a}I didn't think again! {a}Idiot! {a}Did they hear that?"
 
@@ -54,19 +54,15 @@ narrator|"[playSound(effect_door_unlock)]The lock clicks open and I panic for a 
 
 "One minute, then two minutes pass. {a}No movement. {a}I think I'm safe."
 
-"I return to the hatch and slowly lift it.[playSound(effect_door_open_creak)] {a}There's a ladder leading down into darkness."
+"I return to the hatch and slowly lift it.[playSound(effect_hatch_open)] {a}There's a ladder leading down into darkness."
 
-"I descend."
-
-showBackground(basement,true,1)
-
-playMusic(music_final,0,0.25)
+"I descend."|showBackground(basement,true,1)|playSound(effect_ladder)|playMusic(music_final,0,0.25)
 
 "There's a faint light ahead, and I can hear soft voices murmuring. {a}Is that them?"
 
 "I creep behind several dusty crates and bins. {a}No time to think what's inside."
 
-"When I peek around a bin, I see them - all three of them. {a}Victor is seated in front, head down, while the man and woman loom over him with their knives."
+"When I peek around a storage container, I see them - all three of them. {a}Victor is seated in front, head down, while the man and woman loom over him with their knives."
 
 Woman|"You let her escape."
 
@@ -74,7 +70,7 @@ man|"It wasn't my fault! {a}How can you blame me?"
 
 Woman|"Well it wasn't ME who was near her, was it?"
 
-narrator|"The man shouts and punches a box and dust flies as it crashes to the floor. {a}Victor is motionless."
+narrator|"The man shouts and punches a box and dust flies as it crashes to the floor.[playSound(effect_cardboard_box)] {a}Victor is motionless."
 
 man|"I can't believe it's come to this."
 
@@ -94,7 +90,7 @@ Gwen|"Stop!!"
 
 narrator|"I jump out, brandishing my knife in front of me. {a}The man spins around and his eyes widen."
 
-man|"What the -"
+man|"What the - ?"
 
 Victor|"Gwen! {a}What are you doing here?"
 
@@ -128,7 +124,7 @@ narrator|"I wipe my face quickly as my vision begins to blur from tears - withou
 
 Gwen|"Please don't give up!"
 
-narrator|"The man steps towards me and I stumble back, bumping into a table."
+narrator|"The man steps towards me and I step away in response."
 
 man|"Look around you, Gwen."
 
@@ -142,11 +138,9 @@ Victor|"Do as he says."
 
 narrator|"Swearing, I keep my knife raised and allow my eyes to look around the dim room."
 
-narrator|"A cabinet against the wall, stacks of cardboard boxes across the room, and... {a}"
+narrator|"A cabinet against the wall, stacks of cardboard boxes across the room, and... "
 
-playMusic(music_pursuit,0.25,0.25)
-
-"... {a}Daggers. {a}Hammers. {a}Pliers. {a}Hanging around the room. {a}A giant meat hook is hanging from the ceiling, and dark stains litter the cement floor beneath it."
+"... Daggers. [playMusic(music_pursuit,0.25,0.25)] {a}Hammers. {a}Pliers. {a}Hanging around the room. {a}A giant meat hook is hanging from the ceiling, and dark stains litter the cement floor beneath it."
 
 "I cover my mouth, nausea bubbling up my throat."
 
