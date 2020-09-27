@@ -1,16 +1,16 @@
 Gwen|"I have to get to the phone!"
 
-narrator|"I quickly duck back down the ladder."|setBackground(hallway_up_light,true,1)
+narrator|"I quickly duck back down the ladder."|playSound(effect_ladder)|setBackground(hallway_up_light,true,1)
 
-"Damn! Someone is coming up the stairs!"
+"Damn! Someone is coming up the stairs!"|setPosition(Woman,100,0)|setPosition(Man,100,0)
 
-Man|"Oh, Gweeeen? {a}Come ouuuut!"
+Man|"[exit(Man)]Oh, Gweeeen? {a}Come ouuuut!"
 
 narrator|"How do they know my name?? {a}I need to get some help!"
 
-"The first door I see open is the library. {a}There's plenty of places for me to hide in there, right?"|setBackground(library_door,true,1)
+"The first door I see open is the library. {a}There's plenty of places for me to hide in there, right?"
 
-"I run in and carefully close the door, hands shaking. {a}Get a hold of yourself, Gwen!"|playSound(effect_door_close)
+"I run in and carefully close the door, hands shaking. {a}Get a hold of yourself, Gwen!"|setBackground(library_door,true,1)
 
 "Victor’s bookshelves are packed with his favorite works, spanning many genres. {a}The shelves he sectioned off for me to use are much barer, in contrast."
 
@@ -24,7 +24,7 @@ Gwen|"Codes, hidden rooms… this house is so weird."
 
 narrator|"I dash into the small room and tug the bookshelf door closed with all my strength. {a}Gah! {a}It's so heavy!!"|playSound(effect_door_close)|setBackground(secret_room,true,1)
 
-"Safe.[playMusic(music_library,0,0.25)] {a}I have to be safe, now. {a}There's no way anyone but Victor could know about this."
+"Safe.[playMusic(music_library,0.25,0)] {a}I have to be safe, now. {a}There's no way anyone but Victor could know about this."
 
 "Maybe I would have found this room earlier if I had used the library more often. {a}I'm lucky he left it open!"
 
@@ -38,11 +38,9 @@ narrator|"I dash into the small room and tug the bookshelf door closed with all 
 
 "I scan along, feeling calmer while skimming through his titles. {a}'Leather + Hide'. {a}Is this about how people make leather?"
 
-"I tug the volume off the shelf and a scrap of paper falls from the pages."
+"[playSound(effect_book_take)]I tug the volume off the shelf and a scrap of paper falls from the pages."|playSound(effect_paper_shake1)
 
-"Oh! {a}This looks just like one of Victor's keys! {a}There's a different card suite on it, and a different set of numbers lined up. {a}I grab some tape off the desk and attach it to the key scrap I already have, tucking the tape into my back pocket."
-
-"setForeground(tapedKey)"
+"Oh! {a}This looks just like one of Victor's keys! {a}There's a different card suite on it, and a different set of numbers lined up. {a}[playSound(effect_tape)]I grab some tape off the desk and attach it to the key scrap I already have, tucking the tape into my back pocket."
 
 "I'm sure this will come in handy later. {a}I'm suddenly glad my boyfriend uses codes to lock doors instead of keys - there's no way the intruders could pick their way in."
 
@@ -52,9 +50,9 @@ narrator|"I dash into the small room and tug the bookshelf door closed with all 
 
 "I duck my head down into my lap, squeezing my eyes shut."
 
-Woman|"Gwen! {a}Come say hi!"
+Woman|"[exit(Woman)]Gwen! {a}Come say hi!"
 
-"What? {a}Who is that? {a}A woman? So there's more than one person in here?"|playSound(effect_walk_womanlibrary_soft)
+narrator|"What? {a}Who is that? {a}A woman? So there's more than one person in here?"|playSound(effect_walk_womanlibrary_soft)
 
 "The steps approach the secret door and I curl up tighter. {a}Please, please, please go away!"
 
@@ -62,7 +60,7 @@ Woman|"Gwen! {a}Come say hi!"
 
 "Breathe, breathe, breathe."
 
-"After I stay frozen for what seems like an eternity, the woman in the library finally shuffles away, and I hear the library door click shut. {a}Thank god."|playSound(effect_door_close)
+"After I stay frozen for what seems like an eternity, the woman in the library finally shuffles away, and I can barely hear the library door click shut. {a}Thank god."
 
 "I thought for sure she knew I was in here."
 
@@ -88,7 +86,7 @@ narrator|"So, I guess there's only one thing I can do."
 
 "Damn. Happy Halloween, Gwen."|playMusic(music_pursuit,0,0.25)
 
-"I let a few moments pass and then I approach the library door, placing my hand on the doorknob. {a}Slowly, I twist the knob and pull the door open."|playSound(effect_door_open)|setBackground(hallway_up_light,true,1)
+"I let a few moments pass and then I approach the library door, placing my hand on the doorknob. {a}Slowly, I twist the knob and pull the door open."|playSound(effect_door_unlock)|setBackground(hallway_up_light,true,1)
 
 Gwen|"Silence.{a} Perfect."
 
@@ -100,7 +98,7 @@ Gwen|"Silence.{a} Perfect."
 
 "But first... I need to get there. {a}The kitchen is back downstairs, behind the living room."
 
-narrator|"Hugging the wall, I creep through the hallway, hyperaware of every tiny creak from the floorboards. {a}When I make it to the stairs, I duck behind the railing as I descend."|playSound(effect_stairs)|setBackground(living_room,true,1)
+narrator|"Hugging the wall, I creep through the hallway, hyperaware of every tiny creak from the floorboards. {a}When I make it to the stairs, I duck behind the railing as I descend."|setBackground(living_room,true,1)
 
 narrator|"When I reach the bottom of the stairs, I do a quick scan of the area. {a}No one is there to greet me. {a}Whew."
 
@@ -116,14 +114,6 @@ narrator|"The kitchen door - it's shut! {a}In all the time I've lived here, it's
 
 "Wait - is that footsteps? {a}From upstairs?"
 
-"Shit! Someone is coming down the stairs! {a}I need to open this right now!!!"
+"Shit! Someone is coming down the stairs! {a}I need to open this right now!!!"|playSound(effect_screen_smack)
 
-loadPuzzle(puzzle1,chapter_2a,chapter_2b)
-
-choice|"Puzzle Result?"
-{
-    "Pass"
-        Load(chapter_2a)
-    "Fail"
-        Load(chapter_2b)
-}
+loadPuzzle(puzzle1,key1,23012010122620,chapter_2a,chapter_2b,60)

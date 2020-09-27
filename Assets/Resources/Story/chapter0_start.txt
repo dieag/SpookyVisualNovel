@@ -1,22 +1,10 @@
-setBackground(living_room,true,100)|playMusic(music_bedroom,0,0.25)
-
-endGame(end_bad)
-
-loadPuzzle(puzzle0,key1,100201104070,chapter_1a,chapter_1b,30)
-
-choice|"What should I choose?"
-{
-    "Attic"
-        Load(chapter_1a)
-    "Downstairs"
-        Load(chapter_1b)
-}
+setBackground(living_room,true,100)|playMusic(music_bedroom,0.25,0.0)|playAmbientMusic(ambient_rain,0.02,0.0)
 
 narrator|"It's Halloween tonight. {a}A storm pounds against the walls of this mansion, raindrops tapping impatiently against the glass window near the glowing fireplace."
 
 "I curl up further into the leather couch, turning the page of my book. {a}No trick-or-treaters tonight, it seems."
 
-"The mansion - my boyfriend's mansion - sits at the top of a mountain, miles up a windy road from a small town nearby. {a}When I first started living here my boyfriend told me that this mansion has been in his family for generations."|setPosition(Gwen,.5,0)|changeExpression(Gwen,body,stand,expression,neutral)|enter(Gwen,1,true)
+"The mansion - my boyfriend's mansion - sits at the top of a mountain, miles up a windy road from a small town nearby. {a}When I first started living here my boyfriend told me that this mansion has been in his family for generations."|setPosition(Gwen,.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,neutral)|enter(Gwen,1,true)
 
 Gwen|"Generations of tradition... {a}wonder what that's like."
 
@@ -26,15 +14,15 @@ narrator|"[playSound(effect_thunder1)]Another crack of thunder. {a}I glance up t
 
 "He's told me stories about how his mom loved to work with him on the garden - I think that was his favorite thing to do with her. Together, they transformed it from cracked cement to brilliant greenery."|playSound(effect_thunder2)
 
-"Damn - I better go up and check on it. {a}I set my book down and to the stairs, leaving the warmth of the fire behind me."|playSound(effect_stairs)|setBackground(hallway_up_light,true,1)
+"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,unamused)]Damn - I better go up and check on it. {a}I set my book down and to the stairs, leaving the warmth of the fire behind me."|playSound(effect_stairs)|setBackground(hallway_up_light,true,1)|exit(Gwen)
 
 "This mansion can be like a labyrinth, sometimes - to be honest, I'm not used to living somewhere with this many rooms.{a} I didn't exactly grow up in the lap of luxury."
 
-"Victor's parents died when he was young, and my parents abandoned me when I was twelve, so we could relate immediately on some level when we met. Trauma bonding and all that."
+"Victor's parents died when he was young, and my parents abandoned me when I was twelve, so we could relate immediately on some level when we met. Trauma bonding and all that."|setPosition(Gwen,.5,0)|changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,neutral)|enter(Gwen,0,false)
 
-"It's nice to have a place to really call home again."
+Gwen|"It's nice to have a place to really call home again."
 
-"After meandering and making some bad turns, I finally find it - the roof ladder!{a} Well, more like the door leading to the ladder."
+narrator|"After meandering and making some bad turns, I finally find it - the roof ladder!{a} Well, more like the door leading to the ladder."
 
 "It may seem surprising that I haven't seen most of Victor's mansion. {a}He has these strange locks on every door that need a code to be opened, but he only gave me a handful of codes to use for the rooms he dubbed 'safe'. {a}According to him, some of the rooms are too old and decrepit could be damaged if someone goes into them."
 
@@ -42,29 +30,29 @@ narrator|"[playSound(effect_thunder1)]Another crack of thunder. {a}I glance up t
 
 "I sense that Victor is a little fond of math, since all the codes on here look like the card number times ten. {a}Cute."
 
-"Anyway, let's enter in the code and unlock this door."
+"Anyway, let's enter in the code and unlock this door."|exit(Gwen)
 
-loadPuzzle(puzzle0,key1,100201104070)
+loadPuzzle(puzzle0,key0,100201104070)
 
 Gwen|"Yes! {a}I'm in!"|setBackground(hallway_up_light,true,1)
 
 narrator|"I've done this so many times that I could probably just memorize it if I wanted to."
 
-"When the door opens, the ladder to the roof slides down soundlessly, oiled to perfection."|setBackground(hallway_up_light,true,1)
+"When the door opens, the ladder to the roof slides down soundlessly, oiled to perfection."|setBackground(greenhouse,true,1)|setPosition(Gwen,.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,happy)|enter(Gwen,0,true)
 
 "I emerge and notice immediately that the top cover to the greenhouse is already up. {a}Victor must have checked weather reports and lowered it when I didn't notice. {a}Ha - guess I should have known he wouldn't have forgotten about the plants up here."
 
 "I walk up to one of the windows and glance around the front of the mansion.{a} The expansive lawn is an acre long, stretching to the forest edge. Victor and I have often hiked through that forest - it's almost like he has a private set of trails since no one else really comes up here."|playSound(effect_thunder1)
 
-Gwen|"I hope Victor will be okay driving in this storm."
+Gwen|"[changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,neutral)]I hope Victor will be okay driving in this storm."
 
 narrator|"I'm sure he's upset about it. {a}He's told me many times that Halloween is his favorite holiday - and it's ruined! No trick or treaters, no scary movies by the fire..."
 
-Gwen|"Ah! {a}A crash?"|playMusic(music_pursuit,0,0.25)
+Gwen|"[playSound(effect_crash_faraway)|changeExpression(Gwen,face,shock)]Ah! {a}A crash?"|playMusic(music_pursuit,0,0.25)
 
 narrator|"Shaken from my reverie, I lean into the glass window, struggling to see immediately below."
 
-Gwen|"W[txtSpeed 30,1] - [\txtSpeed]What was that?"
+Gwen|"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shocktalk)]W[txtSpeed 30,1] - [\txtSpeed]What was that?"
 
 narrator|"It looked like someone jumped into a window downstairs!"
 

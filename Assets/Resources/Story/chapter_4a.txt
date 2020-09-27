@@ -1,8 +1,8 @@
 Gwen|"God DAMN it!"
 
-"I fought back trying to save Victor, and I'm wavering NOW on whether or not I want to go back and help him?"
+narrator|"I fought back trying to save Victor, and I'm wavering NOW on whether or not I want to go back and help him?"
 
-"No. {a}I'm going back in."
+"No. {a}I'm going back in."|playMusic(music_pursuit,0.25,0)
 
 "I still have a knife, and now I also have the element of surprise. {a}They must have assumed I ran away."
 
@@ -10,25 +10,17 @@ Gwen|"God DAMN it!"
 
 Gwen|"Hang on, Victor."
 
-"At the side of the mansion, I grip my knife tightly and advance out of the safety of the forest. {a}I move slowly, taking deep breaths - I need to be calm, focused."
+narrator|"At the side of the mansion, I grip my knife tightly and advance out of the safety of the forest. {a}I move slowly, taking deep breaths - I need to be calm, focused."
 
 "At the broken window, I peek into the dark hallway. {a}I don't see any visible movement, and I don't hear anything - at least, I don't hear anything over the storm around me."
 
-"No time to waver. {a}Careful to avoid the glass shards, I lay my sweater on the window sill and leap through into the hall."
-
-stopMusic()
-
-stopSound()
-
-showBackground(hallway_down_dark,true,1)
+"No time to waver. {a}Careful to avoid the glass shards, I lay my sweater on the window sill and leap through into the hall."|playSound(effect_body_impact_tile)|stopMusic()|stopAmbientMusic()|showBackground(hallway_down_dark,true,1)
 
 "I quickly duck behind a statue once I'm far enough in, cupping my hand around my ear."
 
 "... {a}Nothing."
 
-"I move forward cautiously, hyper aware of every tiny creak around me. {a}The last place I saw everyone was in the living room, so I might as well start there. {a}I'm not immediately sure where else they would go."
-
-showBackground(living_room,true,1)
+"I move forward cautiously. {a}The last place I saw everyone was in the living room, so I might as well start there. {a}I'm not immediately sure where else they would go."|showBackground(living_room,true,1)
 
 "Empty. {a}Damn."
 
@@ -38,11 +30,9 @@ showBackground(living_room,true,1)
 
 "I quickly run over and pick it up. {a}Another key!"
 
-"I tape it to the other keys and smile. {a}Victor dropped this. {a}How else would it get here? {a}He must have known I'd come back."
+"I tape it to the other keys and smile.[playSound(effect_tape)] {a}Victor dropped this. {a}He must have known I'd come back."
 
-"With this last key, I'm pretty sure I can get into every single room in the mansion. {a}I rack my brain, struggling to think of any room that I've noticed with a heavily coded lock."
-
-"Wait! {a}Maybe a room that Victor specifically told me to avoid?"
+"With this last key, I'm pretty sure I can get into every single room in the mansion. {a}I rack my brain, struggling to think of any room that I've noticed with a heavily coded lock. {a}Maybe a room that Victor specifically told me to avoid?"
 
 "A few months ago, Victor and I were cooking in the kitchen and I asked him about an odd lock on the floor."
 
@@ -50,17 +40,15 @@ showBackground(living_room,true,1)
 
 "That has to be it. {a}It's the only room he's explicitly told me not to enter. {a}Of course he'd carry the final key on him!"
 
-"He must have led them into there and dropped this for me to follow."
+"He must have led them into there and dropped this for me to follow."|showBackground(kitchen,true,1)
 
-showBackground(kitchen,true,1)
+"I immediately head to the back closet in the kitchen and crouch on the floor. {a}[playSound(effect_screen_tap)]The lock glows to life when I tap the screen."
 
-"I immediately head to the back closet in the kitchen and crouch on the floor. {a}The lock glows to life when I tap the screen."
-
-Gwen|"Time to open this."
+Gwen|"Time to open this."|exit(Gwen)
 
 loadPuzzle(puzzle5)
 
-"[playSound(effect_door_unlock)]The lock clicks open and I panic for a moment. {a}I didn't think again! {a}Idiot! {a}Did they hear that?"
+narrator|"[playSound(effect_door_unlock)]The lock clicks open and I panic for a moment. {a}I didn't think again! {a}Idiot! {a}Did they hear that?"
 
 "I crawl behind a counter, waiting. {a}If they come up, I'm screwed."
 
@@ -72,7 +60,7 @@ loadPuzzle(puzzle5)
 
 showBackground(basement,true,1)
 
-playMusic(music_final,0.25,0.25)
+playMusic(music_final,0,0.25)
 
 "There's a faint light ahead, and I can hear soft voices murmuring. {a}Is that them?"
 
@@ -86,25 +74,25 @@ man|"It wasn't my fault! {a}How can you blame me?"
 
 Woman|"Well it wasn't ME who was near her, was it?"
 
-"The man shouts and punches a box and dust flies as it crashes to the floor. {a}Victor is motionless."
+narrator|"The man shouts and punches a box and dust flies as it crashes to the floor. {a}Victor is motionless."
 
 man|"I can't believe it's come to this."
 
-"The woman's scowl loosens, and she turns sadly towards Victor."
+narrator|"The woman's scowl loosens, and she turns sadly towards Victor."
 
 Woman|"You know what comes next, right?"
 
-"He nods."
+narrator|"He nods."
 
 Woman|"Alright."
 
-"She places her hand on his shoulder. {a}What's going on?"
+narrator|"She places her hand on his shoulder. {a}What's going on?"
 
 "With her other hand, she suddenly raises a knife over her head. {a}Shit!"
 
 Gwen|"Stop!!"
 
-"I jump out, brandishing my knife in front of me. {a}The man spins around and his eyes widen."
+narrator|"I jump out, brandishing my knife in front of me. {a}The man spins around and his eyes widen."
 
 man|"What the -"
 
@@ -112,7 +100,7 @@ Victor|"Gwen! {a}What are you doing here?"
 
 Gwen|"Victor get up! {a}Come on!"
 
-"Victor doesn't move. {a}The woman slowly lowers her blade, eyes locked on me."
+narrator|"Victor doesn't move. {a}The woman slowly lowers her blade, eyes locked on me."
 
 Gwen|"Victor!!"
 
@@ -120,15 +108,15 @@ man|"Ha. {a}Why would he get up?"
 
 Gwen|"Shut up! {a}Shut up!!"
 
-"My voice cracks and my hands shake."
+narrator|"My voice cracks and my hands shake."
 
-"The woman notices and sneers."
+narrator|"The woman notices and sneers."
 
 Woman|"Not feeling so brave now, huh?"
 
 Gwen|"Victor, why won't you move??"
 
-"He frowns, turning his head away from me. {a}No reply."
+narrator|"He frowns, turning his head away from me. {a}No reply."
 
 Gwen|"I-If you don't help me - "
 
@@ -136,11 +124,11 @@ man|"He won't be helping you."
 
 Gwen|"We made it this far! {a}Y-You dropped that key for me in the living room! {a}You knew I'd come back!"
 
-"I wipe my face quickly as my vision begins to blur from tears - without Victor this is all hopeless."
+narrator|"I wipe my face quickly as my vision begins to blur from tears - without Victor this is all hopeless."
 
 Gwen|"Please don't give up!"
 
-"The man steps towards me and I stumble back, bumping into a table."
+narrator|"The man steps towards me and I stumble back, bumping into a table."
 
 man|"Look around you, Gwen."
 
@@ -148,13 +136,13 @@ Gwen|"Shut up!"
 
 Victor|"Gwen."
 
-"He turns to face me and my heart drops."
+narrator|"He turns to face me and my heart drops."
 
 Victor|"Do as he says."
 
-"Swearing, I keep my knife raised and allow my eyes to look around the dim room."
+narrator|"Swearing, I keep my knife raised and allow my eyes to look around the dim room."
 
-"A cabinet against the wall, stacks of cardboard boxes across the room, and... {a}"
+narrator|"A cabinet against the wall, stacks of cardboard boxes across the room, and... {a}"
 
 playMusic(music_pursuit,0.25,0.25)
 
@@ -166,6 +154,6 @@ Gwen|"What the shit is this, Victor?"
 
 Woman|"Our little Victor... {a}always was so obedient growing up, wasn't he?"
 
-"My eyes widen."
+narrator|"My eyes widen."
 
 checkFlagLoad(chapter_5a,chapter_5b)

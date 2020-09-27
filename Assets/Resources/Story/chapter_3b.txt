@@ -1,17 +1,9 @@
-showBackground(hallway_up_dark,true,1)
-
-playSound(effect_puzzle_timeup)
-
-playMusic(music_pursuit)
-
-Woman|"Ha. Gotcha."
+Woman|"Ha. Gotcha."|playMusic(music_final)
 
 narrator|"I spin around and see the two intruders looming over me."
 
 Man|"Let's get this started, Gwen."
 
-Gwen|"Get what started?? How do you know who I am?"
+Gwen|"Get what started?? How do you know who I am?"|playSound(effect_stab)|exit(Gwen)|exit(Man)|exit(Woman)
 
-playSound(effect_stab)
-
-narrator|"{wa 1}BAD END 3: Third-Rate Triples."
+endGame(end_death)

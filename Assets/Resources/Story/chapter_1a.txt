@@ -1,29 +1,27 @@
-Gwen|"The attic! {a}Hiding is the safest option."
+Gwen|"The attic! {a}Hiding is the safest option."|exit(Gwen)
 
-narrator|"I run to the hatch and swing it open, climbing down the ladder as fast as I can."|setBackground(attic,true,1)
+narrator|"I run to the hatch and swing it open, climbing down the ladder as fast as I can."|playSound(effect_attic_close)|setBackground(attic,true,1)
 
 "Phew. {a}There's a large window that overlooks the front of the mansion, but besides that, you can only get in here either through the roof or through the hidden entrance in the master bedroom."
 
 "There's no way they'll find me here. {a}No way."
 
-"<i>BANG!</i>{wa 0.5} <i>BANG!</i>{wa 0.5} <i>BANG!</i>{wa 0.5} The door swings open."
+"[playSound(effect_door_knock_heavy] Out of nowhere, someone bangs on the door and it swings open."|playSound(effect_door_open_creak)|setPosition(Gwen,.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shocktalk)|enter(Gwen,0,true)
 
 Gwen|"Shit!"
 
-narrator|"I leap to my feet just as the intruder crawls inside. It's a man, brandishing a knife and grinning at me."|moveCharacter(Gwen,.75,0,3)|setPosition(Man,.25,0)|enter(Man,1,true)
+narrator|"I leap to my feet just as the intruder crawls inside. It's a man, brandishing a knife and grinning at me."|moveCharacter(Gwen,.75,0,3)|setPosition(Man,.25,0)|changeExpression(Man,body,standknifeout)|changeExpression(Man,face,happytalk)|enter(Man,1,true)
 
 Man|"Happy Halloween, sweetie."
 
-Gwen|"No! {a}Get away from me!"
+Gwen|"[changeExpression(Gwen,face,shock)]No! {a}Get away from me!"
 
 narrator|"I stumble back, tripping on the boxes littering the floor."
 
-Man|"Wait!"
+Man|"[changeExpression(Man,face,disgust]Wait!"
 
-narrator|"The man lunges forward to grab me, but I crash into the window and fly into the air."|playSound(effect_window_break)
+narrator|"The man lunges forward to grab me, but I crash into the window and fly into the air."|playSound(effect_window_break)|exit(Man)
 
-Gwen|"SH-"
+Gwen|"[changeExpression(Gwen,face,shocktalk)]SH-"|playSound(effect_body_impact_outside)|exit(Gwen)
 
-narrator|"<i>THUMP</i>"
-
-endGame(bad_end1)
+endGame(end_death)

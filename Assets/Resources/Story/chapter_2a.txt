@@ -1,8 +1,4 @@
-playMusic(music_library,0.25, 0.25)
-
-setBackground(kitchen,true,1)
-
-Gwen|"Yes! {a}It's open!"|playSound(effect_door_unlock)
+Gwen|"[playMusic(music_library,0.25, 0)]Yes! {a}It's open!"|playSound(effect_door_unlock)|setBackground(kitchen,true,1)
 
 narrator|"I rush in and close the door behind me, leaning against its cold steel and taking deep breaths."|playSound(effect_door_close)
 
@@ -26,17 +22,13 @@ narrator|"When can I leave the kitchen? {a}I wish I could hear anything outside 
 
 "Odd that he wouldn't want them displayed, though. {a}I'd at least lock them in a glass case, or something."
 
-"I kneel down in front of the cabinet, tapping the screen."
+"I kneel down in front of the cabinet, tapping the screen."|playSound(effect_screen_tap)
 
 Gwen|"Oh! {a}Wait, I think I can unlock this!"
 
-narrator|"Let's give it a shot."
+narrator|"Let's give it a shot."|exit(Gwen)
 
-loadPuzzle(puzzle2)
-
-setBackground(kitchen,true,1)
-
-playMusic(music_library,0.25, 0.25)
+loadPuzzle(puzzle2,key1,901101816130830)
 
 "Done! {a}The door swings open."
 
@@ -48,9 +40,7 @@ Gwen|"Maybe they're worth a fortune?"
 
 narrator|"There's something under the knife pile - another scrap of paper!"
 
-// show scrap
-
-"It's another suite and another set of numbers. {a}This is getting a little complicated. {a}I tape it to my key and turn back to the pile of knives."
+"It's another suit and another set of numbers. {a}This is getting a little complicated. {a}I tape it to my key and turn back to the pile of knives."
 
 "I pick up one of the longer ones. {a}The sharp tip gleams in the light. {a}This one might be better than the butcher knife"
 
@@ -60,15 +50,11 @@ narrator|"There's something under the knife pile - another scrap of paper!"
 
 "There's no way to know if someone will be behind the door. {a}But I have to open it."
 
-"I push it open, brandishing my knife in my right hand and ready to strike as my eyes move around the living room."
-
-setBackground(living_room,true,1)
+"I push it open[playSound(effect_door_open], brandishing my knife in my right hand and ready to strike as my eyes move around the living room."|setBackground(living_room,true,1)
 
 "No one. {a}I got lucky."
 
-playSound(effect_thunder1)
-
-"The thunder cracks loudly and a flash of lightning blinds me through the window. {a}With a loud pop, I hear all the lightbulbs die through the mansion."
+"[playSound(effect_thunder1)]The thunder cracks loudly and a flash of lightning blinds me through the window. {a}With a loud pop[playSound(effect_light_pop)], the lights blow out and the mansion dims."
 
 Gwen|"Shit."
 
@@ -78,9 +64,7 @@ narrator|"The fireplace is now the only source of light in the entire mansion, a
 
 "Let's check around downstairs. {a}I know for sure that someone was recently here, and with any luck they're still down here. {a}Alone."
 
-"On top of that... I've never heard more than one person at a time. {a}The chances are high that they are wandering around alone."
-
-setBackground(hallway_down_dark,true,1)
+"On top of that... I've never heard more than one person at a time. {a}The chances are high that they are wandering around alone."|setBackground(hallway_down_dark,true,1)
 
 "No light, as expected. {a}Every single door in the long hallway is shut."
 
@@ -90,49 +74,41 @@ setBackground(hallway_down_dark,true,1)
 
 "Slowly, I move through the hallway. {a}Every door I pass looms behind me, and I strain to listen for the sound of any of them opening behind me."
 
-"I've been in some of these rooms before. {a}Guest bedrooms, bathrooms, a sauna… Victor really has it all."
+"I've been in some of these rooms before. {a}Guest bedrooms, bathrooms, a sauna... Victor really has it all."
 
-"It always made me wonder, though, what could possibly be behind the other doors. {a}What else does he need?"
+"It always made me wonder what could possibly be behind the other doors. {a}What else does he need?"
 
 "At the end of the hallway, I pause, eyes locked on the entrance to the final room."
 
-"There's a small window at the top of the door, and when I look in I see a workbench with papers scattered around. {a}More books are stacked on metal mobile shelves.
+"There's a small window at the top of the door, and when I peek in I see a workbench with papers scattered around."
 
-"And a man is leaning over the workbench, faced away from the door."
+"...and a man is leaning over that workbench, faced away from the door."
 
-"I duck down. {a}My hand grips the knife against my chest. {a}The man inside is alone. {a}This is my chance."
+"I duck down. {a}My hand grips the knife against my chest. {a}The man inside is alone - unaware. {a}This is my chance."
 
 "I turn to the door, and see a lock. {a}Damn. {a}Can I open it?"
 
 "My fingers carefully press the touchpad and the code buzzes to life on the screen."
 
-loadPuzzle(puzzle2)
+loadPuzzle(puzzle3,key2,301521236302110)
 
-"Got it."
-
-playSound(effect_door_open)
+"Got it."|playSound(effect_door_open)
 
 "Wait, shit!"
 
 "I forgot about the sound it makes!"
 
-Man|"Who's there?"
+Man|"Who's there?"|playMusic(music_pursuit,0.25,0.25)
 
-playMusic(music_pursuit,0.25,0.25)
+narrator|"I gotta run!"|playSound(effect_run_inside)|setBackground(living_room,true,1)
 
-narrator|"I gotta run!"|playSound(effect_run_inside)
-
-setBackground(living_room,true,1)
-
-"Upstairs, upstairs!"|playSound(effect_stairs)
-
-setBackground(hallway_up_dark,true,1)
+"Upstairs, upstairs!"|playSound(effect_stairs)|setBackground(hallway_up_dark,true,1)
 
 "Shit, are any of these doors open? {a}Can I go back into the library?"
 
 "I hear shouting downstairs - the man and woman! {a}I’m hoping no one else is here."
 
-"I run to the library door and turn the knob but the door doesn't budge. {a}Do I need to unlock it?"
+"I run to the library door and[playSound(effect_door_locked)] turn the knob but the door doesn't budge. {a}Do I need to unlock it?"
 
 Gwen|"Oh, shit. {a}The lock…"
 
@@ -142,24 +118,16 @@ Woman|"Stop running!"
 
 narrator|"Oh god! {a}They're coming up the stairs!!"
 
-"I scramble to find another hiding spot. {a}I can't fight them both at once!"playSound(effect_run_inside)
+"I scramble to find another hiding spot. {a}I can't fight them both at once!"|playSound(effect_run_inside)
 
 "As I run down the winding hallway, I see that all of the locks have been smashed. {a}No!"
 
-"At the end of the hall, I place my hands on my knees, gasping for breath. {a}Dead end. {a}They'll find me any minute now."
+"At the end of the hall, I stumble to a stop and place my hands on my knees, gasping for breath. {a}Dead end. {a}They'll find me any minute now."
 
 "I glance at the door in front of me. {a}Smashed. {a}As expected."
 
-"Wait? {a}It looks like the screen is still functioning! {a}I tap the screen and the code buzzes to life. {a}Yes!"
+"Wait? {a}It looks like the screen is still functioning! {a}[playSound(effect_screen_tap)]I tap the screen and the code buzzes to life. {a}Yes!"
 
 "I have to open this door!"
 
-loadPuzzle(puzzle3,chapter_3a,chapter_3b)
-
-choice|"Puzzle Result?"
-{
-    "Pass"
-        Load(chapter_3a)
-    "Fail"
-        Load(chapter_3b)
-}
+loadPuzzle(puzzle4,key2,1202724110398215029,chapter_3a,chapter_3b,60)
