@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
 		Destroy(source.gameObject, effect.length);
 	}
 
-	public void PlaySong(AudioClip song, float maxVolume =1f, float pitch = 1f, float startingVolume = 0f, bool playOnStart = true, bool loop = true)
+	public void PlaySong(AudioClip song, float maxVolume = 1f, float pitch = 1f, float startingVolume = 0f, bool playOnStart = true, bool loop = true)
 	{
 		if(song != null)
 		{
