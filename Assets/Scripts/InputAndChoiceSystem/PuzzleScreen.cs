@@ -35,6 +35,8 @@ public class PuzzleScreen : MonoBehaviour
     Coroutine handlingPuzzle = null;
     public void puzzleStart(string puzzleName, string _keyImage, string keyCode, string passChapter, string failChapter, float timerStart)
     {
+        PauseScreen.savePreviousState = true;
+        NovelController.instance.blockNext = true;
         NovelController.instance.Command_SetLayerImage(puzzleName + ",1f,true", BCFC.instance.foreground);
         if (timerStart > 0f) {
            NovelController.instance.Command_PlayMusic("music_puzzle,0.5,0.5", false);
@@ -48,7 +50,6 @@ public class PuzzleScreen : MonoBehaviour
     IEnumerator HandlePuzzle(string puzzleName, string keyCode, string passChapter, string failChapter, float timerStart)
     {
         bool gameDone = false;
-        NovelController.instance.blockNext = true;
         AudioClip wrongAnswerClip = Resources.Load("Audio/SFX/effect_puzzle_fail") as AudioClip;
         AudioClip passedClip = Resources.Load("Audio/SFX/effect_puzzle_pass") as AudioClip;
         AudioClip failClip = Resources.Load("Audio/SFX/effect_puzzle_timeup") as AudioClip;
@@ -103,6 +104,7 @@ public class PuzzleScreen : MonoBehaviour
         }
         NovelController.instance.blockNext = false;
         NovelController.instance.Next();
+        PauseScreen.savePreviousState = false;
     }
 
     bool showingKey = false;

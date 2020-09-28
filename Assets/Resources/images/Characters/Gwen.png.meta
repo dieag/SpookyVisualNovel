@@ -3,59 +3,59 @@ guid: 82cf87945bb890e4f9d2c2d2986b4534
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5386393245506497422
+      213: -8661935486813600529
     second: stand
   - first:
-      213: -8445945674746838407
+      213: 9140814023783276045
     second: standknife
   - first:
-      213: -7980565496680237823
+      213: -6087116493083914855
     second: standarmsbehind
   - first:
-      213: 1916373964520344149
-    second: standarmsbehind
+      213: -3767920239792954239
+    second: standarmsbehindknife
   - first:
-      213: -1168378421306713742
-    second: shocktalk
-  - first:
-      213: 697305154294016230
+      213: -2126102008187979942
     second: shock
   - first:
-      213: -8071734071061867843
-    second: scaredtalk
+      213: -5825206907008310380
+    second: shocktalk
   - first:
-      213: -3044704564576733644
-    second: scared
-  - first:
-      213: 6675284147495575405
+      213: -2274701062576879061
     second: sadtalk
   - first:
-      213: 8031388166028513514
+      213: 4201897051902987769
     second: sad
   - first:
-      213: -3818843012243316900
+      213: 8744906312849460904
+    second: scaredtalk
+  - first:
+      213: -9065333948087181714
+    second: scared
+  - first:
+      213: 2281307591480897903
     second: happy
   - first:
-      213: -8197993174076095681
+      213: 6698516005615505221
     second: happytalk
   - first:
-      213: -8053365051852501200
+      213: -1963737860759537239
     second: angrytalk
   - first:
-      213: 1817108146106952903
+      213: -8415899614028466633
     second: angry
   - first:
-      213: 6334871885486750304
-    second: unamused
-  - first:
-      213: -3903689424197350405
+      213: 6616279321720696811
     second: unamusedtalk
   - first:
-      213: 8890504287724923391
-    second: neutraltalk
+      213: 408139269583905742
+    second: unamused
   - first:
-      213: -5711801904548709423
+      213: 2398078796169605439
     second: neutral
+  - first:
+      213: -2121983188241396717
+    second: neutraltalk
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -96,8 +96,8 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
-  spriteMeshType: 1
+  spriteExtrude: 0
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -118,7 +118,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 8192
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -130,7 +130,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 8192
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -147,18 +147,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 13634
-        width: 282
-        height: 802
+        y: 13600
+        width: 280
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8b6af25e1050ca40800000000000000
-      internalID: 5386393245506497422
+      spriteID: fe40021519f9ac780800000000000000
+      internalID: -8661935486813600529
       vertices: []
       indices: 
       edges: []
@@ -168,39 +168,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 12832
-        width: 282
-        height: 802
+        y: 12800
+        width: 280
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 972c7784829f9ca80800000000000000
-      internalID: -8445945674746838407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: standarmsbehindknife
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 12030
-        width: 282
-        height: 802
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 105b2afa6f55f3190800000000000000
-      internalID: -7980565496680237823
+      spriteID: d0ed28dace1bade70800000000000000
+      internalID: 9140814023783276045
       vertices: []
       indices: 
       edges: []
@@ -210,39 +189,39 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 11228
-        width: 282
-        height: 802
+        y: 12000
+        width: 280
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55aca04a7f3589a10800000000000000
-      internalID: 1916373964520344149
+      spriteID: 99dcf4becc7368ba0800000000000000
+      internalID: -6087116493083914855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shocktalk
+      name: standarmsbehindknife
       rect:
         serializedVersion: 2
         x: 0
-        y: 10426
-        width: 282
-        height: 802
+        y: 11200
+        width: 280
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27918c2240619cfe0800000000000000
-      internalID: -1168378421306713742
+      spriteID: 184e2255188a5bbc0800000000000000
+      internalID: -3767920239792954239
       vertices: []
       indices: 
       edges: []
@@ -252,60 +231,39 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 9624
-        width: 282
-        height: 802
+        y: 10400
+        width: 280
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e86eb5e7535da900800000000000000
-      internalID: 697305154294016230
+      spriteID: a57f5b5fc719e72e0800000000000000
+      internalID: -2126102008187979942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: scaredtalk
+      name: shocktalk
       rect:
         serializedVersion: 2
         x: 0
-        y: 8822
-        width: 282
-        height: 802
+        y: 9600
+        width: 280
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db290f4d0a07bff80800000000000000
-      internalID: -8071734071061867843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: scared
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 8020
-        width: 282
-        height: 802
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 436b46e74590fb5d0800000000000000
-      internalID: -3044704564576733644
+      spriteID: 4932e9c6e25b82fa0800000000000000
+      internalID: -5825206907008310380
       vertices: []
       indices: 
       edges: []
@@ -315,18 +273,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 7223
-        width: 282
-        height: 802
+        y: 8800
+        width: 280
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6f1542a09f53ac50800000000000000
-      internalID: 6675284147495575405
+      spriteID: b2ac6ea7f63ae60e0800000000000000
+      internalID: -2274701062576879061
       vertices: []
       indices: 
       edges: []
@@ -336,18 +294,60 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 6416
-        width: 282
-        height: 802
+        y: 8000
+        width: 280
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae0d7612cf8357f60800000000000000
-      internalID: 8031388166028513514
+      spriteID: 9fd40792b13205a30800000000000000
+      internalID: 4201897051902987769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scaredtalk
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7200
+        width: 280
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae867385f52c5970800000000000000
+      internalID: 8744906312849460904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scared
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6400
+        width: 280
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e59fdedc6713280800000000000000
+      internalID: -9065333948087181714
       vertices: []
       indices: 
       edges: []
@@ -357,18 +357,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 5614
-        width: 282
-        height: 802
+        y: 5600
+        width: 280
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5f1142738eb00bc0800000000000000
-      internalID: -3818843012243316900
+      spriteID: f61fe95ea25d8af10800000000000000
+      internalID: 2281307591480897903
       vertices: []
       indices: 
       edges: []
@@ -378,18 +378,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4812
-        width: 282
-        height: 802
+        y: 4800
+        width: 280
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f330e1c94a0ea3e80800000000000000
-      internalID: -8197993174076095681
+      spriteID: 54f0bfc11d8e5fc50800000000000000
+      internalID: 6698516005615505221
       vertices: []
       indices: 
       edges: []
@@ -399,18 +399,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4010
-        width: 282
-        height: 802
+        y: 4000
+        width: 280
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03f49c56723bc3090800000000000000
-      internalID: -8053365051852501200
+      spriteID: 9a93179e1d66fb4e0800000000000000
+      internalID: -1963737860759537239
       vertices: []
       indices: 
       edges: []
@@ -420,39 +420,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3208
-        width: 282
-        height: 802
+        y: 3200
+        width: 280
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cc6c2f3b3aa73910800000000000000
-      internalID: 1817108146106952903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: unamused
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2406
-        width: 282
-        height: 802
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06afb009a6cf9e750800000000000000
-      internalID: 6334871885486750304
+      spriteID: 7367c70f3e7b43b80800000000000000
+      internalID: -8415899614028466633
       vertices: []
       indices: 
       edges: []
@@ -462,39 +441,39 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1604
-        width: 282
-        height: 802
+        y: 2400
+        width: 280
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfb844db62f43d9c0800000000000000
-      internalID: -3903689424197350405
+      spriteID: beface11dfeb1db50800000000000000
+      internalID: 6616279321720696811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neutraltalk
+      name: unamused
       rect:
         serializedVersion: 2
         x: 0
-        y: 802
-        width: 282
-        height: 802
+        y: 1600
+        width: 280
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff96ee7bb8a616b70800000000000000
-      internalID: 8890504287724923391
+      spriteID: ec3af66d0800aa500800000000000000
+      internalID: 408139269583905742
       vertices: []
       indices: 
       edges: []
@@ -504,18 +483,39 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 282
-        height: 802
+        y: 800
+        width: 280
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1db79f32e6a9bb0b0800000000000000
-      internalID: -5711801904548709423
+      spriteID: f31f515a5ffa74120800000000000000
+      internalID: 2398078796169605439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutraltalk
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 280
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c458578833d82e0800000000000000
+      internalID: -2121983188241396717
       vertices: []
       indices: 
       edges: []

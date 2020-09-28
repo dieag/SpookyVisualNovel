@@ -29,6 +29,7 @@ public class ChoiceScreen : MonoBehaviour
     // Start is called before the first frame update
     public static void Show(string title, params string[] choices)
     {
+        PauseScreen.savePreviousState = true;
         NovelController.instance.blockNext = true;
         instance.root.SetActive(true);
     	if (title != "")
@@ -142,6 +143,7 @@ public class ChoiceScreen : MonoBehaviour
     public void MakeChoice(ChoiceButton button)
     {
         NovelController.instance.blockNext = false;
+        PauseScreen.savePreviousState = false;
         choice.index = button.choiceIndex;
     	choice.title = button.text;
     }

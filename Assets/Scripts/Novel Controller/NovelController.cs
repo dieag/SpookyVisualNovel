@@ -14,6 +14,7 @@ public class NovelController : MonoBehaviour
     public char delimiter = '|';
     [HideInInspector]
     public bool blockNext = false;
+    public static bool loadingGameSave = false;
 
     void Awake()
     {
@@ -22,13 +23,16 @@ public class NovelController : MonoBehaviour
 
     int activeGameFileNumber = 0;
     GAMEFILE activeGameFile = null;
+    GAMEFILE previousGameFile = new GAMEFILE();
     string activeChapterFile = "";
 
     // Start is called before the first frame update
     void Start()
     {
-        LoadGameFile(0);
-        //TODO: Differentiate between a new game and loading from a saved game. If saved game is very first line, is that a bug?
+        if (loadingGameSave)
+            LoadGameFile(0);
+        else
+            LoadChapterFile("chapter0_start");
     }
 
     public void LoadGameFile(int gameFileNumber)
@@ -89,42 +93,56 @@ public class NovelController : MonoBehaviour
         chapterProgress = activeGameFile.chapterProgress;
     }
 
-    public void SaveGameFile()
+
+    void setGameFile(ref GAMEFILE gamefile)
     {
-        string filePath = FileManager.savPath + "Resources/gameFiles/" + activeGameFileNumber.ToString() + ".txt";
+        gamefile.chapterName = activeChapterFile;
+        gamefile.chapterProgress = chapterProgress;
+        gamefile.cachedLastSpeaker = cachedLastSpeaker;
+        gamefile.currentTextSystemDisplayText = DialogueSystem.instance.speechText.text;
+        gamefile.currentTextSystemSpeakerDisplayText = DialogueSystem.instance.speakerNameText.text;
 
-        activeGameFile.chapterName = activeChapterFile;
-        activeGameFile.chapterProgress = chapterProgress;
-        activeGameFile.cachedLastSpeaker = cachedLastSpeaker;
-        activeGameFile.currentTextSystemDisplayText = DialogueSystem.instance.speechText.text;
-        activeGameFile.currentTextSystemSpeakerDisplayText = DialogueSystem.instance.speakerNameText.text;
-
-        activeGameFile.charactersInScene.Clear();
-        for(int i = 0; i < CharacterManager.instance.characters.Count; i++)
+        gamefile.charactersInScene.Clear();
+        for (int i = 0; i < CharacterManager.instance.characters.Count; i++)
         {
             Character character = CharacterManager.instance.characters[i];
             GAMEFILE.CHARACTERDATA data = new GAMEFILE.CHARACTERDATA(character);
-            activeGameFile.charactersInScene.Add(data);
+            gamefile.charactersInScene.Add(data);
         }
 
         //save the layers to disk
         BCFC b = BCFC.instance;
-        activeGameFile.background = b.background.activeImage != null ? b.background.activeImage.texture : null;
-        activeGameFile.cinematic = b.cinematic.activeImage != null ? b.cinematic.activeImage.texture : null;
-        activeGameFile.foreground = b.foreground.activeImage != null ? b.foreground.activeImage.texture : null;
+        gamefile.background = b.background.activeImage != null ? b.background.activeImage.texture : null;
+        gamefile.cinematic = b.cinematic.activeImage != null ? b.cinematic.activeImage.texture : null;
+        gamefile.foreground = b.foreground.activeImage != null ? b.foreground.activeImage.texture : null;
 
         //save the music to disk
         if (AudioManager.activeSong != null)
         {
             GAMEFILE.SONGDATA songdata = new GAMEFILE.SONGDATA(AudioManager.activeSong);
-            activeGameFile.music = songdata;
+            gamefile.music = songdata;
         }
-        if (AudioManager.activeSong != null)
+        if (AudioManager.activeAmbientSong != null)
         {
             GAMEFILE.SONGDATA songdata = new GAMEFILE.SONGDATA(AudioManager.activeAmbientSong);
-            activeGameFile.ambientMusic = songdata;
+            gamefile.ambientMusic = songdata;
         }
+    }
+    public void SaveGameFile(bool usePreviousGameFile)
+    {
+        string filePath = FileManager.savPath + "Resources/gameFiles/" + activeGameFileNumber.ToString() + ".txt";
 
+        if (!System.IO.File.Exists(filePath))
+        {
+            FileManager.SaveEncryptedJSON(filePath, new GAMEFILE(), keys);
+        }
+        activeGameFile = FileManager.LoadEncryptedJSON<GAMEFILE>(filePath, keys);
+
+        if (usePreviousGameFile)
+            activeGameFile = previousGameFile;
+        else
+            setGameFile(ref activeGameFile);
+        
         FileManager.SaveEncryptedJSON(filePath, activeGameFile,keys);
     }
 
@@ -137,10 +155,6 @@ public class NovelController : MonoBehaviour
     	{
             Next();
     	}
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SaveGameFile();
-        }
     }
 
     public void LoadChapterFile(string fileName)
@@ -159,8 +173,11 @@ public class NovelController : MonoBehaviour
     bool _next = false;
     public void Next()
     {
-        if(!blockNext)
+        if (!blockNext)
+        {
+            setGameFile(ref previousGameFile);
             _next = true;
+        }
     }
 
     public bool isHandlingChapterFile {get{return handlingChapterFile != null;}}

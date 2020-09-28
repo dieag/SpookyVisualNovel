@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
     private bool waitForAnimation = false;
     public Animator startGamePanel;
+    public TextMeshProUGUI menuText;
+    public MainMenuButton enterbutton;
+    public MainMenuButton loadButton;
 
     private void Start()
     {
@@ -30,7 +34,27 @@ public class MainMenu : MonoBehaviour
         if (!waitForAnimation)
         {
             startGamePanel.SetTrigger("activate");
+            NovelController.loadingGameSave = false;
             StartCoroutine(WaitForAnimation());
         }
+    }
+
+    public void ClickLoadGame()
+    {
+        if (!waitForAnimation)
+        {
+            startGamePanel.SetTrigger("activate");
+            NovelController.loadingGameSave = true;
+            StartCoroutine(WaitForAnimation());
+        }
+    }
+
+    public void ButtonHover(MainMenuButton button)
+    {
+        menuText.text = button.menuText;
+    }
+    public void ButtonUnHover()
+    {
+        menuText.text = "";
     }
 }

@@ -13,6 +13,7 @@ public class GlobalFunctions : MonoBehaviour
 		for(int i = allImages.Count - 1; i >= 0; i--)
 		{
 			Image image = allImages[i];
+			if (image == null) continue;
 
 			if (image == activeImage) {
 				if(image.color.a < 1f)
