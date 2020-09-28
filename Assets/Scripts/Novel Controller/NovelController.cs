@@ -400,13 +400,13 @@ public class NovelController : MonoBehaviour
             case "setFlag":
                 Command_SetFlag(data[1]);
                 return;
-            case "hideDialogueBox":
-                Command_HideDialogueBox(data[1]);
+            case "showDialogueBox":
+                Command_ShowDialogueBox(data[1]);
                 return;
         }
     }
 
-    public void Command_HideDialogueBox(string data)
+    public void Command_ShowDialogueBox(string data)
     {
         bool flag;
         if (bool.TryParse(data, out flag))
