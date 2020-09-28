@@ -1,48 +1,48 @@
 narrator|"The diary... {a}the terrible secret... {a}"
 
-Gwen|"[changeExpression(Gwen,face,shocktalk)]You're his parents. {a}"
+Gwen|"[changeExpression(Gwen,face,sadtalk)]You're his parents. {a}"
 
-Woman|"[changeExpression(Gwen,face,shock)]Ha! {a}You're more clever than Victor says."
+Woman|"[changeExpression(Gwen,face,snear)]Ha! {a}You're more clever than Victor says."
 
-narrator|"Victor stands slowly, and the woman hands him her knife."|changeExpression(Victor,face,shock)|changeExpression(Victor,body,stand)|enter(Victor,1,true)
+narrator|"[moveCharacter(Woman,-100,0)|moveCharacter(Victor,0.25,0)]Victor stands slowly, and the woman hands him her knife."|changeExpression(Victor,face,sad)|changeExpression(Victor,body,standbloodknife)
 
-Victor|"[changeExpression(Victor,face,shocktalk)]How did you figure it out?"
+Victor|"How did you figure it out?"
 
-Gwen|"[changeExpression(Gwen,face,shocktalk)]What are you doing, Victor? {a}I came here to help you!"
+Gwen|"[changeExpression(Gwen,face,sadtalk)]What are you doing, Victor? {a}I came here to help you!"
 
-narrator|"[changeExpression(Gwen,face,shock)]There's nowhere to run. {a}I'm trapped. {a}This isn't how it was supposed to go! {a}Why is he doing this?"
+narrator|"There's nowhere to run. {a}I'm trapped. {a}This isn't how it was supposed to go! {a}Why is he doing this?"
 
-narrator|"The man lunges [flip(Man)|changeExpression(Man,face,angry)|moveCharacter(Man,.75,0)]at me and wrests the knife from my shaky grip. {a}He jumps back[changeExpression(Man,face,happy)|changeExpression(Man,body,standknifeout)|moveCharacter(Man,.5,0)] before I can retaliate."
+narrator|"The man lunges [flip(Man)|changeExpression(Man,face,angry)|moveCharacter(Man,.7,0)]at me and wrests the knife from my shaky grip. [changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shock)]{a}He jumps back[changeExpression(Man,face,happy)|changeExpression(Man,body,standknifeout)|moveCharacter(Man,.8,0)] before I can retaliate."
 
-narrator|"I fall to the cold concrete, stunned."
+narrator|"[flip(Gwen)]I fall to the cold concrete, stunned."
 
 Gwen|"[changeExpression(Gwen,face,sadtalk)]Victor... whatever this is, I can help you. {a}I know you don't want this."
 
-Woman|"[changeExpression(Gwen,face,sad)]I think we know our son a little better than you, dear."
+Woman|"[moveCharacter(Woman,0.25,0)|moveCharacter(Victor,-100,0)|changeExpression(Woman,body,standing)]I think we know our son a little better than you, dear."
 
-narrator|"[moveCharacter(Woman,.25,0)]She walks in front of me and crouches down so our faces are on the same level."
+narrator|"[moveCharacter(Woman,0.4,0)]She walks in front of me and crouches down so our faces are on the same level."
 
 Woman|"And we know what he needs. {a}What he craves."
 
-Gwen|"[changeExpression(Gwen,face,shocktalk)]What do you mean?"
+Gwen|"[changeExpression(Gwen,face,sad)]What do you mean?"
 
-Woman|"[changeExpression(Gwen,face,shock)]Our family has a long-held tradition. {a}Once a year, the adults all get together for a Halloween feast."
+Woman|"[changeExpression(Woman,face,laugh)]Our family has a long-held tradition. {a}Once a year, the adults all get together for a Halloween feast."
 
-Gwen|"[changeExpression(Gwen,face,neutraltalk)]A feast... {a}That's nothing special."
+Gwen|"[changeExpression(Gwen,face,unamusedtalk)]A feast... {a}That's nothing special."
 
-Man|"[changeExpression(Gwen,face,neutral)]Our menu is quite unique."
+Man|"[changeExpression(Man,face,happy)]Our menu is quite unique."
 
 narrator|"The woman smiles at me, raising a hand to my hair."
 
-Woman|"Tonight, you will be our main course."
+Woman|"[changeExpression(Woman,face,snear)]Tonight, you will be our main course."
 
-narrator|"[changeExpression(Gwen,face,shock)]My eyes lock onto the meat hook glinting in the light. {a}No way. {a}No."
+narrator|"[changeExpression(Gwen,face,shock)|flip(Gwen)]My eyes lock onto the meat hook glinting in the light. {a}No way. {a}No."
 
-narrator|"The woman stands and steps aside. {a}Victor and his father move towards me simultaneously."
+narrator|"[moveCharacter(Woman,-100,0)|moveCharacter(Victor,0.25,0)]The woman stands and steps aside. {a}[moveCharacter(Man,0.7,0)|moveCharacter(Victor,0.3,0)]Victor and his father move towards me simultaneously."
 
 Victor|"[changeExpression(Victor,face,unamusedtalk)]Just relax. {a}It'll be over soon."
 
-narrator|"No... {a}wait... {a}"
+narrator|"[flip(Gwen)|changeExpression(Gwen,face,sad)]No... {a}wait... {a}"
 
 choice|"Victor!"
 {

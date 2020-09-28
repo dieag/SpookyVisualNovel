@@ -1,8 +1,8 @@
-Victor|"[changeExpression(Victor,body,standblood)|changeExpression(Victor, face,unamusedtalk)]Easily. {a}I do this every year."
+Victor|"[changeExpression(Victor,body,standbloodknife)|changeExpression(Victor, face,unamusedtalk)]Easily. {a}I do this every year."
 
 Gwen|"[flip(Gwen)|changeExpression(Gwen,face,sad)]What do you mean?"|playMusic(music_final,0,0.25)
 
-Woman|"[setPosition(Woman,0.25,0)|changeExpression(Woman,body,standing)|changeExpression(Woman,face,laugh)|enter(Woman)]Little Victor has been taking idiots like you into his home every Halloween for us to enjoy."
+Woman|"[moveCharacter(Woman,0.15,0)|changeExpression(Woman,body,standing)|changeExpression(Woman,face,laugh)|enter(Woman)]Little Victor has been taking idiots like you into his home every Halloween for us to enjoy."
 
 Gwen|"What? {a}All those dates, everything you told me... {a}"
 
@@ -10,7 +10,7 @@ Gwen|"What? {a}All those dates, everything you told me... {a}"
 
 Gwen|"[changeExpression(Gwen,face,sadtalk)|flip(Gwen)]You were just lying? {a}The whole time? {a}Luring me here?"
 
-Man|"He's a good actor, isn't he?"
+Man|"[flip(Man)]He's a good actor, isn't he?"
 
 "I clench my fists and take deep breaths. {a}It's hopeless. {a}I should have ran down the mountain."
 
@@ -26,19 +26,19 @@ Woman|"Us? {a}Kill Victor?"
 
 Woman|"[changeExpression(Woman,face,snear)|flip(Woman)]We just wanted him to donate an arm for dinner. {a}As penance for failing."
 
-Gwen|"What??"
+Gwen|"[changeExpression(Gwen,face,angrytalk)]What??"
 
 Man|"Enough. {a}Let's end this."
 
-"[exit(Man)|exit(Woman)|moveCharacter(Victor,0.4,0)]Victor takes one step forward."
+"[exit(Man)|exit(Woman)|moveCharacter(Victor,0.4,0)|moveCharacter(Gwen,0.6,0)]Victor takes one step forward."
 
-Gwen|"[changeExpression(Gwen,face,angrytalk)]Damn it. I loved you, Victor. {a}I came back to save you."
+Gwen|"[changeExpression(Gwen,face,sadtalk)]Damn it. I loved you, Victor. {a}I came back to save you."
 
-"[changeExpression(Victor,face,unamused)|flip(Gwen)]He doesn't say anything. {a}I lift my head and scream at him."|flip(Gwen)
+"[changeExpression(Victor,face,unamused)]He doesn't say anything. {a}I lift my head and scream at him."|flip(Gwen)
 
-Gwen|"You're disgusting! {a}A monster! {a}A freak!"
+Gwen|"[changeExpression(Gwen,face,angrytalk)]You're disgusting! {a}A monster! {a}A freak!"
 
-"[changeExpression(Victor,body,standarmblood)]He raises his arm."
+"[changeExpression(Victor,body,standarmbloodknife)|flip(Victor)]He raises his arm."
 
 Gwen|"[flip(Gwen)]I hope you CHOKE on my god damn -"|playSound(effect_stab)|exit(Gwen)|exit(Victor)
 

@@ -124,17 +124,17 @@ narrator|"Shit!"
 
 Woman|"Don't let her escape!"|playAmbientMusic(ambient_rain,0.1,0.0)
 
-narrator|"The man jumps up from the fight and I slam the door shut.[showBackground(mansion_lights_off,true,1)|exit(Gwen)] {a}I use the hilt of the knife to smash the lock[playSound(effect_screen_smash)], ensuring it stays shut."
+narrator|"The man jumps up from the fight and I slam the door shut.[setBackground(mansion_lights_off,true,1)|exit(Gwen)] {a}I use the hilt of the knife to smash the lock[playSound(effect_screen_smash)], ensuring it stays shut."
 
 "I can hear the man banging and screaming[playSound(effect_door_knock_heavy)]. {a}I want to collapse to the ground, but I know need to keep moving."
 
 "[playSound(effect_run_gravel)]Using all of my remaining energy, I race across the seemingly endless lawn to the safety of the forest. {a}Keep running, keep running!"
 
-"When I reach the edge of the forest, I stop and sink to my knees. {a}For a moment, I just focus on taking deep breaths, trying to stay calm. {a}A wet chill seeps into my bones as my mind races."
+"[showBackground(forest,true,1)]When I reach the edge of the forest, I stop and sink to my knees. {a}For a moment, I just focus on taking deep breaths, trying to stay calm. {a}A wet chill seeps into my bones as my mind races."
 
 "I left him there. {a}I can't believe I left him there."
 
-"[setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,sad)|enter(Gwen)]What do I do? {a}If I run down the mountain, maybe I can get some help. {a}That's the safest option."
+"[setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,standarmsbehindknife)|changeExpression(Gwen,face,sad)|enter(Gwen)]What do I do? {a}If I run down the mountain, maybe I can get some help. {a}That's the safest option."
 
 "But will Victor hold out that long?"
 

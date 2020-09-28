@@ -2,7 +2,7 @@ Man|"[changeExpression(Man,face,happytalk)]Help you? {a}Do you see where you are
 
 narrator|"[changeExpression(Victor,face,unamused)|changeExpression(Woman,face,laugh)]Victor frowns and his mother laughs cruelly behind him."
 
-Woman|"[moveCharacter(Woman,0.6,0)|flip(Woman)]Ha! {a}Victor helped you?"
+Woman|"[moveCharacter(Woman,0.15,0)|flip(Woman)]Ha! {a}Victor helped you?"
 
 Gwen|"[flip(Gwen)|changeExpression(Gwen,face,sadtalk)]You did! {a}I know you did!"|playMusic(music_final,0,0.25)
 
@@ -16,9 +16,9 @@ Gwen|"I'm not talking about that."
 
 narrator|"I point to the middle two keys."
 
-Gwen|"[changeExpression(Gwen,face,unamused)|changeExpression(Gwen,body,standarmsbehind)]You left that door open in the library. {a}You NEVER leave that door open."
+Gwen|"[changeExpression(Gwen,face,angry)|changeExpression(Gwen,body,standarmsbehind)]You left that door open in the library. {a}You NEVER leave that door open."
 
-narrator|"[changeExpression(Victor,face,shock)]Victor's eyes soften a bit and his father frowns next to him."|changeExpression(Man,face,unamused)
+narrator|"[changeExpression(Victor,face,sad)]Victor's eyes soften a bit and his father frowns next to him."|changeExpression(Man,face,unamused)
 
 Gwen|"I could only find those knives because of you. {a}And you put the next key in there for me to find."
 
@@ -30,31 +30,31 @@ Woman|"[flip(Woman)|changeExpression(Woman,face,angrytalk)]What is she saying, V
 
 Victor|"[flip(Victor)]Mother -"
 
-Man|"Just get it over with!"
+Man|"[changeExpression(Man,face,disgusttalk)]Just get it over with!"
 
-narrator|"[changeExpression(Victor,body,standarmblood)|changeExpression(Victor,face,angry)]Victor grimaces, lifting his dagger."
+narrator|"[changeExpression(Victor,body,standarmbloodknife)|changeExpression(Victor,face,angry)]Victor grimaces, lifting his dagger."
 
-Gwen|"[changeExpression(Gwen,face,sadtalk)|flip(Gwen)|moveCharacter(Gwen,0.7,0)]The diary! {a}In your room!"
+Gwen|"[changeExpression(Gwen,face,sad)|flip(Gwen)]The diary! {a}In your room!"
 
 narrator|"[changeExpression(Victor,face,shock)]He pauses."
 
 Gwen|"I know you aren't doing this because you want to. {a}I know you're afraid."
 
-Man|"[changeExpression(Man,face,angrytalk)]Enough!"
+Man|"[flip(Man)|changeExpression(Man,face,angrytalk)]Enough!"
 
 Gwen|"Wait!"
 
-narrator|"[flip(Man)|changeExpression(Man,body,standknifeout)]The man lifts his own blade into the air. {a}No!!"
+narrator|"[changeExpression(Man,body,standknifeout)]The man lifts his own blade into the air. {a}No!!"
 
 Woman|"[playSound(effect_stab)|changeExpression(Man,face,angry)|changeExpression(Woman,face,sadtalk)|flip(Woman)|changeExpression(Victor,face,shock)|changeExpression(Gwen,face,shock)]{wa 1}VICTOR!"
 
 narrator|"[changeExpression(Victor,body,standarmblood)|exit(Man)]The man collapses, a knife hilt protruding from his chest. {a}Victor turns to me, hands empty."
 
-Victor|"[flip(Victor)]Let's go!"
+Victor|"[moveCharacter(Victor,0.35,0)]Let's go!"
 
 narrator|"Yes!"
 
-"[moveCharacter(Woman,0.2,0)|changeExpression(Woman,face,sad)]I grab his hand and see the woman rush over to the man collapsed on the floor. {a}He's not moving."
+"[moveCharacter(Woman,0.8,0)|changeExpression(Woman,face,sad)]I grab his hand and see the woman rush over to the man collapsed on the floor. {a}He's not moving."
 
 Woman|"No! {a}No, no, no, no, no!!!!"
 
