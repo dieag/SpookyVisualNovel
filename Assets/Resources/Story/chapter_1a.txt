@@ -10,7 +10,7 @@ narrator|"I run to the hatch and swing it open, climbing down the ladder as fast
 
 Gwen|"Shit!"
 
-narrator|"I leap to my feet just as the intruder crawls inside. It's a man, brandishing a knife and grinning at me."|moveCharacter(Gwen,.75,0,3)|setPosition(Man,.25,0)|changeExpression(Man,body,standknifeout)|changeExpression(Man,face,happytalk)|flip(Gwen)|enter(Man,1,true)
+narrator|"I leap to my feet just as the intruder crawls inside. {a}It's a man, brandishing a knife and grinning at me."|moveCharacter(Gwen,.75,0,3)|setPosition(Man,.25,0)|changeExpression(Man,body,standknifeout)|changeExpression(Man,face,happytalk)|flip(Gwen)|enter(Man,1,true)
 
 Man|"Happy Halloween, sweetie."
 

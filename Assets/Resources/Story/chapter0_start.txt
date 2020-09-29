@@ -1,4 +1,4 @@
-setBackground(living_room,true,100)|playMusic(music_bedroom,0.25,0.0)|playAmbientMusic(ambient_rain,0.02,0.0)
+setBackground(living_room,true,100)|playMusic(music_bedroom,0.5,0.0)|playAmbientMusic(ambient_fireplace,0.5,0.0)|changeExpression(Victor,body,stand)|changeExpression(Victor,face,happy)|changeExpression(Man,body,stand)|changeExpression(Man,face,happy)|changeExpression(Woman,body,standing)|changeExpression(Woman,face,laugh)|setPosition(Woman,100,0)|setPosition(Man,100,0)|setPosition(Victor,100,0)
 
 narrator|"It's Halloween tonight. {a}A storm pounds against the walls of this mansion, raindrops tapping impatiently against the glass window near the glowing fireplace."
 
@@ -12,13 +12,13 @@ narrator|"[playSound(effect_thunder1)]Another crack of thunder. {a}I glance up t
 
 "I've only been dating Victor for a few months now. {a}In that little time, however, I've come to learn just how much that garden means to him. {a}It sprawls across the entire roof, with varying flowers, vegetables, and herbs packed into growers."
 
-"He's told me stories about how his mom loved to work with him on the garden - I think that was his favorite thing to do with her. Together, they transformed it from cracked cement to brilliant greenery."|playSound(effect_thunder2)
+"He's told me stories about how his mom loved to work with him on the garden - I think that was his favorite thing to do with her. {a}Together, they transformed it from cracked cement to brilliant greenery."|playSound(effect_thunder2)
 
-"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,unamused)]Damn - I better go up and check on it. {a}I set my book down and head to the stairs, leaving the warmth of the fire behind me."|playSound(effect_stairs)|setBackground(hallway_up_light,true,1)|exit(Gwen)
+"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,unamused)]Damn - I better go up and check on it. {a}I set my book down and head to the stairs, leaving the warmth of the fire behind me."|playSound(effect_stairs)|setBackground(hallway_up_light,true,1)|exit(Gwen)|stopAmbientMusic()
 
 "This mansion can be like a labyrinth, sometimes - to be honest, I'm not used to living somewhere with this many rooms.{a} I didn't exactly grow up in the lap of luxury."
 
-"Victor's parents died when he was young, and my parents abandoned me when I was twelve, so we could relate immediately on some level when we met. Trauma bonding and all that."
+"Victor's parents died when he was young, and my parents abandoned me when I was twelve, so we could relate immediately on some level when we met. {a}Trauma bonding and all that."
 
 Gwen|"[setPosition(Gwen,.75,0)|changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,neutral)|enter(Gwen,0,false)]It's nice to have a place to really call home again."
 
@@ -48,7 +48,7 @@ Gwen|"[changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,sa
 
 narrator|"I'm sure he's upset about it. {a}He's told me many times that Halloween is his favorite holiday - and it's ruined! No trick or treaters, no scary movies by the fire..."
 
-Gwen|"[playSound(effect_crash_faraway)|changeExpression(Gwen,face,shock)|playMusic(music_pursuit,0,0.25)]Ah! {a}A crash?"
+Gwen|"[playSound(effect_crash_faraway)|changeExpression(Gwen,face,shock)|playMusic(music_pursuit,0.5,0)]Ah! {a}A crash?"
 
 narrator|"Shaken from my reverie, I lean into the glass window, struggling to see immediately below."
 

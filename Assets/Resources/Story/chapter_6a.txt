@@ -4,7 +4,7 @@ narrator|"[changeExpression(Victor,face,unamused)|changeExpression(Woman,face,la
 
 Woman|"[moveCharacter(Woman,0.15,0)|flip(Woman)]Ha! {a}Victor helped you?"
 
-Gwen|"[flip(Gwen)|changeExpression(Gwen,face,sadtalk)]You did! {a}I know you did!"|playMusic(music_final,0,0.25)
+Gwen|"[flip(Gwen)|changeExpression(Gwen,face,sadtalk)]You did! {a}I know you did!"|playMusic(music_final,0.5,0)
 
 narrator|"I quickly tug the taped together codes out of my pocket, waving it in front of me.[playSound(effect_paper_shake2)]"
 
@@ -64,7 +64,7 @@ Woman|"[flip(Woman)|changeExpression(Woman,face,angrytalk)]I'LL KILL YOU!"
 
 Victor|"GO!"|exit(Woman)|exit(Victor)|exit(Gwen)
 
-narrator|"I book it back to the ladder, Victor on my heels. {a}We race to the top and slam the hatch shut behind us."|playSound(effect_hatch_close)|showBackground(kitchen,true,1)
+narrator|"I book it back to the ladder, Victor on my heels. {a}We race to the top and slam the hatch shut behind us."|playSound(effect_hatch_close)|setBackground(kitchen,true,1)
 
 Victor|"[setPosition(Victor,0.25,0)|changeExpression(Victor,body,standblood)|changeExpression(Victor,face,unamusedtalk)|enter(Victor)]We aren't safe yet."
 
@@ -94,7 +94,7 @@ Gwen|"[changeExpression(Gwen,face,sad)]Ha."
 
 Victor|"Let's go."|exit(Victor)
 
-narrator|"He takes my hand and leads me out of the kitchen."|showBackground(living_room,true,1)|exit(Gwen)
+narrator|"He takes my hand and leads me out of the kitchen."|setBackground(living_room_dark,true,1)|exit(Gwen)
 
 Victor|"My mother isn't stupid. {a}She'll be waiting for us somewhere outside. {a}We'll need to lure her back in."
 
@@ -118,7 +118,7 @@ narrator|"I can't meet his gaze."
 
 Victor|"Let's go."|exit(Victor)|exit(Gwen)
 
-narrator|"He walks up the stairs and I follow at a distance, still trying to process that disgusting new discovery."|playSound(effect_stairs)|showBackground(hallway_up_dark,true,1)
+narrator|"He walks up the stairs and I follow at a distance, still trying to process that disgusting new discovery."|playSound(effect_stairs)|setBackground(hallway_up_dark,true,1)
 
 Gwen|"[setPosition(Gwen,0.25,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,sadtalk)|enter(Gwen)]How... {a}how will we get her inside?"
 
@@ -164,7 +164,7 @@ narrator|"[flip(Victor)|moveCharacter(Victor,0.6,0)]Victor lifts his hands from 
 
 Victor|"[changeExpression(Victor,face,sad)|changeExpression(Victor,body,standblood)]I've always planned to end it this way."
 
-narrator|"[exit(Victor)|exit(Gwen)]When we reach the top of the stairs, Victor pauses and blocks me with his arm. {a}The woman screams below."|playMusic(music_pursuit)
+narrator|"[exit(Victor)|exit(Gwen)]When we reach the top of the stairs, Victor pauses and blocks me with his arm. {a}The woman screams below."|playMusic(music_pursuit,0.5,0)
 
 Victor|"[setPosition(Victor,0.5,0)|changeExpression(Victor,body,standarmsblood)|changeExpression(Victor,face,angrytalk)|enter(Victor)]Damn! {a}Quick, run!"
 
@@ -172,11 +172,11 @@ narrator|"He quickly shoves me in the opposite direction of the bedroom as his m
 
 "[exit(Victor)]I dart around the corner out of sight just as she reaches the top.[playSound(effect_run_inside)] {a}She shrieks and I hear the beginning of a pursuit as Victor runs in the opposite direction."
 
-"[setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,angry)|enter(Gwen)]He can handle it. {a}I need to do my part."|showBackground(living_room,true,1)|playSound(effect_stairs)
+"[setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,angry)|enter(Gwen)]He can handle it. {a}I need to do my part."|setBackground(living_room_dark,true,1)|playSound(effect_stairs)
 
 Gwen|"[flip(Gwen)]First floor. {a}West side."
 
-narrator|"Gotta move."|showBackground(hallway_down_dark,true,1)
+narrator|"Gotta move."|setBackground(hallway_down_dark,true,1)
 
 "[exit(Gwen)]As I run down the hall, I notice that none of the locks are shattered. {a}I can get in the gasoline room!"
 

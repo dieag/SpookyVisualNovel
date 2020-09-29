@@ -40,4 +40,4 @@ narrator|"That has to be it. {a}They've been stalking him for years, tracking hi
 
 "[changeExpression(Gwen,face,angry)]I won't let them hurt you, Victor."
 
-Load(chapter_3a_continue)
+Load(chapter_3a2)
