@@ -22,11 +22,11 @@ public class CLM : MonoBehaviour
 		{
 			string[] dialogueAndActions = rawLine.Split('"');
 			char actionSplitter = NovelController.instance.delimiter;
-			string[] actionArr = dialogueAndActions.Length == 3 ? dialogueAndActions[2].Split(actionSplitter) : dialogueAndActions[0].Split(actionSplitter);
+ 			string[] actionArr = dialogueAndActions.Length == 3 ? dialogueAndActions[2].Split(actionSplitter) : dialogueAndActions[0].Split(actionSplitter);
 
 			if (dialogueAndActions.Length == 3)
 			{
-				speaker = dialogueAndActions[0] == "" ? NovelController.instance.cachedLastSpeaker : dialogueAndActions[0];
+   				speaker = dialogueAndActions[0] == "" ? NovelController.instance.cachedLastSpeaker : dialogueAndActions[0];
 				if(speaker[speaker.Length-1] == NovelController.instance.delimiter)
 				{
 					speaker = speaker.Remove(speaker.Length - 1);

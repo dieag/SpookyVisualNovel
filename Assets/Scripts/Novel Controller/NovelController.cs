@@ -157,12 +157,14 @@ public class NovelController : MonoBehaviour
     	}
     }
 
+    private bool loadedNewFile = false;
     public void LoadChapterFile(string fileName)
     {
+        _next = false;
         activeChapterFile = fileName;
     	data = FileManager.LoadFile(FileManager.savPath + "Resources/Story/" + fileName);
     	cachedLastSpeaker = "";
-
+        loadedNewFile = true;
         if(handlingChapterFile != null)
             StopCoroutine(handlingChapterFile);
         handlingChapterFile = StartCoroutine(HandlingChapterFile());
@@ -182,7 +184,9 @@ public class NovelController : MonoBehaviour
 
     public bool isHandlingChapterFile {get{return handlingChapterFile != null;}}
     Coroutine handlingChapterFile = null;
+
     [HideInInspector] public int chapterProgress = 0;
+
     IEnumerator HandlingChapterFile()
     {
         chapterProgress = 0;
@@ -199,7 +203,10 @@ public class NovelController : MonoBehaviour
                 else
                 {
                     HandleLine(line);
-                    chapterProgress ++;
+                    if (!loadedNewFile)
+                        chapterProgress++;
+                    else
+                        loadedNewFile = false;
                     while(isHandlingLine)
                     {
                         yield return new WaitForEndOfFrame();

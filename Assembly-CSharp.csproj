@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Features\AdaptiveFont.cs" />
     <Compile Include="Assets\Scripts\CharacterManager.cs" />
     <Compile Include="Assets\Scripts\InputAndChoiceSystem\TitleHeader.cs" />
+    <Compile Include="Assets\Scripts\MainMenuButton.cs" />
     <Compile Include="Assets\Scripts\InputAndChoiceSystem\InputScreen.cs" />
     <Compile Include="Assets\TEST\scripts\characterTesting.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
@@ -89,7 +90,6 @@
     <Compile Include="Assets\TEST\scripts\ChoiceScreenTesting.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\SavingLoading\GAMEFILE.cs" />
-    <Compile Include="Assets\Scripts\MainMenuButton.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -99,6 +99,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Resources\Story\TestingLineSegmentation.txt" />
      <None Include="Assets\Resources\Story\chapter0_start.txt" />
+     <None Include="Assets\Resources\Story\chapter_10a.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\Resources\Story\chapter_1b.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
