@@ -32,7 +32,7 @@ Victor|"[flip(Victor)]Mother -"
 
 Man|"[changeExpression(Man,face,disgusttalk)]Just get it over with!"
 
-narrator|"[changeExpression(Victor,body,standarmbloodknife)|changeExpression(Victor,face,angry)]Victor grimaces, lifting his dagger."
+narrator|"[changeExpression(Victor,body,standarmsbloodknife)|changeExpression(Victor,face,angry)]Victor grimaces, lifting his dagger."
 
 Gwen|"[changeExpression(Gwen,face,sad)|flip(Gwen)]The diary! {a}In your room!"
 
@@ -48,7 +48,7 @@ narrator|"[changeExpression(Man,body,standknifeout)]The man lifts his own blade 
 
 Woman|"[playSound(effect_stab)|changeExpression(Man,face,angry)|changeExpression(Woman,face,sadtalk)|flip(Woman)|changeExpression(Victor,face,shock)|changeExpression(Gwen,face,shock)]{wa 1}VICTOR!"
 
-narrator|"[changeExpression(Victor,body,standarmblood)|exit(Man)]The man collapses, a knife hilt protruding from his chest. {a}Victor turns to me, hands empty."
+narrator|"[changeExpression(Victor,body,standarmsblood)|exit(Man)]The man collapses, a knife hilt protruding from his chest. {a}Victor turns to me, hands empty."
 
 Victor|"[moveCharacter(Victor,0.35,0)]Let's go!"
 
@@ -134,7 +134,7 @@ Victor|"Right now she is. {a}She's not thinking."
 
 narrator|"[playSound(effect_window_open)]Victor swings open a window, thunder crackling in response."|playSound(effect_thunder1)
 
-Victor|"[changeExpresion(Victor,body,standarmblood)|changeExpression(Victor,face,angrytalk)]MOTHER!"
+Victor|"[changeExpresion(Victor,body,standarmsblood)|changeExpression(Victor,face,angrytalk)]MOTHER!"
 
 Gwen|"[changeExpression(Gwen,face,shocktalk)]Victor! {a}What are you doing?"
 

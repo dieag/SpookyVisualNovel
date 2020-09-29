@@ -64,7 +64,7 @@ narrator|"[changeExpression(Gwen,face,sad)]I-I..."
 
 "[changeExpression(Gwen,face,shock)|changeExpression(Man,face,disgust)|playSound(effect_door_open)]The kitchen door suddenly opens, and I pause. {a}My head turns slowly to look in that direction."
 
-"[setPosition(Victor,0.7,0)|changeExpression(Victor,body,stand)|changeExpression(Victor,face,happy)]It's Victor. {a}Finally, Victor is here."
+"[setPosition(Victor,0.7,0)|changeExpression(Victor,body,stand)|changeExpression(Victor,face,happy)|enter(Victor)]It's Victor. {a}Finally, Victor is here."
 
 "[flip(Gwen)|changeExpression(Gwen,face,sad)]My hands go cold and I almost drop the knife.[playMusic(music_final,0.5,0)] {a}[setPosition(Woman,0.9,0)|changeExpression(Woman,body,standingknife)|changeExpression(Woman,face,snear)]The woman is behind him, holding her own knife to his throat. {a}It looks shockingly similar to mine."
 
@@ -88,9 +88,9 @@ Victor|"Come on, Gwen."|exit(Victor)|exit(Woman)
 
 narrator|"I grab the man's arm and he stands. {a}[exit(Gwen)|exit(Man)]My knife stays levelled at his neck as we follow the woman and Victor out to the living area."|setBackground(living_room_dark,true,1)
 
-Woman|"[setPosition(Woman,0.8,0)|enter(Woman)|setPosition(Victor(0.6,0)|enter(Victor)]I'm not doing this dance forever. {a}It's time to decide."
+Woman|"[setPosition(Woman,0.8,0)|enter(Woman)|setPosition(Victor,0.6,0)|enter(Victor)]I'm not doing this dance forever. {a}It's time to decide."
 
-Gwen|"[setPosition(Gwen,0.2,0)|enter(Gwen)|changeExpression(Gwen,body,standarmsbehind)|setPosition(Man,0.4,0)|enter(Man)]Decide what?"
+Gwen|"[setPosition(Gwen,0.2,0)|enter(Gwen)|changeExpression(Gwen,body,standarmssbehind)|setPosition(Man,0.4,0)|enter(Man)]Decide what?"
 
 Woman|"[flip(Woman)]Either Victor dies, or you come with us."
 
@@ -98,7 +98,7 @@ Gwen|"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,sadtalk)]Exc
 
 Woman|"I won't be repeating myself."
 
-narrator|"[playSound(effect_stab)|flip(Woman)|changeExpression(Victor,body,standarmblood)|flip(Victor)|changeExpression(Victor,face,angry)]The woman stabs her knife into Victor's shoulder and he screams, falling to one knee."
+narrator|"[playSound(effect_stab)|flip(Woman)|changeExpression(Victor,body,standarmsblood)|flip(Victor)|changeExpression(Victor,face,angry)]The woman stabs her knife into Victor's shoulder and he screams, falling to one knee."
 
 Gwen|"[changeExpression(Gwen,face,shocktalk)|moveCharacter(Gwen,0.25,0)]Victor!"
 
@@ -136,7 +136,7 @@ narrator|"The man jumps up from the fight and I slam the door shut.[setBackgroun
 
 "I left him there. {a}I can't believe I left him there."
 
-"[setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,standarmsbehindknife)|changeExpression(Gwen,face,sad)|enter(Gwen)]What do I do? {a}If I run down the mountain, maybe I can get some help. {a}That's the safest option."
+"[setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,standarmssbehindknife)|changeExpression(Gwen,face,sad)|enter(Gwen)]What do I do? {a}If I run down the mountain, maybe I can get some help. {a}That's the safest option."
 
 "But will Victor hold out that long?"
 

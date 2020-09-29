@@ -38,7 +38,7 @@ Gwen|"[changeExpression(Gwen,face,sadtalk)]Damn it. I loved you, Victor. {a}I ca
 
 Gwen|"[changeExpression(Gwen,face,angrytalk)]You're disgusting! {a}A monster! {a}A freak!"
 
-"[changeExpression(Victor,body,standarmbloodknife)|flip(Victor)]He raises his arm."
+"[changeExpression(Victor,body,standarmsbloodknife)|flip(Victor)]He raises his arm."
 
 Gwen|"[flip(Gwen)]I hope you CHOKE on my god damn -"|playSound(effect_stab)|exit(Gwen)|exit(Victor)
 

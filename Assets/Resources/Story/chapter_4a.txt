@@ -60,19 +60,19 @@ narrator|"[playSound(effect_door_unlock)]The lock clicks open and I panic for a 
 
 "There's a faint light ahead, and I can hear soft voices murmuring. {a}Is that them?"
 
-"I creep behind several dusty crates and bins. {a}No time to think what's inside."|setPosition(Victor,0.5,0)|setPosition(Man,0.75.0)|setPosition(Woman,0.25,0)
+"I creep behind several dusty crates and bins. {a}No time to think what's inside."|setPosition(Victor,0.5,0)|setPosition(Man,0.75,0)|setPosition(Woman,0.25,0)|changeExpression(Man,body,standknife)|changeExpression(Man,face,disgust)|changeExpression(Woman,body,standingknife)|changeExpression(Woman,face,angry)|changeExpression(Victor,body,standblood)|changeExpression(Victor,face,sad)
 
-"[changeExpression(Man,body,standknife)|changeExpression(Man,face,disgust)|changeExpression(Woman,body,standingknife)|changeExpression(Woman,face,angry)|changeExpression(Victor,body,standblood)|changeExpression(Victor,face,sad)|enter(Man)|enter(Woman)|enter(Victor)]When I peek around a storage container, I see them - all three of them. {a}Victor is seated in front, head down, while the man and woman loom over him with their knives."
+"[enter(Man)|enter(Woman)|enter(Victor)]When I peek around a storage container, I see them - all three of them. {a}Victor is seated in front, head down, while the man and woman loom over him with their knives."
 
 Woman|"[flip(Woman)]You let her escape."
 
-man|"[changeExpression(Man,face,disgusttalk)]It wasn't my fault! {a}How can you blame me?"
+Man|"[changeExpression(Man,face,disgusttalk)]It wasn't my fault! {a}How can you blame me?"
 
 Woman|"Well it wasn't ME who was near her, was it?"
 
 narrator|"[flip(Man)]The man shouts and punches a box and dust flies as it crashes to the floor.[playSound(effect_cardboard_box)] {a}Victor is motionless."
 
-man|"I can't believe it's come to this."
+Man|"I can't believe it's come to this."
 
 narrator|"The woman's scowl loosens, and she looks sadly at Victor."
 
@@ -88,9 +88,9 @@ narrator|"[moveCharacter(Woman,0.3,0)]She places her hand on his shoulder. {a}Wh
 
 Gwen|"Stop!!"|changeExpression(Gwen,body,standknife)|changeExpression(Gwen,face,angrytalk)
 
-narrator|"[setPosition(Gwen,0.6,0)|enter(Gwen)|moveCharacter(Woman,0.2,0)|moveCharacter(Man,0.8,0)|moveCharacter(Victor,0.4,0)|changeExpression(Victor,face,shock)|changeExpression(Man,face,angry)|changeExpression(Woman,face,angry)]I jump out, brandishing my knife in front of me. {a}The man spins around and his eyes widen."
+narrator|"[setPosition(Gwen,0.6,0)|enter(Gwen)|moveCharacter(Woman,0.1,0)|moveCharacter(Man,0.9,0)|moveCharacter(Victor,0.3,0)|changeExpression(Victor,face,shock)|changeExpression(Man,face,angry)|changeExpression(Woman,face,angry)]I jump out, brandishing my knife in front of me. {a}The man spins around and his eyes widen."
 
-man|"[flip(Man)]What the - ?"
+Man|"[flip(Man)]What the - ?"
 
 Victor|"[changeExpression(Victor,face,shocktalk)]Gwen! {a}What are you doing here?"
 
@@ -100,7 +100,7 @@ narrator|"Victor doesn't move. {a}The woman slowly lowers her blade, eyes locked
 
 Gwen|"Victor!!"
 
-man|"[changeExpression(Man,face,happytalk)]Ha. {a}Why would he get up?"
+Man|"[changeExpression(Man,face,happytalk)]Ha. {a}Why would he get up?"
 
 Gwen|"[flip(Gwen)|changeExpression(Gwen,face,sadtalk)]Shut up! {a}Shut up!!"
 
@@ -116,7 +116,7 @@ narrator|"[changeExpression(Victor,face,sad)]He frowns, turning his head away fr
 
 Gwen|"I-If you don't help me - "
 
-man|"[flip(Man)]He won't be helping you."
+Man|"[flip(Man)]He won't be helping you."
 
 Gwen|"[changeExpression(Gwen,face,sad)]We made it this far! {a}Y-You dropped that key for me in the living room! {a}You knew I'd come back!"
 
@@ -126,7 +126,7 @@ Gwen|"Please don't give up!"
 
 narrator|"[moveCharacter(Woman,-100,0)|moveCharacter(Victor,0.2,0)|moveCharacter(Gwen,0.5,0)|moveCharacter(Man,0.7,0)]The man steps towards me and I step away in response."
 
-man|"Look around you, Gwen."
+Man|"Look around you, Gwen."
 
 Gwen|"Shut up!"
 

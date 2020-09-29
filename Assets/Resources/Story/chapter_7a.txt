@@ -20,7 +20,7 @@ Victor|"[changeExpression(Victor,body,standarmsblood)|changeExpression(Victor,fa
 
 narrator|"[exit(Victor)|exit(Gwen)]I chuck the last of the gasoline into the open fire and Victor pulls me down the hallway towards the broken window.[playSound(effect_run_inside)] {a}Glass cuts into my hands and legs and we tumble out onto the grass."
 
-narrator|"[playSound(effect_explosion)|setBackground(mansion_burning,true,1)|playAmbientMusic(ambient_fire,0.2,0)]The explosion rocks the earth beneath us and debris flies through the air. {a}Victor pulls me to my feet and we sprint away from the mansion, not stopping until we reach the edge of the forest. [playSound(effect_run_gravel)]"
+narrator|"[playSound(effect_explosion)|setBackground(mansion_burning,true,1)|playAmbientMusic(ambient_fire,0.5,0)]The explosion rocks the earth beneath us and debris flies through the air. {a}Victor pulls me to my feet and we sprint away from the mansion, not stopping until we reach the edge of the forest. [playSound(effect_run_gravel)]"
 
 "We did it! {a}It worked!"
 
@@ -34,7 +34,7 @@ narrator|"I grab his arm and tug him deeper into the forest."
 
 Gwen|"Don't watch. {a}Let's just go."
 
-narrator|"He nods. {a}Together we enter the woods, leaving the mansion behind us."|stopAmbientMusic()|playAmbientMusic(ambient_fire,0.05,0)
+narrator|"He nods. {a}Together we enter the woods, leaving the mansion behind us."|stopAmbientMusic()|playAmbientMusic(ambient_fire,0.2,0)|setBackground(forest,true,1)
 
 narrator|"The rain is lighter now, and the storm is still. {a}All I hear is the roaring fire behind me and our feet sloshing across the muddy forest floor."
 

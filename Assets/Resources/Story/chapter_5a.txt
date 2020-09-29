@@ -48,6 +48,6 @@ choice|"Victor!"
 {
     "How could you do this to me?"
         Load(chapter_6b)
-    "You didn't want this. {a}You've been trying to help me!"
+    "I know you don't want this! Please!"
         Load(chapter_6a)
 }
