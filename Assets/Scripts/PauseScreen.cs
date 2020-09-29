@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PauseScreen : MonoBehaviour
 {
@@ -9,9 +10,13 @@ public class PauseScreen : MonoBehaviour
     public static bool savePreviousState = false;
     public Button saveButton;
     public Button homeButton;
+    public Slider volumeSlider;
     [HideInInspector]
     public bool isPaused = false;
     public GameObject root;
+    public TextMeshProUGUI pauseText;
+    public MainMenuButton reloadGameButton;
+    public MainMenuButton saveGameButton;
     void Awake()
     {
         instance = this;
@@ -41,5 +46,18 @@ public class PauseScreen : MonoBehaviour
     public void GoHome(Button button)
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+    }
+
+       public void ChangeVol() {
+        AudioListener.volume = volumeSlider.value;
+    }
+
+    public void ButtonHover(MainMenuButton button)
+    {
+        pauseText.text = button.menuText;
+    }
+    public void ButtonUnHover()
+    {
+        pauseText.text = "";
     }
 }

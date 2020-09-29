@@ -1,40 +1,40 @@
 fileFormatVersion: 2
-guid: e2cd3517cf20b3b479e092caed39054e
+guid: 880d617e8cb86de4492274fa4b9f0e2b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5207544987158716770
-    second: standknifeout
-  - first:
-      213: -2250128633291984448
-    second: standknife
-  - first:
-      213: -672509754820783249
+      213: -4677394411757660616
     second: stand
   - first:
-      213: -5657222779149273551
-    second: happytalk
+      213: 6303517767091765959
+    second: standknife
   - first:
-      213: -761530471776030657
+      213: 7240798382712988455
+    second: standknifeout
+  - first:
+      213: 1005263202540497225
     second: unamused
   - first:
-      213: -526423914407090313
-    second: disgust
-  - first:
-      213: 5427590300147334247
-    second: angry
-  - first:
-      213: -4532698330198780497
+      213: 1523683767239500545
     second: unamusedtalk
   - first:
-      213: -3907811233784148841
-    second: happy
+      213: 41046869670083105
+    second: disgust
   - first:
-      213: 6146765075070113607
+      213: -6838915865208616663
     second: disgusttalk
   - first:
-      213: -3331590989316002027
+      213: 4908097715783072081
+    second: happytalk
+  - first:
+      213: -153580687284884816
+    second: happy
+  - first:
+      213: 4859321563839331079
     second: angrytalk
+  - first:
+      213: 7284782250535836223
+    second: angry
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -65,7 +65,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -75,13 +75,13 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
-  spriteMeshType: 1
+  spriteExtrude: 0
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -97,7 +97,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 8192
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -109,7 +109,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 8192
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -122,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: standknifeout
+      name: stand
       rect:
         serializedVersion: 2
         x: 0
-        y: 10821
-        width: 502
-        height: 1081
+        y: 9600
+        width: 503
+        height: 960
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,8 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2612677339ae44840800000000000000
-      internalID: 5207544987158716770
+      spriteID: 83699cc709e861fb0800000000000000
+      internalID: -4677394411757660616
       vertices: []
       indices: 
       edges: []
@@ -147,9 +147,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 9739
-        width: 502
-        height: 1081
+        y: 8640
+        width: 503
+        height: 960
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c132b10eefe5c0e0800000000000000
-      internalID: -2250128633291984448
+      spriteID: 7c24edef2089a7750800000000000000
+      internalID: 6303517767091765959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stand
+      name: standknifeout
       rect:
         serializedVersion: 2
         x: 0
-        y: 8657
-        width: 502
-        height: 1081
+        y: 7680
+        width: 503
+        height: 960
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,29 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f631cebe0f3caa6f0800000000000000
-      internalID: -672509754820783249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: happytalk
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 7575
-        width: 502
-        height: 1081
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1363f890bd18d71b0800000000000000
-      internalID: -5657222779149273551
+      spriteID: 723a4d304cb7c7460800000000000000
+      internalID: 7240798382712988455
       vertices: []
       indices: 
       edges: []
@@ -210,9 +189,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 6493
-        width: 502
-        height: 1081
+        y: 6720
+        width: 503
+        height: 960
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,50 +199,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f30772812108e65f0800000000000000
-      internalID: -761530471776030657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: disgust
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 5411
-        width: 502
-        height: 1081
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 777ae7c2d34c1b8f0800000000000000
-      internalID: -526423914407090313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: angry
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 4329
-        width: 502
-        height: 1081
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76c33a21f9ca25b40800000000000000
-      internalID: 5427590300147334247
+      spriteID: 949a23d7e8963fd00800000000000000
+      internalID: 1005263202540497225
       vertices: []
       indices: 
       edges: []
@@ -273,9 +210,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3247
-        width: 502
-        height: 1081
+        y: 5760
+        width: 503
+        height: 960
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,20 +220,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa5de7a42ee9811c0800000000000000
-      internalID: -4532698330198780497
+      spriteID: 103e6504056352510800000000000000
+      internalID: 1523683767239500545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: happy
+      name: disgust
       rect:
         serializedVersion: 2
         x: 0
-        y: 2165
-        width: 502
-        height: 1081
+        y: 4800
+        width: 503
+        height: 960
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,8 +241,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79cc309236aa4c9c0800000000000000
-      internalID: -3907811233784148841
+      spriteID: 12ab3d519e3d19000800000000000000
+      internalID: 41046869670083105
       vertices: []
       indices: 
       edges: []
@@ -315,9 +252,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1083
-        width: 502
-        height: 1081
+        y: 3840
+        width: 503
+        height: 960
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,8 +262,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 747d451d442bd4550800000000000000
-      internalID: 6146765075070113607
+      spriteID: 9290575314a4711a0800000000000000
+      internalID: -6838915865208616663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happytalk
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2880
+        width: 503
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159f7284ed01d1440800000000000000
+      internalID: 4908097715783072081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: happy
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 503
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba260abd2f5eddf0800000000000000
+      internalID: -153580687284884816
       vertices: []
       indices: 
       edges: []
@@ -336,9 +315,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 502
-        height: 1081
+        y: 960
+        width: 503
+        height: 960
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,8 +325,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51f6de095afc3c1d0800000000000000
-      internalID: -3331590989316002027
+      spriteID: 70bf90e6737cf6340800000000000000
+      internalID: 4859321563839331079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: angry
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 503
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3a52454cdeb81560800000000000000
+      internalID: 7284782250535836223
       vertices: []
       indices: 
       edges: []
