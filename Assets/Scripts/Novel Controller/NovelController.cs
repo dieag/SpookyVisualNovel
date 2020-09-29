@@ -202,11 +202,8 @@ public class NovelController : MonoBehaviour
                 }
                 else
                 {
+                    chapterProgress++;
                     HandleLine(line);
-                    if (!loadedNewFile)
-                        chapterProgress++;
-                    else
-                        loadedNewFile = false;
                     while(isHandlingLine)
                     {
                         yield return new WaitForEndOfFrame();
