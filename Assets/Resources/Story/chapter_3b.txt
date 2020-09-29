@@ -1,4 +1,4 @@
-Woman|"Ha. Gotcha."|setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shock)|enter(Gwen)|playMusic(music_final)
+Woman|"Ha. Gotcha."|setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shock)|enter(Gwen)|playMusic(music_final,0.5,0)
 
 narrator|"[setPosition(Woman,0.25,0)|changeExpression(Woman,body,standingknife)|changeExpression(Woman,face,laugh)|enter(Woman)|setPosition(Man,0.75,0)|changeExpression(Man,body,standknifeout)|changeExpression(man,face,happy)|enter(Man)]I spin around and see the two intruders looming over me."
 

@@ -1,4 +1,4 @@
-Gwen|"[playMusic(music_library,0.25, 0)|setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,happy)|enter(Gwen)]Yes! {a}It's open!"|playSound(effect_door_unlock)|setBackground(kitchen,true,1)
+Gwen|"[playMusic(music_library,0.5, 0)|setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,happy)|enter(Gwen)]Yes! {a}It's open!"|playSound(effect_door_unlock)|setBackground(kitchen,true,1)
 
 narrator|"I rush in and close the door behind me, leaning against its cold steel and taking deep breaths."|playSound(effect_door_close)
 
@@ -18,9 +18,9 @@ Gwen|"Ha..."|exit(Gwen)
 
 narrator|"When can I leave the kitchen? {a}I wish I could hear anything outside the door. {a}Damn."
 
-"My eyes wander around the room until it settles on a cabinet in a corner, locked with one of those special locks. {a}That's been sealed ever since I've moved in. {a}When I asked Victor what was in it, he said it was just antique kitchenware that was locked away so it couldn't be stolen."
+"My eyes wander around the room until it settles on a cabinet in a corner, locked with one of those special locks. {a}That's been sealed ever since I've moved in. {a}When I asked Victor what was in it, he said it was just antique kitchenware locked for safekeeping."
 
-"Odd that he wouldn't want them displayed, though. {a}I'd at least lock them in a glass case, or something."
+"Odd that he wouldn't want them displayed, though. {a}I'd at least store them in a glass case, or something."
 
 "I kneel down in front of the cabinet, tapping the screen."|playSound(effect_screen_tap)
 
@@ -54,7 +54,7 @@ narrator|"There's something under the knife pile - another scrap of paper!"
 
 "No one. {a}I got lucky."|flip(Gwen)
 
-"[playSound(effect_thunder1)]The thunder cracks loudly and a flash of lightning blinds me through the window. {a}With a loud pop[playSound(effect_light_pop)], the lights blow out and the mansion dims."
+"[playSound(effect_thunder1)]The thunder cracks loudly and a flash of lightning blinds me through the window. {a}With a loud pop[playSound(effect_light_pop)], the lights blow out and the mansion dims."|setBackground(living_room_dark,true,1)
 
 Gwen|"Shit."|changeExpression(Gwen,face,unamused)|flip(Gwen)
 
@@ -72,7 +72,7 @@ narrator|"The fireplace is now the only source of light in the entire mansion, a
 
 "I shake my head. {a}I can't back out now."
 
-"[exit(Gwen)]Slowly, I move through the hallway. {a}Every door I pass looms behind me, and I strain to listen for the sound of any of them opening behind me."
+"[exit(Gwen)]Slowly, I move through the hallway. {a}Every door I pass looms behind me, and I strain to listen for the sound of any of them opening."
 
 "I've been in some of these rooms before. {a}Guest bedrooms, bathrooms, a sauna... Victor really has it all."
 
@@ -98,9 +98,9 @@ loadPuzzle(puzzle3,key2,301521236302110)
 
 "I forgot about the sound it makes!"
 
-Man|"Who's there?"|playMusic(music_pursuit,0.25,0.25)
+Man|"Who's there?"|playMusic(music_pursuit,0.5,0)
 
-narrator|"I gotta run!"|playSound(effect_stairs)|setBackground(living_room,true,1)|exit(Gwen)
+narrator|"I gotta run!"|playSound(effect_stairs)|setBackground(living_room_dark,true,1)|exit(Gwen)
 
 "Upstairs, upstairs!"|setBackground(hallway_up_dark,true,1)
 

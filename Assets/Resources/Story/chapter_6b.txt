@@ -1,6 +1,6 @@
 Victor|"[changeExpression(Victor,body,standbloodknife)|changeExpression(Victor, face,unamusedtalk)]Easily. {a}I do this every year."
 
-Gwen|"[flip(Gwen)|changeExpression(Gwen,face,sad)]What do you mean?"|playMusic(music_final,0,0.25)
+Gwen|"[flip(Gwen)|changeExpression(Gwen,face,sad)]What do you mean?"|playMusic(music_final,0.5,0)
 
 Woman|"[moveCharacter(Woman,0.15,0)|changeExpression(Woman,body,standing)|changeExpression(Woman,face,laugh)|enter(Woman)]Little Victor has been taking idiots like you into his home every Halloween for us to enjoy."
 

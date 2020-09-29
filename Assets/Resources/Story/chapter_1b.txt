@@ -24,7 +24,7 @@ Gwen|"Codes, hidden rooms… this house is so weird."
 
 narrator|"I dash into the small room and tug the bookshelf door closed with all my strength. {a}[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shock)]Gah! {a}It's so heavy!!"|playSound(effect_door_close)|setBackground(secret_room,true,1)|moveCharacter(Gwen,.25,0)
 
-"Safe.[playMusic(music_library,0.25,0)] {a}I have to be safe, now. {a}There's no way anyone but Victor could know about this."
+"Safe.[playMusic(music_library,0.5,0)] {a}I have to be safe, now. {a}There's no way anyone but Victor could know about this."
 
 "Maybe I would have found this room earlier if I had used the library more often. {a}I'm lucky he left it open!"
 
@@ -60,7 +60,7 @@ narrator|"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,sad)|fli
 
 "Breathe, breathe, breathe."
 
-"After I stay frozen for what seems like an eternity, the woman in the library finally shuffles away, and after waiting for a while I don't hear her return. {a}Thank god."|changeExpression(Gwen,body,standarmsbehind)
+"After I stay frozen for what seems like an eternity, the woman in the library finally shuffles away and I don't hear her return. {a}Thank God."|changeExpression(Gwen,body,standarmsbehind)
 
 "I thought for sure she knew I was in here."
 
@@ -84,9 +84,9 @@ Gwen|They must have found the phone by now and destroyed it. {a}That's too risky
 
 narrator|"So, I guess there's only one thing I can do."
 
-"Damn. Happy Halloween, Gwen."|playMusic(music_pursuit,0,0.25)
+"Damn. Happy Halloween, Gwen."|playMusic(music_pursuit,0.5,0)
 
-"I let a few moments pass and then I approach the library door, placing my hand on the doorknob. {a}Slowly, I twist the knob and pull the door open."|playSound(effect_door_unlock)|setBackground(hallway_up_light,true,1)
+"I let a few moments pass and then I approach the library door. {a}Slowly, I twist the knob and pull the door open."|playSound(effect_door_unlock)|setBackground(hallway_up_light,true,1)
 
 Gwen|"Silence.{a} Perfect."
 

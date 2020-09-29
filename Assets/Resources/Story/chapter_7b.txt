@@ -1,8 +1,8 @@
-narrator|"[setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,sadtalk)|enter(Gwen)]Why did he have to make this so complicated? {a}Damn!"|playMusic(music_final)
+narrator|"[setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,sadtalk)|enter(Gwen)]Why did he have to make this so complicated? {a}Damn!"|playMusic(music_final,0.5,0)
 
 "[playSound(effect_table_crash)|flip(Gwen)|changeExpression(Gwen,face,shock)]A loud crash - that sounded like a broken table!"
 
-Gwen|"Victor!"|playSound(effect_run_inside)|exit(Gwen)|showBackground(living_room,true,1)
+Gwen|"Victor!"|playSound(effect_run_inside)|exit(Gwen)|setBackground(living_room_dark,true,1)|playAmbientMusic(ambient_fireplace,0.5,0)
 
 narrator|"When I round the corner into the living room, I see Victor's body crumpled on a shattered desk beneath the stairs, blood pooling around his head."
 

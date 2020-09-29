@@ -1,4 +1,4 @@
-narrator|"Yes! {a}Get in!"|playSound(effect_door_open)|playMusic(music_bedroom,0.25,0.25)
+narrator|"Yes! {a}Get in!"|playSound(effect_door_open)|playMusic(music_bedroom,0.5,0)
 
 "[setBackground(bedroom,true,1)]I tumble into the room and quickly turn and close the door[playSound(effect_door_close)]. {a}I don't want them to know this lock wasn't broken."
 

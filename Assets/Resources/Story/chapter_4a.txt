@@ -2,7 +2,7 @@ Gwen|"[changeExpression(Gwen,face,angry)]God DAMN it!"
 
 narrator|"I fought back trying to save Victor, and I'm wavering NOW on whether or not I want to go back and help him?"
 
-"[flip(Gwen)]No. {a}I'm going back in."|playMusic(music_pursuit,0.25,0)
+"[flip(Gwen)]No. {a}I'm going back in."|playMusic(music_pursuit,0.5,0)
 
 "I still have a knife, and now I also have the element of surprise. {a}They must have assumed I ran away."
 
@@ -20,7 +20,7 @@ narrator|"[setBackground(mansion_lights_off,true,1)]At the side of the mansion, 
 
 "[setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,standknife)|changeExpression(Gwen,face,neutral)|enter(Gwen)]... {a}Nothing."
 
-"I move forward cautiously. {a}The last place I saw everyone was in the living room, so I might as well start there. {a}I'm not immediately sure where else they would go."|setBackground(living_room,true,1)
+"I move forward cautiously. {a}The last place I saw everyone was in the living room, so I might as well start there. {a}I'm not immediately sure where else they would go."|setBackground(living_room_dark,true,1)
 
 "[flip(Gwen)]Empty. {a}Damn."
 
@@ -56,7 +56,7 @@ narrator|"[playSound(effect_door_unlock)]The lock clicks open and I panic for a 
 
 "[moveCharacter(Gwen,0.5,0)]I return to the hatch and slowly lift it.[playSound(effect_hatch_open)] {a}There's a ladder leading down into darkness."
 
-"Time to go."|setBackground(basement,true,1)|playSound(effect_ladder)|playMusic(music_final,0,0.25)|exit(Gwen)
+"Time to go."|setBackground(basement,true,1)|playSound(effect_ladder)|playMusic(music_final,0.5,0)|exit(Gwen)
 
 "There's a faint light ahead, and I can hear soft voices murmuring. {a}Is that them?"
 
@@ -140,7 +140,7 @@ narrator|"[flip(Gwen)]Swearing, I keep my knife raised and allow my eyes to look
 
 narrator|"A cabinet against the wall, stacks of cardboard boxes across the room, and... "
 
-"[changeExpression(Gwen,face,shocktalk)]... Daggers. [playMusic(music_pursuit,0.25,0.25)] {a}Hammers. {a}Pliers. {a}Hanging around the room. {a}A giant meat hook is hanging from the ceiling, and dark stains litter the cement floor beneath it."
+"[changeExpression(Gwen,face,shocktalk)]... Daggers. [playMusic(music_pursuit,0.5,0)] {a}Hammers. {a}Pliers. {a}Hanging around the room. {a}A giant meat hook is hanging from the ceiling, and dark stains litter the cement floor beneath it."
 
 "[changeExpression(Gwen,face,shock)]I cover my mouth, nausea bubbling up my throat."
 
