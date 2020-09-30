@@ -122,10 +122,18 @@ public class NovelController : MonoBehaviour
             GAMEFILE.SONGDATA songdata = new GAMEFILE.SONGDATA(AudioManager.activeSong);
             gamefile.music = songdata;
         }
+        else
+        {
+            gamefile.music = null;
+        }
         if (AudioManager.activeAmbientSong != null)
         {
             GAMEFILE.SONGDATA songdata = new GAMEFILE.SONGDATA(AudioManager.activeAmbientSong);
             gamefile.ambientMusic = songdata;
+        }
+        else
+        {
+            gamefile.ambientMusic = null;
         }
     }
     public void SaveGameFile(bool usePreviousGameFile)
@@ -157,14 +165,12 @@ public class NovelController : MonoBehaviour
     	}
     }
 
-    private bool loadedNewFile = false;
     public void LoadChapterFile(string fileName)
     {
         _next = false;
         activeChapterFile = fileName;
     	data = FileManager.LoadFile(FileManager.savPath + "Resources/Story/" + fileName);
     	cachedLastSpeaker = "";
-        loadedNewFile = true;
         if(handlingChapterFile != null)
             StopCoroutine(handlingChapterFile);
         handlingChapterFile = StartCoroutine(HandlingChapterFile());
@@ -530,7 +536,7 @@ public class NovelController : MonoBehaviour
     {
         if (cacheLastPlayedClip)
             lastPlayedAmbientClipData = data;
-        string[] parameters = data.Split(',');
+        string[] parameters = data.Split(','); 
         AudioClip clip = Resources.Load("Audio/Music/" + parameters[0]) as AudioClip;
         float startingVolume = parameters.Length >= 2 ? float.Parse(parameters[1]) : 1f;
         float maxVolume = parameters.Length == 3 ? float.Parse(parameters[2]) : 1f;
@@ -538,7 +544,7 @@ public class NovelController : MonoBehaviour
         {
             AudioManager.instance.PlayAmbientSong(clip, maxVolume, 1f, startingVolume);
         }
-        else
+        else 
             Debug.LogError("Clip " + data + " does not exist");
     }
 

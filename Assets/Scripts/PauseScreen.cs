@@ -41,6 +41,7 @@ public class PauseScreen : MonoBehaviour
     public void SaveState(Button button)
     {
       NovelController.instance.SaveGameFile(savePreviousState);
+      pauseText.text = "<color=red>Game Saved</color>";
     }
 
     public void GoHome(Button button)

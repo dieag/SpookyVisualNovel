@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public TextMeshProUGUI menuText;
     public MainMenuButton enterbutton;
     public MainMenuButton loadButton;
+    private bool blockHover = false;
 
     private void Start()
     {
@@ -27,12 +28,15 @@ public class MainMenu : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("VisualNovel");
+        blockHover = false;
     }
 
     public void ClickStartGame()
     {
         if (!waitForAnimation)
         {
+            menuText.text = "";
+            blockHover = true;
             startGamePanel.SetTrigger("activate");
             NovelController.loadingGameSave = false;
             StartCoroutine(WaitForAnimation());
@@ -43,6 +47,8 @@ public class MainMenu : MonoBehaviour
     {
         if (!waitForAnimation)
         {
+            menuText.text = "";
+            blockHover = true;
             startGamePanel.SetTrigger("activate");
             NovelController.loadingGameSave = true;
             StartCoroutine(WaitForAnimation());
@@ -51,10 +57,12 @@ public class MainMenu : MonoBehaviour
 
     public void ButtonHover(MainMenuButton button)
     {
-        menuText.text = button.menuText;
+        if(!blockHover)
+             menuText.text = button.menuText;
     }
     public void ButtonUnHover()
     {
-        menuText.text = "";
+        if (!blockHover)
+            menuText.text = "";
     }
 }

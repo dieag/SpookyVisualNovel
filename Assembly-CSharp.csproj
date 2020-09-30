@@ -129,10 +129,12 @@
      <None Include="Assets\Resources\Story\chapter_3a_continue.txt" />
      <None Include="Assets\Resources\images\TransitionEffects\TransitionEffect.shader" />
      <None Include="Assets\Resources\Story\chapter_6b.txt" />
+     <None Include="Assets\Resources\Story\chapter_3a2.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\Resources\Story\chapter_1a.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\Resources\Story\chapter_2b.txt" />
+     <None Include="Assets\Resources\Story\please.txt" />
      <None Include="Assets\Resources\Story\chapter_2a.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Resources\Story\chapter_3b.txt" />

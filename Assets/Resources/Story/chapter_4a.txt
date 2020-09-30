@@ -150,4 +150,4 @@ Woman|"[moveCharacter(Victor,-100,0)|moveCharacter(Woman,0.2,0)]Our little Victo
 
 narrator|"My eyes widen."
 
-checkFlagLoad(chapter_5a,chapter_5b)
+checkFlagLoad(Gwen,chapter_5a,chapter_5b)
