@@ -735,6 +735,7 @@ public class NovelController : MonoBehaviour
             Character character = CharacterManager.instance.characters[i];
             character.StopMoving();
         }
+        AudioManager.instance.StopAmbientSong();
         EndGameScreen.instance.setEndGame(endGameImage);
     }
 
