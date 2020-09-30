@@ -26,11 +26,11 @@ narrator|"Oh, hell no. {a}[exit(Woman)|flip(Gwen)]I launch myself down the stair
 
 Man|"[setPosition(Man,0.4,0)|changeExpression(Man,body,standknife)|changeExpression(Man,face,happytalk)]I got her! {a}Come quick!"
 
-narrator|"With all my strength, I swing my elbow into his gut and he grunts, releasing me.[changeExpression(Man,face,angry)|moveCharacter(Man,0.3,0)|playSound(effect_body_punch)] {a}[flip(Man)|changeExpresion(Man,body,stand)]He bends over, coughing, and his knife falls from his hands."
+narrator|"With all my strength, I swing my elbow into his gut and he grunts, releasing me.[changeExpression(Man,face,angry)|moveCharacter(Man,0.1,0)|playSound(effect_body_punch)] {a}[flip(Man)|changeExpresion(Man,body,stand)]He bends over, coughing, and his knife falls from his hands."
 
 setBackground(kitchen,true,1)
 
-"[moveCharacter(Gwen,0.5,0)]I get behind him, point my blade to his throat, and push him into the kitchen."|playSound(effect_door_close)
+"[moveCharacter(Gwen,0.3,0)|changeExpression(Gwen,body,standknife]I get behind him, point my blade to his throat, and push him into the kitchen."|playSound(effect_door_close)
 
 "Moments later, the woman bangs on the door."|playSound(effect_door_knock_heavy)
 
@@ -90,7 +90,7 @@ narrator|"I grab the man's arm and he stands. {a}[exit(Gwen)|exit(Man)]My knife 
 
 Woman|"[setPosition(Woman,0.8,0)|enter(Woman)|setPosition(Victor,0.6,0)|enter(Victor)]I'm not doing this dance forever. {a}It's time to decide."
 
-Gwen|"[setPosition(Gwen,0.2,0)|enter(Gwen)|changeExpression(Gwen,body,standarmsbehind)|setPosition(Man,0.4,0)|enter(Man)]Decide what?"
+Gwen|"[setPosition(Gwen,0.1,0)|enter(Gwen)|changeExpression(Gwen,body,standarmsbehindknife)|setPosition(Man,0.3,0)|enter(Man)]Decide what?"
 
 Woman|"[flip(Woman)]Either Victor dies, or you come with us."
 
@@ -98,23 +98,23 @@ Gwen|"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,sadtalk)]Exc
 
 Woman|"I won't be repeating myself."
 
-narrator|"[playSound(effect_stab)|flip(Woman)|changeExpression(Victor,body,standarmsblood)|flip(Victor)|changeExpression(Victor,face,angry)]The woman stabs her knife into Victor's shoulder and he screams, falling to one knee."
+narrator|"[moveCharacter(Gwen,100,0)|moveCharacter(Victor,100,0)|moveCharacter(Woman,100,0)|moveCharacter(Man,100,0)|playSound(effect_stab)|setBackground(cg_victorstabbed,true,1)]The woman stabs her knife into Victor's shoulder and he screams, falling to one knee."
 
-Gwen|"[changeExpression(Gwen,face,shocktalk)|moveCharacter(Gwen,0.25,0)]Victor!"
+Gwen|"[changeExpression(Gwen,face,shocktalk)]Victor!"
 
 Victor|"[changeExpression(Victor,face,angrytalk)]Get out of here!"
 
 Gwen|"I'm not going to leave you with them!"
 
-"[flip(Victor)]Victor spins around and throws himself into the woman.[changeExpression(Woman,face,angrytalk)|flip(Woman)] {a}[playSound(effect_body_impact_carpet)]With a scream, she falls down to the floor and Victor crawls on top of her, wrestling her for the blade."|exit(Woman)|exit(Victor)|setPosition(Woman,100,0)|setPosition(Victor,100,0)
+"[setBackground(living_room_dark,true,1)]Victor spins around and throws himself into the woman. {a}[playSound(effect_body_impact_carpet)]With a scream, she falls down to the floor and Victor crawls on top of her, wrestling her for the blade."|setPosition(Woman,100,0)|setPosition(Victor,100,0)
 
 Victor|"Gwen, go!"
 
-narrator|"[moveCharacter(Gwen,0.2,0)|changeExpression(Gwen,face,shock)]N-no! {a}Is he really… is this….?"
+narrator|"[moveCharacter(Gwen,0.1,0)|changeExpression(Gwen,body,standknife)|changeExpression(Gwen,face,shock)]N-no! {a}Is he really… is this….?"
 
-"[changeExpression(Man,face,happy)]I feel the man tense up in front of me. {a}Shit!"
+"[moveCharacter(Man,0.7,0)|changeExpression(Man,face,happy)]I feel the man tense up in front of me. {a}Shit!"
 
-"[flip(Man)|moveCharacter(Man,0.35,0)|moveCharacter(Gwen,0.15,0)|flip(Gwen)|changeExpression(Gwen,face,angry)]He spins around and punches me in the gut[playSound(effect_body_punch)]. {a}I stumble back as stars buzz across my vision and I gasp for air."
+"[flip(Man)|moveCharacter(Man,0.35,0)|moveCharacter(Gwen,0.05,0)|flip(Gwen)|changeExpression(Gwen,face,angry)]He spins around and punches me in the gut[playSound(effect_body_punch)]. {a}I stumble back as stars buzz across my vision and I gasp for air."
 
 "Instead of finishing me off, he lunges over to where Victor wrestles with the woman."|exit(Man)|setPosition(Man,100,0)
 

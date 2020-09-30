@@ -2,7 +2,7 @@ Man|"[changeExpression(Man,face,happytalk)]Help you? {a}Do you see where you are
 
 narrator|"[changeExpression(Victor,face,unamused)|changeExpression(Woman,face,laugh)]Victor frowns and his mother laughs cruelly behind him."
 
-Woman|"[moveCharacter(Woman,0.15,0)|flip(Woman)]Ha! {a}Victor helped you?"
+Woman|"[moveCharacter(Woman,0.1,0)|moveCharacter(Victor,0.3,0)|moveCharacter(Gwen,0.6,0)|flip(Woman)]Ha! {a}Victor helped you?"
 
 Gwen|"[flip(Gwen)|changeExpression(Gwen,face,sadtalk)]You did! {a}I know you did!"|playMusic(music_final,0.5,0)
 
@@ -44,23 +44,27 @@ Man|"[flip(Man)|changeExpression(Man,face,angrytalk)]Enough!"
 
 Gwen|"Wait!"
 
-narrator|"[changeExpression(Man,body,standknifeout)]The man lifts his own blade into the air. {a}No!!"
+narrator|"[changeExpression(Man,body,standknifeout)]The man lifts his own blade into the air. {a}No!!"|exit(Man)|exit(Woman)|exit(Victor)|exit(Gwen)|setPosition(Woman,-100,0)|setPosition(Victor,100,0)|setPosition(Gwen,100,0)
 
-Woman|"[playSound(effect_stab)|changeExpression(Man,face,angry)|changeExpression(Woman,face,sadtalk)|flip(Woman)|changeExpression(Victor,face,shock)|changeExpression(Gwen,face,shock)]{wa 1}VICTOR!"
+Woman|"[playSound(effect_stab)|setBackground(cg_manstabbed, true,1)]{wa 1}VICTOR!"
 
-narrator|"[changeExpression(Victor,body,standarmsblood)|exit(Man)]The man collapses, a knife hilt protruding from his chest. {a}Victor turns to me, hands empty."
+narrator|"What just happened? {a}Did Victor - did he really?"
 
-Victor|"[moveCharacter(Victor,0.35,0)]Let's go!"
+Victor|"Gwen!"
 
-narrator|"Yes!"
+narrator|"[setBackground(basement, true,1)]The man collapses, a knife hilt protruding from his chest. {a}Victor turns to me, hands empty."
 
-"[moveCharacter(Woman,0.8,0)|changeExpression(Woman,face,sad)]I grab his hand and see the woman rush over to the man collapsed on the floor. {a}He's not moving."
+Victor|"[changeExpression(Victor,body,standarmsblood)|changeExpression(Victor,face,shock)|moveCharacter(Victor,0.5,0)|enter(Victor)]Let's go!"
+
+narrator|"[changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,happy)|moveCharacter(Gwen,0.2,0)|enter(Gwen)]Yes!"
+
+"[changeExpression(Woman,body,standing)|changeExpression(Woman,face,sad)|moveCharacter(Woman,0.9,0)]I grab his hand and see the woman rush over to the man collapsed on the floor. {a}He's not moving."
 
 Woman|"No! {a}No, no, no, no, no!!!!"
 
-Victor|"Gwen - "
+Victor|"Gwen -"
 
-Woman|"[flip(Woman)|changeExpression(Woman,face,angrytalk)]I'LL KILL YOU!"
+Woman|"[flip(Woman)|changeExpression(Woman,face,angrytalk)]I'LL KILL YOU!"|changeExpression(Gwen,face,shock)|flip(Victor)
 
 Victor|"GO!"|exit(Woman)|exit(Victor)|exit(Gwen)
 
@@ -184,4 +188,4 @@ narrator|"Gotta move."|setBackground(hallway_down_dark,true,1)
 
 "I can hear distant screeching and something banging. {a}Victor must have her trapped in the room! {a}I need to do this now!!"
 
-loadPuzzle(puzzle7,key3,499229180185618130772724220367850,chapter_7a,chapter_7b,90)
+loadPuzzle(puzzle7,key3,499229180185618130772724220367850,chapter_7a,chapter_7b,10)

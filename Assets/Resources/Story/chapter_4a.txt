@@ -22,7 +22,7 @@ narrator|"[setBackground(mansion_lights_off,true,1)]At the side of the mansion, 
 
 "I move forward cautiously. {a}The last place I saw everyone was in the living room, so I might as well start there. {a}I'm not immediately sure where else they would go."|setBackground(living_room_dark,true,1)
 
-"[flip(Gwen)]Empty. {a}Damn."
+"[flip(Gwen)]Empty. {a}Damn."|playMusic(music_final,0.5,0)
 
 "Think. {a}Where would they go?"
 
@@ -56,11 +56,11 @@ narrator|"[playSound(effect_door_unlock)]The lock clicks open and I panic for a 
 
 "[moveCharacter(Gwen,0.5,0)]I return to the hatch and slowly lift it.[playSound(effect_hatch_open)] {a}There's a ladder leading down into darkness."
 
-"Time to go."|setBackground(basement,true,1)|playSound(effect_ladder)|playMusic(music_final,0.5,0)|exit(Gwen)
+"Time to go."|setBackground(basement,true,1)|playSound(effect_ladder)|exit(Gwen)
 
 "There's a faint light ahead, and I can hear soft voices murmuring. {a}Is that them?"
 
-"I creep behind several dusty crates and bins. {a}No time to think what's inside."|setPosition(Victor,0.5,0)|setPosition(Man,0.75,0)|setPosition(Woman,0.25,0)|changeExpression(Man,body,standknife)|changeExpression(Man,face,disgust)|changeExpression(Woman,body,standingknife)|changeExpression(Woman,face,angry)|changeExpression(Victor,body,standblood)|changeExpression(Victor,face,sad)
+"I creep behind several dusty crates and bins. {a}No time to think what's inside."|moveCharacter(Victor,0.5,0)|moveCharacter(Man,0.75,0)|moveCharacter(Woman,0.25,0)|changeExpression(Man,body,standknife)|changeExpression(Man,face,disgust)|changeExpression(Woman,body,standingknife)|changeExpression(Woman,face,angry)|changeExpression(Victor,body,standblood)|changeExpression(Victor,face,sad)
 
 "[enter(Man)|enter(Woman)|enter(Victor)]When I peek around a storage container, I see them - all three of them. {a}Victor is seated in front, head down, while the man and woman loom over him with their knives."
 
@@ -124,7 +124,7 @@ narrator|"I wipe my face quickly as my vision begins to blur from tears - withou
 
 Gwen|"Please don't give up!"
 
-narrator|"[moveCharacter(Woman,-100,0)|moveCharacter(Victor,0.2,0)|moveCharacter(Gwen,0.5,0)|moveCharacter(Man,0.7,0)]The man steps towards me and I step away in response."
+narrator|"[moveCharacter(Woman,-100,0)|moveCharacter(Victor,0.1,0)|moveCharacter(Gwen,0.4,0)|moveCharacter(Man,0.7,0)]The man steps towards me and I step away in response."
 
 Man|"Look around you, Gwen."
 
@@ -146,7 +146,7 @@ narrator|"A cabinet against the wall, stacks of cardboard boxes across the room,
 
 Gwen|"What the shit is this, Victor?"
 
-Woman|"[moveCharacter(Victor,-100,0)|moveCharacter(Woman,0.2,0)]Our little Victor... {a}always was so obedient growing up, wasn't he?"
+Woman|"[moveCharacter(Victor,-1,0)|moveCharacter(Woman,0.1,0)]Our little Victor... {a}always was so obedient growing up, wasn't he?"
 
 narrator|"My eyes widen."
 

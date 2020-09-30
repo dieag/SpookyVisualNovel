@@ -6,19 +6,19 @@ narrator|"Victor finally stands, gently taking the knife from the woman's hand."
 
 Victor|"Gwen... {a}meet my parents."
 
-narrator|"The man lunges [flip(Man)|changeExpression(Man,face,angry)|moveCharacter(Man,.7,0)]at me and wrests the knife from my shaky grip. [changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shock)]{a}He jumps back[changeExpression(Man,face,happy)|changeExpression(Man,body,standknifeout)|moveCharacter(Man,.8,0)] before I can retaliate."
+narrator|"The man lunges [flip(Man)|changeExpression(Man,face,angry)|moveCharacter(Man,.7,0)]at me and wrests the knife from my shaky grip. [changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shock)]{a}He jumps back[changeExpression(Man,face,happy)|changeExpression(Man,body,standknifeout)|moveCharacter(Man,.9,0)] before I can retaliate."
 
 Gwen|"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,sadtalk)]Y-You told me they died! {a}Years ago!"
 
-narrator|"He steps toward me[changeExpression(Victor,face,unamused)|moveCharacter(Victor,.3,0)], face unreadable. {a}[flip(Gwen)]My knees buckle, and I fall to the cold concrete."
+narrator|"He steps toward me[changeExpression(Victor,face,unamused)|moveCharacter(Victor,.2,0)], face unreadable. {a}[flip(Gwen)]My knees buckle, and I fall to the cold concrete."
 
 Victor|"I'm sorry. {a}I lied."
 
 Gwen|"[changeExpression(Gwen,face,sad)What? {a}What are you saying? {a}You're scaring me."
 
-Woman|"changeExpression(Woman,face,snear)|moveCharacter(Woman,.15,0)]Scaring you? {a}Ha! {a}What happened to all that bravery?"
+Woman|"[changeExpression(Woman,face,snear)|moveCharacter(Woman,.05,0)]Scaring you? {a}Ha! {a}What happened to all that bravery?"
 
-narrator|"[moveCharacter(Woman,.3,0)|moveCharacter(Victor,-100,0)]She walks in front of me and crouches down so our faces are on the same level."
+narrator|"[moveCharacter(Woman,.2,0)|moveCharacter(Victor,-1,0)]She walks in front of me and crouches down so our faces are on the same level."
 
 Woman|"Victor has a very special craving. {a}We all do."
 
@@ -36,7 +36,7 @@ Woman|"[changeExpression(Woman,face,snear)]Tonight, you will be our main course.
 
 narrator|"[changeExpression(Gwen,face,shock)|flip(Gwen)]My eyes lock onto the meat hook glinting in the light. {a}No way. {a}No."
 
-narrator|"[moveCharacter(Woman,-100,0)|moveCharacter(Victor,0.25,0)]The woman stands and steps aside. {a}[moveCharacter(Man,0.7,0)|moveCharacter(Victor,0.3,0)]Victor and his father move towards me simultaneously."
+narrator|"[moveCharacter(Woman,-1,0)|moveCharacter(Victor,0.25,0)]The woman stands and steps aside. {a}[moveCharacter(Man,0.8,0)|moveCharacter(Victor,0.3,0)]Victor and his father move towards me simultaneously."
 
 Victor|"[changeExpression(Victor,face,unamusedtalk)]Just relax. {a}It'll be over soon."
 
