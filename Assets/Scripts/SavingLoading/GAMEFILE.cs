@@ -11,7 +11,8 @@ public class GAMEFILE
     public string cachedLastSpeaker = "";
     public string currentTextSystemSpeakerDisplayText = "";
     public string currentTextSystemDisplayText = "";
-
+    public string lastPlayedAmbientMusic = "";
+    public string lastPlayedMusic = "";
     public List<CHARACTERDATA> charactersInScene = new List<CHARACTERDATA>();
 
     public Texture background = null;
@@ -49,6 +50,7 @@ public class GAMEFILE
             this.bodyExpression = c.renderers.bodyRenderer.sprite.name;
             this.facingLeft = c.isFacingLeft;
             this.position = c._targetPosition;
+            this.flag = c.flag;
         }
 
     }
@@ -62,6 +64,7 @@ public class GAMEFILE
         public float startingVolume;
         public bool playOnStart = true;
         public bool loop = true;
+
 
         public SONGDATA(AudioManager.SONG s)
         {

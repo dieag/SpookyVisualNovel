@@ -60,6 +60,7 @@ public class NovelController : MonoBehaviour
             Character character = CharacterManager.instance.createNewCharacter(data.characterName, data.enabled);
             character.SetBody(data.bodyExpression);
             character.SetExpression(data.facialExpression);
+            character.flag = data.flag;
             if (data.facingLeft)
                 character.FaceLeft();
             else
@@ -85,7 +86,11 @@ public class NovelController : MonoBehaviour
         {
             GAMEFILE.SONGDATA song = activeGameFile.ambientMusic;
             AudioManager.instance.PlayAmbientSong(song.clip, song.maxVolume, song.pitch, song.startingVolume, song.playOnStart, song.loop);
+            
         }
+
+        lastPlayedAmbientClipData = activeGameFile.lastPlayedAmbientMusic;
+        lastPlayedClipData = activeGameFile.lastPlayedMusic;
 
         if (handlingChapterFile != null)
             StopCoroutine(handlingChapterFile);
@@ -135,6 +140,8 @@ public class NovelController : MonoBehaviour
         {
             gamefile.ambientMusic = null;
         }
+        gamefile.lastPlayedAmbientMusic = lastPlayedAmbientClipData;
+        gamefile.lastPlayedMusic = lastPlayedClipData;
     }
     public void SaveGameFile(bool usePreviousGameFile)
     {
@@ -513,7 +520,7 @@ public class NovelController : MonoBehaviour
     public string lastPlayedClipData = "";
     public void Command_PlayMusic(string data, bool cacheLastPlayedClip = true)
     {
-        if(cacheLastPlayedClip)
+         if(cacheLastPlayedClip)
             lastPlayedClipData = data;
         string[] parameters = data.Split(',');
         AudioClip clip = Resources.Load("Audio/Music/" + parameters[0]) as AudioClip;
@@ -728,6 +735,7 @@ public class NovelController : MonoBehaviour
             Character character = CharacterManager.instance.characters[i];
             character.StopMoving();
         }
+        AudioManager.instance.StopAmbientSong();
         EndGameScreen.instance.setEndGame(endGameImage);
     }
 

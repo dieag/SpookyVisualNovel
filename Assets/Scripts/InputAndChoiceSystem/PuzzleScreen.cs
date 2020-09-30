@@ -111,7 +111,9 @@ public class PuzzleScreen : MonoBehaviour
     public void ShowKey(PuzzleButton button)
     {
         if (InputScreen.isRevealing) return;
-    	showingKey ^= true;
+        AudioClip key_look_sound = Resources.Load("Audio/SFX/effect_key_look") as AudioClip;
+        AudioManager.instance.PlaySFX(key_look_sound);
+        showingKey ^= true;
         if (showingKey)
         {
             NovelController.instance.Command_SetLayerImage(keyImage, BCFC.instance.cypherframe);
