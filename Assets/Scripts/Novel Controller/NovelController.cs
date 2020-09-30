@@ -47,7 +47,8 @@ public class NovelController : MonoBehaviour
 
         activeGameFile = FileManager.LoadEncryptedJSON<GAMEFILE>(filePath,keys);
         //Load the File
-        data = FileManager.LoadFile(FileManager.savPath + "Resources/Story/" + activeGameFile.chapterName);
+        Debug.Log(activeGameFile.chapterName);
+        data = FileManager.ReadTextAsset(Resources.Load<TextAsset>($"Story/{activeGameFile.chapterName}"));
         activeChapterFile = activeGameFile.chapterName;
         cachedLastSpeaker = activeGameFile.cachedLastSpeaker;
 
@@ -176,7 +177,7 @@ public class NovelController : MonoBehaviour
     {
         _next = false;
         activeChapterFile = fileName;
-    	data = FileManager.LoadFile(FileManager.savPath + "Resources/Story/" + fileName);
+        data = FileManager.ReadTextAsset(Resources.Load<TextAsset>($"Story/{fileName}"));
     	cachedLastSpeaker = "";
         if(handlingChapterFile != null)
             StopCoroutine(handlingChapterFile);

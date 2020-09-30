@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public TextMeshProUGUI menuText;
     public MainMenuButton enterbutton;
     public MainMenuButton loadButton;
+    public MainMenuButton exitButton;
     private bool blockHover = false;
 
     private void Start()
@@ -53,6 +54,11 @@ public class MainMenu : MonoBehaviour
             NovelController.loadingGameSave = true;
             StartCoroutine(WaitForAnimation());
         }
+    }
+
+    public void ClickExitGame()
+    {
+        Application.Quit();
     }
 
     public void ButtonHover(MainMenuButton button)

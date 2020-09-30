@@ -26,7 +26,7 @@ narrator|"Oh, hell no. {a}[exit(Woman)|flip(Gwen)]I launch myself down the stair
 
 Man|"[setPosition(Man,0.4,0)|changeExpression(Man,body,standknife)|changeExpression(Man,face,happytalk)]I got her! {a}Come quick!"
 
-narrator|"With all my strength, I swing my elbow into his gut and he grunts, releasing me.[changeExpression(Man,face,angry)|moveCharacter(Man,0.1,0)|playSound(effect_body_punch)] {a}[flip(Man)|changeExpresion(Man,body,stand)]He bends over, coughing, and his knife falls from his hands."
+narrator|"With all my strength, I swing my elbow into his gut and he grunts, releasing me.[changeExpression(Man,face,angry)|moveCharacter(Man,0.1,0)|playSound(effect_body_punch)] {a}[flip(Man)|changeExpression(Man,body,stand)]He bends over, coughing, and his knife falls from his hands."
 
 setBackground(kitchen,true,1)
 
