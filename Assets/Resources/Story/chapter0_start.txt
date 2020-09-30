@@ -1,4 +1,12 @@
-setBackground(living_room,true,100)|playMusic(music_bedroom,0.5,0.0)|playAmbientMusic(ambient_fireplace,0.5,0.0)|changeExpression(Victor,body,stand)|changeExpression(Victor,face,happy)|changeExpression(Man,body,stand)|changeExpression(Man,face,happy)|changeExpression(Woman,body,standing)|changeExpression(Woman,face,laugh)|setPosition(Woman,100,0)|setPosition(Man,100,0)|setPosition(Victor,100,0)
+setBackground(black,true,1)|changeExpression(Victor,body,stand)|changeExpression(Victor,face,happy)|changeExpression(Man,body,stand)|changeExpression(Man,face,happy)|changeExpression(Woman,body,standing)|changeExpression(Woman,face,laugh)|setPosition(Woman,100,0)|setPosition(Man,100,0)|setPosition(Victor,100,0)
+
+narrator|"Thank you for checking out our game! {a}Here's some tips to get you started."
+
+"To access the in-game menu, press ESC. {a}In that menu, you can save your game or exit back to the title screen. {a}Be careful, though - you only have one save spot!"
+
+"That's everything. {a}Good luck out there!"
+
+setBackground(living_room,true,1)|playMusic(music_bedroom,0.5,0.0)|playAmbientMusic(ambient_fireplace,0.5,0.0)
 
 narrator|"It's Halloween tonight. {a}A storm pounds against the walls of this mansion, raindrops tapping impatiently against the glass window near the glowing fireplace."
 
