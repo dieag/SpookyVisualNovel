@@ -136,7 +136,7 @@ narrator|"The man jumps up from the fight and I slam the door shut.[setBackgroun
 
 "I left him there. {a}I can't believe I left him there."
 
-"[setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,standarmssbehindknife)|changeExpression(Gwen,face,sad)|enter(Gwen)]What do I do? {a}If I run down the mountain, maybe I can get some help. {a}That's the safest option."
+"[setPosition(Gwen,0.5,0)|changeExpression(Gwen,body,standarmsbehindknife)|changeExpression(Gwen,face,sad)|enter(Gwen)]What do I do? {a}If I run down the mountain, maybe I can get some help. {a}That's the safest option."
 
 "But will Victor hold out that long?"
 
