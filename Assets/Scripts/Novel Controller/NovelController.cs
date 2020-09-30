@@ -637,6 +637,7 @@ public class NovelController : MonoBehaviour
        {
          Character c = CharacterManager.instance.getCharacter(s);
          c.FadeOut(speed,smooth);
+         c.StopMoving();
        }
     }
     void Command_Enter(string data)
@@ -722,6 +723,11 @@ public class NovelController : MonoBehaviour
 
     void Command_EndGame(string endGameImage)
     {
+        for (int i = 0; i < CharacterManager.instance.characters.Count; i++)
+        {
+            Character character = CharacterManager.instance.characters[i];
+            character.StopMoving();
+        }
         EndGameScreen.instance.setEndGame(endGameImage);
     }
 

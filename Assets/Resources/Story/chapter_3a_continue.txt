@@ -86,9 +86,9 @@ Victor|"Come on, Gwen."|exit(Victor)|exit(Woman)
 
 narrator|"I grab the man's arm and he stands. {a}[exit(Gwen)|exit(Man)]My knife stays levelled at his neck as we follow the woman and Victor out to the living area."|showBackground(living_room,true,1)
 
-Woman|"[setPosition(Woman,0.8,0)|enter(Woman)|setPosition(Victor(0.6,0)|enter(Victor)]I'm not doing this dance forever. {a}It's time to decide."
+Woman|"[setPosition(Woman,0.8,0)|enter(Woman)|setPosition(Victor(0.6,0)|enter(Victor)]I'm not doing this dance forever. {a}It's time to decide."|changeExpression(Gwen,body,standarmsbehindknife)|setPosition(Gwen,0.2,0)|changeExpression(Gwen,face,sad)
 
-Gwen|"[setPosition(Gwen,0.2,0)|enter(Gwen)|changeExpression(Gwen,body,standarmsbehind)|setPosition(Man,0.4,0)|enter(Man)]Decide what?"
+Gwen|"[setPosition(Man,0.4,0)|enter(Man)]Decide what?"
 
 Woman|"[flip(Woman)]Either Victor dies, or you come with us."
 
@@ -124,7 +124,7 @@ narrator|"Shit!"
 
 Woman|"Don't let her escape!"|playAmbientMusic(ambient_rain,0.1,0.0)
 
-narrator|"The man jumps up from the fight and I slam the door shut.[setBackground(mansion_lights_off,true,1)|exit(Gwen)] {a}I use the hilt of the knife to smash the lock[playSound(effect_screen_smash)], ensuring it stays shut."
+narrator|"The man jumps up from the fight and I slam the door shut.[setBackground(mansion_lights_off,true,1)|exit(Gwen)] {a}I use the hilt of the knife to smash the lock[playSound(effect_screen_break)], ensuring it stays shut."
 
 "I can hear the man banging and screaming[playSound(effect_door_knock_heavy)]. {a}I want to collapse to the ground, but I know need to keep moving."
 
