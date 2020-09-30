@@ -85,7 +85,10 @@ public class NovelController : MonoBehaviour
         {
             GAMEFILE.SONGDATA song = activeGameFile.ambientMusic;
             AudioManager.instance.PlayAmbientSong(song.clip, song.maxVolume, song.pitch, song.startingVolume, song.playOnStart, song.loop);
+            
         }
+        lastPlayedAmbientClipData = activeGameFile.ambientMusic.lastPlayedAmbientMusic;
+        lastPlayedClipData = activeGameFile.ambientMusic.lastPlayedMusic;
 
         if (handlingChapterFile != null)
             StopCoroutine(handlingChapterFile);
@@ -513,7 +516,7 @@ public class NovelController : MonoBehaviour
     public string lastPlayedClipData = "";
     public void Command_PlayMusic(string data, bool cacheLastPlayedClip = true)
     {
-        if(cacheLastPlayedClip)
+         if(cacheLastPlayedClip)
             lastPlayedClipData = data;
         string[] parameters = data.Split(',');
         AudioClip clip = Resources.Load("Audio/Music/" + parameters[0]) as AudioClip;
