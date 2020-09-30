@@ -14,9 +14,9 @@ narrator|"He steps toward me[changeExpression(Victor,face,unamused)|moveCharacte
 
 Victor|"I'm sorry. {a}I lied."
 
-Gwen|"[changeExpression(Gwen,face,sad)What? {a}What are you saying? {a}You're scaring me."
+Gwen|"[changeExpression(Gwen,face,sad)]What? {a}What are you saying? {a}You're scaring me."
 
-Woman|"changeExpression(Woman,face,snear)|moveCharacter(Woman,.15,0)]Scaring you? {a}Ha! {a}What happened to all that bravery?"
+Woman|"[changeExpression(Woman,face,snear)|moveCharacter(Woman,.15,0)]Scaring you? {a}Ha! {a}What happened to all that bravery?"
 
 narrator|"[moveCharacter(Woman,.3,0)|moveCharacter(Victor,-100,0)]She walks in front of me and crouches down so our faces are on the same level."
 
