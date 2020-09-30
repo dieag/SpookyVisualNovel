@@ -2,7 +2,7 @@ Gwen|"[exit(Gwen)]I have to get to the phone!"
 
 narrator|"I quickly duck back down the ladder."|playSound(effect_ladder)|setBackground(hallway_up_light,true,1)|setPosition(Gwen,.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shocktalk)|enter(Gwen,0,false)|flip(Gwen)
 
-"Damn! Someone is coming up the stairs!"|setPosition(Woman,100,0)|setPosition(Man,100,0)
+"[changeExpression(Gwen,body,stand)]Damn! Someone is coming up the stairs!"|setPosition(Woman,100,0)|setPosition(Man,100,0)
 
 Man|"Oh, Gweeeen? {a}Come ouuuut!"
 
