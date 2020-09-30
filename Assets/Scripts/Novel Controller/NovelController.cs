@@ -60,6 +60,7 @@ public class NovelController : MonoBehaviour
             Character character = CharacterManager.instance.createNewCharacter(data.characterName, data.enabled);
             character.SetBody(data.bodyExpression);
             character.SetExpression(data.facialExpression);
+            character.flag = data.flag;
             if (data.facingLeft)
                 character.FaceLeft();
             else
