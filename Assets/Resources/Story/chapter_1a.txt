@@ -6,7 +6,7 @@ narrator|"I run to the hatch and swing it open, climbing down the ladder as fast
 
 "There's no way they'll find me here. {a}No way."
 
-"[playSound(effect_door_knock_heavy] Out of nowhere, someone bangs on the door and it swings open."|playSound(effect_door_open_creak)|setPosition(Gwen,.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shocktalk)|enter(Gwen,0,true)
+"[playSound(effect_door_knock_heavy] Out of nowhere, someone bangs on the door and it swings open."|playSound(effect_door_open_creak)|setPosition(Gwen,.5,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,shocktalk)|enter(Gwen)
 
 Gwen|"Shit!"
 
