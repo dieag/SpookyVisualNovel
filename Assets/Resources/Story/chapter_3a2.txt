@@ -126,7 +126,7 @@ narrator|"Shit!"
 
 Woman|"Don't let her escape!"|playAmbientMusic(ambient_rain,0.2,0.0)
 
-narrator|"The man jumps up from the fight and I slam the door shut.[setBackground(mansion_lights_off,true,1)|exit(Gwen)] {a}I use the hilt of the knife to smash the lock[playSound(effect_screen_smash)], ensuring it stays shut."
+narrator|"The man jumps up from the fight and I slam the door shut.[setBackground(mansion_lights_off,true,1)|exit(Gwen)] {a}I use the hilt of the knife to smash the lock[playSound(effect_screen_break)], ensuring it stays shut."
 
 "I can hear the man banging and screaming[playSound(effect_door_knock_heavy)]. {a}I want to collapse to the ground, but I know need to keep moving."
 
