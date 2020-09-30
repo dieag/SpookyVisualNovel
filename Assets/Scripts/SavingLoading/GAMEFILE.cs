@@ -11,7 +11,8 @@ public class GAMEFILE
     public string cachedLastSpeaker = "";
     public string currentTextSystemSpeakerDisplayText = "";
     public string currentTextSystemDisplayText = "";
-
+    public string lastPlayedAmbientMusic = "";
+    public string lastPlayedMusic = "";
     public List<CHARACTERDATA> charactersInScene = new List<CHARACTERDATA>();
 
     public Texture background = null;
@@ -63,8 +64,7 @@ public class GAMEFILE
         public float startingVolume;
         public bool playOnStart = true;
         public bool loop = true;
-        public string lastPlayedAmbientMusic;
-        public string lastPlayedMusic;
+
 
         public SONGDATA(AudioManager.SONG s)
         {
@@ -74,8 +74,6 @@ public class GAMEFILE
             this.startingVolume = s.source.volume;
             this.playOnStart = s.source.isPlaying;
             this.loop = s.source.loop;
-            this.lastPlayedAmbientMusic = NovelController.instance.lastPlayedAmbientClipData;
-            this.lastPlayedMusic = NovelController.instance.lastPlayedClipData;
         }
 
     }

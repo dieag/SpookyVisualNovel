@@ -88,8 +88,9 @@ public class NovelController : MonoBehaviour
             AudioManager.instance.PlayAmbientSong(song.clip, song.maxVolume, song.pitch, song.startingVolume, song.playOnStart, song.loop);
             
         }
-        lastPlayedAmbientClipData = activeGameFile.ambientMusic.lastPlayedAmbientMusic;
-        lastPlayedClipData = activeGameFile.ambientMusic.lastPlayedMusic;
+
+        lastPlayedAmbientClipData = activeGameFile.lastPlayedAmbientMusic;
+        lastPlayedClipData = activeGameFile.lastPlayedMusic;
 
         if (handlingChapterFile != null)
             StopCoroutine(handlingChapterFile);
@@ -139,6 +140,8 @@ public class NovelController : MonoBehaviour
         {
             gamefile.ambientMusic = null;
         }
+        gamefile.lastPlayedAmbientMusic = lastPlayedAmbientClipData;
+        gamefile.lastPlayedMusic = lastPlayedClipData;
     }
     public void SaveGameFile(bool usePreviousGameFile)
     {
