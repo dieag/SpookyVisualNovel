@@ -49,6 +49,7 @@ public class GAMEFILE
             this.bodyExpression = c.renderers.bodyRenderer.sprite.name;
             this.facingLeft = c.isFacingLeft;
             this.position = c._targetPosition;
+            this.flag = c.flag;
         }
 
     }
