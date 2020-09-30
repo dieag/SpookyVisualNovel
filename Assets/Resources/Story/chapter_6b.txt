@@ -1,8 +1,8 @@
-Victor|"[changeExpression(Victor,body,standbloodknife)|changeExpression(Victor, face,unamusedtalk)]Easily. {a}I do this every year."
+Victor|"[changeExpression(Victor,body,standbloodknife)|changeExpression(Victor, face,unamusedtalk)]Easily. {a}I do this every year."|moveCharacter(Gwen,0.6,0)
 
 Gwen|"[flip(Gwen)|changeExpression(Gwen,face,sad)]What do you mean?"|playMusic(music_final,0.5,0)
 
-Woman|"[moveCharacter(Woman,0.15,0)|changeExpression(Woman,body,standing)|changeExpression(Woman,face,laugh)|enter(Woman)]Little Victor has been taking idiots like you into his home every Halloween for us to enjoy."
+Woman|"[moveCharacter(Woman,0.1,0)|changeExpression(Woman,body,standing)|changeExpression(Woman,face,laugh)|enter(Woman)]Little Victor has been taking idiots like you into his home every Halloween for us to enjoy."
 
 Gwen|"What? {a}All those dates, everything you told me... {a}"
 
@@ -30,7 +30,7 @@ Gwen|"[changeExpression(Gwen,face,angrytalk)]What??"
 
 Man|"Enough. {a}Let's end this."
 
-"[exit(Man)|exit(Woman)|moveCharacter(Victor,0.4,0)|moveCharacter(Gwen,0.6,0)]Victor takes one step forward."
+"[exit(Man)|exit(Woman)|moveCharacter(Victor,0.4,0)|moveCharacter(Gwen,0.7,0)]Victor takes one step forward."
 
 Gwen|"[changeExpression(Gwen,face,sadtalk)]Damn it. I loved you, Victor. {a}I came back to save you."
 
@@ -38,7 +38,7 @@ Gwen|"[changeExpression(Gwen,face,sadtalk)]Damn it. I loved you, Victor. {a}I ca
 
 Gwen|"[changeExpression(Gwen,face,angrytalk)]You're disgusting! {a}A monster! {a}A freak!"
 
-"[changeExpression(Victor,body,standarmsbloodknife)|flip(Victor)]He raises his arm."
+"[changeExpression(Victor,body,standarmsbloodknife)|flip(Victor)|moveCharacter(Victor,0.5,0)]He raises his arm."
 
 Gwen|"[flip(Gwen)]I hope you CHOKE on my god damn -"|playSound(effect_stab)|exit(Gwen)|exit(Victor)
 

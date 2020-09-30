@@ -42,7 +42,7 @@ narrator|"The rain is lighter now, and the storm is still. {a}All I hear is the 
 
 Victor|"[setPosition(Victor,0.25,0)|changeExpression(Victor,body,standblood)|changeExpression(Victor,face,unamusedtalk)|enter(Victor)]I killed a lot of people, Gwen."
 
-Gwen|"[setPosition(Gwen,0.25,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,unamusedtalk)|enter(Gwen)]Yeah. {a}I figured. {a}I do have a question for you, Victor."
+Gwen|"[setPosition(Gwen,0.75,0)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,unamusedtalk)|enter(Gwen)]Yeah. {a}I figured. {a}I do have a question for you, Victor."
 
 Victor|"Yes?"
 
@@ -81,5 +81,11 @@ narrator|"He pulls me into a tight hug and I wrap my arms around him."
 "[exit(Gwen)|exit(Victor)]We stand there for a moment, the ashes of mansion mingling with the rainfall and misting over our shoulders."
 
 "It's over."
+
+setBackground(black,true,1)
+
+narrator|"Congratulations for reaching the ending! {a}Our tiny team learned a lot while making this game, and I hope you enjoyed the experience."
+
+"Until next time!"
 
 endGame(end_good)
