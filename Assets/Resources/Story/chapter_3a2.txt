@@ -90,7 +90,7 @@ narrator|"I grab the man's arm and he stands. {a}[exit(Gwen)|exit(Man)]My knife 
 
 Woman|"[setPosition(Woman,0.8,0)|enter(Woman)|setPosition(Victor,0.6,0)|enter(Victor)]I'm not doing this dance forever. {a}It's time to decide."
 
-Gwen|"[setPosition(Gwen,0.2,0)|enter(Gwen)|changeExpression(Gwen,body,standarmssbehind)|setPosition(Man,0.4,0)|enter(Man)]Decide what?"
+Gwen|"[setPosition(Gwen,0.2,0)|enter(Gwen)|changeExpression(Gwen,body,standarmsbehind)|setPosition(Man,0.4,0)|enter(Man)]Decide what?"
 
 Woman|"[flip(Woman)]Either Victor dies, or you come with us."
 
