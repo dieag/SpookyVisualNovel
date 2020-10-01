@@ -17,7 +17,7 @@ public class ChoiceScreen : MonoBehaviour
 
 	public ChoiceButton choicePrefab;
 
-	static List<ChoiceButton> choices = new List<ChoiceButton>();
+	static List<ChoiceButton> choices = new List<ChoiceButton>(); 
 
 	public VerticalLayoutGroup layoutGroup;
 
@@ -30,6 +30,7 @@ public class ChoiceScreen : MonoBehaviour
     public static void Show(string title, params string[] choices)
     {
         PauseScreen.savePreviousState = true;
+        CypherScreen.instance.blockCypherScreen = true;
         NovelController.instance.blockNext = true;
         instance.root.SetActive(true);
     	if (title != "")
@@ -142,12 +143,12 @@ public class ChoiceScreen : MonoBehaviour
 
     public void MakeChoice(ChoiceButton button)
     {
+        CypherScreen.instance.blockCypherScreen = false;
         NovelController.instance.blockNext = false;
         PauseScreen.savePreviousState = false;
         choice.index = button.choiceIndex;
     	choice.title = button.text;
     }
-
 
 
 }

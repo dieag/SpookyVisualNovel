@@ -22,6 +22,8 @@ public class GAMEFILE
     public SONGDATA music = null;
     public SONGDATA ambientMusic = null;
 
+    public string keyImage = null;
+
     public GAMEFILE()
     {
         this.chapterName = "chapter0_start";

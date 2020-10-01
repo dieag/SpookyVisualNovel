@@ -30,6 +30,11 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PauseScreen.instance.isPaused)
+        {
+            startTime += Time.deltaTime;
+            return;
+        }
     	if(!startTimer) return;
         float t = timeLeft;
         if(isTimeOut) return;

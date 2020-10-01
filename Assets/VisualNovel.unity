@@ -1246,7 +1246,7 @@ RectTransform:
   - {fileID: 332327694}
   - {fileID: 121189424}
   m_Father: {fileID: 1563321367}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1568,7 +1568,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1904796068}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.71400005, y: 0.0050000004}
   m_AnchorMax: {x: 0.79145145, y: 0.11928998}
@@ -1750,7 +1750,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1904796068}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.014466258, y: 0.93629366}
   m_AnchorMax: {x: 0.16623314, y: 0.99200004}
@@ -2640,7 +2640,7 @@ RectTransform:
   m_Children:
   - {fileID: 1801381743}
   m_Father: {fileID: 1563321367}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3762,7 +3762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abe378b9ca741024b983d27815051a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cypherButton: {fileID: 2117187062}
+  cypherButton: {fileID: 0}
   enterButton: {fileID: 462942756}
   timer: {fileID: 660156676}
   inputField: {fileID: 1421868797}
@@ -3988,6 +3988,7 @@ RectTransform:
   - {fileID: 875071178}
   - {fileID: 19784447}
   - {fileID: 1431414738}
+  - {fileID: 2117187061}
   - {fileID: 870493201}
   - {fileID: 1751747983}
   - {fileID: 357372684}
@@ -5023,7 +5024,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1563321367}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5615,7 +5616,6 @@ RectTransform:
   m_Children:
   - {fileID: 2120078744}
   - {fileID: 1421868798}
-  - {fileID: 2117187061}
   - {fileID: 462942755}
   - {fileID: 1941574113}
   - {fileID: 660156672}
@@ -5695,7 +5695,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1904796068}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.014466258, y: 0.93629366}
   m_AnchorMax: {x: 0.16623314, y: 0.99200004}
@@ -5993,6 +5993,7 @@ GameObject:
   - component: {fileID: 1976114285}
   - component: {fileID: 1976114286}
   - component: {fileID: 1976114287}
+  - component: {fileID: 1976114288}
   m_Layer: 0
   m_Name: Core
   m_TagString: Untagged
@@ -6129,6 +6130,20 @@ MonoBehaviour:
   pauseText: {fileID: 332327695}
   reloadGameButton: {fileID: 1955309703}
   saveGameButton: {fileID: 1096220860}
+--- !u!114 &1976114288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976114279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91f919cb8f3712c458ea9e3651e22486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyImage: key0
+  blockCypherScreen: 1
 --- !u!1 &2087955070
 GameObject:
   m_ObjectHideFlags: 0
@@ -6335,7 +6350,6 @@ GameObject:
   - component: {fileID: 2117187065}
   - component: {fileID: 2117187064}
   - component: {fileID: 2117187063}
-  - component: {fileID: 2117187062}
   m_Layer: 5
   m_Name: CypherButton
   m_TagString: Untagged
@@ -6354,28 +6368,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1904796068}
-  m_RootOrder: 2
+  m_Father: {fileID: 1563321367}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.897, y: 0.011769614}
-  m_AnchorMax: {x: 0.99200004, y: 0.11928998}
-  m_AnchoredPosition: {x: 0.2199707, y: 0.17999268}
-  m_SizeDelta: {x: -0.43945312, y: 1.0532074}
+  m_AnchorMin: {x: 0.9545467, y: 0.004}
+  m_AnchorMax: {x: 0.9978489, y: 0.0522863}
+  m_AnchoredPosition: {x: -0.19995117, y: 0.70007324}
+  m_SizeDelta: {x: -0.07702637, y: 0.65374374}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2117187062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2117187060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f971b9aad8f260241af41d1dee211ae2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tmpro: {fileID: 0}
-  showPage: 0
 --- !u!114 &2117187063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6421,11 +6421,23 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1431414743}
         m_TargetAssemblyTypeName: PuzzleScreen, Assembly-CSharp
-        m_MethodName: ShowKey
-        m_Mode: 2
+        m_MethodName: ShowPuzzleScreenKey
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 2117187062}
-          m_ObjectArgumentAssemblyTypeName: PuzzleButton, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1976114288}
+        m_TargetAssemblyTypeName: CypherScreen, Assembly-CSharp
+        m_MethodName: ShowKey
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

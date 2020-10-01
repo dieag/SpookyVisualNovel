@@ -15,7 +15,7 @@ public class NovelController : MonoBehaviour
     [HideInInspector]
     public bool blockNext = false;
     public static bool loadingGameSave = false;
-
+    [HideInInspector]
     void Awake()
     {
         instance = this;
@@ -105,6 +105,8 @@ public class NovelController : MonoBehaviour
         lastPlayedAmbientClipData = activeGameFile.lastPlayedAmbientMusic;
         lastPlayedClipData = activeGameFile.lastPlayedMusic;
 
+        CypherScreen.instance.keyImage = activeGameFile.keyImage;
+
         if (handlingChapterFile != null)
             StopCoroutine(handlingChapterFile);
         handlingChapterFile = StartCoroutine(HandlingChapterFile());
@@ -155,6 +157,7 @@ public class NovelController : MonoBehaviour
         }
         gamefile.lastPlayedAmbientMusic = lastPlayedAmbientClipData;
         gamefile.lastPlayedMusic = lastPlayedClipData;
+        gamefile.keyImage = CypherScreen.instance.keyImage;
     }
     public void SaveGameFile(bool usePreviousGameFile)
     {
@@ -179,10 +182,12 @@ public class NovelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
     	if(Input.GetKeyDown(KeyCode.RightArrow))  
     	{
             Next();
     	}
+        */
     }
 
     public void LoadChapterFile(string fileName)
@@ -450,9 +455,16 @@ public class NovelController : MonoBehaviour
             case "showDialogueBox":
                 Command_ShowDialogueBox(data[1]);
                 return;
+            case "setKey":
+                Command_SetKey(data[1]);
+                return;
         }
     }
 
+    public void Command_SetKey(string data)
+    {
+        CypherScreen.instance.keyImage = data;  
+    }
     public void Command_ShowDialogueBox(string data)
     {
         bool flag;

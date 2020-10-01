@@ -13,7 +13,6 @@ public class PuzzleScreen : MonoBehaviour
 	public Timer timer;
     public GameObject inputField;
     public GameObject inputHeader;
-    private string keyImage;
     private bool enterButtonHit = false;
 
     void Awake()
@@ -44,7 +43,7 @@ public class PuzzleScreen : MonoBehaviour
         }
         InputScreen.Show("Enter the Key");
         handlingPuzzle = StartCoroutine(HandlePuzzle(puzzleName, keyCode, passChapter,failChapter,timerStart));
-        keyImage = _keyImage;
+        CypherScreen.instance.keyImage = _keyImage;
 	}
 
     IEnumerator HandlePuzzle(string puzzleName, string keyCode, string passChapter, string failChapter, float timerStart)
@@ -104,25 +103,23 @@ public class PuzzleScreen : MonoBehaviour
         NovelController.instance.blockNext = false;
         NovelController.instance.Next();
         PauseScreen.savePreviousState = false;
+        handlingPuzzle = null;
     }
 
-    bool showingKey = false;
-    public void ShowKey(PuzzleButton button)
+    
+    public void ShowPuzzleScreenKey()
     {
+        if (handlingPuzzle == null) return;
         if (InputScreen.isRevealing) return;
-        AudioClip key_look_sound = Resources.Load("Audio/SFX/effect_key_look") as AudioClip;
-        AudioManager.instance.PlaySFX(key_look_sound);
-        showingKey ^= true;
-        if (showingKey)
+       
+        if (!CypherScreen.instance.isShowingKey)
         {
-            NovelController.instance.Command_SetLayerImage(keyImage, BCFC.instance.cypherframe);
             inputHeader.SetActive(false);
             inputField.SetActive(false);
             enterButton.gameObject.SetActive(false);
         }
         else
         {
-            NovelController.instance.Command_SetLayerImage("null", BCFC.instance.cypherframe);
             inputHeader.SetActive(true);
             inputField.SetActive(true);
             enterButton.gameObject.SetActive(true);
@@ -130,9 +127,10 @@ public class PuzzleScreen : MonoBehaviour
 
     }
 
+
     public void EnterAnswer(PuzzleButton button)
     {
-        if(!showingKey && !InputScreen.isRevealing)
+        if(!CypherScreen.instance.isShowingKey && !InputScreen.isRevealing)
             enterButtonHit = true;
     }
 
