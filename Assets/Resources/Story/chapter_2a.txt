@@ -32,11 +32,11 @@ loadPuzzle(puzzle2,key1,901101816130830)
 
 "Done! {a}The door swings open."
 
-"Laying on the cabinet shelves are piles of knives, scattered, unsorted. {a}This isn't like Victor."
+"[setBackground(knifepile,true,1)]Laying on the cabinet shelves are piles of knives, scattered, unsorted. {a}This isn't like Victor."
 
 "They range from dingy stone knives to razor sharp steel blades, some as short as three inches and some as long as my forearm. {a}They do all look a little old, but… I'm not sure why Victor would lock these up."
 
-Gwen|"[changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,neutral)|enter(Gwen)]Maybe they're worth a fortune?"
+Gwen|"[setBackground(kitchen,true,1)|changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,neutral)|enter(Gwen)]Maybe they're worth a fortune?"
 
 narrator|"There's something under the knife pile - another scrap of paper!"
 

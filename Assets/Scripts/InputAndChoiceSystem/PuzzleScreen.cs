@@ -87,9 +87,8 @@ public class PuzzleScreen : MonoBehaviour
         InputScreen.Hide();
         if (timerStart > 0f)
         {
-            Debug.Log(NovelController.instance.lastPlayedClipData);
-            NovelController.instance.Command_PlayMusic(NovelController.instance.lastPlayedClipData);
-            NovelController.instance.Command_PlayAmbientMusic(NovelController.instance.lastPlayedAmbientClipData);
+            NovelController.instance.playLastClipData();
+            NovelController.instance.playLastAmbientMusic();
         }
         if(passedTimedGame)
             AudioManager.instance.PlaySFX(passedClip);

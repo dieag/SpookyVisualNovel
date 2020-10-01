@@ -35,6 +35,18 @@ public class NovelController : MonoBehaviour
             LoadChapterFile("chapter0_start");
     }
 
+    public void playLastClipData()
+    {
+        if (NovelController.instance.lastPlayedClipData != null && NovelController.instance.lastPlayedClipData != "")
+            NovelController.instance.Command_PlayMusic(NovelController.instance.lastPlayedClipData);
+    }
+
+    public void playLastAmbientMusic()
+    {
+        if (NovelController.instance.lastPlayedAmbientClipData != null && NovelController.instance.lastPlayedAmbientClipData != "")
+            NovelController.instance.Command_PlayAmbientMusic(NovelController.instance.lastPlayedAmbientClipData);
+    }
+
     public void LoadGameFile(int gameFileNumber)
     {
         activeGameFileNumber = gameFileNumber;
@@ -537,6 +549,7 @@ public class NovelController : MonoBehaviour
     public void Command_StopMusic()
     {
         AudioManager.instance.StopSong();
+        lastPlayedClipData = "";
     }
     [HideInInspector]
     public string lastPlayedAmbientClipData = "";
@@ -559,6 +572,7 @@ public class NovelController : MonoBehaviour
     public void Command_StopAmbientMusic()
     {
         AudioManager.instance.StopAmbientSong();
+        lastPlayedAmbientClipData = "";
     }
 
     void Command_MoveCharacter(string data)

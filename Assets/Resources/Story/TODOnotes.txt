@@ -1,4 +1,2 @@
-IF puzzle is not times, dont change music
-Loading and Saving game
-Volume control
-Fix Title Header changing alpha to 1 always
+Man missing knife when Gwen captures him
+Check all puzzle fails

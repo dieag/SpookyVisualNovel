@@ -42,6 +42,8 @@ public class PauseScreen : MonoBehaviour
     {
       NovelController.instance.SaveGameFile(savePreviousState);
       pauseText.text = "<color=red>Game Saved</color>";
+      AudioClip savedClip = Resources.Load("Audio/SFX/effect_puzzle_pass") as AudioClip;
+      AudioManager.instance.PlaySFX(savedClip);
     }
 
     public void GoHome(Button button)

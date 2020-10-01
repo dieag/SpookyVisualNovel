@@ -4,13 +4,13 @@ narrator|"[changeExpression(Gwen,face,neutral)|flip(Gwen)]I crack it open[playSo
 
 "Flipping through the pages[playSound(effect_page_turn)], it looks like he kept this diary during high school. {a}The date ranges line up, at least."
 
-"I turn to the final entry. {a}The date at the top of the page is from around the time he would have graduated."
+"[setBackground(journal,true,1)|exit(Gwen)|setPosition(Gwen,100,0.0)]I turn to the final entry. {a}The date at the top of the page is from around the time he would have graduated."
 
 "'Hey, it's me again. {a}I have no idea what to do.'"
 
 "'Mom and Dad approached me just a few minutes ago with a giant, old crate. {a}They told me something… terrible. {a}A horrible, awful family secret.'"
 
-Gwen|"A secret?"|changeExpression(Gwen,body,standarmsbehind)|changeExpression(Gwen,face,unamused)
+Gwen|"A secret?"
 
 narrator|"'I can't even write it out here - I feel like I'm going to vomit just thinking about it. {a}I don't want to be a part of this. {a}The things they had in the box… ugh.'"
 
@@ -24,7 +24,7 @@ narrator|"'I can't even write it out here - I feel like I'm going to vomit just 
 
 "It ends there."
 
-"[changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,angry)|flip(Gwen)]What the hell is this? {a}He told me his parents died way before high school."
+"[enter(Gwen)|setPosition(Gwen,.5,0.0)|setBackground(bedroom,true,3)|changeExpression(Gwen,body,stand)|changeExpression(Gwen,face,angry)|flip(Gwen)]What the hell is this? {a}He told me his parents died way before high school."
 
 "I stare at the photo on his dresser, the one of the two people with their arms around him. {a}He lied to me. {a}I'm guessing it has to do with what they told him, then."
 
