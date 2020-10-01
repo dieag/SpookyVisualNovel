@@ -40,7 +40,7 @@ Gwen|"[setBackground(kitchen,true,1)|changeExpression(Gwen,body,standarmsbehind)
 
 narrator|"There's something under the knife pile - another scrap of paper!"
 
-"It's another suit with a new set of numbers. {a}This is getting a little complicated. {a}[playSound(effect_tape)]I tape it to my key and turn back to the pile of knives."
+"It's another suit with a new set of numbers. {a}This is getting a little complicated. {a}[playSound(effect_tape)]I tape it to my key and turn back to the pile of knives."|setKey(key2)
 
 "[changeExpression(Gwen,body,standknife)]I take a random knife. {a}The sharp tip gleams in the light. {a}This one might be better than the butcher knife."|changeExpression(Gwen,face,shock)
 

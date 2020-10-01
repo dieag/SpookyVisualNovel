@@ -40,7 +40,7 @@ narrator|"I dash into the small room and tug the bookshelf door closed with all 
 
 "[playSound(effect_book_take)]I tug the volume off the shelf and a scrap of paper falls from the pages."|playSound(effect_paper_shake1)
 
-"Oh! [changeExpression(Gwen,face,shock)|moveCharacter(Gwen,.6,0)]{a}This looks just like one of Victor's keys! {a}There's a different card suit on it, and a different set of numbers lined up. {a}[playSound(effect_tape)]I grab some tape off the desk and attach it to the key scrap I already have, tucking the tape into my back pocket."
+"Oh! [changeExpression(Gwen,face,shock)|moveCharacter(Gwen,.6,0)]{a}This looks just like one of Victor's keys! {a}There's a different card suit on it, and a different set of numbers lined up. {a}[playSound(effect_tape)]I grab some tape off the desk and attach it to the key scrap I already have, tucking the tape into my back pocket."|setKey(key1)
 
 "I'm sure this will come in handy later. {a}I'm suddenly glad my boyfriend uses codes to lock doors instead of keys - there's no way the intruders could pick their way in."
 
@@ -114,4 +114,4 @@ narrator|"The kitchen door - it's shut! {a}In all the time I've lived here, it's
 
 "[flip(Gwen)]Shit! Someone is coming down the stairs! {a}I need to open this right now!!!"|playSound(effect_screen_smack)|exit(Gwen)
 
-loadPuzzle(puzzle1,key1,23012010122620,chapter_2a,chapter_2b,60)
+loadPuzzle(puzzle1,key1,ha,chapter_2a,chapter_2b,60)

@@ -28,7 +28,7 @@ narrator|"[setBackground(mansion_lights_off,true,1)]At the side of the mansion, 
 
 "My eyes wander around the room and I see a scrap of paper fluttering on the ground. {a}Is that...?"
 
-"[moveCharacter(Gwen,0.75,0)|changeExpression(Gwen,face,shock)]I quickly run over and pick it up. {a}Another key!"
+"[moveCharacter(Gwen,0.75,0)|changeExpression(Gwen,face,shock)]I quickly run over and pick it up. {a}Another key!"|setKey(key3)
 
 "I tape it to the other keys and smile.[changeExpression(Gwen,face,happy)|playSound(effect_tape)] {a}Victor dropped this. {a}He must have known I'd come back."
 

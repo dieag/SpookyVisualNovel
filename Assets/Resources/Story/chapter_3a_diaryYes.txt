@@ -1,6 +1,4 @@
-setFlag(Gwen,true)
-
-narrator|"[changeExpression(Gwen,face,neutral)|flip(Gwen)]I crack it open[playSound(effect_book_take)]. {a}I know, I shouldn't read this, but I’m desperate for a distraction. {a}I'll apologize later."
+narrator|"[changeExpression(Gwen,face,neutral)|flip(Gwen)]I crack it open[playSound(effect_book_take)]. {a}I know, I shouldn't read this, but I’m desperate for a distraction. {a}I'll apologize later."|setFlag(Gwen,true)
 
 "Flipping through the pages[playSound(effect_page_turn)], it looks like he kept this diary during high school. {a}The date ranges line up, at least."
 
